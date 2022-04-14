@@ -5,65 +5,284 @@
 //  Created by Alex Apostol on 4/4/22.
 //
 
-import Foundation
+import Alamofire
 
-public enum APIError: Error {
-    case system(Error)
-    case undefined(String)
-    case invalidResponse
-    case notFound
-    case unableToDecode(String)
-    case emptyResponse
-}
+
 
 class ServiceProxy {
     
-    private let session: URLSession
+    private var mainURL = ""
+    private let timeout: Double = 30
+    let retryLimit: Int = 30
     
-    init() {
-        self.session = .shared
-    }
-    
-    func getItem<T: Decodable>(url: String, type: T.Type, queue: DispatchQueue = .main, completion: @escaping (Result<T, APIError>) -> Void) {
-        
-        let url = URL(string: url)
-        
-        var request = URLRequest(url: url!)
-        
-        request.httpMethod  = "GET"
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        let task = session.dataTask(with: request) { (data, response, error) in
+    func getItem<T: Decodable>(url: String, type: T.Type, parameters: [String:Any]?,headers: HTTPHeaders? = nil, queue: DispatchQueue = .main, completion: @escaping (Result<T, AFError>) -> Void) {
+        let url = "\(mainURL)\(url)"
+        let request =  AF.request(url, method: .get, parameters: parameters, headers: headers)
+        { $0.timeoutInterval = self.timeout }
+        .validate()
+        .responseDecodable(of: T.self, queue: queue) { (response) in
+            print("IN<---------------------------------------")
+            if let HTTPresponse = response.response {
+                // Debug
+                print(HTTPresponse)
+            } else {
+                print(response)
+            }
+            print("IN<---------------------------------------")
             
-            if let error = error {
-                completion(.failure(.system(error)))
-                return
+            if let data = response.data {
+                print("Response: \(String(data: data, encoding: .utf8) ?? "")")
             }
             
-            guard let httpResponse = response as? HTTPURLResponse else {
-                completion(.failure(.invalidResponse))
-                return
-            }
-            
-            switch httpResponse.statusCode {
-            case 404:
-                completion(.failure(.notFound))
-                
-            case 200:
-                if let data = data {
-                    let decoder = JSONDecoder()
-                    if let resource = try? decoder.decode(type, from: data) {
-                        completion(.success(resource))
-                    } else {
-                        completion(.failure(.unableToDecode("\(T.self)")))
-                    }
-                } else {
-                    completion(.failure(.emptyResponse))
-                }
-            default:
-                completion(.failure(.undefined("status code: \(httpResponse.statusCode)")))
+            switch response.result {
+            case .success(let result):
+                completion(.success(result))
+            case .failure(let error):
+                completion(.failure(error))
             }
         }
         
-        task.resume()
+        if request.isInitialized {
+            request.cURLDescription(calling: { (description) in
+                print("OUT----------------------------->")
+                print("Curl Description \(description)")
+                print("--------------------------------->")
+            })
+            
+        }
+    }
+    
+    func getItemOptional<T: Decodable>(url: String, type: T.Type?, parameters: [String:Any]?,headers: HTTPHeaders? = nil,queue: DispatchQueue = .main, completion: @escaping (Result<T?, AFError>) -> Void) {
+        let url = "\(mainURL)\(url)"
+        let request =  AF.request(url, method: .get, parameters: parameters, headers: headers)
+        { $0.timeoutInterval = self.timeout  }
+        .validate()
+        .responseDecodable(of: T.self, queue: queue) { (response) in
+            print("IN<---------------------------------------")
+            if let HTTPresponse = response.response {
+                // Debug
+                print(HTTPresponse)
+            } else {
+                print(response)
+            }
+            print("IN<---------------------------------------")
+            
+            if let data = response.data {
+                print("Response: \(String(data: data, encoding: .utf8) ?? "")")
+            }
+            
+            switch response.result {
+            case .success(let result):
+                completion(.success(result))
+            case .failure(let error):
+                    switch error {
+                    case .responseSerializationFailed(reason: let reason) :
+                        switch reason {
+                           case .invalidEmptyResponse(type: _):
+                            completion(.success(nil))
+                            break
+                        default:
+                            break
+                        }
+                    default:
+                        break
+                    }
+                completion(.failure(error))
+            }
+        }
+        
+        if request.isInitialized {
+            request.cURLDescription(calling: { (description) in
+                print("OUT----------------------------->")
+                print("Curl Description \(description)")
+                print("--------------------------------->")
+            })
+            
+        }
+    }
+    
+    func postItem<T: Decodable>(url: String, type: T.Type?, parameters: [String:Any] = [:], headers: HTTPHeaders?,completion: @escaping (Result<T?, AFError>) -> Void) {
+        let url = "\(mainURL)\(url)"
+        let request =  AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers)
+        { $0.timeoutInterval = self.timeout  }
+        .validate()
+        .responseDecodable(of: T.self) { (response) in
+            print("<-IN---------------------------------------")
+            if let HTTPresponse = response.response {
+                // Debug
+                print(HTTPresponse)
+            } else {
+                print(response)
+            }
+            print("<---------------------------------------")
+            // Debug
+            print(response)
+            if let data = response.data {
+                print("Response: \(String(data: data, encoding: .utf8) ?? "")")
+            }
+            
+            switch response.result {
+            case .success(let result):
+                completion(.success(result))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+        
+        if request.isInitialized {
+            request.cURLDescription(calling: { (description) in
+                print("OUT----------------------------->")
+                print("Curl Description \(description)")
+                print("--------------------------------->")
+            })
+            
+        }
+    }
+    
+    func postItemNoResponse(url: String, parameters: [String:Any] = [:], headers: HTTPHeaders?,completion: @escaping (Result<Any, AFError>) -> Void) {
+        let url = "\(mainURL)\(url)"
+        let request =  AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers)
+        { $0.timeoutInterval = self.timeout  }
+        .validate()
+        .responseData(emptyResponseCodes: [200, 201]) {  (response) in
+            print("<-IN---------------------------------------")
+            if let HTTPresponse = response.response {
+                // Debug
+                print(HTTPresponse)
+            } else {
+                print(response)
+            }
+            print("<---------------------------------------")
+            
+            if let data = response.data {
+                print("Response: \(String(data: data, encoding: .utf8) ?? "")")
+            }
+            
+            switch response.result {
+            case .success(let result):
+                completion(.success(result))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+        
+        if request.isInitialized {
+            request.cURLDescription(calling: { (description) in
+                print("OUT----------------------------->")
+                print("Curl Description \(description)")
+                print("--------------------------------->")
+            })
+            
+        }
+    }
+    
+    func putItemNoResponse(url: String, parameters: [String:Any] = [:], headers: HTTPHeaders?,completion: @escaping (Result<Any, AFError>) -> Void) {
+        let url = "\(mainURL)\(url)"
+        let request =  AF.request(url, method: .put, parameters: parameters, encoding: JSONEncoding.default, headers: headers).validate()
+            .responseData(emptyResponseCodes: [200, 201]) {  (response) in
+                print("<-IN---------------------------------------")
+                if let HTTPresponse = response.response {
+                    // Debug
+                    print(HTTPresponse)
+                } else {
+                    print(response)
+                }
+                print("<---------------------------------------")
+                
+                if let data = response.data {
+                    print("Response: \(String(data: data, encoding: .utf8) ?? "")")
+                }
+                
+                switch response.result {
+                case .success(let result):
+                    completion(.success(result))
+                case .failure(let error):
+                    completion(.failure(error))
+                }
+            }
+        
+        if request.isInitialized {
+            request.cURLDescription(calling: { (description) in
+                print("OUT----------------------------->")
+                print("Curl Description \(description)")
+                print("--------------------------------->")
+            })
+            
+        }
+    }
+    
+    func deleteItemNoResponse(url: String, parameters: [String:Any]?, headers: HTTPHeaders?,completion: @escaping (Result<Any, AFError>) -> Void) {
+        let url = "\(mainURL)\(url)"
+        let request =  AF.request(url, method: .delete, parameters: parameters, encoding: JSONEncoding.default, headers: headers)
+        { $0.timeoutInterval = self.timeout  }
+        .validate()
+        .responseData(emptyResponseCodes: [200, 201]) { (response) in
+            print("<-IN---------------------------------------")
+            if let HTTPresponse = response.response {
+                // Debug
+                print(HTTPresponse)
+            } else {
+                print(response)
+            }
+            print("<---------------------------------------")
+            
+            if let data = response.data {
+                print("Response: \(String(data: data, encoding: .utf8) ?? "")")
+            }
+            
+            switch response.result {
+            case .success(let result):
+                completion(.success(result))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+        
+        if request.isInitialized {
+            request.cURLDescription(calling: { (description) in
+                print("OUT----------------------------->")
+                print("Curl Description \(description)")
+                print("--------------------------------->")
+            })
+            
+        }
+    }
+    
+    
+    func getItems<T: Decodable>(url: String, type: [T].Type, parameters: [String:Any]?, headers: HTTPHeaders? = nil ,completion: @escaping (Result<[T], AFError>) -> Void) {
+        let url = "\(mainURL)\(url)"
+        let request = AF.request(url, method: .get, parameters: parameters, headers: headers)
+        { $0.timeoutInterval = self.timeout  }
+        .validate()
+        .responseDecodable(of: [T].self) { (response) in
+            print("IN<---------------------------------------")
+            if let HTTPresponse = response.response {
+                
+                // Debug
+                print(HTTPresponse)
+            } else {
+                print(response)
+            }
+            print("IN<---------------------------------------")
+            
+            if let data = response.data {
+                print("Response: \(String(data: data, encoding: .utf8) ?? "")")
+            }
+            
+            switch response.result {
+            case .success(let result):
+                completion(.success(result))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+        if request.isInitialized {
+            request.cURLDescription(calling: { (description) in
+                print("OUT----------------------------->")
+                print("Curl Description \(description)")
+                print("--------------------------------->")
+            })
+            
+        }
     }
 }
