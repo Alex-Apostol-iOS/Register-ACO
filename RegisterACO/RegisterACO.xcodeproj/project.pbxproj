@@ -18,6 +18,16 @@
 		B40D312128085A54002C1396 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D311B28085A54002C1396 /* Loader.swift */; };
 		B40D312428085A54002C1396 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D311E28085A54002C1396 /* Coordinator.swift */; };
 		B40D312828085A62002C1396 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D312728085A62002C1396 /* MainCoordinator.swift */; };
+		B40D3134280863FB002C1396 /* StarterInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D312A280863FB002C1396 /* StarterInteractorProtocol.swift */; };
+		B40D3135280863FB002C1396 /* StarterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D312B280863FB002C1396 /* StarterPresenter.swift */; };
+		B40D3136280863FB002C1396 /* StarterViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D312C280863FB002C1396 /* StarterViewControllerProtocol.swift */; };
+		B40D3137280863FB002C1396 /* StarterPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D312D280863FB002C1396 /* StarterPresenterProtocol.swift */; };
+		B40D3138280863FB002C1396 /* StarterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D312E280863FB002C1396 /* StarterViewController.swift */; };
+		B40D3139280863FB002C1396 /* StarterBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D312F280863FB002C1396 /* StarterBuilder.swift */; };
+		B40D313A280863FB002C1396 /* StarterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D3130280863FB002C1396 /* StarterInteractor.swift */; };
+		B40D313B280863FB002C1396 /* StarterDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D3131280863FB002C1396 /* StarterDataManagerProtocol.swift */; };
+		B40D313C280863FB002C1396 /* StarterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D3132280863FB002C1396 /* StarterOutput.swift */; };
+		B40D313D280863FB002C1396 /* StarterDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D3133280863FB002C1396 /* StarterDataManager.swift */; };
 		C7DD8466CA29468BFF1F049B /* Pods_RegisterACO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 590A60A5953D89FCABD09D0F /* Pods_RegisterACO.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +48,16 @@
 		B40D311B28085A54002C1396 /* Loader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		B40D311E28085A54002C1396 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		B40D312728085A62002C1396 /* MainCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		B40D312A280863FB002C1396 /* StarterInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterInteractorProtocol.swift; sourceTree = "<group>"; };
+		B40D312B280863FB002C1396 /* StarterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterPresenter.swift; sourceTree = "<group>"; };
+		B40D312C280863FB002C1396 /* StarterViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterViewControllerProtocol.swift; sourceTree = "<group>"; };
+		B40D312D280863FB002C1396 /* StarterPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterPresenterProtocol.swift; sourceTree = "<group>"; };
+		B40D312E280863FB002C1396 /* StarterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterViewController.swift; sourceTree = "<group>"; };
+		B40D312F280863FB002C1396 /* StarterBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterBuilder.swift; sourceTree = "<group>"; };
+		B40D3130280863FB002C1396 /* StarterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterInteractor.swift; sourceTree = "<group>"; };
+		B40D3131280863FB002C1396 /* StarterDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterDataManagerProtocol.swift; sourceTree = "<group>"; };
+		B40D3132280863FB002C1396 /* StarterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterOutput.swift; sourceTree = "<group>"; };
+		B40D3133280863FB002C1396 /* StarterDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +78,6 @@
 				40A3A5F11283A45636049278 /* Pods-RegisterACO.debug.xcconfig */,
 				13133E5C59BD45F445B7E812 /* Pods-RegisterACO.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -91,6 +110,7 @@
 		B40D30FB280858AD002C1396 /* RegisterACO */ = {
 			isa = PBXGroup;
 			children = (
+				B40D3129280863D0002C1396 /* Modules */,
 				B40D312628085A62002C1396 /* Coordinators */,
 				B40D311328085A41002C1396 /* NetWork */,
 				B40D311928085A54002C1396 /* Common */,
@@ -137,6 +157,63 @@
 				B40D312728085A62002C1396 /* MainCoordinator.swift */,
 			);
 			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		B40D3129280863D0002C1396 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				B40D314228086429002C1396 /* Interactor */,
+				B40D314128086415002C1396 /* DataManager */,
+				B40D31402808640F002C1396 /* Presenter */,
+				B40D313F2808640A002C1396 /* View */,
+				B40D313E28086402002C1396 /* Builder */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		B40D313E28086402002C1396 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				B40D312F280863FB002C1396 /* StarterBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		B40D313F2808640A002C1396 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B40D312C280863FB002C1396 /* StarterViewControllerProtocol.swift */,
+				B40D312E280863FB002C1396 /* StarterViewController.swift */,
+				B40D3132280863FB002C1396 /* StarterOutput.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B40D31402808640F002C1396 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B40D312D280863FB002C1396 /* StarterPresenterProtocol.swift */,
+				B40D312B280863FB002C1396 /* StarterPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B40D314128086415002C1396 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				B40D3131280863FB002C1396 /* StarterDataManagerProtocol.swift */,
+				B40D3133280863FB002C1396 /* StarterDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		B40D314228086429002C1396 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B40D3130280863FB002C1396 /* StarterInteractor.swift */,
+				B40D312A280863FB002C1396 /* StarterInteractorProtocol.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,15 +330,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B40D3137280863FB002C1396 /* StarterPresenterProtocol.swift in Sources */,
+				B40D3136280863FB002C1396 /* StarterViewControllerProtocol.swift in Sources */,
+				B40D313B280863FB002C1396 /* StarterDataManagerProtocol.swift in Sources */,
+				B40D313A280863FB002C1396 /* StarterInteractor.swift in Sources */,
+				B40D3138280863FB002C1396 /* StarterViewController.swift in Sources */,
+				B40D3139280863FB002C1396 /* StarterBuilder.swift in Sources */,
 				B40D3107280858AE002C1396 /* RegisterACO.xcdatamodeld in Sources */,
 				B40D312028085A54002C1396 /* Builder.swift in Sources */,
 				B40D30FD280858AE002C1396 /* AppDelegate.swift in Sources */,
 				B40D311728085A41002C1396 /* ServiceProxy.swift in Sources */,
+				B40D313C280863FB002C1396 /* StarterOutput.swift in Sources */,
 				B40D312428085A54002C1396 /* Coordinator.swift in Sources */,
 				B40D311828085A41002C1396 /* Endpoint.swift in Sources */,
+				B40D3134280863FB002C1396 /* StarterInteractorProtocol.swift in Sources */,
+				B40D313D280863FB002C1396 /* StarterDataManager.swift in Sources */,
 				B40D312128085A54002C1396 /* Loader.swift in Sources */,
 				B40D312828085A62002C1396 /* MainCoordinator.swift in Sources */,
 				B40D30FF280858AE002C1396 /* SceneDelegate.swift in Sources */,
+				B40D3135280863FB002C1396 /* StarterPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

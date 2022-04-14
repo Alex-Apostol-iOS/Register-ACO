@@ -47,7 +47,11 @@ class MainCoordinator: Coordinator {
     }
     
     private func showLoginFlow() {
-        
+        let vc = StarterBuilder { _ in
+            
+        }.build()
+        vc.view.backgroundColor = .red
+        self.navigator.setViewControllers([vc], animated: true)
     }
     
 }
