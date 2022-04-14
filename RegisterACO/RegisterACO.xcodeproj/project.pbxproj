@@ -9,23 +9,31 @@
 /* Begin PBXBuildFile section */
 		B40D30FD280858AE002C1396 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D30FC280858AE002C1396 /* AppDelegate.swift */; };
 		B40D30FF280858AE002C1396 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D30FE280858AE002C1396 /* SceneDelegate.swift */; };
-		B40D3101280858AE002C1396 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D3100280858AE002C1396 /* ViewController.swift */; };
-		B40D3104280858AE002C1396 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B40D3102280858AE002C1396 /* Main.storyboard */; };
 		B40D3107280858AE002C1396 /* RegisterACO.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B40D3105280858AE002C1396 /* RegisterACO.xcdatamodeld */; };
 		B40D3109280858B1002C1396 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B40D3108280858B1002C1396 /* Assets.xcassets */; };
 		B40D310C280858B1002C1396 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B40D310A280858B1002C1396 /* LaunchScreen.storyboard */; };
+		B40D311728085A41002C1396 /* ServiceProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D311428085A41002C1396 /* ServiceProxy.swift */; };
+		B40D311828085A41002C1396 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D311628085A41002C1396 /* Endpoint.swift */; };
+		B40D312028085A54002C1396 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D311A28085A54002C1396 /* Builder.swift */; };
+		B40D312128085A54002C1396 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D311B28085A54002C1396 /* Loader.swift */; };
+		B40D312428085A54002C1396 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D311E28085A54002C1396 /* Coordinator.swift */; };
+		B40D312828085A62002C1396 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D312728085A62002C1396 /* MainCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B40D30F9280858AD002C1396 /* RegisterACO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RegisterACO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B40D30FC280858AE002C1396 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B40D30FE280858AE002C1396 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B40D3100280858AE002C1396 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B40D3103280858AE002C1396 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B40D3106280858AE002C1396 /* RegisterACO.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RegisterACO.xcdatamodel; sourceTree = "<group>"; };
 		B40D3108280858B1002C1396 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B40D310B280858B1002C1396 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B40D310D280858B1002C1396 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B40D311428085A41002C1396 /* ServiceProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceProxy.swift; sourceTree = "<group>"; };
+		B40D311628085A41002C1396 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		B40D311A28085A54002C1396 /* Builder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
+		B40D311B28085A54002C1396 /* Loader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+		B40D311E28085A54002C1396 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		B40D312728085A62002C1396 /* MainCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +66,52 @@
 		B40D30FB280858AD002C1396 /* RegisterACO */ = {
 			isa = PBXGroup;
 			children = (
+				B40D312628085A62002C1396 /* Coordinators */,
+				B40D311328085A41002C1396 /* NetWork */,
+				B40D311928085A54002C1396 /* Common */,
 				B40D30FC280858AE002C1396 /* AppDelegate.swift */,
 				B40D30FE280858AE002C1396 /* SceneDelegate.swift */,
-				B40D3100280858AE002C1396 /* ViewController.swift */,
-				B40D3102280858AE002C1396 /* Main.storyboard */,
 				B40D3108280858B1002C1396 /* Assets.xcassets */,
 				B40D310A280858B1002C1396 /* LaunchScreen.storyboard */,
 				B40D310D280858B1002C1396 /* Info.plist */,
 				B40D3105280858AE002C1396 /* RegisterACO.xcdatamodeld */,
 			);
 			path = RegisterACO;
+			sourceTree = "<group>";
+		};
+		B40D311328085A41002C1396 /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				B40D311428085A41002C1396 /* ServiceProxy.swift */,
+				B40D311528085A41002C1396 /* Endpoint */,
+			);
+			path = NetWork;
+			sourceTree = "<group>";
+		};
+		B40D311528085A41002C1396 /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				B40D311628085A41002C1396 /* Endpoint.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		B40D311928085A54002C1396 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B40D311A28085A54002C1396 /* Builder.swift */,
+				B40D311B28085A54002C1396 /* Loader.swift */,
+				B40D311E28085A54002C1396 /* Coordinator.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		B40D312628085A62002C1396 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				B40D312728085A62002C1396 /* MainCoordinator.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,7 +174,6 @@
 			files = (
 				B40D310C280858B1002C1396 /* LaunchScreen.storyboard in Resources */,
 				B40D3109280858B1002C1396 /* Assets.xcassets in Resources */,
-				B40D3104280858AE002C1396 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,8 +185,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B40D3107280858AE002C1396 /* RegisterACO.xcdatamodeld in Sources */,
-				B40D3101280858AE002C1396 /* ViewController.swift in Sources */,
+				B40D312028085A54002C1396 /* Builder.swift in Sources */,
 				B40D30FD280858AE002C1396 /* AppDelegate.swift in Sources */,
+				B40D311728085A41002C1396 /* ServiceProxy.swift in Sources */,
+				B40D312428085A54002C1396 /* Coordinator.swift in Sources */,
+				B40D311828085A41002C1396 /* Endpoint.swift in Sources */,
+				B40D312128085A54002C1396 /* Loader.swift in Sources */,
+				B40D312828085A62002C1396 /* MainCoordinator.swift in Sources */,
 				B40D30FF280858AE002C1396 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,14 +199,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B40D3102280858AE002C1396 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B40D3103280858AE002C1396 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B40D310A280858B1002C1396 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -298,7 +338,6 @@
 				INFOPLIST_FILE = RegisterACO/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -327,7 +366,6 @@
 				INFOPLIST_FILE = RegisterACO/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
