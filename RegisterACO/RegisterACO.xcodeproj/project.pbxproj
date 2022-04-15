@@ -28,6 +28,18 @@
 		B40D313B280863FB002C1396 /* StarterDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D3131280863FB002C1396 /* StarterDataManagerProtocol.swift */; };
 		B40D313C280863FB002C1396 /* StarterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D3132280863FB002C1396 /* StarterOutput.swift */; };
 		B40D313D280863FB002C1396 /* StarterDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D3133280863FB002C1396 /* StarterDataManager.swift */; };
+		B40D3145280961BC002C1396 /* RegisterACOButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D3144280961BC002C1396 /* RegisterACOButton.swift */; };
+		B40D314828098A2F002C1396 /* RegisterACOColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D314728098A2F002C1396 /* RegisterACOColor.swift */; };
+		B40D315328098D0B002C1396 /* Inter-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B40D314A28098D0A002C1396 /* Inter-ExtraLight.ttf */; };
+		B40D315428098D0B002C1396 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B40D314B28098D0A002C1396 /* Inter-Regular.ttf */; };
+		B40D315528098D0B002C1396 /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B40D314C28098D0A002C1396 /* Inter-Medium.ttf */; };
+		B40D315628098D0B002C1396 /* Inter-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B40D314D28098D0A002C1396 /* Inter-Black.ttf */; };
+		B40D315728098D0B002C1396 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B40D314E28098D0A002C1396 /* Inter-SemiBold.ttf */; };
+		B40D315828098D0B002C1396 /* Inter-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B40D314F28098D0B002C1396 /* Inter-Light.ttf */; };
+		B40D315928098D0B002C1396 /* Inter-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B40D315028098D0B002C1396 /* Inter-Thin.ttf */; };
+		B40D315A28098D0B002C1396 /* Inter-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B40D315128098D0B002C1396 /* Inter-ExtraBold.ttf */; };
+		B40D315B28098D0B002C1396 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B40D315228098D0B002C1396 /* Inter-Bold.ttf */; };
+		B40D315D28098E7A002C1396 /* RegisterACOFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D315C28098E7A002C1396 /* RegisterACOFont.swift */; };
 		C7DD8466CA29468BFF1F049B /* Pods_RegisterACO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 590A60A5953D89FCABD09D0F /* Pods_RegisterACO.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +70,18 @@
 		B40D3131280863FB002C1396 /* StarterDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterDataManagerProtocol.swift; sourceTree = "<group>"; };
 		B40D3132280863FB002C1396 /* StarterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterOutput.swift; sourceTree = "<group>"; };
 		B40D3133280863FB002C1396 /* StarterDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterDataManager.swift; sourceTree = "<group>"; };
+		B40D3144280961BC002C1396 /* RegisterACOButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterACOButton.swift; sourceTree = "<group>"; };
+		B40D314728098A2F002C1396 /* RegisterACOColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterACOColor.swift; sourceTree = "<group>"; };
+		B40D314A28098D0A002C1396 /* Inter-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraLight.ttf"; sourceTree = "<group>"; };
+		B40D314B28098D0A002C1396 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
+		B40D314C28098D0A002C1396 /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
+		B40D314D28098D0A002C1396 /* Inter-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Black.ttf"; sourceTree = "<group>"; };
+		B40D314E28098D0A002C1396 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
+		B40D314F28098D0B002C1396 /* Inter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light.ttf"; sourceTree = "<group>"; };
+		B40D315028098D0B002C1396 /* Inter-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Thin.ttf"; sourceTree = "<group>"; };
+		B40D315128098D0B002C1396 /* Inter-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraBold.ttf"; sourceTree = "<group>"; };
+		B40D315228098D0B002C1396 /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
+		B40D315C28098E7A002C1396 /* RegisterACOFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterACOFont.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,10 +134,12 @@
 		B40D30FB280858AD002C1396 /* RegisterACO */ = {
 			isa = PBXGroup;
 			children = (
-				B40D3129280863D0002C1396 /* Modules */,
-				B40D312628085A62002C1396 /* Coordinators */,
 				B40D311328085A41002C1396 /* NetWork */,
 				B40D311928085A54002C1396 /* Common */,
+				B40D314628098A1B002C1396 /* Theme */,
+				B40D312628085A62002C1396 /* Coordinators */,
+				B40D3129280863D0002C1396 /* Modules */,
+				B40D31432809619C002C1396 /* Componenets */,
 				B40D30FC280858AE002C1396 /* AppDelegate.swift */,
 				B40D30FE280858AE002C1396 /* SceneDelegate.swift */,
 				B40D3108280858B1002C1396 /* Assets.xcassets */,
@@ -216,6 +242,40 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
+		B40D31432809619C002C1396 /* Componenets */ = {
+			isa = PBXGroup;
+			children = (
+				B40D3144280961BC002C1396 /* RegisterACOButton.swift */,
+			);
+			path = Componenets;
+			sourceTree = "<group>";
+		};
+		B40D314628098A1B002C1396 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				B40D314928098CFD002C1396 /* Fonts */,
+				B40D314728098A2F002C1396 /* RegisterACOColor.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		B40D314928098CFD002C1396 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B40D314D28098D0A002C1396 /* Inter-Black.ttf */,
+				B40D315228098D0B002C1396 /* Inter-Bold.ttf */,
+				B40D315128098D0B002C1396 /* Inter-ExtraBold.ttf */,
+				B40D314A28098D0A002C1396 /* Inter-ExtraLight.ttf */,
+				B40D314F28098D0B002C1396 /* Inter-Light.ttf */,
+				B40D314C28098D0A002C1396 /* Inter-Medium.ttf */,
+				B40D314B28098D0A002C1396 /* Inter-Regular.ttf */,
+				B40D314E28098D0A002C1396 /* Inter-SemiBold.ttf */,
+				B40D315028098D0B002C1396 /* Inter-Thin.ttf */,
+				B40D315C28098E7A002C1396 /* RegisterACOFont.swift */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -277,7 +337,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				B40D310C280858B1002C1396 /* LaunchScreen.storyboard in Resources */,
+				B40D315628098D0B002C1396 /* Inter-Black.ttf in Resources */,
+				B40D315B28098D0B002C1396 /* Inter-Bold.ttf in Resources */,
+				B40D315928098D0B002C1396 /* Inter-Thin.ttf in Resources */,
+				B40D315828098D0B002C1396 /* Inter-Light.ttf in Resources */,
+				B40D315328098D0B002C1396 /* Inter-ExtraLight.ttf in Resources */,
+				B40D315A28098D0B002C1396 /* Inter-ExtraBold.ttf in Resources */,
+				B40D315428098D0B002C1396 /* Inter-Regular.ttf in Resources */,
+				B40D315528098D0B002C1396 /* Inter-Medium.ttf in Resources */,
 				B40D3109280858B1002C1396 /* Assets.xcassets in Resources */,
+				B40D315728098D0B002C1396 /* Inter-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,8 +400,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B40D3137280863FB002C1396 /* StarterPresenterProtocol.swift in Sources */,
+				B40D314828098A2F002C1396 /* RegisterACOColor.swift in Sources */,
 				B40D3136280863FB002C1396 /* StarterViewControllerProtocol.swift in Sources */,
+				B40D3145280961BC002C1396 /* RegisterACOButton.swift in Sources */,
 				B40D313B280863FB002C1396 /* StarterDataManagerProtocol.swift in Sources */,
+				B40D315D28098E7A002C1396 /* RegisterACOFont.swift in Sources */,
 				B40D313A280863FB002C1396 /* StarterInteractor.swift in Sources */,
 				B40D3138280863FB002C1396 /* StarterViewController.swift in Sources */,
 				B40D3139280863FB002C1396 /* StarterBuilder.swift in Sources */,

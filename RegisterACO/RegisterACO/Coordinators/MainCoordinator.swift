@@ -50,7 +50,7 @@ class MainCoordinator: Coordinator {
         let vc = StarterBuilder { _ in
             
         }.build()
-        vc.view.backgroundColor = .red
+        vc.view.backgroundColor = .white
         self.navigator.setViewControllers([vc], animated: true)
     }
     
