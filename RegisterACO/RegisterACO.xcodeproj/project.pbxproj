@@ -40,6 +40,7 @@
 		B40D315A28098D0B002C1396 /* Inter-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B40D315128098D0B002C1396 /* Inter-ExtraBold.ttf */; };
 		B40D315B28098D0B002C1396 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B40D315228098D0B002C1396 /* Inter-Bold.ttf */; };
 		B40D315D28098E7A002C1396 /* RegisterACOFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D315C28098E7A002C1396 /* RegisterACOFont.swift */; };
+		B40D31602809C465002C1396 /* UIView+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D315F2809C465002C1396 /* UIView+extensions.swift */; };
 		C7DD8466CA29468BFF1F049B /* Pods_RegisterACO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 590A60A5953D89FCABD09D0F /* Pods_RegisterACO.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +83,7 @@
 		B40D315128098D0B002C1396 /* Inter-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraBold.ttf"; sourceTree = "<group>"; };
 		B40D315228098D0B002C1396 /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
 		B40D315C28098E7A002C1396 /* RegisterACOFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterACOFont.swift; sourceTree = "<group>"; };
+		B40D315F2809C465002C1396 /* UIView+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 				B40D311928085A54002C1396 /* Common */,
 				B40D314628098A1B002C1396 /* Theme */,
 				B40D312628085A62002C1396 /* Coordinators */,
+				B40D315E2809C44F002C1396 /* Utils */,
 				B40D3129280863D0002C1396 /* Modules */,
 				B40D31432809619C002C1396 /* Componenets */,
 				B40D30FC280858AE002C1396 /* AppDelegate.swift */,
@@ -274,6 +277,14 @@
 				B40D315C28098E7A002C1396 /* RegisterACOFont.swift */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		B40D315E2809C44F002C1396 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B40D315F2809C465002C1396 /* UIView+extensions.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -420,6 +431,7 @@
 				B40D312128085A54002C1396 /* Loader.swift in Sources */,
 				B40D312828085A62002C1396 /* MainCoordinator.swift in Sources */,
 				B40D30FF280858AE002C1396 /* SceneDelegate.swift in Sources */,
+				B40D31602809C465002C1396 /* UIView+extensions.swift in Sources */,
 				B40D3135280863FB002C1396 /* StarterPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -19,8 +19,27 @@ class RegisterACOButton: UIButton {
     
     private var buttonAction: (() -> Void)?
     
-    func config(type: ButtonType, action: @escaping() -> Void) {
+    func config(buttonStyle: ButtonStyle, title: String, action: @escaping() -> Void) {
         self.addTarget(self, action: #selector(didPressButton), for: .touchUpInside)
+        let attributeString = NSAttributedString(string: title, attributes: [NSAttributedString.Key.font : UIFont.theme(id: .regular18), NSAttributedString.Key.foregroundColor: UIColor.white])
+        DispatchQueue.main.async {
+            self.setAttributedTitle(attributeString, for: .normal)
+        }
+        setUpStyle(buttonStyle: buttonStyle)
+    }
+    
+    fileprivate func setUpStyle(buttonStyle: ButtonStyle) {
+        self.layer.cornerRadius = 16
+        self.heightAnchor.constraint(equalToConstant: 56).isActive = true
+        self.widthAnchor.constraint(equalToConstant: 353).isActive = true
+        switch buttonStyle {
+        case .primary:
+            self.backgroundColor = UIColor.theme(.primary100)
+        case .negativeAction:
+            self.backgroundColor = UIColor.theme(.red100)
+        case .secondary:
+            self.backgroundColor = UIColor.theme(.primary50)
+        }
     }
     
     @objc
@@ -31,8 +50,9 @@ class RegisterACOButton: UIButton {
     }
 }
 
-enum ButtonType {
+enum ButtonStyle {
     case primary
     case negativeAction
+    case secondary
     
 }
