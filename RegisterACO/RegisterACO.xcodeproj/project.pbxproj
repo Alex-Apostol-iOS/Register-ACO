@@ -43,6 +43,16 @@
 		B40D31602809C465002C1396 /* UIView+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D315F2809C465002C1396 /* UIView+extensions.swift */; };
 		B40D3164280AB00F002C1396 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B40D3166280AB00F002C1396 /* Localizable.strings */; };
 		B40D3169280AB173002C1396 /* LabelsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D3168280AB173002C1396 /* LabelsProtocol.swift */; };
+		B40D3176280AD27F002C1396 /* Login_RegisterInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D316C280AD27F002C1396 /* Login_RegisterInteractorProtocol.swift */; };
+		B40D3177280AD27F002C1396 /* Login_RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D316D280AD27F002C1396 /* Login_RegisterPresenter.swift */; };
+		B40D3178280AD27F002C1396 /* Login_RegisterViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D316E280AD27F002C1396 /* Login_RegisterViewControllerProtocol.swift */; };
+		B40D3179280AD27F002C1396 /* Login_RegisterPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D316F280AD27F002C1396 /* Login_RegisterPresenterProtocol.swift */; };
+		B40D317A280AD27F002C1396 /* Login_RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D3170280AD27F002C1396 /* Login_RegisterViewController.swift */; };
+		B40D317B280AD27F002C1396 /* Login_RegisterBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D3171280AD27F002C1396 /* Login_RegisterBuilder.swift */; };
+		B40D317C280AD27F002C1396 /* Login_RegisterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D3172280AD27F002C1396 /* Login_RegisterInteractor.swift */; };
+		B40D317D280AD27F002C1396 /* Login_RegisterDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D3173280AD27F002C1396 /* Login_RegisterDataManagerProtocol.swift */; };
+		B40D317E280AD27F002C1396 /* Login_RegisterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D3174280AD27F002C1396 /* Login_RegisterOutput.swift */; };
+		B40D317F280AD27F002C1396 /* Login_RegisterDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D3175280AD27F002C1396 /* Login_RegisterDataManager.swift */; };
 		C7DD8466CA29468BFF1F049B /* Pods_RegisterACO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 590A60A5953D89FCABD09D0F /* Pods_RegisterACO.framework */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +100,16 @@
 		B40D3165280AB00F002C1396 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B40D3167280AB011002C1396 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B40D3168280AB173002C1396 /* LabelsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelsProtocol.swift; sourceTree = "<group>"; };
+		B40D316C280AD27F002C1396 /* Login_RegisterInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_RegisterInteractorProtocol.swift; sourceTree = "<group>"; };
+		B40D316D280AD27F002C1396 /* Login_RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_RegisterPresenter.swift; sourceTree = "<group>"; };
+		B40D316E280AD27F002C1396 /* Login_RegisterViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_RegisterViewControllerProtocol.swift; sourceTree = "<group>"; };
+		B40D316F280AD27F002C1396 /* Login_RegisterPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_RegisterPresenterProtocol.swift; sourceTree = "<group>"; };
+		B40D3170280AD27F002C1396 /* Login_RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_RegisterViewController.swift; sourceTree = "<group>"; };
+		B40D3171280AD27F002C1396 /* Login_RegisterBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_RegisterBuilder.swift; sourceTree = "<group>"; };
+		B40D3172280AD27F002C1396 /* Login_RegisterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_RegisterInteractor.swift; sourceTree = "<group>"; };
+		B40D3173280AD27F002C1396 /* Login_RegisterDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_RegisterDataManagerProtocol.swift; sourceTree = "<group>"; };
+		B40D3174280AD27F002C1396 /* Login_RegisterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_RegisterOutput.swift; sourceTree = "<group>"; };
+		B40D3175280AD27F002C1396 /* Login_RegisterDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_RegisterDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,11 +217,8 @@
 		B40D3129280863D0002C1396 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				B40D314228086429002C1396 /* Interactor */,
-				B40D314128086415002C1396 /* DataManager */,
-				B40D31402808640F002C1396 /* Presenter */,
-				B40D313F2808640A002C1396 /* View */,
-				B40D313E28086402002C1396 /* Builder */,
+				B40D316B280AD242002C1396 /* Login_Register */,
+				B40D316A280AD22D002C1396 /* Starter */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -293,6 +310,75 @@
 				B40D3168280AB173002C1396 /* LabelsProtocol.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		B40D316A280AD22D002C1396 /* Starter */ = {
+			isa = PBXGroup;
+			children = (
+				B40D314228086429002C1396 /* Interactor */,
+				B40D314128086415002C1396 /* DataManager */,
+				B40D31402808640F002C1396 /* Presenter */,
+				B40D313F2808640A002C1396 /* View */,
+				B40D313E28086402002C1396 /* Builder */,
+			);
+			path = Starter;
+			sourceTree = "<group>";
+		};
+		B40D316B280AD242002C1396 /* Login_Register */ = {
+			isa = PBXGroup;
+			children = (
+				B40D3184280AD29D002C1396 /* Builder */,
+				B40D3183280AD294002C1396 /* DataManager */,
+				B40D3182280AD28E002C1396 /* Interactor */,
+				B40D3181280AD289002C1396 /* Presenter */,
+				B40D3180280AD284002C1396 /* View */,
+			);
+			path = Login_Register;
+			sourceTree = "<group>";
+		};
+		B40D3180280AD284002C1396 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B40D3170280AD27F002C1396 /* Login_RegisterViewController.swift */,
+				B40D316E280AD27F002C1396 /* Login_RegisterViewControllerProtocol.swift */,
+				B40D3174280AD27F002C1396 /* Login_RegisterOutput.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B40D3181280AD289002C1396 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B40D316F280AD27F002C1396 /* Login_RegisterPresenterProtocol.swift */,
+				B40D316D280AD27F002C1396 /* Login_RegisterPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B40D3182280AD28E002C1396 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B40D3172280AD27F002C1396 /* Login_RegisterInteractor.swift */,
+				B40D316C280AD27F002C1396 /* Login_RegisterInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B40D3183280AD294002C1396 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				B40D3173280AD27F002C1396 /* Login_RegisterDataManagerProtocol.swift */,
+				B40D3175280AD27F002C1396 /* Login_RegisterDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		B40D3184280AD29D002C1396 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				B40D3171280AD27F002C1396 /* Login_RegisterBuilder.swift */,
+			);
+			path = Builder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -420,10 +506,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B40D317F280AD27F002C1396 /* Login_RegisterDataManager.swift in Sources */,
 				B40D3137280863FB002C1396 /* StarterPresenterProtocol.swift in Sources */,
 				B40D314828098A2F002C1396 /* RegisterACOColor.swift in Sources */,
+				B40D317B280AD27F002C1396 /* Login_RegisterBuilder.swift in Sources */,
+				B40D317C280AD27F002C1396 /* Login_RegisterInteractor.swift in Sources */,
 				B40D3136280863FB002C1396 /* StarterViewControllerProtocol.swift in Sources */,
 				B40D3145280961BC002C1396 /* RegisterACOButton.swift in Sources */,
+				B40D317D280AD27F002C1396 /* Login_RegisterDataManagerProtocol.swift in Sources */,
 				B40D313B280863FB002C1396 /* StarterDataManagerProtocol.swift in Sources */,
 				B40D315D28098E7A002C1396 /* RegisterACOFont.swift in Sources */,
 				B40D313A280863FB002C1396 /* StarterInteractor.swift in Sources */,
@@ -431,13 +521,19 @@
 				B40D3139280863FB002C1396 /* StarterBuilder.swift in Sources */,
 				B40D3107280858AE002C1396 /* RegisterACO.xcdatamodeld in Sources */,
 				B40D312028085A54002C1396 /* Builder.swift in Sources */,
+				B40D3179280AD27F002C1396 /* Login_RegisterPresenterProtocol.swift in Sources */,
+				B40D317E280AD27F002C1396 /* Login_RegisterOutput.swift in Sources */,
+				B40D317A280AD27F002C1396 /* Login_RegisterViewController.swift in Sources */,
 				B40D30FD280858AE002C1396 /* AppDelegate.swift in Sources */,
 				B40D311728085A41002C1396 /* ServiceProxy.swift in Sources */,
 				B40D313C280863FB002C1396 /* StarterOutput.swift in Sources */,
+				B40D3176280AD27F002C1396 /* Login_RegisterInteractorProtocol.swift in Sources */,
 				B40D312428085A54002C1396 /* Coordinator.swift in Sources */,
+				B40D3178280AD27F002C1396 /* Login_RegisterViewControllerProtocol.swift in Sources */,
 				B40D311828085A41002C1396 /* Endpoint.swift in Sources */,
 				B40D3134280863FB002C1396 /* StarterInteractorProtocol.swift in Sources */,
 				B40D313D280863FB002C1396 /* StarterDataManager.swift in Sources */,
+				B40D3177280AD27F002C1396 /* Login_RegisterPresenter.swift in Sources */,
 				B40D312128085A54002C1396 /* Loader.swift in Sources */,
 				B40D312828085A62002C1396 /* MainCoordinator.swift in Sources */,
 				B40D3169280AB173002C1396 /* LabelsProtocol.swift in Sources */,
