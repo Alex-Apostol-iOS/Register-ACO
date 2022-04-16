@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  RegisterACO
+
+  Created by Alex Apostol on 16/4/22.
+  
+*/
+
+"lng.distribuitor" = "Distributor";
+"lng.seller" = "Seller";

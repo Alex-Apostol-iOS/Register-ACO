@@ -14,13 +14,13 @@ class StarterViewController: UIViewController {
     
     private lazy var sellerButton: RegisterACOButton = {
         let button = RegisterACOButton(frame: .zero)
-        button.config(buttonStyle: .primary, title: "Seller", action: didPressSellerButton)
+        button.config(buttonStyle: .primary, title: presenter.getlabelForKey(key: "lng.seller"), action: didPressSellerButton)
         return button
     }()
     
     private lazy var distributorButton: RegisterACOButton = {
         let button = RegisterACOButton(frame: .zero)
-        button.config(buttonStyle: .primary, title: "Distributor", action: didPressDistributorButton)
+        button.config(buttonStyle: .primary, title: presenter.getlabelForKey(key: "lng.distribuitor"), action: didPressDistributorButton)
         return button
     }()
     

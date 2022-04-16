@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol StarterPresenterProtocol: AnyObject {
+protocol StarterPresenterProtocol: AnyObject, GetLabel {
     
 }
