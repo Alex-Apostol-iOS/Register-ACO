@@ -8,3 +8,5 @@
 "lng.distribuitor" = "Distribuidor";
 "lng.seller" = "Vendedor";
 "lng.back" = "Atras";
+"lng.login" = "Entrar";
+"lng.register" = "Registrarse";
