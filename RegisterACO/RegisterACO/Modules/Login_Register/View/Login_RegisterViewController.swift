@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Login_RegisterViewController: UIViewController {
+class Login_RegisterViewController: RegisterAcoNavigationController {
     
     let presenter: Login_RegisterPresenterProtocol
         

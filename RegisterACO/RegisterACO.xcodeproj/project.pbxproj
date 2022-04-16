@@ -53,6 +53,7 @@
 		B40D317D280AD27F002C1396 /* Login_RegisterDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D3173280AD27F002C1396 /* Login_RegisterDataManagerProtocol.swift */; };
 		B40D317E280AD27F002C1396 /* Login_RegisterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D3174280AD27F002C1396 /* Login_RegisterOutput.swift */; };
 		B40D317F280AD27F002C1396 /* Login_RegisterDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D3175280AD27F002C1396 /* Login_RegisterDataManager.swift */; };
+		B40D3188280AD5F5002C1396 /* RegisterAcoNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D3187280AD5F5002C1396 /* RegisterAcoNavigationController.swift */; };
 		C7DD8466CA29468BFF1F049B /* Pods_RegisterACO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 590A60A5953D89FCABD09D0F /* Pods_RegisterACO.framework */; };
 /* End PBXBuildFile section */
 
@@ -110,6 +111,7 @@
 		B40D3173280AD27F002C1396 /* Login_RegisterDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_RegisterDataManagerProtocol.swift; sourceTree = "<group>"; };
 		B40D3174280AD27F002C1396 /* Login_RegisterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_RegisterOutput.swift; sourceTree = "<group>"; };
 		B40D3175280AD27F002C1396 /* Login_RegisterDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_RegisterDataManager.swift; sourceTree = "<group>"; };
+		B40D3187280AD5F5002C1396 /* RegisterAcoNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAcoNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,7 +273,8 @@
 		B40D31432809619C002C1396 /* Componenets */ = {
 			isa = PBXGroup;
 			children = (
-				B40D3144280961BC002C1396 /* RegisterACOButton.swift */,
+				B40D3186280AD5E6002C1396 /* NavigationController */,
+				B40D3185280AD5DE002C1396 /* Buttons */,
 			);
 			path = Componenets;
 			sourceTree = "<group>";
@@ -379,6 +382,22 @@
 				B40D3171280AD27F002C1396 /* Login_RegisterBuilder.swift */,
 			);
 			path = Builder;
+			sourceTree = "<group>";
+		};
+		B40D3185280AD5DE002C1396 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				B40D3144280961BC002C1396 /* RegisterACOButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		B40D3186280AD5E6002C1396 /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				B40D3187280AD5F5002C1396 /* RegisterAcoNavigationController.swift */,
+			);
+			path = NavigationController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -512,6 +531,7 @@
 				B40D317B280AD27F002C1396 /* Login_RegisterBuilder.swift in Sources */,
 				B40D317C280AD27F002C1396 /* Login_RegisterInteractor.swift in Sources */,
 				B40D3136280863FB002C1396 /* StarterViewControllerProtocol.swift in Sources */,
+				B40D3188280AD5F5002C1396 /* RegisterAcoNavigationController.swift in Sources */,
 				B40D3145280961BC002C1396 /* RegisterACOButton.swift in Sources */,
 				B40D317D280AD27F002C1396 /* Login_RegisterDataManagerProtocol.swift in Sources */,
 				B40D313B280863FB002C1396 /* StarterDataManagerProtocol.swift in Sources */,

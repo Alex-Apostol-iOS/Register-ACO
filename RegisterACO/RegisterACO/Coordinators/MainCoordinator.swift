@@ -60,7 +60,6 @@ class MainCoordinator: Coordinator {
                 self.loop()
             }
         }.build()
-        vc.view.backgroundColor = .white
         self.navigator.setViewControllers([vc], animated: true)
     }
     
@@ -68,7 +67,6 @@ class MainCoordinator: Coordinator {
         let vc = Login_RegisterBuilder(type: type) { _ in
             
         }.build()
-        vc.view.backgroundColor = .red
         self.navigator.pushViewController(vc, animated: true)
     }
     

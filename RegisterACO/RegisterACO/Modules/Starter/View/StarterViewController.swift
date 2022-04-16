@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StarterViewController: UIViewController {
+class StarterViewController: RegisterAcoNavigationController {
     
     private let presenter: StarterPresenterProtocol
     
@@ -46,6 +46,16 @@ class StarterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpMainStackViewLayout()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     private func setUpMainStackViewLayout()  {
