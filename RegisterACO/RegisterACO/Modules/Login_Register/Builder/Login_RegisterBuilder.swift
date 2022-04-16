@@ -10,18 +10,25 @@ import Foundation
 import UIKit
 
 class Login_RegisterBuilder: Builder {
-    var coordinatorOutput: (Login_RegisterOutput) -> Void
+    private var coordinatorOutput: (Login_RegisterOutput) -> Void
+    private let type: LoginRegisterUserType
     
-    init(coordinatorOutput: @escaping (Login_RegisterOutput) -> Void) {
+    init(type: LoginRegisterUserType, coordinatorOutput: @escaping (Login_RegisterOutput) -> Void) {
+        self.type = type
         self.coordinatorOutput = coordinatorOutput
     }
     func build() -> UIViewController {
         let dataManager = Login_RegisterDataManager()
         let interactor = Login_RegisterInteractor(dataManager: dataManager)
-        let presenter = Login_RegisterPresenter(interactor: interactor, coordinnatorOutput: coordinatorOutput)
+        let presenter = Login_RegisterPresenter(type: type, interactor: interactor, coordinnatorOutput: coordinatorOutput)
         let view = Login_RegisterViewController(presenter: presenter)
         presenter.view = view
         return view
     }
     
+}
+
+enum LoginRegisterUserType {
+    case seller
+    case distribuitor
 }

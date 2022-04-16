@@ -20,5 +20,7 @@ class StarterPresenter {
 }
 
 extension StarterPresenter: StarterPresenterProtocol {
-    
+    func didTapUserButton(type: LoginRegisterUserType) {
+        self.coordinatorOutput(.willShowLoginRegisterView(type: type))
+    }
 }

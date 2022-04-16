@@ -56,11 +56,11 @@ class StarterViewController: UIViewController {
     }
     
     private func didPressSellerButton() {
-        
+        presenter.didTapUserButton(type: .seller)
     }
     
     private func didPressDistributorButton() {
-        
+        presenter.didTapUserButton(type: .distribuitor)
     }
     
 }

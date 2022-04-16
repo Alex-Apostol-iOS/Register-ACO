@@ -14,6 +14,8 @@ class MainCoordinator: Coordinator {
     enum MainCoordinatorState {
         case initial
         case willShowLogin
+        case didShowLogin(type: LoginRegisterUserType)
+        case willShowLoginRegisterFlow(type: LoginRegisterUserType)
     }
     
     private var state: MainCoordinatorState
@@ -32,7 +34,9 @@ class MainCoordinator: Coordinator {
         switch  self.state {
         case .willShowLogin:
             showLoginFlow()
-        case .initial:
+        case .willShowLoginRegisterFlow(type: let type):
+            showLoginRegister(type: type)
+        case .initial, .didShowLogin(type: _):
             fatalError("Unexpected Case in Main Coordinator")
         }
     }
@@ -41,17 +45,31 @@ class MainCoordinator: Coordinator {
         switch nextState {
         case .initial:
             return .willShowLogin
-        case .willShowLogin:
+        case .didShowLogin(type: let type):
+            return .willShowLoginRegisterFlow(type: type)
+        case .willShowLogin, .willShowLoginRegisterFlow(type: _):
             return nextState
         }
     }
     
     private func showLoginFlow() {
-        let vc = StarterBuilder { _ in
-            
+        let vc = StarterBuilder { output in
+            switch output {
+            case .willShowLoginRegisterView(let type):
+                self.state = .didShowLogin(type: type)
+                self.loop()
+            }
         }.build()
         vc.view.backgroundColor = .white
         self.navigator.setViewControllers([vc], animated: true)
+    }
+    
+    private func showLoginRegister(type: LoginRegisterUserType) {
+        let vc = Login_RegisterBuilder(type: type) { _ in
+            
+        }.build()
+        vc.view.backgroundColor = .red
+        self.navigator.pushViewController(vc, animated: true)
     }
     
 }

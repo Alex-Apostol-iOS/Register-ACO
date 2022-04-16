@@ -20,6 +20,7 @@ class RegisterACOButton: UIButton {
     private var buttonAction: (() -> Void)?
     
     func config(buttonStyle: ButtonStyle, title: String, action: @escaping() -> Void) {
+        self.buttonAction = action
         self.addTarget(self, action: #selector(didPressButton), for: .touchUpInside)
         let attributeString = NSAttributedString(string: title, attributes: [NSAttributedString.Key.font : UIFont.theme(id: .regular18), NSAttributedString.Key.foregroundColor: UIColor.white])
         DispatchQueue.main.async {

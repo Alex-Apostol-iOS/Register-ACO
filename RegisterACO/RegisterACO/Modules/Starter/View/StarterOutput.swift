@@ -9,4 +9,5 @@
 import Foundation
 
 enum StarterOutput {
+    case willShowLoginRegisterView(type: LoginRegisterUserType)
 }

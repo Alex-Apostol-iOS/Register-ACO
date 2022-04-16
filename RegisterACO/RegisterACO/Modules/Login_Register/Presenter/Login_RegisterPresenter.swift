@@ -9,11 +9,13 @@
 import Foundation
 
 class Login_RegisterPresenter {
-    var interactor: Login_RegisterInteractorProtocol
+    private var interactor: Login_RegisterInteractorProtocol
     weak var view: Login_RegisterViewProtocol?
-    var coordinatorOutput: (Login_RegisterOutput) -> Void
+    private var coordinatorOutput: (Login_RegisterOutput) -> Void
+    private let type: LoginRegisterUserType
 
-    init(interactor: Login_RegisterInteractorProtocol, coordinnatorOutput: @escaping (Login_RegisterOutput) -> Void) {
+    init(type: LoginRegisterUserType, interactor: Login_RegisterInteractorProtocol, coordinnatorOutput: @escaping (Login_RegisterOutput) -> Void) {
+        self.type = type
         self.interactor = interactor
         self.coordinatorOutput = coordinnatorOutput
     }
