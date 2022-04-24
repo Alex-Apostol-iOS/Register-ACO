@@ -9,7 +9,7 @@ import UIKit
 
 class RegisterACOTextField: UIStackView {
     
-    private lazy var textField: UITextField = {
+     lazy var textField: UITextField = {
         let textField = UITextField(frame: .zero)
         textField.font = UIFont.theme(id: .medium16)
         textField.textColor = UIColor.theme(.baseLight20)
@@ -61,6 +61,7 @@ class RegisterACOTextField: UIStackView {
         textField.placeholder = placeHolder
         textField.isSecureTextEntry = isSecureText
         setUpRightView(isSecureText: isSecureText)
+        
     }
     
     private func setUpRightView(isSecureText: Bool) {

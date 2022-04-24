@@ -18,3 +18,4 @@
 "lng.commonPhone" = "Telefono";
 "lng.commonPassword" = "Contraseña";
 "lng.commonPasswordConfirm" = "Confirma tu Contraseña";
+"lng.commonSubmit" = "Enviar";

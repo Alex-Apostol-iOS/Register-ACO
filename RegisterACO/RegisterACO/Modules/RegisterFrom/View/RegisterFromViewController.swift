@@ -79,8 +79,16 @@ class RegisterFromViewController: RegisterAcoNavigationController {
         return content
     }()
     
+    private lazy var submitButton: RegisterACOButton = {
+        let button = RegisterACOButton(frame: .zero)
+        button.config(buttonStyle: .primary, title: presenter.getlabelForKey(key: "lng.commonSubmit"), action: submitForm)
+        return button
+    }()
+    
     private lazy var mainStackView: UIStackView = {
-       let stackView = UIStackView(arrangedSubviews: [nameTextField, surnameTextField, secondSurnameTextField, emailTextField, phoneTextField,passwordTextField, passwordConfirmTextField, FreeSpaceView()])
+        let view = FreeSpaceView()
+        view.heightAnchor.constraint(equalToConstant: 40).isActive = true
+       let stackView = UIStackView(arrangedSubviews: [nameTextField, surnameTextField, secondSurnameTextField, emailTextField, phoneTextField,passwordTextField, passwordConfirmTextField, FreeSpaceView(), submitButton, view])
         stackView.distribution  = .fill
         stackView.alignment = .fill
         stackView.axis = .vertical
@@ -135,9 +143,18 @@ class RegisterFromViewController: RegisterAcoNavigationController {
         customContentView.topAnchor.constraint(equalTo: scrollView.topAnchor).isActive = true
         customContentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor).isActive = true
         customContentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor).isActive = true
-        customContentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
+        customContentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -80).isActive = true
         customContentView.widthAnchor.constraint(equalTo:    self.view.widthAnchor).isActive = true
         customContentView.heightAnchor.constraint(greaterThanOrEqualTo:  self.view.heightAnchor).isActive = true
+    }
+    
+    @objc
+    private func submitForm() {
+        
+    }
+    
+    @objc private func nameTextFieldValidation() {
+       
     }
     
 }

@@ -19,4 +19,5 @@
 "lng.commonPhone" = "Phone";
 "lng.commonPassword" = "Password";
 "lng.commonPasswordConfirm" = "Confirm Password";
+"lng.commonSubmit" = "Submit";
 
