@@ -26,7 +26,7 @@ class RegisterFromViewController: RegisterAcoNavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Register"
+        configTitle(title: presenter.getlabelForKey(key: "lng.registerFormNavTitle"))
     }
     
 }

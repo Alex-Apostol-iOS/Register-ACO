@@ -10,3 +10,4 @@
 "lng.back" = "Atras";
 "lng.login" = "Entrar";
 "lng.register" = "Registrarse";
+"lng.registerFormNavTitle" = "Formulario de inscripción";

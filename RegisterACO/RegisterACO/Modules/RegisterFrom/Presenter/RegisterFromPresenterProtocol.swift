@@ -8,5 +8,5 @@
 
 import Foundation
 
-protocol RegisterFromPresenterProtocol: AnyObject {
+protocol RegisterFromPresenterProtocol: AnyObject, GetLabel {
 }

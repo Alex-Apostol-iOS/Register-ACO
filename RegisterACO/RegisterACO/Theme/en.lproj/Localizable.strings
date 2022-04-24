@@ -11,3 +11,4 @@
 "lng.back" = "Back";
 "lng.login" = "Login";
 "lng.register" = "Register";
+"lng.registerFormNavTitle" = "Register form";

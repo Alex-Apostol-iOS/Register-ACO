@@ -42,8 +42,15 @@ class RegisterAcoNavigationController: UIViewController, GetLabel {
         appearance.shadowImage = UIImage()
         appearance.shadowColor = .clear
         appearance.backgroundImage = UIImage()
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
         self.navigationController?.navigationBar.standardAppearance = appearance;
         self.navigationController?.navigationBar.scrollEdgeAppearance = self.navigationController?.navigationBar.standardAppearance
+    }
+    
+    func configTitle(title: String) {
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.theme(id: .bold14), NSAttributedString.Key.foregroundColor: UIColor.white]
+        self.title = title
     }
 }
 
