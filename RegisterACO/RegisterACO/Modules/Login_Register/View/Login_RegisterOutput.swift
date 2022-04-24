@@ -9,4 +9,6 @@
 import Foundation
 
 enum Login_RegisterOutput {
+    case goToRegisterForm
+    case goToLogin
 }

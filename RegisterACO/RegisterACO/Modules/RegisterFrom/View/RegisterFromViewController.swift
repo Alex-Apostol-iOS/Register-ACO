@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import SwiftUI
 
-class RegisterFromViewController: UIViewController {
+class RegisterFromViewController: RegisterAcoNavigationController {
     
-    let presenter: RegisterFromPresenterProtocol
+    private let presenter: RegisterFromPresenterProtocol
+    @StateObject private var viewModel = RegisterFormViewModel()
         
     init (presenter: RegisterFromPresenterProtocol) {
         self.presenter = presenter
@@ -24,6 +26,7 @@ class RegisterFromViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Register"
     }
     
 }

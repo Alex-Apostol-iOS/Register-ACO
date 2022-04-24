@@ -9,5 +9,4 @@
 import UIKit
 
 protocol Login_RegisterViewProtocol: AnyObject {
-    
 }

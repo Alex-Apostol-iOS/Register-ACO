@@ -14,7 +14,7 @@ class Login_RegisterViewController: RegisterAcoNavigationController {
     
     private lazy var registerButton: RegisterACOButton = {
         let button = RegisterACOButton(frame: .zero)
-        button.config(buttonStyle: .primary, title: presenter.getlabelForKey(key: "lng.register"), action: didTapLoginButton)
+        button.config(buttonStyle: .primary, title: presenter.getlabelForKey(key: "lng.register"), action: didTapRegisterButton)
         return button
     }()
     
@@ -60,7 +60,7 @@ class Login_RegisterViewController: RegisterAcoNavigationController {
     }
     
     private func didTapRegisterButton() {
-        
+        presenter.didTapRegisterButton()
     }
     
 }

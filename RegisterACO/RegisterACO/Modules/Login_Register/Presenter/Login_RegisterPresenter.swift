@@ -22,5 +22,7 @@ class Login_RegisterPresenter {
 }
 
 extension Login_RegisterPresenter: Login_RegisterPresenterProtocol {
-    
+    func didTapRegisterButton() {
+        coordinatorOutput(.goToRegisterForm)
+    }
 }

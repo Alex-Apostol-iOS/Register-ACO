@@ -20,5 +20,4 @@ class RegisterFromPresenter {
 }
 
 extension RegisterFromPresenter: RegisterFromPresenterProtocol {
-    
 }

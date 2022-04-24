@@ -9,5 +9,5 @@
 import Foundation
 
 protocol Login_RegisterPresenterProtocol: AnyObject, GetLabel {
-    
+    func didTapRegisterButton()
 }

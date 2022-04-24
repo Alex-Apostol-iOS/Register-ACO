@@ -9,5 +9,4 @@
 import UIKit
 
 protocol RegisterFromViewProtocol: AnyObject {
-    
 }

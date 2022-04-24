@@ -16,6 +16,9 @@ class MainCoordinator: Coordinator {
         case willShowLogin
         case didShowLogin(type: LoginRegisterUserType)
         case willShowLoginRegisterFlow(type: LoginRegisterUserType)
+        case didShowLoginRegisterFlow(ouput: Login_RegisterOutput)
+        case willShowRegisterForm
+        case willShowLoginFromLoginRegiser
     }
     
     private var state: MainCoordinatorState
@@ -36,7 +39,11 @@ class MainCoordinator: Coordinator {
             showLoginFlow()
         case .willShowLoginRegisterFlow(type: let type):
             showLoginRegister(type: type)
-        case .initial, .didShowLogin(type: _):
+        case .willShowRegisterForm:
+            showRegisterForm()
+        case .willShowLoginFromLoginRegiser:
+            break
+        case .initial, .didShowLogin(type: _), .didShowLoginRegisterFlow:
             fatalError("Unexpected Case in Main Coordinator")
         }
     }
@@ -47,7 +54,14 @@ class MainCoordinator: Coordinator {
             return .willShowLogin
         case .didShowLogin(type: let type):
             return .willShowLoginRegisterFlow(type: type)
-        case .willShowLogin, .willShowLoginRegisterFlow(type: _):
+        case .didShowLoginRegisterFlow(ouput: let ouput):
+            switch ouput {
+            case .goToRegisterForm:
+                return .willShowRegisterForm
+            case .goToLogin:
+                return .willShowLoginFromLoginRegiser
+            }
+        case .willShowLogin, .willShowLoginRegisterFlow(type: _), .willShowRegisterForm, .willShowLoginFromLoginRegiser:
             return nextState
         }
     }
@@ -64,10 +78,24 @@ class MainCoordinator: Coordinator {
     }
     
     private func showLoginRegister(type: LoginRegisterUserType) {
-        let vc = Login_RegisterBuilder(type: type) { _ in
-            
+        let vc = Login_RegisterBuilder(type: type) { output in
+            switch output {
+            case .goToRegisterForm:
+                self.state = .didShowLoginRegisterFlow(ouput: .goToRegisterForm)
+                self.loop()
+            case .goToLogin:
+                self.state = .didShowLoginRegisterFlow(ouput: .goToLogin)
+                self.loop()
+            }
         }.build()
         self.navigator.pushViewController(vc, animated: true)
+    }
+    
+    private func showRegisterForm() {
+        let vc = RegisterFromBuilder { _ in
+            
+        }.build()
+        navigator.pushViewController(vc, animated: true)
     }
     
 }
