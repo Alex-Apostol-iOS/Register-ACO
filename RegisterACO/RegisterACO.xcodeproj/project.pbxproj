@@ -54,6 +54,16 @@
 		B40D317E280AD27F002C1396 /* Login_RegisterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D3174280AD27F002C1396 /* Login_RegisterOutput.swift */; };
 		B40D317F280AD27F002C1396 /* Login_RegisterDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D3175280AD27F002C1396 /* Login_RegisterDataManager.swift */; };
 		B40D3188280AD5F5002C1396 /* RegisterAcoNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D3187280AD5F5002C1396 /* RegisterAcoNavigationController.swift */; };
+		B44386F42815373F00ADACC5 /* RegisterFromInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44386EA2815373F00ADACC5 /* RegisterFromInteractorProtocol.swift */; };
+		B44386F52815373F00ADACC5 /* RegisterFromPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44386EB2815373F00ADACC5 /* RegisterFromPresenter.swift */; };
+		B44386F62815373F00ADACC5 /* RegisterFromViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44386EC2815373F00ADACC5 /* RegisterFromViewControllerProtocol.swift */; };
+		B44386F72815373F00ADACC5 /* RegisterFromPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44386ED2815373F00ADACC5 /* RegisterFromPresenterProtocol.swift */; };
+		B44386F82815373F00ADACC5 /* RegisterFromViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44386EE2815373F00ADACC5 /* RegisterFromViewController.swift */; };
+		B44386F92815373F00ADACC5 /* RegisterFromBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44386EF2815373F00ADACC5 /* RegisterFromBuilder.swift */; };
+		B44386FA2815373F00ADACC5 /* RegisterFromInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44386F02815373F00ADACC5 /* RegisterFromInteractor.swift */; };
+		B44386FB2815373F00ADACC5 /* RegisterFromDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44386F12815373F00ADACC5 /* RegisterFromDataManagerProtocol.swift */; };
+		B44386FC2815373F00ADACC5 /* RegisterFromOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44386F22815373F00ADACC5 /* RegisterFromOutput.swift */; };
+		B44386FD2815373F00ADACC5 /* RegisterFromDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44386F32815373F00ADACC5 /* RegisterFromDataManager.swift */; };
 		C7DD8466CA29468BFF1F049B /* Pods_RegisterACO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 590A60A5953D89FCABD09D0F /* Pods_RegisterACO.framework */; };
 /* End PBXBuildFile section */
 
@@ -112,6 +122,16 @@
 		B40D3174280AD27F002C1396 /* Login_RegisterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_RegisterOutput.swift; sourceTree = "<group>"; };
 		B40D3175280AD27F002C1396 /* Login_RegisterDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_RegisterDataManager.swift; sourceTree = "<group>"; };
 		B40D3187280AD5F5002C1396 /* RegisterAcoNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAcoNavigationController.swift; sourceTree = "<group>"; };
+		B44386EA2815373F00ADACC5 /* RegisterFromInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFromInteractorProtocol.swift; sourceTree = "<group>"; };
+		B44386EB2815373F00ADACC5 /* RegisterFromPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFromPresenter.swift; sourceTree = "<group>"; };
+		B44386EC2815373F00ADACC5 /* RegisterFromViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFromViewControllerProtocol.swift; sourceTree = "<group>"; };
+		B44386ED2815373F00ADACC5 /* RegisterFromPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFromPresenterProtocol.swift; sourceTree = "<group>"; };
+		B44386EE2815373F00ADACC5 /* RegisterFromViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFromViewController.swift; sourceTree = "<group>"; };
+		B44386EF2815373F00ADACC5 /* RegisterFromBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFromBuilder.swift; sourceTree = "<group>"; };
+		B44386F02815373F00ADACC5 /* RegisterFromInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFromInteractor.swift; sourceTree = "<group>"; };
+		B44386F12815373F00ADACC5 /* RegisterFromDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFromDataManagerProtocol.swift; sourceTree = "<group>"; };
+		B44386F22815373F00ADACC5 /* RegisterFromOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFromOutput.swift; sourceTree = "<group>"; };
+		B44386F32815373F00ADACC5 /* RegisterFromDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFromDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +239,7 @@
 		B40D3129280863D0002C1396 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				B44386E92815372200ADACC5 /* RegisterFrom */,
 				B40D316B280AD242002C1396 /* Login_Register */,
 				B40D316A280AD22D002C1396 /* Starter */,
 			);
@@ -400,6 +421,63 @@
 			path = NavigationController;
 			sourceTree = "<group>";
 		};
+		B44386E92815372200ADACC5 /* RegisterFrom */ = {
+			isa = PBXGroup;
+			children = (
+				B44387022815375C00ADACC5 /* Builder */,
+				B44387012815375500ADACC5 /* DataManager */,
+				B44387002815374F00ADACC5 /* Interactor */,
+				B44386FF2815374900ADACC5 /* Presenter */,
+				B44386FE2815374400ADACC5 /* View */,
+			);
+			path = RegisterFrom;
+			sourceTree = "<group>";
+		};
+		B44386FE2815374400ADACC5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B44386F22815373F00ADACC5 /* RegisterFromOutput.swift */,
+				B44386EE2815373F00ADACC5 /* RegisterFromViewController.swift */,
+				B44386EC2815373F00ADACC5 /* RegisterFromViewControllerProtocol.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B44386FF2815374900ADACC5 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B44386ED2815373F00ADACC5 /* RegisterFromPresenterProtocol.swift */,
+				B44386EB2815373F00ADACC5 /* RegisterFromPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B44387002815374F00ADACC5 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B44386EA2815373F00ADACC5 /* RegisterFromInteractorProtocol.swift */,
+				B44386F02815373F00ADACC5 /* RegisterFromInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B44387012815375500ADACC5 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				B44386F12815373F00ADACC5 /* RegisterFromDataManagerProtocol.swift */,
+				B44386F32815373F00ADACC5 /* RegisterFromDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		B44387022815375C00ADACC5 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				B44386EF2815373F00ADACC5 /* RegisterFromBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -528,29 +606,38 @@
 				B40D317F280AD27F002C1396 /* Login_RegisterDataManager.swift in Sources */,
 				B40D3137280863FB002C1396 /* StarterPresenterProtocol.swift in Sources */,
 				B40D314828098A2F002C1396 /* RegisterACOColor.swift in Sources */,
+				B44386F62815373F00ADACC5 /* RegisterFromViewControllerProtocol.swift in Sources */,
 				B40D317B280AD27F002C1396 /* Login_RegisterBuilder.swift in Sources */,
 				B40D317C280AD27F002C1396 /* Login_RegisterInteractor.swift in Sources */,
+				B44386F42815373F00ADACC5 /* RegisterFromInteractorProtocol.swift in Sources */,
 				B40D3136280863FB002C1396 /* StarterViewControllerProtocol.swift in Sources */,
 				B40D3188280AD5F5002C1396 /* RegisterAcoNavigationController.swift in Sources */,
 				B40D3145280961BC002C1396 /* RegisterACOButton.swift in Sources */,
 				B40D317D280AD27F002C1396 /* Login_RegisterDataManagerProtocol.swift in Sources */,
 				B40D313B280863FB002C1396 /* StarterDataManagerProtocol.swift in Sources */,
 				B40D315D28098E7A002C1396 /* RegisterACOFont.swift in Sources */,
+				B44386FC2815373F00ADACC5 /* RegisterFromOutput.swift in Sources */,
 				B40D313A280863FB002C1396 /* StarterInteractor.swift in Sources */,
+				B44386F82815373F00ADACC5 /* RegisterFromViewController.swift in Sources */,
+				B44386FD2815373F00ADACC5 /* RegisterFromDataManager.swift in Sources */,
 				B40D3138280863FB002C1396 /* StarterViewController.swift in Sources */,
 				B40D3139280863FB002C1396 /* StarterBuilder.swift in Sources */,
 				B40D3107280858AE002C1396 /* RegisterACO.xcdatamodeld in Sources */,
 				B40D312028085A54002C1396 /* Builder.swift in Sources */,
 				B40D3179280AD27F002C1396 /* Login_RegisterPresenterProtocol.swift in Sources */,
+				B44386F92815373F00ADACC5 /* RegisterFromBuilder.swift in Sources */,
 				B40D317E280AD27F002C1396 /* Login_RegisterOutput.swift in Sources */,
 				B40D317A280AD27F002C1396 /* Login_RegisterViewController.swift in Sources */,
+				B44386FB2815373F00ADACC5 /* RegisterFromDataManagerProtocol.swift in Sources */,
 				B40D30FD280858AE002C1396 /* AppDelegate.swift in Sources */,
 				B40D311728085A41002C1396 /* ServiceProxy.swift in Sources */,
 				B40D313C280863FB002C1396 /* StarterOutput.swift in Sources */,
 				B40D3176280AD27F002C1396 /* Login_RegisterInteractorProtocol.swift in Sources */,
 				B40D312428085A54002C1396 /* Coordinator.swift in Sources */,
 				B40D3178280AD27F002C1396 /* Login_RegisterViewControllerProtocol.swift in Sources */,
+				B44386F72815373F00ADACC5 /* RegisterFromPresenterProtocol.swift in Sources */,
 				B40D311828085A41002C1396 /* Endpoint.swift in Sources */,
+				B44386FA2815373F00ADACC5 /* RegisterFromInteractor.swift in Sources */,
 				B40D3134280863FB002C1396 /* StarterInteractorProtocol.swift in Sources */,
 				B40D313D280863FB002C1396 /* StarterDataManager.swift in Sources */,
 				B40D3177280AD27F002C1396 /* Login_RegisterPresenter.swift in Sources */,
@@ -558,6 +645,7 @@
 				B40D312828085A62002C1396 /* MainCoordinator.swift in Sources */,
 				B40D3169280AB173002C1396 /* LabelsProtocol.swift in Sources */,
 				B40D30FF280858AE002C1396 /* SceneDelegate.swift in Sources */,
+				B44386F52815373F00ADACC5 /* RegisterFromPresenter.swift in Sources */,
 				B40D31602809C465002C1396 /* UIView+extensions.swift in Sources */,
 				B40D3135280863FB002C1396 /* StarterPresenter.swift in Sources */,
 			);
