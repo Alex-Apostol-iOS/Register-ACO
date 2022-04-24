@@ -65,6 +65,7 @@
 		B44386FC2815373F00ADACC5 /* RegisterFromOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44386F22815373F00ADACC5 /* RegisterFromOutput.swift */; };
 		B44386FD2815373F00ADACC5 /* RegisterFromDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44386F32815373F00ADACC5 /* RegisterFromDataManager.swift */; };
 		B4438704281556DB00ADACC5 /* RegisterFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4438703281556DB00ADACC5 /* RegisterFormViewModel.swift */; };
+		B44387072815917500ADACC5 /* RegisterACOTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44387062815917500ADACC5 /* RegisterACOTextField.swift */; };
 		C7DD8466CA29468BFF1F049B /* Pods_RegisterACO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 590A60A5953D89FCABD09D0F /* Pods_RegisterACO.framework */; };
 /* End PBXBuildFile section */
 
@@ -134,6 +135,7 @@
 		B44386F22815373F00ADACC5 /* RegisterFromOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFromOutput.swift; sourceTree = "<group>"; };
 		B44386F32815373F00ADACC5 /* RegisterFromDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFromDataManager.swift; sourceTree = "<group>"; };
 		B4438703281556DB00ADACC5 /* RegisterFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFormViewModel.swift; sourceTree = "<group>"; };
+		B44387062815917500ADACC5 /* RegisterACOTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterACOTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -296,6 +298,7 @@
 		B40D31432809619C002C1396 /* Componenets */ = {
 			isa = PBXGroup;
 			children = (
+				B44387052815916300ADACC5 /* TextField */,
 				B40D3186280AD5E6002C1396 /* NavigationController */,
 				B40D3185280AD5DE002C1396 /* Buttons */,
 			);
@@ -481,6 +484,14 @@
 			path = Builder;
 			sourceTree = "<group>";
 		};
+		B44387052815916300ADACC5 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				B44387062815917500ADACC5 /* RegisterACOTextField.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -645,6 +656,7 @@
 				B40D3134280863FB002C1396 /* StarterInteractorProtocol.swift in Sources */,
 				B40D313D280863FB002C1396 /* StarterDataManager.swift in Sources */,
 				B40D3177280AD27F002C1396 /* Login_RegisterPresenter.swift in Sources */,
+				B44387072815917500ADACC5 /* RegisterACOTextField.swift in Sources */,
 				B40D312128085A54002C1396 /* Loader.swift in Sources */,
 				B40D312828085A62002C1396 /* MainCoordinator.swift in Sources */,
 				B40D3169280AB173002C1396 /* LabelsProtocol.swift in Sources */,

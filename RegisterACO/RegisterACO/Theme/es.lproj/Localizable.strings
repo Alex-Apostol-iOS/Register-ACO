@@ -11,3 +11,10 @@
 "lng.login" = "Entrar";
 "lng.register" = "Registrarse";
 "lng.registerFormNavTitle" = "Formulario de inscripción";
+"lng.commonName" = "Nombre";
+"lng.commonSurname" = "Apellido";
+"lng.commonSecondSurname" = "Segundo Apellido";
+"lng.commonEmail" = "Correo";
+"lng.commonPhone" = "Telefono";
+"lng.commonPassword" = "Contraseña";
+"lng.commonPasswordConfirm" = "Confirma tu Contraseña";

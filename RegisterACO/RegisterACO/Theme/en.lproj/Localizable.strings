@@ -12,3 +12,11 @@
 "lng.login" = "Login";
 "lng.register" = "Register";
 "lng.registerFormNavTitle" = "Register form";
+"lng.commonName" = "Name";
+"lng.commonSurname" = "Surname";
+"lng.commonSecondSurname" = "Second Surname";
+"lng.commonEmail" = "Email";
+"lng.commonPhone" = "Phone";
+"lng.commonPassword" = "Password";
+"lng.commonPasswordConfirm" = "Confirm Password";
+
