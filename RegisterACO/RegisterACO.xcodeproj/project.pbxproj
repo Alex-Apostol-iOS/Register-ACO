@@ -66,6 +66,7 @@
 		B44386FD2815373F00ADACC5 /* RegisterFromDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44386F32815373F00ADACC5 /* RegisterFromDataManager.swift */; };
 		B4438704281556DB00ADACC5 /* RegisterFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4438703281556DB00ADACC5 /* RegisterFormViewModel.swift */; };
 		B44387072815917500ADACC5 /* RegisterACOTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44387062815917500ADACC5 /* RegisterACOTextField.swift */; };
+		B4B531AA281ED18000D49EE5 /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B531A9281ED18000D49EE5 /* UITextField+Extensions.swift */; };
 		C7DD8466CA29468BFF1F049B /* Pods_RegisterACO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 590A60A5953D89FCABD09D0F /* Pods_RegisterACO.framework */; };
 /* End PBXBuildFile section */
 
@@ -136,6 +137,7 @@
 		B44386F32815373F00ADACC5 /* RegisterFromDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFromDataManager.swift; sourceTree = "<group>"; };
 		B4438703281556DB00ADACC5 /* RegisterFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFormViewModel.swift; sourceTree = "<group>"; };
 		B44387062815917500ADACC5 /* RegisterACOTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterACOTextField.swift; sourceTree = "<group>"; };
+		B4B531A9281ED18000D49EE5 /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -337,6 +339,7 @@
 			children = (
 				B40D315F2809C465002C1396 /* UIView+extensions.swift */,
 				B40D3168280AB173002C1396 /* LabelsProtocol.swift */,
+				B4B531A9281ED18000D49EE5 /* UITextField+Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -626,6 +629,7 @@
 				B44386F42815373F00ADACC5 /* RegisterFromInteractorProtocol.swift in Sources */,
 				B40D3136280863FB002C1396 /* StarterViewControllerProtocol.swift in Sources */,
 				B40D3188280AD5F5002C1396 /* RegisterAcoNavigationController.swift in Sources */,
+				B4B531AA281ED18000D49EE5 /* UITextField+Extensions.swift in Sources */,
 				B40D3145280961BC002C1396 /* RegisterACOButton.swift in Sources */,
 				B40D317D280AD27F002C1396 /* Login_RegisterDataManagerProtocol.swift in Sources */,
 				B40D313B280863FB002C1396 /* StarterDataManagerProtocol.swift in Sources */,

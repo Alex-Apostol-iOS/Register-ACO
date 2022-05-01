@@ -13,6 +13,16 @@ class RegisterACOButton: UIButton {
         super.init(frame: frame)
     }
     
+    override var isEnabled: Bool {
+        didSet {
+            if isEnabled {
+                self.alpha = 1.0
+            } else {
+                self.alpha = 0.5
+            }
+        }
+    }
+    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }

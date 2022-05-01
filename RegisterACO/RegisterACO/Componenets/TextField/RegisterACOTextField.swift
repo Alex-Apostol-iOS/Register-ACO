@@ -6,10 +6,21 @@
 //
 
 import UIKit
+import Combine
 
 class RegisterACOTextField: UIStackView {
     
-     lazy var textField: UITextField = {
+    enum TextFieldType {
+        case email
+        case password
+        case phone
+        case number
+        case text
+    }
+    
+    private var fieldType: TextFieldType = .text
+    
+     private lazy var textField: UITextField = {
         let textField = UITextField(frame: .zero)
         textField.font = UIFont.theme(id: .medium16)
         textField.textColor = UIColor.theme(.baseLight20)
@@ -31,6 +42,18 @@ class RegisterACOTextField: UIStackView {
             } else {
                 textFieldRightView.setImage(UIImage(systemName: "eye"), for: .normal)
             }
+        }
+    }
+    
+    var text: String {
+        get {
+            return textField.text ?? ""
+        }
+    }
+    
+    var publisher: AnyPublisher<String, Never> {
+        get {
+            return textField.textPublisher
         }
     }
     
@@ -57,28 +80,38 @@ class RegisterACOTextField: UIStackView {
         self.layoutMargins = UIEdgeInsets(top: 5, left: 16, bottom: 5, right: 5)
     }
     
-    func configure(placeHolder: String, isSecureText: Bool = false) {
+    func configure(placeHolder: String, type: TextFieldType) {
         textField.placeholder = placeHolder
-        textField.isSecureTextEntry = isSecureText
-        setUpRightView(isSecureText: isSecureText)
+        
+        setUp(type: type)
         
     }
     
-    private func setUpRightView(isSecureText: Bool) {
-        if isSecureText {
+    private func setUp(type: TextFieldType) {
+        textField.clearButtonMode = .whileEditing
+        textFieldRightView.setImage(UIImage(systemName: "xmark.circle.fill")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        textFieldRightView.imageView?.sizeToFit()
+        textFieldRightView.tintColor = UIColor.theme(.baseLight20)
+        textField.rightView = textFieldRightView
+        textField.rightViewMode = .always
+        switch type {
+        case .email:
+            textFieldRightView.addTarget(self, action: #selector(clearText), for: .touchUpInside)
+            textField.textContentType = .emailAddress
+        case .password:
             textFieldRightView.setImage(UIImage(systemName: "eye")?.withRenderingMode(.alwaysTemplate), for: .normal)
             textFieldRightView.addTarget(self, action: #selector(toggleHiddenText), for: .touchUpInside)
             textFieldRightView.imageView?.sizeToFit()
-            textFieldRightView.tintColor = UIColor.theme(.baseLight20)
             textField.rightView = textFieldRightView
-            textField.rightViewMode = .always
-        } else {
-            textField.clearButtonMode = .whileEditing
-            textFieldRightView.setImage(UIImage(systemName: "xmark.circle.fill")?.withRenderingMode(.alwaysTemplate), for: .normal)
-            textFieldRightView.imageView?.sizeToFit()
-            textFieldRightView.tintColor = UIColor.theme(.baseLight20)
+            textField.isSecureTextEntry = true
+        case .phone:
             textFieldRightView.addTarget(self, action: #selector(clearText), for: .touchUpInside)
-            textField.rightView = textFieldRightView
+            textField.textContentType = .telephoneNumber
+        case .number:
+            textFieldRightView.addTarget(self, action: #selector(clearText), for: .touchUpInside)
+            textField.keyboardType = .numberPad
+        case .text:
+            textFieldRightView.addTarget(self, action: #selector(clearText), for: .touchUpInside)
         }
     }
     
@@ -90,5 +123,6 @@ class RegisterACOTextField: UIStackView {
     @objc
     private func clearText() {
         textField.text = nil
+        NotificationCenter.default.post(name: UITextField.textDidChangeNotification, object: self.textField)
     }
 }

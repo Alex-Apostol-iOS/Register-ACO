@@ -7,59 +7,92 @@
 //
 
 import UIKit
-import SwiftUI
+import Combine
 
 class RegisterFromViewController: RegisterAcoNavigationController {
     
     private let presenter: RegisterFromPresenterProtocol
-    @StateObject private var viewModel = RegisterFormViewModel()
+    var  model = RegisterFormViewModel()
+    var cancellableSet: Set<AnyCancellable> = []
+    
+    
+    
+    private var buttonSubscriber: AnyCancellable?
     
     private lazy var passwordTextField: RegisterACOTextField = {
         let textField = RegisterACOTextField(frame: .zero)
-        textField.configure(placeHolder: presenter.getlabelForKey(key: "lng.commonPassword"), isSecureText: true)
+        textField.configure(placeHolder: presenter.getlabelForKey(key: "lng.commonPassword"), type: .password)
         textField.heightAnchor.constraint(equalToConstant: 56).isActive = true
+        textField.publisher
+            .sink { text in
+                self.model.password = text
+            }.store(in: &cancellableSet)
         return textField
     }()
     
     private lazy var nameTextField: RegisterACOTextField = {
         let textField = RegisterACOTextField(frame: .zero)
-        textField.configure(placeHolder: presenter.getlabelForKey(key: "lng.commonName"))
+        textField.configure(placeHolder: presenter.getlabelForKey(key: "lng.commonName"), type: .text)
         textField.heightAnchor.constraint(equalToConstant: 56).isActive = true
+        textField.publisher
+            .sink { text in
+                self.model.firstName = text
+            }.store(in: &cancellableSet)
         return textField
     }()
     
     private lazy var surnameTextField: RegisterACOTextField = {
         let textField = RegisterACOTextField(frame: .zero)
-        textField.configure(placeHolder: presenter.getlabelForKey(key: "lng.commonSurname"))
+        textField.configure(placeHolder: presenter.getlabelForKey(key: "lng.commonSurname"), type: .text)
         textField.heightAnchor.constraint(equalToConstant: 56).isActive = true
+        textField.publisher
+            .sink { text in
+                self.model.surname = text
+            }.store(in: &cancellableSet)
         return textField
     }()
     
     private lazy var secondSurnameTextField: RegisterACOTextField = {
         let textField = RegisterACOTextField(frame: .zero)
-        textField.configure(placeHolder: presenter.getlabelForKey(key: "lng.commonSecondSurname"))
+        textField.configure(placeHolder: presenter.getlabelForKey(key: "lng.commonSecondSurname"), type: .text)
         textField.heightAnchor.constraint(equalToConstant: 56).isActive = true
+        textField.publisher
+            .sink { text in
+                self.model.secondSurname = text
+            }.store(in: &cancellableSet)
         return textField
     }()
     
     private lazy var emailTextField: RegisterACOTextField = {
         let textField = RegisterACOTextField(frame: .zero)
-        textField.configure(placeHolder: presenter.getlabelForKey(key: "lng.commonEmail"))
+        textField.configure(placeHolder: presenter.getlabelForKey(key: "lng.commonEmail"), type: .email)
         textField.heightAnchor.constraint(equalToConstant: 56).isActive = true
+        textField.publisher
+            .sink { text in
+                self.model.email = text
+            }.store(in: &cancellableSet)
         return textField
     }()
     
     private lazy var phoneTextField: RegisterACOTextField = {
         let textField = RegisterACOTextField(frame: .zero)
-        textField.configure(placeHolder: presenter.getlabelForKey(key: "lng.commonPhone"))
+        textField.configure(placeHolder: presenter.getlabelForKey(key: "lng.commonPhone"), type: .phone)
         textField.heightAnchor.constraint(equalToConstant: 56).isActive = true
+        textField.publisher
+            .sink { text in
+                self.model.phone = text
+            }.store(in: &cancellableSet)
         return textField
     }()
     
     private lazy var passwordConfirmTextField: RegisterACOTextField = {
         let textField = RegisterACOTextField(frame: .zero)
-        textField.configure(placeHolder: presenter.getlabelForKey(key: "lng.commonPasswordConfirm"), isSecureText: true)
+        textField.configure(placeHolder: presenter.getlabelForKey(key: "lng.commonPasswordConfirm"), type: .password)
         textField.heightAnchor.constraint(equalToConstant: 56).isActive = true
+        textField.publisher
+            .sink { text in
+                self.model.ConfirmedPassword = text
+            }.store(in: &cancellableSet)
         return textField
     }()
     
@@ -113,6 +146,10 @@ class RegisterFromViewController: RegisterAcoNavigationController {
         setUpScrollViewLayout()
         setUpContentViewLayout()
         setUpMainStackViewLayout()
+        
+        buttonSubscriber = model.validateCredentaials
+            .receive(on: RunLoop.main)
+            .assign(to: \.isEnabled, on: submitButton)
     }
     
     
@@ -150,7 +187,7 @@ class RegisterFromViewController: RegisterAcoNavigationController {
     
     @objc
     private func submitForm() {
-        
+        print(model)
     }
     
     @objc private func nameTextFieldValidation() {
