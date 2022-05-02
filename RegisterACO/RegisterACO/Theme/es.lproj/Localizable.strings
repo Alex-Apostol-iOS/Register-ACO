@@ -19,3 +19,4 @@
 "lng.commonPassword" = "Contraseña";
 "lng.commonPasswordConfirm" = "Confirma tu Contraseña";
 "lng.commonSubmit" = "Enviar";
+"lng.common.passwordFieldText" = "La contraseña debe contener caracteres especiales, mayusculas y numeros";

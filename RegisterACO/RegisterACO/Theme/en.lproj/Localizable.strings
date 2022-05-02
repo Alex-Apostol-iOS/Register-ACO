@@ -20,4 +20,5 @@
 "lng.commonPassword" = "Password";
 "lng.commonPasswordConfirm" = "Confirm Password";
 "lng.commonSubmit" = "Submit";
+"lng.common.passwordFieldText" = "Passord must containt special characters, uppercased, and numbers";
 

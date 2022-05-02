@@ -18,6 +18,30 @@ class RegisterACOTextField: UIStackView {
         case text
     }
     
+    private lazy var fieldLabel: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.font = UIFont.theme(id: .medium12)
+        label.textColor = UIColor.theme(.dark50)
+        label.numberOfLines = 0
+        label.isHidden = true
+        return label
+    }()
+    
+    private  lazy var textFieldStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews:  [textField])
+        stackView.distribution = .fill
+        stackView.alignment = .fill
+        stackView.axis = .vertical
+        stackView.spacing = 4
+        stackView.layer.cornerRadius = 16
+        stackView.layer.borderWidth = 1
+        stackView.layer.borderColor = UIColor.theme(.baseLight20).cgColor
+        stackView.isLayoutMarginsRelativeArrangement = true
+        stackView.layoutMargins = UIEdgeInsets(top: 5, left: 16, bottom: 5, right: 5)
+        stackView.heightAnchor.constraint(equalToConstant: 56).isActive = true
+        return stackView
+    }()
+    
     private var fieldType: TextFieldType = .text
     
      private lazy var textField: UITextField = {
@@ -68,21 +92,23 @@ class RegisterACOTextField: UIStackView {
     }
     
     private func commonInit() {
-        addArrangedSubview(textField)
+        addArrangedSubview(textFieldStackView)
+        addArrangedSubview(fieldLabel)
         self.distribution = .fill
         self.alignment = .fill
         self.axis = .vertical
         self.spacing = 4
-        self.layer.cornerRadius = 16
-        self.layer.borderWidth = 1
-        self.layer.borderColor = UIColor.theme(.baseLight20).cgColor
-        self.isLayoutMarginsRelativeArrangement = true
-        self.layoutMargins = UIEdgeInsets(top: 5, left: 16, bottom: 5, right: 5)
+//        self.layer.cornerRadius = 16
+//        self.layer.borderWidth = 1
+//        self.layer.borderColor = UIColor.theme(.baseLight20).cgColor
+//        self.isLayoutMarginsRelativeArrangement = true
+//        self.layoutMargins = UIEdgeInsets(top: 5, left: 16, bottom: 5, right: 5)
     }
     
-    func configure(placeHolder: String, type: TextFieldType) {
+    func configure(placeHolder: String, type: TextFieldType, fieldText: String? = nil) {
         textField.placeholder = placeHolder
-        
+        fieldLabel.text = fieldText
+        fieldLabel.isHidden = fieldText == nil
         setUp(type: type)
         
     }

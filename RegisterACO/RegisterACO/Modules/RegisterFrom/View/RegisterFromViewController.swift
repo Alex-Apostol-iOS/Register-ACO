@@ -12,17 +12,15 @@ import Combine
 class RegisterFromViewController: RegisterAcoNavigationController {
     
     private let presenter: RegisterFromPresenterProtocol
-    var  model = RegisterFormViewModel()
-    var cancellableSet: Set<AnyCancellable> = []
-    
-    
+    private var  model = RegisterFormViewModel()
+    private var cancellableSet: Set<AnyCancellable> = []
     
     private var buttonSubscriber: AnyCancellable?
     
     private lazy var passwordTextField: RegisterACOTextField = {
         let textField = RegisterACOTextField(frame: .zero)
-        textField.configure(placeHolder: presenter.getlabelForKey(key: "lng.commonPassword"), type: .password)
-        textField.heightAnchor.constraint(equalToConstant: 56).isActive = true
+        textField.configure(placeHolder: presenter.getlabelForKey(key: "lng.commonPassword"), type: .password, fieldText: presenter.getlabelForKey(key: "lng.common.passwordFieldText"))
+       
         textField.publisher
             .sink { text in
                 self.model.password = text
@@ -33,7 +31,7 @@ class RegisterFromViewController: RegisterAcoNavigationController {
     private lazy var nameTextField: RegisterACOTextField = {
         let textField = RegisterACOTextField(frame: .zero)
         textField.configure(placeHolder: presenter.getlabelForKey(key: "lng.commonName"), type: .text)
-        textField.heightAnchor.constraint(equalToConstant: 56).isActive = true
+       
         textField.publisher
             .sink { text in
                 self.model.firstName = text
@@ -44,7 +42,7 @@ class RegisterFromViewController: RegisterAcoNavigationController {
     private lazy var surnameTextField: RegisterACOTextField = {
         let textField = RegisterACOTextField(frame: .zero)
         textField.configure(placeHolder: presenter.getlabelForKey(key: "lng.commonSurname"), type: .text)
-        textField.heightAnchor.constraint(equalToConstant: 56).isActive = true
+       
         textField.publisher
             .sink { text in
                 self.model.surname = text
@@ -55,7 +53,7 @@ class RegisterFromViewController: RegisterAcoNavigationController {
     private lazy var secondSurnameTextField: RegisterACOTextField = {
         let textField = RegisterACOTextField(frame: .zero)
         textField.configure(placeHolder: presenter.getlabelForKey(key: "lng.commonSecondSurname"), type: .text)
-        textField.heightAnchor.constraint(equalToConstant: 56).isActive = true
+        
         textField.publisher
             .sink { text in
                 self.model.secondSurname = text
@@ -66,7 +64,7 @@ class RegisterFromViewController: RegisterAcoNavigationController {
     private lazy var emailTextField: RegisterACOTextField = {
         let textField = RegisterACOTextField(frame: .zero)
         textField.configure(placeHolder: presenter.getlabelForKey(key: "lng.commonEmail"), type: .email)
-        textField.heightAnchor.constraint(equalToConstant: 56).isActive = true
+       
         textField.publisher
             .sink { text in
                 self.model.email = text
@@ -77,7 +75,7 @@ class RegisterFromViewController: RegisterAcoNavigationController {
     private lazy var phoneTextField: RegisterACOTextField = {
         let textField = RegisterACOTextField(frame: .zero)
         textField.configure(placeHolder: presenter.getlabelForKey(key: "lng.commonPhone"), type: .phone)
-        textField.heightAnchor.constraint(equalToConstant: 56).isActive = true
+       
         textField.publisher
             .sink { text in
                 self.model.phone = text
@@ -87,8 +85,8 @@ class RegisterFromViewController: RegisterAcoNavigationController {
     
     private lazy var passwordConfirmTextField: RegisterACOTextField = {
         let textField = RegisterACOTextField(frame: .zero)
-        textField.configure(placeHolder: presenter.getlabelForKey(key: "lng.commonPasswordConfirm"), type: .password)
-        textField.heightAnchor.constraint(equalToConstant: 56).isActive = true
+        textField.configure(placeHolder: presenter.getlabelForKey(key: "lng.commonPasswordConfirm"), type: .password, fieldText: presenter.getlabelForKey(key: "lng.common.passwordFieldText"))
+       
         textField.publisher
             .sink { text in
                 self.model.ConfirmedPassword = text

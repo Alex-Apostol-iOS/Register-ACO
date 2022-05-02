@@ -13,6 +13,7 @@ extension UIColor {
         case primary50
         case red100
         case baseLight20
+        case dark50
     }
     
     convenience init(hexString: String, alpha: CGFloat = 1.0) {
@@ -44,6 +45,8 @@ extension UIColor {
             return UIColor(hexString: "#FD3C4A")
         case .baseLight20:
             return UIColor(hexString: "#91919F")
+        case .dark50:
+            return UIColor(hexString: "#212325")
         }
     }
 }
