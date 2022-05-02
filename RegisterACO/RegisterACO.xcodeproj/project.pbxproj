@@ -67,6 +67,9 @@
 		B4438704281556DB00ADACC5 /* RegisterFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4438703281556DB00ADACC5 /* RegisterFormViewModel.swift */; };
 		B44387072815917500ADACC5 /* RegisterACOTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44387062815917500ADACC5 /* RegisterACOTextField.swift */; };
 		B4B531AA281ED18000D49EE5 /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B531A9281ED18000D49EE5 /* UITextField+Extensions.swift */; };
+		B4B531AD28202FFE00D49EE5 /* DtoUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B531AC28202FFE00D49EE5 /* DtoUser.swift */; };
+		B4B531AF282030B900D49EE5 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B531AE282030B900D49EE5 /* AppManager.swift */; };
+		B4B531B12820315800D49EE5 /* Encodable+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B531B02820315800D49EE5 /* Encodable+extensions.swift */; };
 		C7DD8466CA29468BFF1F049B /* Pods_RegisterACO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 590A60A5953D89FCABD09D0F /* Pods_RegisterACO.framework */; };
 /* End PBXBuildFile section */
 
@@ -138,6 +141,9 @@
 		B4438703281556DB00ADACC5 /* RegisterFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFormViewModel.swift; sourceTree = "<group>"; };
 		B44387062815917500ADACC5 /* RegisterACOTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterACOTextField.swift; sourceTree = "<group>"; };
 		B4B531A9281ED18000D49EE5 /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
+		B4B531AC28202FFE00D49EE5 /* DtoUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DtoUser.swift; sourceTree = "<group>"; };
+		B4B531AE282030B900D49EE5 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		B4B531B02820315800D49EE5 /* Encodable+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +218,7 @@
 			children = (
 				B40D311428085A41002C1396 /* ServiceProxy.swift */,
 				B40D311528085A41002C1396 /* Endpoint */,
+				B4B531AB28202FD900D49EE5 /* Entities */,
 			);
 			path = NetWork;
 			sourceTree = "<group>";
@@ -340,6 +347,8 @@
 				B40D315F2809C465002C1396 /* UIView+extensions.swift */,
 				B40D3168280AB173002C1396 /* LabelsProtocol.swift */,
 				B4B531A9281ED18000D49EE5 /* UITextField+Extensions.swift */,
+				B4B531AE282030B900D49EE5 /* AppManager.swift */,
+				B4B531B02820315800D49EE5 /* Encodable+extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -495,6 +504,14 @@
 			path = TextField;
 			sourceTree = "<group>";
 		};
+		B4B531AB28202FD900D49EE5 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				B4B531AC28202FFE00D49EE5 /* DtoUser.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -621,6 +638,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B40D317F280AD27F002C1396 /* Login_RegisterDataManager.swift in Sources */,
+				B4B531AF282030B900D49EE5 /* AppManager.swift in Sources */,
 				B40D3137280863FB002C1396 /* StarterPresenterProtocol.swift in Sources */,
 				B40D314828098A2F002C1396 /* RegisterACOColor.swift in Sources */,
 				B44386F62815373F00ADACC5 /* RegisterFromViewControllerProtocol.swift in Sources */,
@@ -640,6 +658,7 @@
 				B44386FD2815373F00ADACC5 /* RegisterFromDataManager.swift in Sources */,
 				B40D3138280863FB002C1396 /* StarterViewController.swift in Sources */,
 				B40D3139280863FB002C1396 /* StarterBuilder.swift in Sources */,
+				B4B531AD28202FFE00D49EE5 /* DtoUser.swift in Sources */,
 				B40D3107280858AE002C1396 /* RegisterACO.xcdatamodeld in Sources */,
 				B40D312028085A54002C1396 /* Builder.swift in Sources */,
 				B40D3179280AD27F002C1396 /* Login_RegisterPresenterProtocol.swift in Sources */,
@@ -658,6 +677,7 @@
 				B40D311828085A41002C1396 /* Endpoint.swift in Sources */,
 				B44386FA2815373F00ADACC5 /* RegisterFromInteractor.swift in Sources */,
 				B40D3134280863FB002C1396 /* StarterInteractorProtocol.swift in Sources */,
+				B4B531B12820315800D49EE5 /* Encodable+extensions.swift in Sources */,
 				B40D313D280863FB002C1396 /* StarterDataManager.swift in Sources */,
 				B40D3177280AD27F002C1396 /* Login_RegisterPresenter.swift in Sources */,
 				B44387072815917500ADACC5 /* RegisterACOTextField.swift in Sources */,

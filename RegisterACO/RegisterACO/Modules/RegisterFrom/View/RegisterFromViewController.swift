@@ -12,7 +12,7 @@ import Combine
 class RegisterFromViewController: RegisterAcoNavigationController {
     
     private let presenter: RegisterFromPresenterProtocol
-    private var  model = RegisterFormViewModel()
+    private let  model = RegisterFormViewModel()
     private var cancellableSet: Set<AnyCancellable> = []
     
     private var buttonSubscriber: AnyCancellable?
@@ -185,7 +185,7 @@ class RegisterFromViewController: RegisterAcoNavigationController {
     
     @objc
     private func submitForm() {
-        print(model)
+        presenter.didTapSubmit(viewModel: model)
     }
     
     @objc private func nameTextFieldValidation() {

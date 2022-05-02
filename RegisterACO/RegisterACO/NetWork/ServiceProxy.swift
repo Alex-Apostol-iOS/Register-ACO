@@ -11,7 +11,7 @@ import Alamofire
 
 class ServiceProxy {
     
-    private var mainURL = ""
+    private var mainURL = Endpoint.mainUrl.rawValue
     private let timeout: Double = 30
     let retryLimit: Int = 30
     

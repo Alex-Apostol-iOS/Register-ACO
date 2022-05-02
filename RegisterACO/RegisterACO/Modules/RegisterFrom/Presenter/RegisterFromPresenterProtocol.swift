@@ -9,4 +9,6 @@
 import Foundation
 
 protocol RegisterFromPresenterProtocol: AnyObject, GetLabel {
+    
+    func didTapSubmit(viewModel: RegisterFormViewModel)
 }

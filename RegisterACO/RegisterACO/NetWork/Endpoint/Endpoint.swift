@@ -8,5 +8,6 @@
 import Foundation
 
 enum Endpoint: String {
-    case mainUrl = "https://myjson.dit.upm.es/api/bins/e8zj"
+    case mainUrl = "http://127.0.0.1:8080"
+    case user = "/user"
 }

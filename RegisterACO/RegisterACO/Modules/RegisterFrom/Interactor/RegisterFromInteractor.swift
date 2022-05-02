@@ -15,4 +15,15 @@ class RegisterFromInteractor: RegisterFromInteractorProtocol {
     init(dataManager: RegisterFromDataManagerProtocol) {
         self.dataManager = dataManager
     }
+    
+    func postUser(user: DtoUser, completion: @escaping (Result<DtoUser?, Error>) -> Void) {
+        dataManager.postUser(user: user) { result in
+            switch result {
+            case .success(let dtoUser):
+                completion(.success(dtoUser))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
 }
