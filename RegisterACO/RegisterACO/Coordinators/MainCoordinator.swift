@@ -19,6 +19,8 @@ class MainCoordinator: Coordinator {
         case didShowLoginRegisterFlow(ouput: Login_RegisterOutput)
         case willShowRegisterForm
         case willShowLoginFromLoginRegiser
+        case didShowRegister
+        case willShowHomeFlow
     }
     
     private var state: MainCoordinatorState
@@ -43,7 +45,9 @@ class MainCoordinator: Coordinator {
             showRegisterForm()
         case .willShowLoginFromLoginRegiser:
             break
-        case .initial, .didShowLogin(type: _), .didShowLoginRegisterFlow:
+        case .willShowHomeFlow:
+            goToHomeFlow()
+        case .initial, .didShowLogin(type: _), .didShowLoginRegisterFlow, .didShowRegister:
             fatalError("Unexpected Case in Main Coordinator")
         }
     }
@@ -61,7 +65,9 @@ class MainCoordinator: Coordinator {
             case .goToLogin:
                 return .willShowLoginFromLoginRegiser
             }
-        case .willShowLogin, .willShowLoginRegisterFlow(type: _), .willShowRegisterForm, .willShowLoginFromLoginRegiser:
+        case .didShowRegister:
+            return .willShowHomeFlow
+        case .willShowLogin, .willShowLoginRegisterFlow(type: _), .willShowRegisterForm, .willShowLoginFromLoginRegiser, .willShowHomeFlow:
             return nextState
         }
     }
@@ -92,10 +98,18 @@ class MainCoordinator: Coordinator {
     }
     
     private func showRegisterForm() {
-        let vc = RegisterFromBuilder { _ in
-            
+        let vc = RegisterFromBuilder { output in
+            switch output {
+            case .goToHome:
+                self.state = .didShowRegister
+                self.loop()
+            }
         }.build()
         navigator.pushViewController(vc, animated: true)
+    }
+    
+    private func goToHomeFlow() {
+        HomeCoordinator(with: navigator).start()
     }
     
 }

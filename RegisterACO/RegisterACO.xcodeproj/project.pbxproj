@@ -70,6 +70,17 @@
 		B4B531AD28202FFE00D49EE5 /* DtoUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B531AC28202FFE00D49EE5 /* DtoUser.swift */; };
 		B4B531AF282030B900D49EE5 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B531AE282030B900D49EE5 /* AppManager.swift */; };
 		B4B531B12820315800D49EE5 /* Encodable+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B531B02820315800D49EE5 /* Encodable+extensions.swift */; };
+		B4C60A5F282572E0007DBE70 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C60A5E282572E0007DBE70 /* HomeCoordinator.swift */; };
+		B4C60A6B2826423C007DBE70 /* HomeInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C60A612826423C007DBE70 /* HomeInteractorProtocol.swift */; };
+		B4C60A6C2826423C007DBE70 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C60A622826423C007DBE70 /* HomePresenter.swift */; };
+		B4C60A6D2826423C007DBE70 /* HomeViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C60A632826423C007DBE70 /* HomeViewControllerProtocol.swift */; };
+		B4C60A6E2826423C007DBE70 /* HomePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C60A642826423C007DBE70 /* HomePresenterProtocol.swift */; };
+		B4C60A6F2826423C007DBE70 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C60A652826423C007DBE70 /* HomeViewController.swift */; };
+		B4C60A702826423C007DBE70 /* HomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C60A662826423C007DBE70 /* HomeBuilder.swift */; };
+		B4C60A712826423C007DBE70 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C60A672826423C007DBE70 /* HomeInteractor.swift */; };
+		B4C60A722826423C007DBE70 /* HomeDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C60A682826423C007DBE70 /* HomeDataManagerProtocol.swift */; };
+		B4C60A732826423C007DBE70 /* HomeOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C60A692826423C007DBE70 /* HomeOutput.swift */; };
+		B4C60A742826423C007DBE70 /* HomeDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C60A6A2826423C007DBE70 /* HomeDataManager.swift */; };
 		C7DD8466CA29468BFF1F049B /* Pods_RegisterACO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 590A60A5953D89FCABD09D0F /* Pods_RegisterACO.framework */; };
 /* End PBXBuildFile section */
 
@@ -144,6 +155,17 @@
 		B4B531AC28202FFE00D49EE5 /* DtoUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DtoUser.swift; sourceTree = "<group>"; };
 		B4B531AE282030B900D49EE5 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		B4B531B02820315800D49EE5 /* Encodable+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+extensions.swift"; sourceTree = "<group>"; };
+		B4C60A5E282572E0007DBE70 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		B4C60A612826423C007DBE70 /* HomeInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorProtocol.swift; sourceTree = "<group>"; };
+		B4C60A622826423C007DBE70 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		B4C60A632826423C007DBE70 /* HomeViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerProtocol.swift; sourceTree = "<group>"; };
+		B4C60A642826423C007DBE70 /* HomePresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterProtocol.swift; sourceTree = "<group>"; };
+		B4C60A652826423C007DBE70 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B4C60A662826423C007DBE70 /* HomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBuilder.swift; sourceTree = "<group>"; };
+		B4C60A672826423C007DBE70 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		B4C60A682826423C007DBE70 /* HomeDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataManagerProtocol.swift; sourceTree = "<group>"; };
+		B4C60A692826423C007DBE70 /* HomeOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeOutput.swift; sourceTree = "<group>"; };
+		B4C60A6A2826423C007DBE70 /* HomeDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				B40D312728085A62002C1396 /* MainCoordinator.swift */,
+				B4C60A5E282572E0007DBE70 /* HomeCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -252,9 +275,8 @@
 		B40D3129280863D0002C1396 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				B44386E92815372200ADACC5 /* RegisterFrom */,
-				B40D316B280AD242002C1396 /* Login_Register */,
-				B40D316A280AD22D002C1396 /* Starter */,
+				B4C60A5D282572A8007DBE70 /* HomeModule */,
+				B4C60A5C28257245007DBE70 /* StarterModule */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -512,6 +534,81 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
+		B4C60A5C28257245007DBE70 /* StarterModule */ = {
+			isa = PBXGroup;
+			children = (
+				B40D316B280AD242002C1396 /* Login_Register */,
+				B44386E92815372200ADACC5 /* RegisterFrom */,
+				B40D316A280AD22D002C1396 /* Starter */,
+			);
+			path = StarterModule;
+			sourceTree = "<group>";
+		};
+		B4C60A5D282572A8007DBE70 /* HomeModule */ = {
+			isa = PBXGroup;
+			children = (
+				B4C60A6028264223007DBE70 /* Home */,
+			);
+			path = HomeModule;
+			sourceTree = "<group>";
+		};
+		B4C60A6028264223007DBE70 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B4C60A7928264269007DBE70 /* Builder */,
+				B4C60A7828264260007DBE70 /* DataManager */,
+				B4C60A7728264259007DBE70 /* Interactor */,
+				B4C60A762826424A007DBE70 /* Presenter */,
+				B4C60A7528264243007DBE70 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B4C60A7528264243007DBE70 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B4C60A632826423C007DBE70 /* HomeViewControllerProtocol.swift */,
+				B4C60A692826423C007DBE70 /* HomeOutput.swift */,
+				B4C60A652826423C007DBE70 /* HomeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B4C60A762826424A007DBE70 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B4C60A642826423C007DBE70 /* HomePresenterProtocol.swift */,
+				B4C60A622826423C007DBE70 /* HomePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B4C60A7728264259007DBE70 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B4C60A612826423C007DBE70 /* HomeInteractorProtocol.swift */,
+				B4C60A672826423C007DBE70 /* HomeInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B4C60A7828264260007DBE70 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				B4C60A682826423C007DBE70 /* HomeDataManagerProtocol.swift */,
+				B4C60A6A2826423C007DBE70 /* HomeDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		B4C60A7928264269007DBE70 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				B4C60A662826423C007DBE70 /* HomeBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -638,8 +735,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B40D317F280AD27F002C1396 /* Login_RegisterDataManager.swift in Sources */,
+				B4C60A6E2826423C007DBE70 /* HomePresenterProtocol.swift in Sources */,
+				B4C60A6F2826423C007DBE70 /* HomeViewController.swift in Sources */,
 				B4B531AF282030B900D49EE5 /* AppManager.swift in Sources */,
 				B40D3137280863FB002C1396 /* StarterPresenterProtocol.swift in Sources */,
+				B4C60A6D2826423C007DBE70 /* HomeViewControllerProtocol.swift in Sources */,
 				B40D314828098A2F002C1396 /* RegisterACOColor.swift in Sources */,
 				B44386F62815373F00ADACC5 /* RegisterFromViewControllerProtocol.swift in Sources */,
 				B40D317B280AD27F002C1396 /* Login_RegisterBuilder.swift in Sources */,
@@ -652,12 +752,14 @@
 				B40D317D280AD27F002C1396 /* Login_RegisterDataManagerProtocol.swift in Sources */,
 				B40D313B280863FB002C1396 /* StarterDataManagerProtocol.swift in Sources */,
 				B40D315D28098E7A002C1396 /* RegisterACOFont.swift in Sources */,
+				B4C60A6B2826423C007DBE70 /* HomeInteractorProtocol.swift in Sources */,
 				B44386FC2815373F00ADACC5 /* RegisterFromOutput.swift in Sources */,
 				B40D313A280863FB002C1396 /* StarterInteractor.swift in Sources */,
 				B44386F82815373F00ADACC5 /* RegisterFromViewController.swift in Sources */,
 				B44386FD2815373F00ADACC5 /* RegisterFromDataManager.swift in Sources */,
 				B40D3138280863FB002C1396 /* StarterViewController.swift in Sources */,
 				B40D3139280863FB002C1396 /* StarterBuilder.swift in Sources */,
+				B4C60A5F282572E0007DBE70 /* HomeCoordinator.swift in Sources */,
 				B4B531AD28202FFE00D49EE5 /* DtoUser.swift in Sources */,
 				B40D3107280858AE002C1396 /* RegisterACO.xcdatamodeld in Sources */,
 				B40D312028085A54002C1396 /* Builder.swift in Sources */,
@@ -667,8 +769,10 @@
 				B40D317A280AD27F002C1396 /* Login_RegisterViewController.swift in Sources */,
 				B44386FB2815373F00ADACC5 /* RegisterFromDataManagerProtocol.swift in Sources */,
 				B40D30FD280858AE002C1396 /* AppDelegate.swift in Sources */,
+				B4C60A712826423C007DBE70 /* HomeInteractor.swift in Sources */,
 				B40D311728085A41002C1396 /* ServiceProxy.swift in Sources */,
 				B40D313C280863FB002C1396 /* StarterOutput.swift in Sources */,
+				B4C60A742826423C007DBE70 /* HomeDataManager.swift in Sources */,
 				B40D3176280AD27F002C1396 /* Login_RegisterInteractorProtocol.swift in Sources */,
 				B40D312428085A54002C1396 /* Coordinator.swift in Sources */,
 				B40D3178280AD27F002C1396 /* Login_RegisterViewControllerProtocol.swift in Sources */,
@@ -679,13 +783,17 @@
 				B40D3134280863FB002C1396 /* StarterInteractorProtocol.swift in Sources */,
 				B4B531B12820315800D49EE5 /* Encodable+extensions.swift in Sources */,
 				B40D313D280863FB002C1396 /* StarterDataManager.swift in Sources */,
+				B4C60A722826423C007DBE70 /* HomeDataManagerProtocol.swift in Sources */,
 				B40D3177280AD27F002C1396 /* Login_RegisterPresenter.swift in Sources */,
 				B44387072815917500ADACC5 /* RegisterACOTextField.swift in Sources */,
 				B40D312128085A54002C1396 /* Loader.swift in Sources */,
 				B40D312828085A62002C1396 /* MainCoordinator.swift in Sources */,
 				B40D3169280AB173002C1396 /* LabelsProtocol.swift in Sources */,
+				B4C60A702826423C007DBE70 /* HomeBuilder.swift in Sources */,
 				B40D30FF280858AE002C1396 /* SceneDelegate.swift in Sources */,
 				B44386F52815373F00ADACC5 /* RegisterFromPresenter.swift in Sources */,
+				B4C60A732826423C007DBE70 /* HomeOutput.swift in Sources */,
+				B4C60A6C2826423C007DBE70 /* HomePresenter.swift in Sources */,
 				B40D31602809C465002C1396 /* UIView+extensions.swift in Sources */,
 				B40D3135280863FB002C1396 /* StarterPresenter.swift in Sources */,
 			);
