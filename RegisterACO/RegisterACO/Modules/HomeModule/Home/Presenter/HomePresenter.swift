@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class HomePresenter {
     var interactor: HomeInteractorProtocol
@@ -20,5 +21,8 @@ class HomePresenter {
 }
 
 extension HomePresenter: HomePresenterProtocol {
-    
+}
+
+enum HomeListSection {
+    case users
 }

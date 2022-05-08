@@ -81,6 +81,8 @@
 		B4C60A722826423C007DBE70 /* HomeDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C60A682826423C007DBE70 /* HomeDataManagerProtocol.swift */; };
 		B4C60A732826423C007DBE70 /* HomeOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C60A692826423C007DBE70 /* HomeOutput.swift */; };
 		B4C60A742826423C007DBE70 /* HomeDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C60A6A2826423C007DBE70 /* HomeDataManager.swift */; };
+		B4C60A7D2827A8BF007DBE70 /* HomeListUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C60A7C2827A8BF007DBE70 /* HomeListUserTableViewCell.swift */; };
+		B4C60A7F2827C290007DBE70 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C60A7E2827C290007DBE70 /* UITableViewCell+Extension.swift */; };
 		C7DD8466CA29468BFF1F049B /* Pods_RegisterACO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 590A60A5953D89FCABD09D0F /* Pods_RegisterACO.framework */; };
 /* End PBXBuildFile section */
 
@@ -166,6 +168,8 @@
 		B4C60A682826423C007DBE70 /* HomeDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataManagerProtocol.swift; sourceTree = "<group>"; };
 		B4C60A692826423C007DBE70 /* HomeOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeOutput.swift; sourceTree = "<group>"; };
 		B4C60A6A2826423C007DBE70 /* HomeDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataManager.swift; sourceTree = "<group>"; };
+		B4C60A7C2827A8BF007DBE70 /* HomeListUserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListUserTableViewCell.swift; sourceTree = "<group>"; };
+		B4C60A7E2827C290007DBE70 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -329,6 +333,7 @@
 		B40D31432809619C002C1396 /* Componenets */ = {
 			isa = PBXGroup;
 			children = (
+				B4C60A7A2827A897007DBE70 /* TableViewCells */,
 				B44387052815916300ADACC5 /* TextField */,
 				B40D3186280AD5E6002C1396 /* NavigationController */,
 				B40D3185280AD5DE002C1396 /* Buttons */,
@@ -371,6 +376,7 @@
 				B4B531A9281ED18000D49EE5 /* UITextField+Extensions.swift */,
 				B4B531AE282030B900D49EE5 /* AppManager.swift */,
 				B4B531B02820315800D49EE5 /* Encodable+extensions.swift */,
+				B4C60A7E2827C290007DBE70 /* UITableViewCell+Extension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -609,6 +615,22 @@
 			path = Builder;
 			sourceTree = "<group>";
 		};
+		B4C60A7A2827A897007DBE70 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				B4C60A7B2827A8A8007DBE70 /* HomeListUserTableViewCell */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		B4C60A7B2827A8A8007DBE70 /* HomeListUserTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				B4C60A7C2827A8BF007DBE70 /* HomeListUserTableViewCell.swift */,
+			);
+			path = HomeListUserTableViewCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -737,6 +759,7 @@
 				B40D317F280AD27F002C1396 /* Login_RegisterDataManager.swift in Sources */,
 				B4C60A6E2826423C007DBE70 /* HomePresenterProtocol.swift in Sources */,
 				B4C60A6F2826423C007DBE70 /* HomeViewController.swift in Sources */,
+				B4C60A7F2827C290007DBE70 /* UITableViewCell+Extension.swift in Sources */,
 				B4B531AF282030B900D49EE5 /* AppManager.swift in Sources */,
 				B40D3137280863FB002C1396 /* StarterPresenterProtocol.swift in Sources */,
 				B4C60A6D2826423C007DBE70 /* HomeViewControllerProtocol.swift in Sources */,
@@ -762,6 +785,7 @@
 				B4C60A5F282572E0007DBE70 /* HomeCoordinator.swift in Sources */,
 				B4B531AD28202FFE00D49EE5 /* DtoUser.swift in Sources */,
 				B40D3107280858AE002C1396 /* RegisterACO.xcdatamodeld in Sources */,
+				B4C60A7D2827A8BF007DBE70 /* HomeListUserTableViewCell.swift in Sources */,
 				B40D312028085A54002C1396 /* Builder.swift in Sources */,
 				B40D3179280AD27F002C1396 /* Login_RegisterPresenterProtocol.swift in Sources */,
 				B44386F92815373F00ADACC5 /* RegisterFromBuilder.swift in Sources */,
