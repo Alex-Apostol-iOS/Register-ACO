@@ -9,5 +9,5 @@
 import Foundation
 
 protocol StarterDataManagerProtocol : AnyObject {
-
+    func getUser(id: String, completion: @escaping (Result<DtoUser, Error>) -> Void)
 }
