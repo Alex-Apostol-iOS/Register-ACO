@@ -11,4 +11,5 @@ struct DtoUser: Codable, Hashable {
     var id: String?
     let email, phone, surname: String?
     let name, secondSurname: String?
+    let password: String?
 }

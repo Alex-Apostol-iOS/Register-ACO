@@ -17,7 +17,7 @@ final class KeychainHelper  {
         // Create query
         let query = [
             kSecValueData: data,
-            kSecClass: kSecClassIdentity,
+            kSecClass: kSecClassGenericPassword,
             kSecAttrService: service.rawValue,
             kSecAttrAccount: account.rawValue,
         ] as CFDictionary
@@ -36,7 +36,7 @@ final class KeychainHelper  {
         let query = [
             kSecAttrService: service.rawValue,
             kSecAttrAccount: account.rawValue,
-            kSecClass: kSecClassIdentity,
+            kSecClass: kSecClassGenericPassword,
             kSecReturnData: true
         ] as CFDictionary
         
@@ -64,5 +64,5 @@ enum KeyChainAccount: String {
 }
 
 enum KeyChainService: String {
-    case user_Id = "user_Id"
+    case user_password = "user_password"
 }
