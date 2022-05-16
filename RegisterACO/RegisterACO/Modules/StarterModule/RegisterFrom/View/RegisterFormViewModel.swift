@@ -19,13 +19,13 @@ class RegisterFormViewModel {
     
     var cancellableSet: Set<AnyCancellable> = []
     
-    private let emailPredicate = NSPredicate(format: "SELF MATCHES %@", "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}[\\@]{1}[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}([\\.]{1}[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25})+")
+    private let emailPredicate = NSPredicate(format: "SELF MATCHES %@", Constants.emailPredicate.rawValue)
     
-   private let passwordPredicate = NSPredicate(format: "SELF MATCHES %@", "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$")
+   private let passwordPredicate = NSPredicate(format: "SELF MATCHES %@", Constants.passwordPredicate.rawValue)
     
-    private let noEmptyStringPredicate = NSPredicate(format: "SELF MATCHES %@", "^(?!\\s*$).+")
+    private let noEmptyStringPredicate = NSPredicate(format: "SELF MATCHES %@", Constants.noEmptyStringPredicate.rawValue)
     
-    private let spanishphoneStringPredicate = NSPredicate(format: "SELF MATCHES %@", "^[679]{1}[0-9]{8}$")
+    private let spanishphoneStringPredicate = NSPredicate(format: "SELF MATCHES %@", Constants.spanishphoneStringPredicate.rawValue)
     
     private var validateFirstNameAndEmail: AnyPublisher<Bool, Never> {
         return Publishers.CombineLatest($email, $firstName)

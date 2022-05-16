@@ -56,7 +56,7 @@ class Login_RegisterViewController: RegisterAcoNavigationController {
     }
     
     private func didTapLoginButton() {
-        
+        presenter.didTapLoginButtton()
     }
     
     private func didTapRegisterButton() {

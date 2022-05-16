@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol LoginPresenterProtocol: AnyObject {
+protocol LoginPresenterProtocol: AnyObject, GetLabel {
     
 }

@@ -25,4 +25,8 @@ extension Login_RegisterPresenter: Login_RegisterPresenterProtocol {
     func didTapRegisterButton() {
         coordinatorOutput(.goToRegisterForm)
     }
+    
+    func didTapLoginButtton() {
+        coordinatorOutput(.goToLogin)
+    }
 }

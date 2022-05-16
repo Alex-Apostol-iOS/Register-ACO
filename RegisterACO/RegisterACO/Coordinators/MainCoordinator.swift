@@ -44,11 +44,12 @@ class MainCoordinator: Coordinator {
         case .willShowRegisterForm:
             showRegisterForm()
         case .willShowLoginFromLoginRegiser:
-            break
+            showLogin()
         case .willShowHomeFlow:
             goToHomeFlow()
         case .initial, .didShowLogin(type: _), .didShowLoginRegisterFlow, .didShowRegister:
             fatalError("Unexpected Case in Main Coordinator")
+       
         }
     }
     
@@ -69,6 +70,7 @@ class MainCoordinator: Coordinator {
             return .willShowHomeFlow
         case .willShowLogin, .willShowLoginRegisterFlow(type: _), .willShowRegisterForm, .willShowLoginFromLoginRegiser, .willShowHomeFlow:
             return nextState
+        
         }
     }
     
@@ -110,6 +112,13 @@ class MainCoordinator: Coordinator {
     
     private func goToHomeFlow() {
         HomeCoordinator(with: navigator).start()
+    }
+    
+    private func showLogin() {
+        let vc = LoginBuilder { _ in
+            
+        }.build()
+        navigator.pushViewController(vc, animated: true)
     }
     
 }

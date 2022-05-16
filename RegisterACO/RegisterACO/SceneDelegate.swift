@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let navigationController = UINavigationController()
         let data = KeychainHelper.sharedInstance.read(service: .user_Id, account: .registerACO)
         if let data = data, let userId = String(data: data, encoding: .utf8) {
-                mainCoordinator = HomeCoordinator(with: navigationController)
+            mainCoordinator = MainCoordinator(with: navigationController, state: .willShowLoginFromLoginRegiser)
         } else {
             mainCoordinator = MainCoordinator(with: navigationController, state: .initial)
         }
