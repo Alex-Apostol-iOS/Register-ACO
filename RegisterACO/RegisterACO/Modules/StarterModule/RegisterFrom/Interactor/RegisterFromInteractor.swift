@@ -26,4 +26,10 @@ class RegisterFromInteractor: RegisterFromInteractorProtocol {
             }
         }
     }
+    
+    private func saveUserDataToKeyChain(user: DtoUser) {
+        let id = user.id ?? ""
+        let data = Data(id.utf8)
+        KeychainHelper.sharedInstance.save(data, service: .user_Id, account: .registerACO)
+    }
 }

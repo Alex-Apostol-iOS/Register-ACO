@@ -83,6 +83,7 @@
 		B4C60A742826423C007DBE70 /* HomeDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C60A6A2826423C007DBE70 /* HomeDataManager.swift */; };
 		B4C60A7D2827A8BF007DBE70 /* HomeListUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C60A7C2827A8BF007DBE70 /* HomeListUserTableViewCell.swift */; };
 		B4C60A7F2827C290007DBE70 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C60A7E2827C290007DBE70 /* UITableViewCell+Extension.swift */; };
+		B4C60A81282832CB007DBE70 /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C60A80282832CB007DBE70 /* KeychainHelper.swift */; };
 		C7DD8466CA29468BFF1F049B /* Pods_RegisterACO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 590A60A5953D89FCABD09D0F /* Pods_RegisterACO.framework */; };
 /* End PBXBuildFile section */
 
@@ -170,6 +171,7 @@
 		B4C60A6A2826423C007DBE70 /* HomeDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataManager.swift; sourceTree = "<group>"; };
 		B4C60A7C2827A8BF007DBE70 /* HomeListUserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListUserTableViewCell.swift; sourceTree = "<group>"; };
 		B4C60A7E2827C290007DBE70 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
+		B4C60A80282832CB007DBE70 /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +265,7 @@
 				B40D311A28085A54002C1396 /* Builder.swift */,
 				B40D311B28085A54002C1396 /* Loader.swift */,
 				B40D311E28085A54002C1396 /* Coordinator.swift */,
+				B4C60A80282832CB007DBE70 /* KeychainHelper.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -764,6 +767,7 @@
 				B40D3137280863FB002C1396 /* StarterPresenterProtocol.swift in Sources */,
 				B4C60A6D2826423C007DBE70 /* HomeViewControllerProtocol.swift in Sources */,
 				B40D314828098A2F002C1396 /* RegisterACOColor.swift in Sources */,
+				B4C60A81282832CB007DBE70 /* KeychainHelper.swift in Sources */,
 				B44386F62815373F00ADACC5 /* RegisterFromViewControllerProtocol.swift in Sources */,
 				B40D317B280AD27F002C1396 /* Login_RegisterBuilder.swift in Sources */,
 				B40D317C280AD27F002C1396 /* Login_RegisterInteractor.swift in Sources */,
