@@ -16,7 +16,7 @@ class RegisterFromInteractor: RegisterFromInteractorProtocol {
         self.dataManager = dataManager
     }
     
-    func postUser(user: DtoUser, completion: @escaping (Result<DtoUser?, Error>) -> Void) {
+    func postUser(user: RegisterACOUser, completion: @escaping (Result<DtoUser?, Error>) -> Void) {
         dataManager.postUser(user: user) { result in
             switch result {
             case .success(let dtoUser):
@@ -33,8 +33,13 @@ class RegisterFromInteractor: RegisterFromInteractorProtocol {
             return
         }
 
-        let id = user.id ?? ""
-        let data = Data(id.utf8)
+        let password = user.user?.password ?? ""
+        let data = Data(password.utf8)
+       
         KeychainHelper.sharedInstance.save(data, service: .user_password, account: .registerACO)
+        
+        let email = user.user?.email ?? ""
+        let emailData = Data(email.utf8)
+        KeychainHelper.sharedInstance.save(emailData, service: .user_email, account: .registerACO)
     }
 }

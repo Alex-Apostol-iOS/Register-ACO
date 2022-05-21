@@ -9,5 +9,5 @@
 import Foundation
 
 protocol RegisterFromInteractorProtocol : AnyObject {
-    func postUser(user: DtoUser, completion: @escaping (Result<DtoUser?, Error>) -> Void)
+    func postUser(user: RegisterACOUser, completion: @escaping (Result<DtoUser?, Error>) -> Void)
 }

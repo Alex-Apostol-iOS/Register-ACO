@@ -78,6 +78,7 @@
 		B4832EEF28322DAF0024A950 /* LoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4832EE528322DAE0024A950 /* LoginDataManager.swift */; };
 		B4832EF6283231010024A950 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4832EF5283231010024A950 /* LoginViewModel.swift */; };
 		B4832EF9283232490024A950 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4832EF8283232490024A950 /* Constants.swift */; };
+		B4832F282838C1A80024A950 /* HTTPHeadersHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4832F272838C1A70024A950 /* HTTPHeadersHelper.swift */; };
 		B4B531AA281ED18000D49EE5 /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B531A9281ED18000D49EE5 /* UITextField+Extensions.swift */; };
 		B4B531AD28202FFE00D49EE5 /* DtoUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B531AC28202FFE00D49EE5 /* DtoUser.swift */; };
 		B4B531AF282030B900D49EE5 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B531AE282030B900D49EE5 /* AppManager.swift */; };
@@ -178,6 +179,7 @@
 		B4832EE528322DAE0024A950 /* LoginDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataManager.swift; sourceTree = "<group>"; };
 		B4832EF5283231010024A950 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		B4832EF8283232490024A950 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B4832F272838C1A70024A950 /* HTTPHeadersHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeadersHelper.swift; sourceTree = "<group>"; };
 		B4B531A9281ED18000D49EE5 /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
 		B4B531AC28202FFE00D49EE5 /* DtoUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DtoUser.swift; sourceTree = "<group>"; };
 		B4B531AE282030B900D49EE5 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 		B40D311328085A41002C1396 /* NetWork */ = {
 			isa = PBXGroup;
 			children = (
+				B4832F272838C1A70024A950 /* HTTPHeadersHelper.swift */,
 				B40D311428085A41002C1396 /* ServiceProxy.swift */,
 				B40D311528085A41002C1396 /* Endpoint */,
 				B4B531AB28202FD900D49EE5 /* Entities */,
@@ -873,6 +876,7 @@
 				B40D313B280863FB002C1396 /* StarterDataManagerProtocol.swift in Sources */,
 				B40D315D28098E7A002C1396 /* RegisterACOFont.swift in Sources */,
 				B4832EE628322DAF0024A950 /* LoginInteractorProtocol.swift in Sources */,
+				B4832F282838C1A80024A950 /* HTTPHeadersHelper.swift in Sources */,
 				B4C60A6B2826423C007DBE70 /* HomeInteractorProtocol.swift in Sources */,
 				B44386FC2815373F00ADACC5 /* RegisterFromOutput.swift in Sources */,
 				B40D313A280863FB002C1396 /* StarterInteractor.swift in Sources */,

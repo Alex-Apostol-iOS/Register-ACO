@@ -7,9 +7,15 @@
 
 import Foundation
 
-struct DtoUser: Codable, Hashable {
-    var id: String?
-    let email, phone, surname: String?
-    let name, secondSurname: String?
-    let password: String?
+// MARK: - DtoUser
+struct DtoUser: Codable {
+    let token: String?
+    let user: RegisterACOUser?
 }
+
+// MARK: - User
+struct RegisterACOUser: Codable, Hashable {
+    let phone, password, id, surname: String?
+    let email, name, secondSurname: String?
+}
+

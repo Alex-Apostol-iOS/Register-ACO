@@ -11,8 +11,8 @@ import UIKit
 class HomeViewController: RegisterAcoNavigationController {
     
     private let presenter: HomePresenterProtocol
-    private var tableViewDifableDataSurce: UITableViewDiffableDataSource<HomeListSection, DtoUser>!
-    private var content: [DtoUser] = []
+    private var tableViewDifableDataSurce: UITableViewDiffableDataSource<HomeListSection, RegisterACOUser>!
+    private var content: [RegisterACOUser] = []
     
     private lazy var tableView: UITableView = {
         let view = UITableView(frame: .zero)
@@ -49,7 +49,7 @@ class HomeViewController: RegisterAcoNavigationController {
     }
     
     private func setUpTableViewDataSource() {
-        tableViewDifableDataSurce = UITableViewDiffableDataSource<HomeListSection, DtoUser>(tableView: tableView, cellProvider: {
+        tableViewDifableDataSurce = UITableViewDiffableDataSource<HomeListSection, RegisterACOUser>(tableView: tableView, cellProvider: {
             tableView, indexPath, model -> UITableViewCell? in
             guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeListUserTableViewCell.tableViewRegisterID, for: indexPath) as?  HomeListUserTableViewCell else { return UITableViewCell()}
             return cell
@@ -59,8 +59,8 @@ class HomeViewController: RegisterAcoNavigationController {
 }
 
 extension HomeViewController: HomeViewProtocol{
-    func layout(with users: [DtoUser]) {
-        var snapshot = NSDiffableDataSourceSnapshot<HomeListSection, DtoUser>()
+    func layout(with users: [RegisterACOUser]) {
+        var snapshot = NSDiffableDataSourceSnapshot<HomeListSection, RegisterACOUser>()
         snapshot.appendSections([.users])
         snapshot.appendItems(users, toSection: .users)
     }

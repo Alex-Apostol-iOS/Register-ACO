@@ -8,6 +8,11 @@
 
 import Foundation
 
-class LoginDataManager: LoginDataManagerProtocol {
+class LoginDataManager: LoginDataManagerProtocol, HTTPHeadersHelper {
+    let serviceProxy = AppManager.serviceProxy
     
+    @available(iOS 15.0.0, *)
+    func login() async throws {
+       async let userLogin = serviceProxy.getItemAsyncAwait(url: "", type: DtoUser.self, parameters: [:])
+    }
 }

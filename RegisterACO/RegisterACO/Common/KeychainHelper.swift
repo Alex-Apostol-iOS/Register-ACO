@@ -31,19 +31,18 @@ final class KeychainHelper  {
         }
     }
     
-    func read(service: KeyChainService, account: KeyChainAccount) -> Data? {
+    func read(service: KeyChainService, account: KeyChainAccount)  throws -> String {
         
-        let query = [
-            kSecAttrService: service.rawValue,
-            kSecAttrAccount: account.rawValue,
-            kSecClass: kSecClassGenericPassword,
-            kSecReturnData: true
-        ] as CFDictionary
+        var item: CFTypeRef?
         
-        var result: AnyObject?
-        SecItemCopyMatching(query, &result)
-        
-        return (result as? Data)
+        guard
+            let existingItem = item as? [String: Any],
+            let valueData = existingItem[kSecValueData as String] as? Data,
+            let value = String(data: valueData, encoding: .utf8)
+        else {
+            throw KeyChainError.unableToConvertToString
+        }
+        return value
     }
     
     func delete(service: KeyChainService, account: KeyChainAccount) {
@@ -65,4 +64,9 @@ enum KeyChainAccount: String {
 
 enum KeyChainService: String {
     case user_password = "user_password"
+    case user_email = "user_email"
+}
+
+enum KeyChainError: Error {
+    case unableToConvertToString
 }
