@@ -33,16 +33,23 @@ final class KeychainHelper  {
     
     func read(service: KeyChainService, account: KeyChainAccount)  throws -> String {
         
-        var item: CFTypeRef?
         
-        guard
-            let existingItem = item as? [String: Any],
-            let valueData = existingItem[kSecValueData as String] as? Data,
-            let value = String(data: valueData, encoding: .utf8)
-        else {
+        let query = [
+            kSecAttrService: service.rawValue,
+            kSecAttrAccount: account.rawValue,
+            kSecClass: kSecClassGenericPassword,
+            kSecReturnData: true
+        ] as CFDictionary
+
+        
+        var result: AnyObject?
+        SecItemCopyMatching(query, &result)
+        
+        if let valueData = result as? Data, let value = String(data: valueData, encoding: .utf8) {
+            return value
+        } else {
             throw KeyChainError.unableToConvertToString
         }
-        return value
     }
     
     func delete(service: KeyChainService, account: KeyChainAccount) {

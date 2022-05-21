@@ -37,6 +37,7 @@ class HomeViewController: RegisterAcoNavigationController {
         tableView.delegate = self
         setUpTableViewDataSource()
         setUpTableViewLayout()
+        presenter.viewDidLoad()
     }
     
     private func setUpTableViewLayout() {

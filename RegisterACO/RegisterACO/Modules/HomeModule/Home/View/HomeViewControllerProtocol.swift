@@ -9,5 +9,5 @@
 import UIKit
 
 protocol HomeViewProtocol: AnyObject {
-    
+    func layout(with users: [RegisterACOUser])
 }

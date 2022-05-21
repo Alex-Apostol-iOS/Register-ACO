@@ -79,6 +79,9 @@
 		B4832EF6283231010024A950 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4832EF5283231010024A950 /* LoginViewModel.swift */; };
 		B4832EF9283232490024A950 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4832EF8283232490024A950 /* Constants.swift */; };
 		B4832F282838C1A80024A950 /* HTTPHeadersHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4832F272838C1A70024A950 /* HTTPHeadersHelper.swift */; };
+		B4832F2B283925B10024A950 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4832F2A283925B00024A950 /* Cache.swift */; };
+		B4832F2D28392A090024A950 /* CacheEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4832F2C28392A090024A950 /* CacheEntry.swift */; };
+		B4832F2F28392A220024A950 /* MemoryCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4832F2E28392A220024A950 /* MemoryCacheManager.swift */; };
 		B4B531AA281ED18000D49EE5 /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B531A9281ED18000D49EE5 /* UITextField+Extensions.swift */; };
 		B4B531AD28202FFE00D49EE5 /* DtoUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B531AC28202FFE00D49EE5 /* DtoUser.swift */; };
 		B4B531AF282030B900D49EE5 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B531AE282030B900D49EE5 /* AppManager.swift */; };
@@ -180,6 +183,9 @@
 		B4832EF5283231010024A950 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		B4832EF8283232490024A950 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B4832F272838C1A70024A950 /* HTTPHeadersHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeadersHelper.swift; sourceTree = "<group>"; };
+		B4832F2A283925B00024A950 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+		B4832F2C28392A090024A950 /* CacheEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheEntry.swift; sourceTree = "<group>"; };
+		B4832F2E28392A220024A950 /* MemoryCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryCacheManager.swift; sourceTree = "<group>"; };
 		B4B531A9281ED18000D49EE5 /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
 		B4B531AC28202FFE00D49EE5 /* DtoUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DtoUser.swift; sourceTree = "<group>"; };
 		B4B531AE282030B900D49EE5 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
@@ -271,6 +277,7 @@
 		B40D311328085A41002C1396 /* NetWork */ = {
 			isa = PBXGroup;
 			children = (
+				B4832F29283925A60024A950 /* Cache */,
 				B4832F272838C1A70024A950 /* HTTPHeadersHelper.swift */,
 				B40D311428085A41002C1396 /* ServiceProxy.swift */,
 				B40D311528085A41002C1396 /* Endpoint */,
@@ -630,6 +637,16 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		B4832F29283925A60024A950 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				B4832F2A283925B00024A950 /* Cache.swift */,
+				B4832F2C28392A090024A950 /* CacheEntry.swift */,
+				B4832F2E28392A220024A950 /* MemoryCacheManager.swift */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
 		B4B531AB28202FD900D49EE5 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
@@ -894,6 +911,7 @@
 				B4832EF6283231010024A950 /* LoginViewModel.swift in Sources */,
 				B40D312028085A54002C1396 /* Builder.swift in Sources */,
 				B4832EE928322DAF0024A950 /* LoginPresenterProtocol.swift in Sources */,
+				B4832F2F28392A220024A950 /* MemoryCacheManager.swift in Sources */,
 				B40D3179280AD27F002C1396 /* Login_RegisterPresenterProtocol.swift in Sources */,
 				B4832EE728322DAF0024A950 /* LoginPresenter.swift in Sources */,
 				B44386F92815373F00ADACC5 /* RegisterFromBuilder.swift in Sources */,
@@ -916,8 +934,10 @@
 				B44386FA2815373F00ADACC5 /* RegisterFromInteractor.swift in Sources */,
 				B40D3134280863FB002C1396 /* StarterInteractorProtocol.swift in Sources */,
 				B4B531B12820315800D49EE5 /* Encodable+extensions.swift in Sources */,
+				B4832F2B283925B10024A950 /* Cache.swift in Sources */,
 				B40D313D280863FB002C1396 /* StarterDataManager.swift in Sources */,
 				B4C60A722826423C007DBE70 /* HomeDataManagerProtocol.swift in Sources */,
+				B4832F2D28392A090024A950 /* CacheEntry.swift in Sources */,
 				B40D3177280AD27F002C1396 /* Login_RegisterPresenter.swift in Sources */,
 				B44387072815917500ADACC5 /* RegisterACOTextField.swift in Sources */,
 				B40D312128085A54002C1396 /* Loader.swift in Sources */,
