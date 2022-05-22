@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol HomePresenterProtocol: AnyObject {
+protocol HomePresenterProtocol: AnyObject, GetLabel {
     func viewDidLoad()
 }

@@ -39,6 +39,7 @@ class HomeViewController: RegisterAcoNavigationController {
         setUpTableViewDataSource()
         setUpTableViewLayout()
         presenter.viewDidLoad()
+        configTitle(title: presenter.getlabelForKey(key: "lng.common.home"))
     }
     
     private func setUpTableViewLayout() {

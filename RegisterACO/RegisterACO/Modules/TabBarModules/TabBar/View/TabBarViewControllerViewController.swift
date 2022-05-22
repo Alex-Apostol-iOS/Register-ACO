@@ -68,8 +68,7 @@ extension TabBarViewControllerViewController: TabBarViewControllerViewProtocol {
             tabBarViewController.append(vc)
             
         }
-        
         self.setViewControllers(tabBarViewController, animated: true)
-       
+        self.title = tabBarViewController.first?.title
     }
 }
