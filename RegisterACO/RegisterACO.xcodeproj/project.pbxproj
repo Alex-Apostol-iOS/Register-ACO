@@ -66,6 +66,16 @@
 		B44386FD2815373F00ADACC5 /* RegisterFromDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44386F32815373F00ADACC5 /* RegisterFromDataManager.swift */; };
 		B4438704281556DB00ADACC5 /* RegisterFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4438703281556DB00ADACC5 /* RegisterFormViewModel.swift */; };
 		B44387072815917500ADACC5 /* RegisterACOTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44387062815917500ADACC5 /* RegisterACOTextField.swift */; };
+		B44AA75D283A75A900383413 /* TabBarViewControllerInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44AA753283A75A900383413 /* TabBarViewControllerInteractorProtocol.swift */; };
+		B44AA75E283A75A900383413 /* TabBarViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44AA754283A75A900383413 /* TabBarViewControllerPresenter.swift */; };
+		B44AA75F283A75A900383413 /* TabBarViewControllerViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44AA755283A75A900383413 /* TabBarViewControllerViewControllerProtocol.swift */; };
+		B44AA760283A75A900383413 /* TabBarViewControllerPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44AA756283A75A900383413 /* TabBarViewControllerPresenterProtocol.swift */; };
+		B44AA761283A75A900383413 /* TabBarViewControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44AA757283A75A900383413 /* TabBarViewControllerViewController.swift */; };
+		B44AA762283A75A900383413 /* TabBarViewControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44AA758283A75A900383413 /* TabBarViewControllerBuilder.swift */; };
+		B44AA763283A75A900383413 /* TabBarViewControllerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44AA759283A75A900383413 /* TabBarViewControllerInteractor.swift */; };
+		B44AA764283A75A900383413 /* TabBarViewControllerDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44AA75A283A75A900383413 /* TabBarViewControllerDataManagerProtocol.swift */; };
+		B44AA765283A75A900383413 /* TabBarViewControllerOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44AA75B283A75A900383413 /* TabBarViewControllerOutput.swift */; };
+		B44AA766283A75A900383413 /* TabBarViewControllerDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44AA75C283A75A900383413 /* TabBarViewControllerDataManager.swift */; };
 		B4832EE628322DAF0024A950 /* LoginInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4832EDC28322DAE0024A950 /* LoginInteractorProtocol.swift */; };
 		B4832EE728322DAF0024A950 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4832EDD28322DAE0024A950 /* LoginPresenter.swift */; };
 		B4832EE828322DAF0024A950 /* LoginViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4832EDE28322DAE0024A950 /* LoginViewControllerProtocol.swift */; };
@@ -170,6 +180,16 @@
 		B44386F32815373F00ADACC5 /* RegisterFromDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFromDataManager.swift; sourceTree = "<group>"; };
 		B4438703281556DB00ADACC5 /* RegisterFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFormViewModel.swift; sourceTree = "<group>"; };
 		B44387062815917500ADACC5 /* RegisterACOTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterACOTextField.swift; sourceTree = "<group>"; };
+		B44AA753283A75A900383413 /* TabBarViewControllerInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewControllerInteractorProtocol.swift; sourceTree = "<group>"; };
+		B44AA754283A75A900383413 /* TabBarViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewControllerPresenter.swift; sourceTree = "<group>"; };
+		B44AA755283A75A900383413 /* TabBarViewControllerViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewControllerViewControllerProtocol.swift; sourceTree = "<group>"; };
+		B44AA756283A75A900383413 /* TabBarViewControllerPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewControllerPresenterProtocol.swift; sourceTree = "<group>"; };
+		B44AA757283A75A900383413 /* TabBarViewControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewControllerViewController.swift; sourceTree = "<group>"; };
+		B44AA758283A75A900383413 /* TabBarViewControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewControllerBuilder.swift; sourceTree = "<group>"; };
+		B44AA759283A75A900383413 /* TabBarViewControllerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewControllerInteractor.swift; sourceTree = "<group>"; };
+		B44AA75A283A75A900383413 /* TabBarViewControllerDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewControllerDataManagerProtocol.swift; sourceTree = "<group>"; };
+		B44AA75B283A75A900383413 /* TabBarViewControllerOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewControllerOutput.swift; sourceTree = "<group>"; };
+		B44AA75C283A75A900383413 /* TabBarViewControllerDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewControllerDataManager.swift; sourceTree = "<group>"; };
 		B4832EDC28322DAE0024A950 /* LoginInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractorProtocol.swift; sourceTree = "<group>"; };
 		B4832EDD28322DAE0024A950 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		B4832EDE28322DAE0024A950 /* LoginViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerProtocol.swift; sourceTree = "<group>"; };
@@ -317,8 +337,8 @@
 		B40D3129280863D0002C1396 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				B44AA751283A757900383413 /* TabBarModules */,
 				B4832EDB283229050024A950 /* Login */,
-				B4C60A5D282572A8007DBE70 /* HomeModule */,
 				B4C60A5C28257245007DBE70 /* StarterModule */,
 			);
 			path = Modules;
@@ -569,6 +589,72 @@
 				B44387062815917500ADACC5 /* RegisterACOTextField.swift */,
 			);
 			path = TextField;
+			sourceTree = "<group>";
+		};
+		B44AA751283A757900383413 /* TabBarModules */ = {
+			isa = PBXGroup;
+			children = (
+				B44AA752283A758500383413 /* TabBar */,
+				B4C60A5D282572A8007DBE70 /* HomeModule */,
+			);
+			path = TabBarModules;
+			sourceTree = "<group>";
+		};
+		B44AA752283A758500383413 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				B44AA76B283A75DB00383413 /* Builder */,
+				B44AA769283A75CD00383413 /* DataManager */,
+				B44AA76A283A75D300383413 /* Interactor */,
+				B44AA768283A75C600383413 /* Presenter */,
+				B44AA767283A75BF00383413 /* View */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		B44AA767283A75BF00383413 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B44AA75B283A75A900383413 /* TabBarViewControllerOutput.swift */,
+				B44AA757283A75A900383413 /* TabBarViewControllerViewController.swift */,
+				B44AA755283A75A900383413 /* TabBarViewControllerViewControllerProtocol.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B44AA768283A75C600383413 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B44AA756283A75A900383413 /* TabBarViewControllerPresenterProtocol.swift */,
+				B44AA754283A75A900383413 /* TabBarViewControllerPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B44AA769283A75CD00383413 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				B44AA75A283A75A900383413 /* TabBarViewControllerDataManagerProtocol.swift */,
+				B44AA75C283A75A900383413 /* TabBarViewControllerDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		B44AA76A283A75D300383413 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B44AA759283A75A900383413 /* TabBarViewControllerInteractor.swift */,
+				B44AA753283A75A900383413 /* TabBarViewControllerInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B44AA76B283A75DB00383413 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				B44AA758283A75A900383413 /* TabBarViewControllerBuilder.swift */,
+			);
+			path = Builder;
 			sourceTree = "<group>";
 		};
 		B4832EDB283229050024A950 /* Login */ = {
@@ -880,6 +966,7 @@
 				B4C60A6D2826423C007DBE70 /* HomeViewControllerProtocol.swift in Sources */,
 				B40D314828098A2F002C1396 /* RegisterACOColor.swift in Sources */,
 				B4C60A81282832CB007DBE70 /* KeychainHelper.swift in Sources */,
+				B44AA764283A75A900383413 /* TabBarViewControllerDataManagerProtocol.swift in Sources */,
 				B44386F62815373F00ADACC5 /* RegisterFromViewControllerProtocol.swift in Sources */,
 				B40D317B280AD27F002C1396 /* Login_RegisterBuilder.swift in Sources */,
 				B40D317C280AD27F002C1396 /* Login_RegisterInteractor.swift in Sources */,
@@ -894,13 +981,16 @@
 				B40D315D28098E7A002C1396 /* RegisterACOFont.swift in Sources */,
 				B4832EE628322DAF0024A950 /* LoginInteractorProtocol.swift in Sources */,
 				B4832F282838C1A80024A950 /* HTTPHeadersHelper.swift in Sources */,
+				B44AA761283A75A900383413 /* TabBarViewControllerViewController.swift in Sources */,
 				B4C60A6B2826423C007DBE70 /* HomeInteractorProtocol.swift in Sources */,
 				B44386FC2815373F00ADACC5 /* RegisterFromOutput.swift in Sources */,
 				B40D313A280863FB002C1396 /* StarterInteractor.swift in Sources */,
 				B4832EED28322DAF0024A950 /* LoginDataManagerProtocol.swift in Sources */,
+				B44AA75E283A75A900383413 /* TabBarViewControllerPresenter.swift in Sources */,
 				B44386F82815373F00ADACC5 /* RegisterFromViewController.swift in Sources */,
 				B44386FD2815373F00ADACC5 /* RegisterFromDataManager.swift in Sources */,
 				B4832EEF28322DAF0024A950 /* LoginDataManager.swift in Sources */,
+				B44AA762283A75A900383413 /* TabBarViewControllerBuilder.swift in Sources */,
 				B40D3138280863FB002C1396 /* StarterViewController.swift in Sources */,
 				B40D3139280863FB002C1396 /* StarterBuilder.swift in Sources */,
 				B4832EEA28322DAF0024A950 /* LoginViewController.swift in Sources */,
@@ -912,6 +1002,7 @@
 				B40D312028085A54002C1396 /* Builder.swift in Sources */,
 				B4832EE928322DAF0024A950 /* LoginPresenterProtocol.swift in Sources */,
 				B4832F2F28392A220024A950 /* MemoryCacheManager.swift in Sources */,
+				B44AA75D283A75A900383413 /* TabBarViewControllerInteractorProtocol.swift in Sources */,
 				B40D3179280AD27F002C1396 /* Login_RegisterPresenterProtocol.swift in Sources */,
 				B4832EE728322DAF0024A950 /* LoginPresenter.swift in Sources */,
 				B44386F92815373F00ADACC5 /* RegisterFromBuilder.swift in Sources */,
@@ -920,10 +1011,13 @@
 				B44386FB2815373F00ADACC5 /* RegisterFromDataManagerProtocol.swift in Sources */,
 				B40D30FD280858AE002C1396 /* AppDelegate.swift in Sources */,
 				B4C60A712826423C007DBE70 /* HomeInteractor.swift in Sources */,
+				B44AA760283A75A900383413 /* TabBarViewControllerPresenterProtocol.swift in Sources */,
+				B44AA75F283A75A900383413 /* TabBarViewControllerViewControllerProtocol.swift in Sources */,
 				B40D311728085A41002C1396 /* ServiceProxy.swift in Sources */,
 				B4832EEC28322DAF0024A950 /* LoginInteractor.swift in Sources */,
 				B40D313C280863FB002C1396 /* StarterOutput.swift in Sources */,
 				B4C60A742826423C007DBE70 /* HomeDataManager.swift in Sources */,
+				B44AA765283A75A900383413 /* TabBarViewControllerOutput.swift in Sources */,
 				B40D3176280AD27F002C1396 /* Login_RegisterInteractorProtocol.swift in Sources */,
 				B40D312428085A54002C1396 /* Coordinator.swift in Sources */,
 				B40D3178280AD27F002C1396 /* Login_RegisterViewControllerProtocol.swift in Sources */,
@@ -938,6 +1032,7 @@
 				B40D313D280863FB002C1396 /* StarterDataManager.swift in Sources */,
 				B4C60A722826423C007DBE70 /* HomeDataManagerProtocol.swift in Sources */,
 				B4832F2D28392A090024A950 /* CacheEntry.swift in Sources */,
+				B44AA766283A75A900383413 /* TabBarViewControllerDataManager.swift in Sources */,
 				B40D3177280AD27F002C1396 /* Login_RegisterPresenter.swift in Sources */,
 				B44387072815917500ADACC5 /* RegisterACOTextField.swift in Sources */,
 				B40D312128085A54002C1396 /* Loader.swift in Sources */,
@@ -950,6 +1045,7 @@
 				B4C60A732826423C007DBE70 /* HomeOutput.swift in Sources */,
 				B4832EEB28322DAF0024A950 /* LoginBuilder.swift in Sources */,
 				B4C60A6C2826423C007DBE70 /* HomePresenter.swift in Sources */,
+				B44AA763283A75A900383413 /* TabBarViewControllerInteractor.swift in Sources */,
 				B40D31602809C465002C1396 /* UIView+extensions.swift in Sources */,
 				B40D3135280863FB002C1396 /* StarterPresenter.swift in Sources */,
 			);
