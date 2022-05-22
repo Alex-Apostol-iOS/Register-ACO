@@ -8,6 +8,6 @@
 
 import UIKit
 
-protocol LoginViewProtocol: AnyObject {
+protocol LoginViewProtocol: AnyObject, Loader {
     
 }

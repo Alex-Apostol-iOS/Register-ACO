@@ -10,4 +10,5 @@ import Foundation
 enum Endpoint: String {
     case mainUrl = "http://127.0.0.1:8080"
     case user = "/user"
+    case login = "/login"
 }

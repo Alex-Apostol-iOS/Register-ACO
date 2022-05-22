@@ -84,8 +84,8 @@ class LoginViewController: RegisterAcoNavigationController {
     }
     
     @objc
-    private func submitForm() {
-//        presenter.didTapSubmit(viewModel: model)
+    private func submitForm()  {
+         presenter.login(viewModel: model)
     }
     
 }

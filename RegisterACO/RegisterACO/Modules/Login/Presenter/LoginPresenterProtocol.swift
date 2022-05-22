@@ -9,5 +9,5 @@
 import Foundation
 
 protocol LoginPresenterProtocol: AnyObject, GetLabel {
-    
+    func login(viewModel: LoginViewModel)
 }

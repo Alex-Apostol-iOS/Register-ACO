@@ -11,8 +11,11 @@ import Foundation
 class LoginDataManager: LoginDataManagerProtocol, HTTPHeadersHelper {
     let serviceProxy = AppManager.serviceProxy
     
-    @available(iOS 15.0.0, *)
-    func login() async throws {
-       async let userLogin = serviceProxy.getItemAsyncAwait(url: "", type: DtoUser.self, parameters: [:])
+    
+    func login(email: String, password: String) async throws -> DtoUser {
+        
+        async let userLogin = serviceProxy.postItemAsyncAwait(url: Endpoint.user.rawValue+Endpoint.login.rawValue, type: DtoUser.self, parameters: [:], headers: buildLoginHeadersWithParams(email: email, password: password))
+        
+        return try await userLogin
     }
 }

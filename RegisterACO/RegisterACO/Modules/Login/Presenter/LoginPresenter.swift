@@ -20,5 +20,14 @@ class LoginPresenter {
 }
 
 extension LoginPresenter: LoginPresenterProtocol {
+   
     
+    func login(viewModel: LoginViewModel)  {
+        view?.showLoader()
+        Task { [weak self] in
+            let user =  try await interactor.login(email: viewModel.email.lowercased(), password: viewModel.password)
+            self?.view?.hideLoader()
+        }
+        
+    }
 }

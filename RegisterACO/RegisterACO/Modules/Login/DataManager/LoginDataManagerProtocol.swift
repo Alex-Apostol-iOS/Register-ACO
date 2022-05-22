@@ -9,5 +9,6 @@
 import Foundation
 
 protocol LoginDataManagerProtocol : AnyObject {
-
+    
+    func login(email: String, password: String) async throws -> DtoUser
 }

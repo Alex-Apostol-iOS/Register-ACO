@@ -326,4 +326,45 @@ class ServiceProxy {
             }
         })
     }
+    
+    @available(iOS 15.0.0, *)
+    func postItemAsyncAwait<T: Decodable>(url: String, type: T.Type, parameters: [String:Any]?,headers: HTTPHeaders? = nil, queue: DispatchQueue = .main) async throws -> (T) {
+        let url = "\(mainURL)\(url)"
+        
+       return  try await withUnsafeThrowingContinuation({ continuation in
+            let request =  AF.request(url, method: .post, parameters: parameters, headers: headers)
+            { $0.timeoutInterval = self.timeout }
+            .validate()
+            .responseDecodable(of: T.self, queue: queue) { (response) in
+                print("IN<---------------------------------------")
+                if let HTTPresponse = response.response {
+                    // Debug
+                    print(HTTPresponse)
+                } else {
+                    print(response)
+                }
+                print("IN<---------------------------------------")
+                
+                if let data = response.data {
+                    print("Response: \(String(data: data, encoding: .utf8) ?? "")")
+                }
+                
+                switch response.result {
+                case .success(let result):
+                    continuation.resume(returning: result)
+                case .failure(let error):
+                    continuation.resume(throwing: error)
+                }
+            }
+            
+            if request.isInitialized {
+                request.cURLDescription(calling: { (description) in
+                    print("OUT----------------------------->")
+                    print("Curl Description \(description)")
+                    print("--------------------------------->")
+                })
+                
+            }
+        })
+    }
 }
