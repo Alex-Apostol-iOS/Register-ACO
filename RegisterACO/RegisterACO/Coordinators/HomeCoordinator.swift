@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeCoordinator: Coordinator {
+class HomeCoordinator: Coordinator, GetLabel {
     
     enum HomeCoordinatorState {
         case initial
@@ -30,7 +30,7 @@ class HomeCoordinator: Coordinator {
     func loop() {
         switch next(state: currentState) {
         case .willShowHome:
-            buildHomeModule()
+            buildTaBarViewController()
         case .didShowHome, .initial:
             fatalError("No navigation for this cases")
         }
@@ -44,11 +44,27 @@ class HomeCoordinator: Coordinator {
         }
     }
     
-    private func buildHomeModule() {
-        let vc = HomeBuilder { _ in
+    private func setUpTabBarModel() -> [TabBarModel] {
+        var tabBarvc: [TabBarModel] = []
+        let homeTabBarModel = TabBarModel(vc: buildHomeModule(), image: UIImage(named: "home_001")?.withRenderingMode(.alwaysTemplate).withTintColor(UIColor.theme(.primary100)) ?? UIImage(), title: getlabelForKey(key: "lng.common.home"))
+        
+        tabBarvc.append(homeTabBarModel)
+        return tabBarvc
+    }
+    
+    private func buildTaBarViewController() {
+        let vc = TabBarViewControllerBuilder(tabBarModel: setUpTabBarModel()) { _ in
             
         }.build()
         
         navigator.setViewControllers([vc], animated: true)
+    }
+    
+    private func buildHomeModule() -> UIViewController {
+        let vc = HomeBuilder { _ in
+            
+        }.build()
+        
+        return vc
     }
 }

@@ -9,5 +9,5 @@
 import UIKit
 
 protocol TabBarViewControllerViewProtocol: AnyObject {
-    
+    func layout(with tabBarModel: [TabBarModel])
 }

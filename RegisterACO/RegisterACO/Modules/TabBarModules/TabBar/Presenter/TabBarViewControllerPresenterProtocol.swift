@@ -9,5 +9,5 @@
 import Foundation
 
 protocol TabBarViewControllerPresenterProtocol: AnyObject {
-    
+    func viewDidload()
 }
