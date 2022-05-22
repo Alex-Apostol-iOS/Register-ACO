@@ -115,8 +115,12 @@ class MainCoordinator: Coordinator {
     }
     
     private func showLogin() {
-        let vc = LoginBuilder { _ in
-            
+        let vc = LoginBuilder { [weak self] output in
+            switch output {
+            case .goToHome:
+                self?.state = .willShowHomeFlow
+                self?.loop()
+            }
         }.build()
         navigator.pushViewController(vc, animated: true)
     }

@@ -12,6 +12,8 @@ class LoginPresenter {
     private var interactor: LoginInteractorProtocol
     weak var view: LoginViewProtocol?
     private var coordinatorOutput: (LoginOutput) -> Void
+    @Cache(.userSession)
+    var user: DtoUser?
 
     init(interactor: LoginInteractorProtocol, coordinnatorOutput: @escaping (LoginOutput) -> Void) {
         self.interactor = interactor
@@ -25,8 +27,16 @@ extension LoginPresenter: LoginPresenterProtocol {
     func login(viewModel: LoginViewModel)  {
         view?.showLoader()
         Task { [weak self] in
-            let user =  try await interactor.login(email: viewModel.email.lowercased(), password: viewModel.password)
-            self?.view?.hideLoader()
+            do {
+                let user =  try await interactor.login(email: viewModel.email.lowercased(), password: viewModel.password)
+                self?.user = user
+                DispatchQueue.main.async { [weak self] in
+                    self?.coordinatorOutput(.goToHome)
+                }
+            } catch {
+                print(error)
+                self?.view?.hideLoader()
+            }
         }
         
     }

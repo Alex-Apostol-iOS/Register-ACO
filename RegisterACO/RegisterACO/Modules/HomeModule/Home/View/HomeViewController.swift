@@ -17,6 +17,7 @@ class HomeViewController: RegisterAcoNavigationController {
     private lazy var tableView: UITableView = {
         let view = UITableView(frame: .zero)
         view.showsVerticalScrollIndicator = false
+        view.separatorStyle = .none
         view.register(HomeListUserTableViewCell.self, forCellReuseIdentifier: HomeListUserTableViewCell.tableViewRegisterID)
         return view
     }()
@@ -45,7 +46,7 @@ class HomeViewController: RegisterAcoNavigationController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 24).isActive = true
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
     
@@ -53,6 +54,10 @@ class HomeViewController: RegisterAcoNavigationController {
         tableViewDifableDataSurce = UITableViewDiffableDataSource<HomeListSection, RegisterACOUser>(tableView: tableView, cellProvider: {
             tableView, indexPath, model -> UITableViewCell? in
             guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeListUserTableViewCell.tableViewRegisterID, for: indexPath) as?  HomeListUserTableViewCell else { return UITableViewCell()}
+            
+            let model = HomeListCellModel(name: model.name ?? "", lastseen: "Ultima vez online ayer a las 12:00", imageURl: nil)
+            
+            cell.configure(with: model)
             return cell
         })
     }
@@ -64,6 +69,7 @@ extension HomeViewController: HomeViewProtocol{
         var snapshot = NSDiffableDataSourceSnapshot<HomeListSection, RegisterACOUser>()
         snapshot.appendSections([.users])
         snapshot.appendItems(users, toSection: .users)
+        tableViewDifableDataSurce.apply(snapshot)
     }
 }
 
