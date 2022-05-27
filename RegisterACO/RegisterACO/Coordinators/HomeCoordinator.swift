@@ -49,6 +49,10 @@ class HomeCoordinator: Coordinator, GetLabel {
         let homeTabBarModel = TabBarModel(vc: buildHomeModule(), image: UIImage(named: "home_001")?.withRenderingMode(.alwaysTemplate).withTintColor(UIColor.theme(.primary100)) ?? UIImage(), title: getlabelForKey(key: "lng.common.home"))
         
         tabBarvc.append(homeTabBarModel)
+        
+        let profileTabBarModel = TabBarModel(vc: buildProfileModule() , image: UIImage(named: "user_icon-1")?.withRenderingMode(.alwaysTemplate).withTintColor(UIColor.theme(.primary100)) ?? UIImage(), title: getlabelForKey(key: "lng.common.profile"))
+        
+        tabBarvc.append(profileTabBarModel)
         return tabBarvc
     }
     
@@ -58,6 +62,7 @@ class HomeCoordinator: Coordinator, GetLabel {
         }.build()
         
         navigator.setViewControllers([vc], animated: true)
+        navigator.interactivePopGestureRecognizer?.isEnabled = true
     }
     
     private func buildHomeModule() -> UIViewController {
@@ -65,6 +70,13 @@ class HomeCoordinator: Coordinator, GetLabel {
             
         }.build()
         
+        return vc
+    }
+    
+    private func buildProfileModule() -> UIViewController {
+        let vc = ProfileBuilder { _ in
+            
+        }.build()
         return vc
     }
 }

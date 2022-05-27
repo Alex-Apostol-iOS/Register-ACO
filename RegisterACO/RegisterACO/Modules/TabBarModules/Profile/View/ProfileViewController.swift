@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: RegisterAcoNavigationController {
     
     private let presenter: ProfilePresenterProtocol
         
@@ -24,6 +24,7 @@ class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configTitle(title: presenter.getlabelForKey(key: "lng.common.profile"))
     }
     
 }

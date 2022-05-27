@@ -72,3 +72,11 @@ extension TabBarViewControllerViewController: TabBarViewControllerViewProtocol {
         self.title = tabBarViewController.first?.title
     }
 }
+
+
+extension TabBarViewControllerViewController: UITabBarControllerDelegate {
+    
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        self.title = item.title
+    }
+}
