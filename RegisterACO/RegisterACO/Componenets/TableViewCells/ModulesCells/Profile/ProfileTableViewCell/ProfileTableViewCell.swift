@@ -70,6 +70,8 @@ class ProfileTableViewCell: UITableViewCell {
         mainStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16).isActive = true
         mainStackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 24).isActive = true
         mainStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 0).isActive = true
+        
+        self.selectionStyle = .none
     }
 }
 
