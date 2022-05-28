@@ -64,6 +64,7 @@
 		B442C3BE2841258600A6781B /* ProfileDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B442C3B42841258500A6781B /* ProfileDataManagerProtocol.swift */; };
 		B442C3BF2841258600A6781B /* ProfileOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B442C3B52841258500A6781B /* ProfileOutput.swift */; };
 		B442C3C02841258600A6781B /* ProfileDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B442C3B62841258500A6781B /* ProfileDataManager.swift */; };
+		B442C3CB2841FCE200A6781B /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B442C3CA2841FCE200A6781B /* ProfileTableViewCell.swift */; };
 		B44386F42815373F00ADACC5 /* RegisterFromInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44386EA2815373F00ADACC5 /* RegisterFromInteractorProtocol.swift */; };
 		B44386F52815373F00ADACC5 /* RegisterFromPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44386EB2815373F00ADACC5 /* RegisterFromPresenter.swift */; };
 		B44386F62815373F00ADACC5 /* RegisterFromViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44386EC2815373F00ADACC5 /* RegisterFromViewControllerProtocol.swift */; };
@@ -188,6 +189,7 @@
 		B442C3B42841258500A6781B /* ProfileDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataManagerProtocol.swift; sourceTree = "<group>"; };
 		B442C3B52841258500A6781B /* ProfileOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileOutput.swift; sourceTree = "<group>"; };
 		B442C3B62841258500A6781B /* ProfileDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataManager.swift; sourceTree = "<group>"; };
+		B442C3CA2841FCE200A6781B /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		B44386EA2815373F00ADACC5 /* RegisterFromInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFromInteractorProtocol.swift; sourceTree = "<group>"; };
 		B44386EB2815373F00ADACC5 /* RegisterFromPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFromPresenter.swift; sourceTree = "<group>"; };
 		B44386EC2815373F00ADACC5 /* RegisterFromViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFromViewControllerProtocol.swift; sourceTree = "<group>"; };
@@ -602,6 +604,39 @@
 			path = Builder;
 			sourceTree = "<group>";
 		};
+		B442C3C62841FCA100A6781B /* ProfileTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				B442C3CA2841FCE200A6781B /* ProfileTableViewCell.swift */,
+			);
+			path = ProfileTableViewCell;
+			sourceTree = "<group>";
+		};
+		B442C3C72841FCBB00A6781B /* ModulesCells */ = {
+			isa = PBXGroup;
+			children = (
+				B442C3C92841FCCD00A6781B /* Profile */,
+				B442C3C82841FCC500A6781B /* Home */,
+			);
+			path = ModulesCells;
+			sourceTree = "<group>";
+		};
+		B442C3C82841FCC500A6781B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B4C60A7B2827A8A8007DBE70 /* HomeListUserTableViewCell */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B442C3C92841FCCD00A6781B /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				B442C3C62841FCA100A6781B /* ProfileTableViewCell */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		B44386E92815372200ADACC5 /* RegisterFrom */ = {
 			isa = PBXGroup;
 			children = (
@@ -897,7 +932,7 @@
 		B4C60A7A2827A897007DBE70 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
-				B4C60A7B2827A8A8007DBE70 /* HomeListUserTableViewCell */,
+				B442C3C72841FCBB00A6781B /* ModulesCells */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -1080,6 +1115,7 @@
 				B4C60A5F282572E0007DBE70 /* HomeCoordinator.swift in Sources */,
 				B4B531AD28202FFE00D49EE5 /* DtoUser.swift in Sources */,
 				B40D3107280858AE002C1396 /* RegisterACO.xcdatamodeld in Sources */,
+				B442C3CB2841FCE200A6781B /* ProfileTableViewCell.swift in Sources */,
 				B4C60A7D2827A8BF007DBE70 /* HomeListUserTableViewCell.swift in Sources */,
 				B4832EF6283231010024A950 /* LoginViewModel.swift in Sources */,
 				B40D312028085A54002C1396 /* Builder.swift in Sources */,
