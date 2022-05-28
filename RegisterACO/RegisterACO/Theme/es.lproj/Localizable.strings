@@ -22,3 +22,4 @@
 "lng.common.passwordFieldText" = "La contraseña debe contener caracteres especiales, mayusculas y numeros";
 "lng.common.home" = "Inicio";
 "lng.common.profile" = "Perfil";
+"lng.common.username" = "Nombre";

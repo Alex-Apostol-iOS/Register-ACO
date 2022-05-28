@@ -38,6 +38,7 @@ enum RegisterACOFont {
     case semiBold14
     case semiBold16
     case semiBold18
+    case semiBold24
 }
 
 
@@ -95,6 +96,9 @@ extension UIFont {
             return UIFont(descriptor: UIFontDescriptor(name: "Inter-SemiBold", size: 16), size: 16.0)
         case .semiBold18:
             return UIFont(descriptor: UIFontDescriptor(name: "Inter-SemiBold", size: 18), size: 18.0)
+        case .semiBold24:
+            return UIFont(descriptor: UIFontDescriptor(name: "Inter-SemiBold", size: 24), size: 24.0)
+        
         }
     }
 }
