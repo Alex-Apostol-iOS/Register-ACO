@@ -67,6 +67,8 @@
 		B442C3CB2841FCE200A6781B /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B442C3CA2841FCE200A6781B /* ProfileTableViewCell.swift */; };
 		B442C3CF2842055300A6781B /* RegisterUserInfoHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B442C3CE2842055300A6781B /* RegisterUserInfoHeader.swift */; };
 		B442C3D3284264F500A6781B /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B442C3D2284264F500A6781B /* AlertViewController.swift */; };
+		B442C3D7284269AF00A6781B /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B442C3D6284269AF00A6781B /* ProfileCoordinator.swift */; };
+		B442C3D928426EB900A6781B /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B442C3D828426EB900A6781B /* TabBarCoordinator.swift */; };
 		B44386F42815373F00ADACC5 /* RegisterFromInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44386EA2815373F00ADACC5 /* RegisterFromInteractorProtocol.swift */; };
 		B44386F52815373F00ADACC5 /* RegisterFromPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44386EB2815373F00ADACC5 /* RegisterFromPresenter.swift */; };
 		B44386F62815373F00ADACC5 /* RegisterFromViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44386EC2815373F00ADACC5 /* RegisterFromViewControllerProtocol.swift */; };
@@ -194,6 +196,8 @@
 		B442C3CA2841FCE200A6781B /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		B442C3CE2842055300A6781B /* RegisterUserInfoHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserInfoHeader.swift; sourceTree = "<group>"; };
 		B442C3D2284264F500A6781B /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		B442C3D6284269AF00A6781B /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
+		B442C3D828426EB900A6781B /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		B44386EA2815373F00ADACC5 /* RegisterFromInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFromInteractorProtocol.swift; sourceTree = "<group>"; };
 		B44386EB2815373F00ADACC5 /* RegisterFromPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFromPresenter.swift; sourceTree = "<group>"; };
 		B44386EC2815373F00ADACC5 /* RegisterFromViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFromViewControllerProtocol.swift; sourceTree = "<group>"; };
@@ -356,6 +360,8 @@
 			children = (
 				B40D312728085A62002C1396 /* MainCoordinator.swift */,
 				B4C60A5E282572E0007DBE70 /* HomeCoordinator.swift */,
+				B442C3D6284269AF00A6781B /* ProfileCoordinator.swift */,
+				B442C3D828426EB900A6781B /* TabBarCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -1166,7 +1172,9 @@
 				B442C3B82841258600A6781B /* ProfilePresenter.swift in Sources */,
 				B40D3138280863FB002C1396 /* StarterViewController.swift in Sources */,
 				B40D3139280863FB002C1396 /* StarterBuilder.swift in Sources */,
+				B442C3D928426EB900A6781B /* TabBarCoordinator.swift in Sources */,
 				B4832EEA28322DAF0024A950 /* LoginViewController.swift in Sources */,
+				B442C3D7284269AF00A6781B /* ProfileCoordinator.swift in Sources */,
 				B4C60A5F282572E0007DBE70 /* HomeCoordinator.swift in Sources */,
 				B4B531AD28202FFE00D49EE5 /* DtoUser.swift in Sources */,
 				B40D3107280858AE002C1396 /* RegisterACO.xcdatamodeld in Sources */,
