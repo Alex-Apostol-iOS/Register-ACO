@@ -17,6 +17,14 @@ class ProfileViewController: RegisterAcoNavigationController {
         }
     }
     
+    private lazy var headerView: RegisterUserInfoHeader = {
+       let view = RegisterUserInfoHeader()
+        let userName = presenter.currentUser?.user?.name ?? ""
+        let userSurname = presenter.currentUser?.user?.surname ?? ""
+        view.configure(with: RegisterUserInfoHeaderModel(image: "", username: userName+" "+userSurname))
+        return view
+    }()
+    
     private lazy var tableView: UITableView = {
         let view = UITableView(frame: .zero)
         view.showsVerticalScrollIndicator = false
@@ -40,6 +48,26 @@ class ProfileViewController: RegisterAcoNavigationController {
         tableView.delegate = self
         tableView.dataSource = self
         configTitle(title: presenter.getlabelForKey(key: "lng.common.profile"))
+        setUpHederViewLayout()
+        setUpTableViewLayout()
+        presenter.viewDidLoad()
+    }
+    
+    private func setUpHederViewLayout() {
+        view.addSubview(headerView)
+        headerView.translatesAutoresizingMaskIntoConstraints = false
+        headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 24).isActive = true
+        headerView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
+        headerView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
+    }
+    
+    private func setUpTableViewLayout() {
+        view.addSubview(tableView)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: 24).isActive = true
+        tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
+        tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
     
     private func reloadTableViewData() {
@@ -51,7 +79,9 @@ class ProfileViewController: RegisterAcoNavigationController {
 }
 
 extension ProfileViewController: ProfileViewProtocol{
-    // TODO: Implement View Output Methods
+    func layout(with tableViewContent:  [ProfileTableViewCellModel]) {
+        self.tableViewContent = tableViewContent
+    }
 }
 
 extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {

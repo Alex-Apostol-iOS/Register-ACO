@@ -9,5 +9,5 @@
 import UIKit
 
 protocol ProfileViewProtocol: AnyObject {
-    
+    func layout(with tableViewContent:  [ProfileTableViewCellModel])
 }

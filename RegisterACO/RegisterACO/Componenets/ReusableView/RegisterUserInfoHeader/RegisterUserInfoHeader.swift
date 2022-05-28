@@ -13,17 +13,17 @@ class RegisterUserInfoHeader: UIStackView, GetLabel {
         let image = UIImageView()
         image.contentMode = .scaleAspectFit
         image.clipsToBounds = true
-        image.heightAnchor.constraint(equalToConstant: 80).isActive = true
-        image.widthAnchor.constraint(equalToConstant: 80).isActive = true
-        image.layer.cornerRadius = 40
+        image.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        image.widthAnchor.constraint(equalToConstant: 60).isActive = true
+        image.layer.cornerRadius = 30
         return image
     }()
     
     private lazy var imageContainter: UIView = {
         let view = UIView(frame: .zero)
-        view.heightAnchor.constraint(equalToConstant: 100).isActive = true
-        view.widthAnchor.constraint(equalToConstant: 100).isActive = true
-        view.layer.cornerRadius = 50
+        view.heightAnchor.constraint(equalToConstant: 80).isActive = true
+        view.widthAnchor.constraint(equalToConstant: 80).isActive = true
+        view.layer.cornerRadius = 40
         view.layer.borderWidth = 2
         view.layer.borderColor = UIColor.theme(.primary100).cgColor
         
@@ -45,17 +45,20 @@ class RegisterUserInfoHeader: UIStackView, GetLabel {
     
     private lazy var userNameLabel: UILabel = {
         let label = UILabel(frame: .zero)
-        label.font = UIFont.theme(id: .semiBold24)
+        label.font = UIFont.theme(id: .semiBold18)
         label.textColor = UIColor.theme(.dark75)
         label.text = getlabelForKey(key: "lng.common.username")
         return label
     }()
     
     private lazy var labelsStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [staticUserNameLabel, userNameLabel])
-        stackView.distribution = .fill
-        stackView.alignment = .center
-        stackView.spacing = 8
+        let topspaceView = UIView(frame: .zero)
+        topspaceView.heightAnchor.constraint(equalToConstant: 16).isActive = true
+        let stackView = UIStackView(arrangedSubviews: [FreeSpaceView(), staticUserNameLabel, userNameLabel, FreeSpaceView()])
+        stackView.distribution = .equalCentering
+        stackView.alignment = .fill
+        stackView.axis = .vertical
+        stackView.spacing = 4
         return stackView
     }()
     

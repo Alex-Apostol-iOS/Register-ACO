@@ -38,7 +38,7 @@ class ProfileTableViewCell: UITableViewCell {
         stackView.distribution = .fill
         stackView.alignment = .fill
         stackView.axis = .horizontal
-        stackView.spacing = 4
+        stackView.spacing = 12
         return stackView
     }()
     
@@ -54,8 +54,9 @@ class ProfileTableViewCell: UITableViewCell {
     
     func configure(with model: ProfileTableViewCellModel) {
         cellText.text = model.cellText
-        cellImage.sd_setImage(with: URL(string: model.image))
         imageContainer.backgroundColor = model.imageContainerColor
+        cellImage.image = UIImage(named: model.image)
+        
     }
     
     private func commonInit() {
