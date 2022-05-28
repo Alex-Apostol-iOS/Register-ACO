@@ -66,6 +66,7 @@
 		B442C3C02841258600A6781B /* ProfileDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B442C3B62841258500A6781B /* ProfileDataManager.swift */; };
 		B442C3CB2841FCE200A6781B /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B442C3CA2841FCE200A6781B /* ProfileTableViewCell.swift */; };
 		B442C3CF2842055300A6781B /* RegisterUserInfoHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B442C3CE2842055300A6781B /* RegisterUserInfoHeader.swift */; };
+		B442C3D3284264F500A6781B /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B442C3D2284264F500A6781B /* AlertViewController.swift */; };
 		B44386F42815373F00ADACC5 /* RegisterFromInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44386EA2815373F00ADACC5 /* RegisterFromInteractorProtocol.swift */; };
 		B44386F52815373F00ADACC5 /* RegisterFromPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44386EB2815373F00ADACC5 /* RegisterFromPresenter.swift */; };
 		B44386F62815373F00ADACC5 /* RegisterFromViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44386EC2815373F00ADACC5 /* RegisterFromViewControllerProtocol.swift */; };
@@ -192,6 +193,7 @@
 		B442C3B62841258500A6781B /* ProfileDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataManager.swift; sourceTree = "<group>"; };
 		B442C3CA2841FCE200A6781B /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		B442C3CE2842055300A6781B /* RegisterUserInfoHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserInfoHeader.swift; sourceTree = "<group>"; };
+		B442C3D2284264F500A6781B /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		B44386EA2815373F00ADACC5 /* RegisterFromInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFromInteractorProtocol.swift; sourceTree = "<group>"; };
 		B44386EB2815373F00ADACC5 /* RegisterFromPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFromPresenter.swift; sourceTree = "<group>"; };
 		B44386EC2815373F00ADACC5 /* RegisterFromViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFromViewControllerProtocol.swift; sourceTree = "<group>"; };
@@ -361,6 +363,7 @@
 		B40D3129280863D0002C1396 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				B442C3D0284264CE00A6781B /* ReusableModules */,
 				B44AA751283A757900383413 /* TabBarModules */,
 				B4832EDB283229050024A950 /* Login */,
 				B4C60A5C28257245007DBE70 /* StarterModule */,
@@ -565,8 +568,9 @@
 		B442C3C12841258D00A6781B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B442C3AF2841258500A6781B /* ProfileViewControllerProtocol.swift */,
 				B442C3B12841258500A6781B /* ProfileViewController.swift */,
+				B442C3AF2841258500A6781B /* ProfileViewControllerProtocol.swift */,
+				B442C3B52841258500A6781B /* ProfileOutput.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -574,7 +578,6 @@
 		B442C3C22841259300A6781B /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				B442C3B52841258500A6781B /* ProfileOutput.swift */,
 				B442C3B02841258500A6781B /* ProfilePresenterProtocol.swift */,
 				B442C3AE2841258500A6781B /* ProfilePresenter.swift */,
 			);
@@ -654,6 +657,38 @@
 				B442C3CE2842055300A6781B /* RegisterUserInfoHeader.swift */,
 			);
 			path = RegisterUserInfoHeader;
+			sourceTree = "<group>";
+		};
+		B442C3D0284264CE00A6781B /* ReusableModules */ = {
+			isa = PBXGroup;
+			children = (
+				B442C3D1284264DC00A6781B /* Alert */,
+			);
+			path = ReusableModules;
+			sourceTree = "<group>";
+		};
+		B442C3D1284264DC00A6781B /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				B442C3D42842652000A6781B /* Model */,
+				B442C3D52842652400A6781B /* View */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		B442C3D42842652000A6781B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B442C3D52842652400A6781B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B442C3D2284264F500A6781B /* AlertViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		B44386E92815372200ADACC5 /* RegisterFrom */ = {
@@ -1100,6 +1135,7 @@
 				B40D314828098A2F002C1396 /* RegisterACOColor.swift in Sources */,
 				B4C60A81282832CB007DBE70 /* KeychainHelper.swift in Sources */,
 				B44AA764283A75A900383413 /* TabBarViewControllerDataManagerProtocol.swift in Sources */,
+				B442C3D3284264F500A6781B /* AlertViewController.swift in Sources */,
 				B44386F62815373F00ADACC5 /* RegisterFromViewControllerProtocol.swift in Sources */,
 				B40D317B280AD27F002C1396 /* Login_RegisterBuilder.swift in Sources */,
 				B40D317C280AD27F002C1396 /* Login_RegisterInteractor.swift in Sources */,

@@ -80,4 +80,10 @@ struct ProfileTableViewCellModel {
     let image: String
     let cellText: String
     let imageContainerColor: UIColor
+    let type: ProfileTableViewCellType
+}
+
+
+enum ProfileTableViewCellType {
+    case logout
 }

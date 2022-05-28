@@ -24,3 +24,5 @@
 "lng.common.profile" = "Perfil";
 "lng.common.username" = "Nombre";
 "lng.common.logout" = "Salir";
+"lng.common.yes" = "Si";
+"lng.common.no" = "No";

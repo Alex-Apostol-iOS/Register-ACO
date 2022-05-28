@@ -11,4 +11,5 @@ import Foundation
 protocol ProfilePresenterProtocol: AnyObject, GetLabel {
     var currentUser: DtoUser? {get}
     func viewDidLoad()
+    func didTapLogout()
 }

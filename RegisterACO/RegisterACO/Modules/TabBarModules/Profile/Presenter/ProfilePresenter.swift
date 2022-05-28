@@ -29,9 +29,13 @@ extension ProfilePresenter: ProfilePresenterProtocol {
     
     func viewDidLoad() {
         var tableViewModel: [ProfileTableViewCellModel] = []
-        tableViewModel.append(ProfileTableViewCellModel(image: "logout_001", cellText: getlabelForKey(key: "lng.common.logout"), imageContainerColor: UIColor.theme(.red50)))
+        tableViewModel.append(ProfileTableViewCellModel(image: "logout_001", cellText: getlabelForKey(key: "lng.common.logout"), imageContainerColor: UIColor.theme(.red50), type: .logout))
         
         view?.layout(with: tableViewModel)
+    }
+    
+    func didTapLogout() {
+        coordinatorOutput(.goToLogout)
     }
 }
 
