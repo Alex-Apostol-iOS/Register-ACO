@@ -20,8 +20,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         let navigationController = UINavigationController()
         
-        if let password = try? KeychainHelper.sharedInstance.read(service: .user_password, account: .registerACO),
-           let email = try? KeychainHelper.sharedInstance.read(service: .user_email, account: .registerACO) {
+        if let _ = try? KeychainHelper.sharedInstance.read(service: .user_password, account: .registerACO),
+           let _ = try? KeychainHelper.sharedInstance.read(service: .user_email, account: .registerACO) {
             mainCoordinator = MainCoordinator(with: navigationController, state: .willShowLoginFromLoginRegiser)
         } else {
             mainCoordinator = MainCoordinator(with: navigationController, state: .initial)
