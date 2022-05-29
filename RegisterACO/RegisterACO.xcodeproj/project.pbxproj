@@ -55,6 +55,7 @@
 		B40D317F280AD27F002C1396 /* Login_RegisterDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D3175280AD27F002C1396 /* Login_RegisterDataManager.swift */; };
 		B40D3188280AD5F5002C1396 /* RegisterAcoNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D3187280AD5F5002C1396 /* RegisterAcoNavigationController.swift */; };
 		B428E18B28436EBE006D38AD /* AlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B428E18A28436EBE006D38AD /* AlertViewModel.swift */; };
+		B428E1902843BA5F006D38AD /* UIApplication+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B428E18F2843BA5F006D38AD /* UIApplication+extension.swift */; };
 		B442C3B72841258600A6781B /* ProfileInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B442C3AD2841258500A6781B /* ProfileInteractorProtocol.swift */; };
 		B442C3B82841258600A6781B /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B442C3AE2841258500A6781B /* ProfilePresenter.swift */; };
 		B442C3B92841258600A6781B /* ProfileViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B442C3AF2841258500A6781B /* ProfileViewControllerProtocol.swift */; };
@@ -185,6 +186,7 @@
 		B40D3175280AD27F002C1396 /* Login_RegisterDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_RegisterDataManager.swift; sourceTree = "<group>"; };
 		B40D3187280AD5F5002C1396 /* RegisterAcoNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAcoNavigationController.swift; sourceTree = "<group>"; };
 		B428E18A28436EBE006D38AD /* AlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewModel.swift; sourceTree = "<group>"; };
+		B428E18F2843BA5F006D38AD /* UIApplication+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+extension.swift"; sourceTree = "<group>"; };
 		B442C3AD2841258500A6781B /* ProfileInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractorProtocol.swift; sourceTree = "<group>"; };
 		B442C3AE2841258500A6781B /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		B442C3AF2841258500A6781B /* ProfileViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewControllerProtocol.swift; sourceTree = "<group>"; };
@@ -466,12 +468,8 @@
 		B40D315E2809C44F002C1396 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				B40D315F2809C465002C1396 /* UIView+extensions.swift */,
-				B40D3168280AB173002C1396 /* LabelsProtocol.swift */,
-				B4B531A9281ED18000D49EE5 /* UITextField+Extensions.swift */,
-				B4B531AE282030B900D49EE5 /* AppManager.swift */,
-				B4B531B02820315800D49EE5 /* Encodable+extensions.swift */,
-				B4C60A7E2827C290007DBE70 /* UITableViewCell+Extension.swift */,
+				B428E18D2843BA29006D38AD /* DataHelpers */,
+				B428E18C2843BA1D006D38AD /* UIHelpers */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -559,6 +557,27 @@
 				B40D3187280AD5F5002C1396 /* RegisterAcoNavigationController.swift */,
 			);
 			path = NavigationController;
+			sourceTree = "<group>";
+		};
+		B428E18C2843BA1D006D38AD /* UIHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				B4C60A7E2827C290007DBE70 /* UITableViewCell+Extension.swift */,
+				B4B531A9281ED18000D49EE5 /* UITextField+Extensions.swift */,
+				B40D3168280AB173002C1396 /* LabelsProtocol.swift */,
+				B40D315F2809C465002C1396 /* UIView+extensions.swift */,
+			);
+			path = UIHelpers;
+			sourceTree = "<group>";
+		};
+		B428E18D2843BA29006D38AD /* DataHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				B4B531B02820315800D49EE5 /* Encodable+extensions.swift */,
+				B4B531AE282030B900D49EE5 /* AppManager.swift */,
+				B428E18F2843BA5F006D38AD /* UIApplication+extension.swift */,
+			);
+			path = DataHelpers;
 			sourceTree = "<group>";
 		};
 		B442C3AC2841257100A6781B /* Profile */ = {
@@ -1211,6 +1230,7 @@
 				B40D3178280AD27F002C1396 /* Login_RegisterViewControllerProtocol.swift in Sources */,
 				B44386F72815373F00ADACC5 /* RegisterFromPresenterProtocol.swift in Sources */,
 				B4438704281556DB00ADACC5 /* RegisterFormViewModel.swift in Sources */,
+				B428E1902843BA5F006D38AD /* UIApplication+extension.swift in Sources */,
 				B40D311828085A41002C1396 /* Endpoint.swift in Sources */,
 				B4832EE828322DAF0024A950 /* LoginViewControllerProtocol.swift in Sources */,
 				B44386FA2815373F00ADACC5 /* RegisterFromInteractor.swift in Sources */,

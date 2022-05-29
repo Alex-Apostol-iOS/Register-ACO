@@ -10,8 +10,8 @@ import UIKit
 class ProfileCoordinator: Coordinator {
     
     enum ProfileCoordinatorState {
-        case showAlert
-        case willShowAlert
+        case showAlert(logout: () -> Void)
+        case willShowAlert(logout: () -> Void)
         case inital
         case willShowDefaultView
 
@@ -31,8 +31,8 @@ class ProfileCoordinator: Coordinator {
     
     func manageProfileInternalNavigation(output: ProfileOutput)  {
         switch output {
-        case .goToLogout:
-            self.currentState = .showAlert
+        case .goToLogout(let logout):
+            self.currentState = .showAlert(logout: logout)
             self.loop()
         }
     }
@@ -41,8 +41,8 @@ class ProfileCoordinator: Coordinator {
     private func loop() {
         currentState = next(nextState: currentState)
         switch currentState {
-        case .willShowAlert:
-            showAlert()
+        case .willShowAlert(let  logout):
+            showAlert(logout: logout)
         case .willShowDefaultView:
             break
         default:
@@ -52,8 +52,8 @@ class ProfileCoordinator: Coordinator {
     
     private func next(nextState: ProfileCoordinatorState) -> ProfileCoordinatorState {
         switch nextState {
-        case .showAlert:
-            return .willShowAlert
+        case .showAlert(let  logout):
+            return .willShowAlert(logout: logout)
         case .inital:
             return .willShowDefaultView
         default: 
@@ -61,9 +61,9 @@ class ProfileCoordinator: Coordinator {
         }
     }
     
-    private func showAlert() {
+    private func showAlert(logout: @escaping() -> Void) {
         
-        let alertViewModel = AlertViewModel(title: "lng.common.logout", subtitle: "lng.logout.subtitle", mainButtonTitle: "lng.common.yes", secondaryButttonTitle: "lng.common.no", mainButtonAction: {})
+        let alertViewModel = AlertViewModel(title: "lng.common.logout", subtitle: "lng.logout.subtitle", mainButtonTitle: "lng.common.yes", secondaryButttonTitle: "lng.common.no", mainButtonAction: logout)
         let vc = AlertViewController(with: alertViewModel)
         
         vc.modalPresentationStyle = .overCurrentContext

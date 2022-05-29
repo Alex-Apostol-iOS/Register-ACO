@@ -35,7 +35,11 @@ extension ProfilePresenter: ProfilePresenterProtocol {
     }
     
     func didTapLogout() {
-        coordinatorOutput(.goToLogout)
+        coordinatorOutput(.goToLogout(logout: logout))
+    }
+    
+    func logout() {
+        interactor.logout()
     }
 }
 

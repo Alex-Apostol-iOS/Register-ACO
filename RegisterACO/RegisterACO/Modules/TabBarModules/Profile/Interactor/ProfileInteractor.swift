@@ -15,4 +15,8 @@ class ProfileInteractor: ProfileInteractorProtocol {
     init(dataManager: ProfileDataManagerProtocol) {
         self.dataManager = dataManager
     }
+    
+    func logout() {
+        dataManager.logout()
+    }
 }

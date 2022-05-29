@@ -9,5 +9,5 @@
 import Foundation
 
 enum ProfileOutput {
-    case goToLogout
+    case goToLogout(logout: () -> Void)
 }

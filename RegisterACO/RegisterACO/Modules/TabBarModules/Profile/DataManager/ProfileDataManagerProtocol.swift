@@ -9,5 +9,5 @@
 import Foundation
 
 protocol ProfileDataManagerProtocol : AnyObject {
-
+    func logout()
 }
