@@ -26,3 +26,4 @@
 "lng.common.logout" = "Salir";
 "lng.common.yes" = "Si";
 "lng.common.no" = "No";
+"lng.logout.subtitle" = "Seguro que quieres salir?";

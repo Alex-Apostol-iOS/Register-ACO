@@ -27,4 +27,5 @@
 "lng.common.logout" = "Logout";
 "lng.common.yes" = "Yes";
 "lng.common.no" = "No";
+"lng.logout.subtitle" = "Are you sure you wanna logout?";
 

@@ -62,7 +62,12 @@ class ProfileCoordinator: Coordinator {
     }
     
     private func showAlert() {
-        let vc = AlertViewController()
+        
+        let alertViewModel = AlertViewModel(title: "lng.common.logout", subtitle: "lng.logout.subtitle", mainButtonTitle: "lng.common.yes", secondaryButttonTitle: "lng.common.no", mainButtonAction: {})
+        let vc = AlertViewController(with: alertViewModel)
+        
+        vc.modalPresentationStyle = .overCurrentContext
+        vc.modalTransitionStyle = .coverVertical
         navigator.present(vc, animated: true, completion: nil)
     }
 }
