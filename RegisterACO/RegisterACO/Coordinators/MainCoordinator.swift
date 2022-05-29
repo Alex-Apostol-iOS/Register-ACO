@@ -111,7 +111,7 @@ class MainCoordinator: Coordinator {
     }
     
     private func goToHomeFlow() {
-        HomeCoordinator(with: navigator).start()
+        TabBarCoordinator(on: navigator, with: .initial).start()
     }
     
     private func showLogin() {

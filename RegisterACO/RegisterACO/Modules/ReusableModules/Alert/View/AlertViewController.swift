@@ -34,7 +34,7 @@ class AlertViewController: UIViewController, GetLabel {
     
     private lazy var buttonsStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [secondaryButton, primaryButton])
-        stackView.distribution = .fill
+        stackView.distribution = .fillEqually
         stackView.alignment = .fill
         stackView.axis = .horizontal
         stackView.spacing = 16

@@ -10,9 +10,10 @@ import UIKit
 class HomeCoordinator: Coordinator, GetLabel {
     
     enum HomeCoordinatorState {
+        case goToUserData
+        case willShowUserData
         case initial
-        case willShowHome
-        case didShowHome
+        case willShowDefaultView
     }
     
     private var navigator: UINavigationController
@@ -28,55 +29,28 @@ class HomeCoordinator: Coordinator, GetLabel {
     }
     
     func loop() {
-        switch next(state: currentState) {
-        case .willShowHome:
-            buildTaBarViewController()
-        case .didShowHome, .initial:
-            fatalError("No navigation for this cases")
+        currentState = next(state: currentState)
+        switch currentState {
+        case .willShowUserData:
+            break
+        case .willShowDefaultView:
+            break
+        default:
+            fatalError("No navigation for \(currentState))")
         }
+    }
+    
+    func manageHomeInternalNavigation(with: HomeOutput) {
+        
     }
     
     func next(state: HomeCoordinatorState) -> HomeCoordinatorState {
         switch state {
+        case .goToUserData:
+            return .willShowUserData
         case .initial:
-            return .willShowHome
+            return .willShowDefaultView
         default: return state
         }
-    }
-    
-    private func setUpTabBarModel() -> [TabBarModel] {
-        var tabBarvc: [TabBarModel] = []
-        let homeTabBarModel = TabBarModel(vc: buildHomeModule(), image: UIImage(named: "home_001")?.withRenderingMode(.alwaysTemplate).withTintColor(UIColor.theme(.primary100)) ?? UIImage(), title: getlabelForKey(key: "lng.common.home"))
-        
-        tabBarvc.append(homeTabBarModel)
-        
-        let profileTabBarModel = TabBarModel(vc: buildProfileModule() , image: UIImage(named: "user_icon-1")?.withRenderingMode(.alwaysTemplate).withTintColor(UIColor.theme(.primary100)) ?? UIImage(), title: getlabelForKey(key: "lng.common.profile"))
-        
-        tabBarvc.append(profileTabBarModel)
-        return tabBarvc
-    }
-    
-    private func buildTaBarViewController() {
-        let vc = TabBarViewControllerBuilder(tabBarModel: setUpTabBarModel()) { _ in
-            
-        }.build()
-        
-        navigator.setViewControllers([vc], animated: true)
-        navigator.interactivePopGestureRecognizer?.isEnabled = true
-    }
-    
-    private func buildHomeModule() -> UIViewController {
-        let vc = HomeBuilder { _ in
-            
-        }.build()
-        
-        return vc
-    }
-    
-    private func buildProfileModule() -> UIViewController {
-        let vc = ProfileBuilder { _ in
-            
-        }.build()
-        return vc
     }
 }

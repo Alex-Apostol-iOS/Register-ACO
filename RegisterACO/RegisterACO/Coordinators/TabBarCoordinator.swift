@@ -11,38 +11,34 @@ class TabBarCoordinator: Coordinator, GetLabel {
     
     enum TabBarCoordinatorState {
         case initial
-        case willShowHomeFlow
-        case goToProfileFlow
-        case willShowProfileFlow
+        case willShowTabBar
     }
     
-    private var currentTabCoordinator: Coordinator? {
-        didSet {
-            currentTabCoordinator?.start()
-        }
-    }
-    
+   
     private var currentState: TabBarCoordinatorState
     private let navigator: UINavigationController
+    
+    private let homeChildCoordinator: HomeCoordinator
+    private let profileChildCoordinator: ProfileCoordinator
     
     init(on navigator: UINavigationController, with state: TabBarCoordinatorState) {
         self.navigator = navigator
         self.currentState = state
+        homeChildCoordinator = HomeCoordinator(with: navigator)
+        profileChildCoordinator =  ProfileCoordinator(on: navigator)
         
     }
     
     func start() {
-        
+        loop()
     }
     
     private func loop() {
         currentState = next(nextState: currentState)
         
         switch currentState {
-        case .willShowHomeFlow:
-            break
-        case .willShowProfileFlow:
-            break
+        case .willShowTabBar:
+            buildTaBarViewController()
         default:
             fatalError("no loop was implemented for \(currentState) on TabBarCoordiantor")
         }
@@ -52,15 +48,9 @@ class TabBarCoordinator: Coordinator, GetLabel {
     private func next(nextState: TabBarCoordinatorState) -> TabBarCoordinatorState {
         switch nextState {
         case .initial:
-            return .willShowHomeFlow
-        case .goToProfileFlow:
-            return .willShowProfileFlow
+            return .willShowTabBar
         default: return nextState
         }
-    }
-    
-    private func goToHomeFlow() {
-        
     }
     
     private func setUpTabBarModel() -> [TabBarModel] {
@@ -86,15 +76,15 @@ class TabBarCoordinator: Coordinator, GetLabel {
     
     private func buildHomeModule() -> UIViewController {
         let vc = HomeBuilder { _ in
-            
+           
         }.build()
         
         return vc
     }
     
     private func buildProfileModule() -> UIViewController {
-        let vc = ProfileBuilder { _ in
-            
+        let vc = ProfileBuilder { output in
+            self.profileChildCoordinator.manageProfileInternalNavigation(output: output)
         }.build()
         return vc
     }

@@ -10,32 +10,40 @@ import UIKit
 class ProfileCoordinator: Coordinator {
     
     enum ProfileCoordinatorState {
-        case inital
         case showAlert
-        case willShowProfile
         case willShowAlert
+        case inital
+        case willShowDefaultView
+
     }
     
     private var currentState: ProfileCoordinatorState
     private let navigator: UINavigationController
     
-    init(on navigator: UINavigationController, with state: ProfileCoordinatorState ) {
+    init(on navigator: UINavigationController, with state: ProfileCoordinatorState = .inital) {
         self.navigator = navigator
         self.currentState = state
     }
     
     func start() {
-        currentState = .inital
         loop()
+    }
+    
+    func manageProfileInternalNavigation(output: ProfileOutput)  {
+        switch output {
+        case .goToLogout:
+            self.currentState = .showAlert
+            self.loop()
+        }
     }
     
     
     private func loop() {
         currentState = next(nextState: currentState)
         switch currentState {
-        case .willShowProfile:
-            showProfileModule()
         case .willShowAlert:
+            showAlert()
+        case .willShowDefaultView:
             break
         default:
             fatalError("no loop implemented For \(currentState) on ProfileCoordinator")
@@ -44,19 +52,17 @@ class ProfileCoordinator: Coordinator {
     
     private func next(nextState: ProfileCoordinatorState) -> ProfileCoordinatorState {
         switch nextState {
-        case .inital:
-            return .willShowProfile
         case .showAlert:
             return .willShowAlert
-        case .willShowAlert, .willShowProfile:
+        case .inital:
+            return .willShowDefaultView
+        default: 
             return nextState
         }
     }
     
-    private func showProfileModule() {
-        let vc = ProfileBuilder { _ in
-            
-        }.build()
+    private func showAlert() {
+        let vc = AlertViewController()
         navigator.present(vc, animated: true, completion: nil)
     }
 }
