@@ -27,3 +27,7 @@
 "lng.common.yes" = "Si";
 "lng.common.no" = "No";
 "lng.logout.subtitle" = "Seguro que quieres salir?";
+"lng.logout.homeFeatureCard.positiveHabit.subtitle" = "Empieza a cambiar tu vida";
+"lng.logout.homeFeatureCard.positiveHabit.title" = "Crea nuevos hábitos";
+"lng.logout.homeFeatureCard.negativeHabit.subtitle" = "Alejate de todo lo contraproducente";
+"lng.logout.homeFeatureCard.negativeHabit.title" = "Elimina malos hábitos";

@@ -28,4 +28,8 @@
 "lng.common.yes" = "Yes";
 "lng.common.no" = "No";
 "lng.logout.subtitle" = "Are you sure you wanna logout?";
+"lng.logout.homeFeatureCard.positiveHabit.subtitle" = "Start changing your life";
+"lng.logout.homeFeatureCard.positiveHabit.title" = "Create new habits";
+"lng.logout.homeFeatureCard.negativeHabit.subtitle" = "Remove all that is harm to you";
+"lng.logout.homeFeatureCard.negativeHabit.title" = "Remove harming habits";
 

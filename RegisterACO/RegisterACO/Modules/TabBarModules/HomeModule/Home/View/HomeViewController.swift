@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class HomeViewController: RegisterAcoNavigationController {
     
@@ -20,6 +21,27 @@ class HomeViewController: RegisterAcoNavigationController {
         view.separatorStyle = .none
         view.register(HomeListUserTableViewCell.self, forCellReuseIdentifier: HomeListUserTableViewCell.tableViewRegisterID)
         return view
+    }()
+    
+    private lazy var postiveHabitAccesCard: FeatureCardItem = {
+        let view = FeatureCardItem(frame: .zero)
+        view.configure(imageUrl: "positivehabitsAccesCard", title: presenter.getlabelForKey(key: "lng.logout.homeFeatureCard.positiveHabit.title"), subtitle: presenter.getlabelForKey(key: "lng.logout.homeFeatureCard.positiveHabit.subtitle"), gradientColors: [UIColor.theme(.primary100), UIColor.clear], gradientRadius: 16)
+        return view
+    }()
+    
+    private lazy var negativeeHabitAccesCard: FeatureCardItem = {
+        let view = FeatureCardItem(frame: .zero)
+        view.configure(imageUrl: "positivehabitsAccesCard", title: presenter.getlabelForKey(key: "lng.logout.homeFeatureCard.negativeHabit.title"), subtitle: presenter.getlabelForKey(key: "lng.logout.homeFeatureCard.negativeHabit.subtitle"), gradientColors: [UIColor.theme(.red100), UIColor.clear], gradientRadius: 16)
+        return view
+    }()
+    
+    private lazy var mainStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [postiveHabitAccesCard, negativeeHabitAccesCard, FreeSpaceView()])
+        stackView.distribution = .fill
+        stackView.alignment = .fill
+        stackView.axis = .vertical
+        stackView.spacing = 16
+        return stackView
     }()
     
     init (presenter: HomePresenterProtocol) {
@@ -37,7 +59,8 @@ class HomeViewController: RegisterAcoNavigationController {
         view.backgroundColor = .white
         tableView.delegate = self
         setUpTableViewDataSource()
-        setUpTableViewLayout()
+//        setUpTableViewLayout()
+        setUpMainStackViewLayout()
         presenter.viewDidLoad()
         configTitle(title: presenter.getlabelForKey(key: "lng.common.home"))
     }
@@ -49,6 +72,15 @@ class HomeViewController: RegisterAcoNavigationController {
         tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 24).isActive = true
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+    }
+    
+    private func setUpMainStackViewLayout() {
+        view.addSubview(mainStackView)
+        mainStackView.translatesAutoresizingMaskIntoConstraints = false
+        mainStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
+        mainStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
+        mainStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 24).isActive = true
+        mainStackView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
     
     private func setUpTableViewDataSource() {
@@ -76,4 +108,15 @@ extension HomeViewController: HomeViewProtocol{
 
 extension HomeViewController: UITableViewDelegate {
     
+}
+
+
+struct ProfileViewController_Previews: PreviewProvider {
+    static var previews: some View {
+        ViewControllerPreview {
+            HomeBuilder { _ in
+                
+            }.build()
+        }
+    }
 }

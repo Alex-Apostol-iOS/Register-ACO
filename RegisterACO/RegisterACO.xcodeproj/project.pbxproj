@@ -127,6 +127,9 @@
 		B4C60A7D2827A8BF007DBE70 /* HomeListUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C60A7C2827A8BF007DBE70 /* HomeListUserTableViewCell.swift */; };
 		B4C60A7F2827C290007DBE70 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C60A7E2827C290007DBE70 /* UITableViewCell+Extension.swift */; };
 		B4C60A81282832CB007DBE70 /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C60A80282832CB007DBE70 /* KeychainHelper.swift */; };
+		B4FFE7A72854D91A0037A278 /* FeatureCardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FFE7A62854D91A0037A278 /* FeatureCardItem.swift */; };
+		B4FFE7A92855CF670037A278 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FFE7A82855CF670037A278 /* UIImageView+Extensions.swift */; };
+		B4FFE7AB2855DA080037A278 /* UIViewController+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FFE7AA2855DA080037A278 /* UIViewController+extensions.swift */; };
 		C7DD8466CA29468BFF1F049B /* Pods_RegisterACO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 590A60A5953D89FCABD09D0F /* Pods_RegisterACO.framework */; };
 /* End PBXBuildFile section */
 
@@ -258,6 +261,9 @@
 		B4C60A7C2827A8BF007DBE70 /* HomeListUserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListUserTableViewCell.swift; sourceTree = "<group>"; };
 		B4C60A7E2827C290007DBE70 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 		B4C60A80282832CB007DBE70 /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
+		B4FFE7A62854D91A0037A278 /* FeatureCardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCardItem.swift; sourceTree = "<group>"; };
+		B4FFE7A82855CF670037A278 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		B4FFE7AA2855DA080037A278 /* UIViewController+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -566,6 +572,8 @@
 				B4B531A9281ED18000D49EE5 /* UITextField+Extensions.swift */,
 				B40D3168280AB173002C1396 /* LabelsProtocol.swift */,
 				B40D315F2809C465002C1396 /* UIView+extensions.swift */,
+				B4FFE7A82855CF670037A278 /* UIImageView+Extensions.swift */,
+				B4FFE7AA2855DA080037A278 /* UIViewController+extensions.swift */,
 			);
 			path = UIHelpers;
 			sourceTree = "<group>";
@@ -673,6 +681,7 @@
 		B442C3CC2842052A00A6781B /* ReusableView */ = {
 			isa = PBXGroup;
 			children = (
+				B4FFE7A52854D8F40037A278 /* FeatureCardItem */,
 				B442C3CD2842053D00A6781B /* RegisterUserInfoHeader */,
 			);
 			path = ReusableView;
@@ -1027,6 +1036,14 @@
 			path = HomeListUserTableViewCell;
 			sourceTree = "<group>";
 		};
+		B4FFE7A52854D8F40037A278 /* FeatureCardItem */ = {
+			isa = PBXGroup;
+			children = (
+				B4FFE7A62854D91A0037A278 /* FeatureCardItem.swift */,
+			);
+			path = FeatureCardItem;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1177,6 +1194,7 @@
 				B442C3B92841258600A6781B /* ProfileViewControllerProtocol.swift in Sources */,
 				B40D313B280863FB002C1396 /* StarterDataManagerProtocol.swift in Sources */,
 				B442C3BC2841258600A6781B /* ProfileBuilder.swift in Sources */,
+				B4FFE7AB2855DA080037A278 /* UIViewController+extensions.swift in Sources */,
 				B40D315D28098E7A002C1396 /* RegisterACOFont.swift in Sources */,
 				B4832EE628322DAF0024A950 /* LoginInteractorProtocol.swift in Sources */,
 				B4832F282838C1A80024A950 /* HTTPHeadersHelper.swift in Sources */,
@@ -1239,8 +1257,10 @@
 				B442C3BD2841258600A6781B /* ProfileInteractor.swift in Sources */,
 				B4832F2B283925B10024A950 /* Cache.swift in Sources */,
 				B442C3C02841258600A6781B /* ProfileDataManager.swift in Sources */,
+				B4FFE7A72854D91A0037A278 /* FeatureCardItem.swift in Sources */,
 				B40D313D280863FB002C1396 /* StarterDataManager.swift in Sources */,
 				B4C60A722826423C007DBE70 /* HomeDataManagerProtocol.swift in Sources */,
+				B4FFE7A92855CF670037A278 /* UIImageView+Extensions.swift in Sources */,
 				B4832F2D28392A090024A950 /* CacheEntry.swift in Sources */,
 				B44AA766283A75A900383413 /* TabBarViewControllerDataManager.swift in Sources */,
 				B40D3177280AD27F002C1396 /* Login_RegisterPresenter.swift in Sources */,
