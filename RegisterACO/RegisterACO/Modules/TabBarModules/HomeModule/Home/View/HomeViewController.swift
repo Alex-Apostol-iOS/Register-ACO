@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SwiftUI
 
 class HomeViewController: RegisterAcoNavigationController {
     
@@ -110,13 +109,3 @@ extension HomeViewController: UITableViewDelegate {
     
 }
 
-
-struct ProfileViewController_Previews: PreviewProvider {
-    static var previews: some View {
-        ViewControllerPreview {
-            HomeBuilder { _ in
-                
-            }.build()
-        }
-    }
-}
