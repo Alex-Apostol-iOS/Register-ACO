@@ -11,6 +11,9 @@ import SDWebImage
 
 class FeatureCardItem: UIView {
     
+    private var gradientColors: [UIColor] = []
+    private var gradientCornerRadius: CGFloat = 16
+    
     private lazy var titleLabel: UILabel = {
         let label = UILabel(frame: .zero)
         label.font = UIFont.theme(id: .bold18)
@@ -63,12 +66,14 @@ class FeatureCardItem: UIView {
         commonInit()
     }
     
-    func configure(imageUrl: String = "", title: String, subtitle: String) {
+    func configure(imageUrl: String = "", title: String, subtitle: String, gradientColors: [UIColor], gradientRadius: CGFloat = 0) {
         mainImage.loadImage(imageUrl: imageUrl, placeHolder: nil)
         mainImage.isHidden = imageUrl.isEmpty
         titleLabel.text = title
         subTitleLabel.text = subtitle
         self.heightAnchor.constraint(equalToConstant: 120).isActive = true
+        self.gradientColors = gradientColors
+        self.gradientCornerRadius = gradientRadius
     }
     
     private func commonInit() {
@@ -80,7 +85,7 @@ class FeatureCardItem: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        mainImage.setUpHorizontalGradient(colors: UIColor.theme(.primary100).cgColor, UIColor.clear.cgColor,  cornerRadius: 16)
+        mainImage.setUpHorizontalGradient(colors: gradientColors,  cornerRadius: gradientCornerRadius)
     }
     
     private func setUpMainStackViewLayout() {

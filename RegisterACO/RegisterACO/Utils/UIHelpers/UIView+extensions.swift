@@ -24,18 +24,18 @@ class FreeSpaceView: UIView {
 }
 
 extension UIView {
-    func setUpVerticalGradient(colors: CGColor..., cornerRadius: CGFloat = 0) {
+    func setUpVerticalGradient(colors: [UIColor], cornerRadius: CGFloat = 0) {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = self.bounds
-        gradientLayer.colors = colors
+        gradientLayer.colors = colors.map{$0.cgColor}
         gradientLayer.cornerRadius = cornerRadius
         self.layer.insertSublayer(gradientLayer, at: 0)
     }
     
-    func setUpHorizontalGradient(colors: CGColor..., cornerRadius: CGFloat = 0) {
+    func setUpHorizontalGradient(colors: [UIColor], cornerRadius: CGFloat = 0) {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = self.bounds
-        gradientLayer.colors = colors
+        gradientLayer.colors = colors.map{$0.cgColor}
         gradientLayer.cornerRadius = cornerRadius
         // Set start point.
         gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.5)
