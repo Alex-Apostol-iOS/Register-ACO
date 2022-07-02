@@ -55,8 +55,12 @@ class RegisterAcoNavigationController: UIViewController, GetLabel {
     }
 }
 
-extension UINavigationController {
-   open override var preferredStatusBarStyle: UIStatusBarStyle {
-       return .lightContent
-   }
+class CustomNavigationController: UINavigationController {
+    override var childForStatusBarStyle: UIViewController? {
+        return visibleViewController
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return visibleViewController?.preferredStatusBarStyle ?? .lightContent
+    }
 }

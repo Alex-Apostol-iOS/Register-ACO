@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        let navigationController = UINavigationController()
+        let navigationController = CustomNavigationController()
         
         if let _ = try? KeychainHelper.sharedInstance.read(service: .user_password, account: .registerACO),
            let _ = try? KeychainHelper.sharedInstance.read(service: .user_email, account: .registerACO) {
