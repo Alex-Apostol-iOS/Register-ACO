@@ -127,6 +127,7 @@
 		B4C60A7D2827A8BF007DBE70 /* HomeListUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C60A7C2827A8BF007DBE70 /* HomeListUserTableViewCell.swift */; };
 		B4C60A7F2827C290007DBE70 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C60A7E2827C290007DBE70 /* UITableViewCell+Extension.swift */; };
 		B4C60A81282832CB007DBE70 /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C60A80282832CB007DBE70 /* KeychainHelper.swift */; };
+		B4DA94CE28704179000EFB60 /* PositiveHabitCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DA94CD28704179000EFB60 /* PositiveHabitCoordinator.swift */; };
 		B4FFE7A72854D91A0037A278 /* FeatureCardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FFE7A62854D91A0037A278 /* FeatureCardItem.swift */; };
 		B4FFE7A92855CF670037A278 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FFE7A82855CF670037A278 /* UIImageView+Extensions.swift */; };
 		B4FFE7AB2855DA080037A278 /* UIViewController+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FFE7AA2855DA080037A278 /* UIViewController+extensions.swift */; };
@@ -261,6 +262,7 @@
 		B4C60A7C2827A8BF007DBE70 /* HomeListUserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListUserTableViewCell.swift; sourceTree = "<group>"; };
 		B4C60A7E2827C290007DBE70 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 		B4C60A80282832CB007DBE70 /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
+		B4DA94CD28704179000EFB60 /* PositiveHabitCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositiveHabitCoordinator.swift; sourceTree = "<group>"; };
 		B4FFE7A62854D91A0037A278 /* FeatureCardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCardItem.swift; sourceTree = "<group>"; };
 		B4FFE7A82855CF670037A278 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		B4FFE7AA2855DA080037A278 /* UIViewController+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extensions.swift"; sourceTree = "<group>"; };
@@ -372,6 +374,7 @@
 				B4C60A5E282572E0007DBE70 /* HomeCoordinator.swift */,
 				B442C3D6284269AF00A6781B /* ProfileCoordinator.swift */,
 				B442C3D828426EB900A6781B /* TabBarCoordinator.swift */,
+				B4DA94CD28704179000EFB60 /* PositiveHabitCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -1279,6 +1282,7 @@
 				B44AA763283A75A900383413 /* TabBarViewControllerInteractor.swift in Sources */,
 				B40D31602809C465002C1396 /* UIView+extensions.swift in Sources */,
 				B40D3135280863FB002C1396 /* StarterPresenter.swift in Sources */,
+				B4DA94CE28704179000EFB60 /* PositiveHabitCoordinator.swift in Sources */,
 				B442C3BA2841258600A6781B /* ProfilePresenterProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
