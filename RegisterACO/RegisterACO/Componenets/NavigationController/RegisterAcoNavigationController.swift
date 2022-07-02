@@ -22,6 +22,7 @@ class RegisterAcoNavigationController: UIViewController, GetLabel {
         self.navigationController?.navigationBar.tintColor = .white
         super.viewDidLoad()
         view.backgroundColor = .white
+        setNeedsStatusBarAppearanceUpdate()
     }
     
     func configureNavBarTintColor(withColor: UIColor = UIColor.theme(.primary100)) {
@@ -54,3 +55,8 @@ class RegisterAcoNavigationController: UIViewController, GetLabel {
     }
 }
 
+extension UINavigationController {
+   open override var preferredStatusBarStyle: UIStatusBarStyle {
+       return .lightContent
+   }
+}

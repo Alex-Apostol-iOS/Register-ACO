@@ -28,6 +28,10 @@ extension HomePresenter: HomePresenterProtocol {
             view?.layout(with: [user])
         }
     }
+    
+    func didTapPositiveHabitCard() {
+        coordinatorOutput(.goToPositiveHabitFlow)
+    }
 }
 
 enum HomeListSection {

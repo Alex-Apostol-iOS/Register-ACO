@@ -128,6 +128,16 @@
 		B4C60A7F2827C290007DBE70 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C60A7E2827C290007DBE70 /* UITableViewCell+Extension.swift */; };
 		B4C60A81282832CB007DBE70 /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C60A80282832CB007DBE70 /* KeychainHelper.swift */; };
 		B4DA94CE28704179000EFB60 /* PositiveHabitCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DA94CD28704179000EFB60 /* PositiveHabitCoordinator.swift */; };
+		B4DA94DB287044C3000EFB60 /* PostiveHabitInfoViewInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DA94D1287044C3000EFB60 /* PostiveHabitInfoViewInteractorProtocol.swift */; };
+		B4DA94DC287044C3000EFB60 /* PostiveHabitInfoViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DA94D2287044C3000EFB60 /* PostiveHabitInfoViewPresenter.swift */; };
+		B4DA94DD287044C3000EFB60 /* PostiveHabitInfoViewViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DA94D3287044C3000EFB60 /* PostiveHabitInfoViewViewControllerProtocol.swift */; };
+		B4DA94DE287044C3000EFB60 /* PostiveHabitInfoViewPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DA94D4287044C3000EFB60 /* PostiveHabitInfoViewPresenterProtocol.swift */; };
+		B4DA94DF287044C3000EFB60 /* PostiveHabitInfoViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DA94D5287044C3000EFB60 /* PostiveHabitInfoViewViewController.swift */; };
+		B4DA94E0287044C3000EFB60 /* PostiveHabitInfoViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DA94D6287044C3000EFB60 /* PostiveHabitInfoViewBuilder.swift */; };
+		B4DA94E1287044C3000EFB60 /* PostiveHabitInfoViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DA94D7287044C3000EFB60 /* PostiveHabitInfoViewInteractor.swift */; };
+		B4DA94E2287044C3000EFB60 /* PostiveHabitInfoViewDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DA94D8287044C3000EFB60 /* PostiveHabitInfoViewDataManagerProtocol.swift */; };
+		B4DA94E3287044C3000EFB60 /* PostiveHabitInfoViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DA94D9287044C3000EFB60 /* PostiveHabitInfoViewOutput.swift */; };
+		B4DA94E4287044C3000EFB60 /* PostiveHabitInfoViewDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DA94DA287044C3000EFB60 /* PostiveHabitInfoViewDataManager.swift */; };
 		B4FFE7A72854D91A0037A278 /* FeatureCardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FFE7A62854D91A0037A278 /* FeatureCardItem.swift */; };
 		B4FFE7A92855CF670037A278 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FFE7A82855CF670037A278 /* UIImageView+Extensions.swift */; };
 		B4FFE7AB2855DA080037A278 /* UIViewController+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FFE7AA2855DA080037A278 /* UIViewController+extensions.swift */; };
@@ -263,6 +273,16 @@
 		B4C60A7E2827C290007DBE70 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 		B4C60A80282832CB007DBE70 /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
 		B4DA94CD28704179000EFB60 /* PositiveHabitCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositiveHabitCoordinator.swift; sourceTree = "<group>"; };
+		B4DA94D1287044C3000EFB60 /* PostiveHabitInfoViewInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostiveHabitInfoViewInteractorProtocol.swift; sourceTree = "<group>"; };
+		B4DA94D2287044C3000EFB60 /* PostiveHabitInfoViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostiveHabitInfoViewPresenter.swift; sourceTree = "<group>"; };
+		B4DA94D3287044C3000EFB60 /* PostiveHabitInfoViewViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostiveHabitInfoViewViewControllerProtocol.swift; sourceTree = "<group>"; };
+		B4DA94D4287044C3000EFB60 /* PostiveHabitInfoViewPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostiveHabitInfoViewPresenterProtocol.swift; sourceTree = "<group>"; };
+		B4DA94D5287044C3000EFB60 /* PostiveHabitInfoViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostiveHabitInfoViewViewController.swift; sourceTree = "<group>"; };
+		B4DA94D6287044C3000EFB60 /* PostiveHabitInfoViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostiveHabitInfoViewBuilder.swift; sourceTree = "<group>"; };
+		B4DA94D7287044C3000EFB60 /* PostiveHabitInfoViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostiveHabitInfoViewInteractor.swift; sourceTree = "<group>"; };
+		B4DA94D8287044C3000EFB60 /* PostiveHabitInfoViewDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostiveHabitInfoViewDataManagerProtocol.swift; sourceTree = "<group>"; };
+		B4DA94D9287044C3000EFB60 /* PostiveHabitInfoViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostiveHabitInfoViewOutput.swift; sourceTree = "<group>"; };
+		B4DA94DA287044C3000EFB60 /* PostiveHabitInfoViewDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostiveHabitInfoViewDataManager.swift; sourceTree = "<group>"; };
 		B4FFE7A62854D91A0037A278 /* FeatureCardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCardItem.swift; sourceTree = "<group>"; };
 		B4FFE7A82855CF670037A278 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		B4FFE7AA2855DA080037A278 /* UIViewController+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extensions.swift"; sourceTree = "<group>"; };
@@ -382,6 +402,7 @@
 		B40D3129280863D0002C1396 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				B4DA94CF287043FA000EFB60 /* PositiveHabit */,
 				B442C3D0284264CE00A6781B /* ReusableModules */,
 				B44AA751283A757900383413 /* TabBarModules */,
 				B4832EDB283229050024A950 /* Login */,
@@ -1039,6 +1060,71 @@
 			path = HomeListUserTableViewCell;
 			sourceTree = "<group>";
 		};
+		B4DA94CF287043FA000EFB60 /* PositiveHabit */ = {
+			isa = PBXGroup;
+			children = (
+				B4DA94D028704408000EFB60 /* PositiveHabitInfoView */,
+			);
+			path = PositiveHabit;
+			sourceTree = "<group>";
+		};
+		B4DA94D028704408000EFB60 /* PositiveHabitInfoView */ = {
+			isa = PBXGroup;
+			children = (
+				B4DA94E9287044E7000EFB60 /* Builder */,
+				B4DA94E8287044E1000EFB60 /* DataManager */,
+				B4DA94E7287044D7000EFB60 /* Interactor */,
+				B4DA94E6287044D1000EFB60 /* Presenter */,
+				B4DA94E5287044CB000EFB60 /* View */,
+			);
+			path = PositiveHabitInfoView;
+			sourceTree = "<group>";
+		};
+		B4DA94E5287044CB000EFB60 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B4DA94D9287044C3000EFB60 /* PostiveHabitInfoViewOutput.swift */,
+				B4DA94D5287044C3000EFB60 /* PostiveHabitInfoViewViewController.swift */,
+				B4DA94D3287044C3000EFB60 /* PostiveHabitInfoViewViewControllerProtocol.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B4DA94E6287044D1000EFB60 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B4DA94D4287044C3000EFB60 /* PostiveHabitInfoViewPresenterProtocol.swift */,
+				B4DA94D2287044C3000EFB60 /* PostiveHabitInfoViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B4DA94E7287044D7000EFB60 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B4DA94D1287044C3000EFB60 /* PostiveHabitInfoViewInteractorProtocol.swift */,
+				B4DA94D7287044C3000EFB60 /* PostiveHabitInfoViewInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B4DA94E8287044E1000EFB60 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				B4DA94D8287044C3000EFB60 /* PostiveHabitInfoViewDataManagerProtocol.swift */,
+				B4DA94DA287044C3000EFB60 /* PostiveHabitInfoViewDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		B4DA94E9287044E7000EFB60 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				B4DA94D6287044C3000EFB60 /* PostiveHabitInfoViewBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
 		B4FFE7A52854D8F40037A278 /* FeatureCardItem */ = {
 			isa = PBXGroup;
 			children = (
@@ -1172,6 +1258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4DA94E4287044C3000EFB60 /* PostiveHabitInfoViewDataManager.swift in Sources */,
 				B40D317F280AD27F002C1396 /* Login_RegisterDataManager.swift in Sources */,
 				B4C60A6E2826423C007DBE70 /* HomePresenterProtocol.swift in Sources */,
 				B4C60A6F2826423C007DBE70 /* HomeViewController.swift in Sources */,
@@ -1180,6 +1267,7 @@
 				B40D3137280863FB002C1396 /* StarterPresenterProtocol.swift in Sources */,
 				B442C3BB2841258600A6781B /* ProfileViewController.swift in Sources */,
 				B4C60A6D2826423C007DBE70 /* HomeViewControllerProtocol.swift in Sources */,
+				B4DA94DB287044C3000EFB60 /* PostiveHabitInfoViewInteractorProtocol.swift in Sources */,
 				B40D314828098A2F002C1396 /* RegisterACOColor.swift in Sources */,
 				B4C60A81282832CB007DBE70 /* KeychainHelper.swift in Sources */,
 				B44AA764283A75A900383413 /* TabBarViewControllerDataManagerProtocol.swift in Sources */,
@@ -1187,8 +1275,10 @@
 				B44386F62815373F00ADACC5 /* RegisterFromViewControllerProtocol.swift in Sources */,
 				B40D317B280AD27F002C1396 /* Login_RegisterBuilder.swift in Sources */,
 				B40D317C280AD27F002C1396 /* Login_RegisterInteractor.swift in Sources */,
+				B4DA94E2287044C3000EFB60 /* PostiveHabitInfoViewDataManagerProtocol.swift in Sources */,
 				B44386F42815373F00ADACC5 /* RegisterFromInteractorProtocol.swift in Sources */,
 				B40D3136280863FB002C1396 /* StarterViewControllerProtocol.swift in Sources */,
+				B4DA94E1287044C3000EFB60 /* PostiveHabitInfoViewInteractor.swift in Sources */,
 				B40D3188280AD5F5002C1396 /* RegisterAcoNavigationController.swift in Sources */,
 				B4B531AA281ED18000D49EE5 /* UITextField+Extensions.swift in Sources */,
 				B40D3145280961BC002C1396 /* RegisterACOButton.swift in Sources */,
@@ -1207,8 +1297,11 @@
 				B40D313A280863FB002C1396 /* StarterInteractor.swift in Sources */,
 				B442C3B72841258600A6781B /* ProfileInteractorProtocol.swift in Sources */,
 				B4832EED28322DAF0024A950 /* LoginDataManagerProtocol.swift in Sources */,
+				B4DA94DF287044C3000EFB60 /* PostiveHabitInfoViewViewController.swift in Sources */,
 				B44AA75E283A75A900383413 /* TabBarViewControllerPresenter.swift in Sources */,
+				B4DA94DE287044C3000EFB60 /* PostiveHabitInfoViewPresenterProtocol.swift in Sources */,
 				B44386F82815373F00ADACC5 /* RegisterFromViewController.swift in Sources */,
+				B4DA94E0287044C3000EFB60 /* PostiveHabitInfoViewBuilder.swift in Sources */,
 				B44386FD2815373F00ADACC5 /* RegisterFromDataManager.swift in Sources */,
 				B4832EEF28322DAF0024A950 /* LoginDataManager.swift in Sources */,
 				B44AA762283A75A900383413 /* TabBarViewControllerBuilder.swift in Sources */,
@@ -1244,11 +1337,13 @@
 				B4832EEC28322DAF0024A950 /* LoginInteractor.swift in Sources */,
 				B442C3BE2841258600A6781B /* ProfileDataManagerProtocol.swift in Sources */,
 				B40D313C280863FB002C1396 /* StarterOutput.swift in Sources */,
+				B4DA94DC287044C3000EFB60 /* PostiveHabitInfoViewPresenter.swift in Sources */,
 				B4C60A742826423C007DBE70 /* HomeDataManager.swift in Sources */,
 				B44AA765283A75A900383413 /* TabBarViewControllerOutput.swift in Sources */,
 				B40D3176280AD27F002C1396 /* Login_RegisterInteractorProtocol.swift in Sources */,
 				B40D312428085A54002C1396 /* Coordinator.swift in Sources */,
 				B40D3178280AD27F002C1396 /* Login_RegisterViewControllerProtocol.swift in Sources */,
+				B4DA94DD287044C3000EFB60 /* PostiveHabitInfoViewViewControllerProtocol.swift in Sources */,
 				B44386F72815373F00ADACC5 /* RegisterFromPresenterProtocol.swift in Sources */,
 				B4438704281556DB00ADACC5 /* RegisterFormViewModel.swift in Sources */,
 				B428E1902843BA5F006D38AD /* UIApplication+extension.swift in Sources */,
@@ -1264,6 +1359,7 @@
 				B40D313D280863FB002C1396 /* StarterDataManager.swift in Sources */,
 				B4C60A722826423C007DBE70 /* HomeDataManagerProtocol.swift in Sources */,
 				B4FFE7A92855CF670037A278 /* UIImageView+Extensions.swift in Sources */,
+				B4DA94E3287044C3000EFB60 /* PostiveHabitInfoViewOutput.swift in Sources */,
 				B4832F2D28392A090024A950 /* CacheEntry.swift in Sources */,
 				B44AA766283A75A900383413 /* TabBarViewControllerDataManager.swift in Sources */,
 				B40D3177280AD27F002C1396 /* Login_RegisterPresenter.swift in Sources */,
@@ -1442,6 +1538,7 @@
 				INFOPLIST_FILE = RegisterACO/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -1471,6 +1568,7 @@
 				INFOPLIST_FILE = RegisterACO/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

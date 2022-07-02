@@ -9,4 +9,6 @@
 import Foundation
 
 enum HomeOutput {
+    case goToPositiveHabitFlow
+    case goToNegativeHabitFlow
 }

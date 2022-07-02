@@ -13,6 +13,7 @@ class FeatureCardItem: UIView {
     
     private var gradientColors: [UIColor] = []
     private var gradientCornerRadius: CGFloat = 16
+    private var cardAction: (() -> Void)?
     
     private lazy var titleLabel: UILabel = {
         let label = UILabel(frame: .zero)
@@ -104,6 +105,13 @@ class FeatureCardItem: UIView {
         mainStackView.topAnchor.constraint(equalTo: self.topAnchor, constant: 8).isActive = true
         mainStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -8).isActive = true
     }
+    
+    @objc
+    func cardSelectorAction() {
+        if let cardAction = cardAction {
+            cardAction()
+        }
+    }
 }
 
 extension FeatureCardItem {
@@ -112,3 +120,12 @@ extension FeatureCardItem {
     }
 }
 
+extension FeatureCardItem {
+    func setpCardTapAction(action: @escaping () -> Void) {
+        cardAction = action
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(cardSelectorAction))
+        self.addGestureRecognizer(tapGesture)
+        tapGesture.isEnabled = true
+        self.isUserInteractionEnabled = true
+    }
+}

@@ -25,13 +25,13 @@ class PositiveHabitCoordinator: Coordinator {
     
     func start() {
         state = .initial
+        loop()
     }
     
     private func loop() {
-        
         switch next(nextState: state) {
         case .willShowPositiveHabitInfoView:
-            break
+            showPositiveHabitInfoView()
         case .initial:
             fatalError("no implementation for \(next(nextState: state)) on PositiveHabitCoordinator")
         }
@@ -45,8 +45,11 @@ class PositiveHabitCoordinator: Coordinator {
         }
     }
     
-    private func willShowPositiveHabitInfoView() {
-        
+    private func showPositiveHabitInfoView() {
+        let vc = PostiveHabitInfoViewBuilder { _ in
+            
+        }.build()
+        navigator.pushViewController(vc, animated: true)
     }
     
 }

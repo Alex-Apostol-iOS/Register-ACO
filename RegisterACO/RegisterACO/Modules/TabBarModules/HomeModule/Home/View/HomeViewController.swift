@@ -25,6 +25,10 @@ class HomeViewController: RegisterAcoNavigationController {
     private lazy var postiveHabitAccesCard: FeatureCardItem = {
         let view = FeatureCardItem(frame: .zero)
         view.configure(imageUrl: "positivehabitsAccesCard", title: presenter.getlabelForKey(key: "lng.logout.homeFeatureCard.positiveHabit.title"), subtitle: presenter.getlabelForKey(key: "lng.logout.homeFeatureCard.positiveHabit.subtitle"), gradientColors: [UIColor.theme(.primary100), UIColor.clear], gradientRadius: 16)
+        
+        view.setpCardTapAction { [weak self] in
+            self?.presenter.didTapPositiveHabitCard()
+        }
         return view
     }()
     

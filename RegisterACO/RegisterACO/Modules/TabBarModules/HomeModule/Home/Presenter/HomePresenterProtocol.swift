@@ -10,4 +10,5 @@ import Foundation
 
 protocol HomePresenterProtocol: AnyObject, GetLabel {
     func viewDidLoad()
+    func didTapPositiveHabitCard()
 }

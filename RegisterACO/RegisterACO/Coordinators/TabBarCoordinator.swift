@@ -75,8 +75,8 @@ class TabBarCoordinator: Coordinator, GetLabel {
     }
     
     private func buildHomeModule() -> UIViewController {
-        let vc = HomeBuilder { _ in
-           
+        let vc = HomeBuilder { [weak self] output in
+            self?.homeChildCoordinator.manageHomeInternalNavigation(with: output)
         }.build()
         
         return vc
