@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol PostiveHabitInfoViewPresenterProtocol: AnyObject {
+protocol PostiveHabitInfoViewPresenterProtocol: GetLabel {
     
 }

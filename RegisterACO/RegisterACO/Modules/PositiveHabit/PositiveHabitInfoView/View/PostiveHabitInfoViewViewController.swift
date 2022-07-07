@@ -14,31 +14,52 @@ class PostiveHabitInfoViewViewController: RegisterAcoNavigationController {
     
     private lazy var whatIsAHabitSwichButton: RegisterACOSwitchButton = {
         let switchButton = RegisterACOSwitchButton(frame: .zero)
+        switchButton.addTarget(self, action: #selector(didChangeWhatIsAHabitSwitchValue), for: .valueChanged)
         return switchButton
     }()
     
     private lazy var whatIsaHabitStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [textView,  FreeSpaceView(), whatIsAHabitSwichButton])
+        let stackView = UIStackView(arrangedSubviews: [whatIsaHabitTextLabel,  FreeSpaceView(), whatIsAHabitSwichButton])
          stackView.distribution = .fill
-         stackView.alignment = .fill
+         stackView.alignment = .center
          stackView.spacing = 0
          stackView.axis = .horizontal
          return stackView
     }()
     
-    private let textView: UITextView = {
-        let textView = UITextView(frame: .zero)
-        textView.font = UIFont.theme(id: .regular14)
-        textView.textColor = UIColor.theme(.dark50)
-        textView.isEditable = false
-        return textView
+    private lazy var whatIsaHabitVerticalStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [whatIsaHabitStackView, whatIsaHabitTextView])
+         stackView.distribution = .fill
+         stackView.alignment = .fill
+         stackView.spacing = 0
+         stackView.axis = .vertical
+         return stackView
+    }()
+    
+    private lazy var whatIsaHabitTextLabel: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.font = UIFont.theme(id: .semiBold16)
+        label.textColor = UIColor.theme(.baseLight20)
+        label.text = presenter.getlabelForKey(key: "lng.whatIsAHabit.label.text")
+        label.numberOfLines = 0
+        return label
+    }()
+    
+    private lazy var  whatIsaHabitTextView: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.font = UIFont.theme(id: .medium16)
+        label.textColor = UIColor.theme(.dark75)
+        label.text = presenter.getlabelForKey(key: "lng.whatIsAHabit.textView.text")
+        label.numberOfLines = 0
+        label.isHidden = true
+        return label
     }()
     
     private lazy var mainStackView: UIStackView = {
-       let stackView = UIStackView(arrangedSubviews: [whatIsaHabitStackView, FreeSpaceView()])
+       let stackView = UIStackView(arrangedSubviews: [whatIsaHabitVerticalStackView, FreeSpaceView()])
         stackView.distribution = .fill
         stackView.alignment = .fill
-        stackView.spacing = 16
+        stackView.spacing = 24
         stackView.axis = .vertical
         return stackView
     }()
@@ -65,6 +86,11 @@ class PostiveHabitInfoViewViewController: RegisterAcoNavigationController {
         mainStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
         mainStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 24).isActive = true
         mainStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 0).isActive = true
+    }
+    
+    @objc
+    private func didChangeWhatIsAHabitSwitchValue() {
+        whatIsaHabitTextView.isHidden = !whatIsAHabitSwichButton.isOn
     }
     
 }

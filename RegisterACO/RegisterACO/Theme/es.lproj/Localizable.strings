@@ -31,3 +31,7 @@
 "lng.logout.homeFeatureCard.positiveHabit.title" = "Crea nuevos hábitos";
 "lng.logout.homeFeatureCard.negativeHabit.subtitle" = "Alejate de todo lo contraproducente";
 "lng.logout.homeFeatureCard.negativeHabit.title" = "Elimina malos hábitos";
+"lng.whatIsAHabit.textView.text" = "Un hábito es una rutina o conducta que se practica con regularidad y, en muchos casos, de
+manera automática. Los hábitos que en un principio pueden parecer pequeños y poco significativos, se transformarán en resultados extraordinarios si tienes la voluntad de mantenerlos durante varios años";
+"lng.whatIsAHabit.label.text" = "Que és un hábito?";
+

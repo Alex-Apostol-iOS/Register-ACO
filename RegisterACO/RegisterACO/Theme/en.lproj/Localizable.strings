@@ -32,4 +32,7 @@
 "lng.logout.homeFeatureCard.positiveHabit.title" = "Create new habits";
 "lng.logout.homeFeatureCard.negativeHabit.subtitle" = "Remove all that is harm to you";
 "lng.logout.homeFeatureCard.negativeHabit.title" = "Remove harming habits";
+"lng.whatIsAHabit.textView.text" = "A habit is a routine or behavior that is practiced regularly and, in many cases,
+automatic way. Habits that at first may seem small and insignificant, will be transformed into extraordinary results if are maintained for several years";
+"lng.whatIsAHabit.label.text" = "What is a habit?";
 
