@@ -55,8 +55,51 @@ class PostiveHabitInfoViewViewController: RegisterAcoNavigationController {
         return label
     }()
     
+    private lazy var howHabitsAffectyourLifeTitleLabel: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.font = UIFont.theme(id: .semiBold16)
+        label.textColor = UIColor.theme(.baseLight20)
+        label.text = presenter.getlabelForKey(key: "lng.howHabitsAffectYourLife.label.text")
+        label.numberOfLines = 0
+        return label
+    }()
+    
+    private lazy var howHabitsAffectYourLifeSwitchButton: RegisterACOSwitchButton = {
+        let switchButton = RegisterACOSwitchButton(frame: .zero)
+        switchButton.addTarget(self, action: #selector(howHabitsAffectYourLifeSwichValue), for: .valueChanged)
+        return switchButton
+    }()
+    
+    private lazy var howHabitsAffectYourLifeHorizontalStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [howHabitsAffectyourLifeTitleLabel,  FreeSpaceView(), howHabitsAffectYourLifeSwitchButton])
+         stackView.distribution = .fill
+         stackView.alignment = .center
+         stackView.spacing = 0
+         stackView.axis = .horizontal
+         return stackView
+    }()
+    
+    private lazy var  howHabitsAfectYourLifeContentLabel: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.font = UIFont.theme(id: .medium16)
+        label.textColor = UIColor.theme(.dark75)
+        label.text = presenter.getlabelForKey(key: "lng.howHabitsAffectYourLife.content.label.text")
+        label.numberOfLines = 0
+        label.isHidden = true
+        return label
+    }()
+    
+    private lazy var howHabitsAffectYourLifeVerticalStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [howHabitsAffectYourLifeHorizontalStackView, howHabitsAfectYourLifeContentLabel])
+         stackView.distribution = .fill
+         stackView.alignment = .fill
+         stackView.spacing = 0
+         stackView.axis = .vertical
+         return stackView
+    }()
+    
     private lazy var mainStackView: UIStackView = {
-       let stackView = UIStackView(arrangedSubviews: [whatIsaHabitVerticalStackView, FreeSpaceView()])
+       let stackView = UIStackView(arrangedSubviews: [whatIsaHabitVerticalStackView, howHabitsAffectYourLifeVerticalStackView, FreeSpaceView()])
         stackView.distribution = .fill
         stackView.alignment = .fill
         stackView.spacing = 24
@@ -91,6 +134,11 @@ class PostiveHabitInfoViewViewController: RegisterAcoNavigationController {
     @objc
     private func didChangeWhatIsAHabitSwitchValue() {
         whatIsaHabitTextView.isHidden = !whatIsAHabitSwichButton.isOn
+    }
+    
+    @objc
+    private func howHabitsAffectYourLifeSwichValue() {
+        howHabitsAfectYourLifeContentLabel.isHidden = !howHabitsAffectYourLifeSwitchButton.isOn
     }
     
 }

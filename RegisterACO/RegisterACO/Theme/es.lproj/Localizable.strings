@@ -34,4 +34,7 @@
 "lng.whatIsAHabit.textView.text" = "Un hábito es una rutina o conducta que se practica con regularidad y, en muchos casos, de
 manera automática. Los hábitos que en un principio pueden parecer pequeños y poco significativos, se transformarán en resultados extraordinarios si tienes la voluntad de mantenerlos durante varios años";
 "lng.whatIsAHabit.label.text" = "Que és un hábito?";
+"lng.howHabitsAffectYourLife.label.text" = "Cómo los hábitos afectan tu vida";
+"lng.howHabitsAffectYourLife.content.label.text" = "Un pequeño cambio en tus hábitos cotidianos puede conducir tu vida a un destino completamente distinto. No importa cuán exitoso seas en este preciso momento. Lo que importa es determinar si tus hábitos te están conduciendo hacia el camino del éxito. Si eres millonario pero gastas más de lo que ganas cada mes, entonces estás siguiendo una mala trayectoria. Si tus hábitos de consumo no cambian, no vas a terminar bien. En cambio, si estás en quiebra pero consigues ahorrar un poco cada mes, entonces te encuentras en un camino que te conducirá a la libertad financiera, aun si lograrlo te toma más tiempo del que te gustaría.
+Tus resultados son los indicadores reactivos de tus hábitos. La cantidad de dinero que posees es un indicador reactivo de tus hábitos financieros. Tu peso actual es un indicador reactivo de tus hábitos alimenticios. Tu conocimiento es un indicador reactivo de tus hábitos de estudio. El aspecto de tu casa es un indicador reactivo de tus hábitos de orden y limpieza. Al final obtienes lo que repites";
 
