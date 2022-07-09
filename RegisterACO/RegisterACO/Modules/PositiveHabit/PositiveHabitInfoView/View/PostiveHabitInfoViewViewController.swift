@@ -98,8 +98,54 @@ class PostiveHabitInfoViewViewController: RegisterAcoNavigationController {
          return stackView
     }()
     
+    
+    private lazy var howHabitsWorkTitleLabel: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.font = UIFont.theme(id: .semiBold16)
+        label.textColor = UIColor.theme(.baseLight20)
+        label.text = presenter.getlabelForKey(key: "lng.habit.how.habit.work")
+        label.numberOfLines = 0
+        return label
+    }()
+    
+    private lazy var howHabitsWorkSwitchButton: RegisterACOSwitchButton = {
+        let switchButton = RegisterACOSwitchButton(frame: .zero)
+        switchButton.addTarget(self, action: #selector(howHabitWorkSwitchValue), for: .valueChanged)
+        return switchButton
+    }()
+    
+    private lazy var howHabitsWorkHorizontalStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [howHabitsWorkTitleLabel,  FreeSpaceView(), howHabitsWorkSwitchButton])
+         stackView.distribution = .fill
+         stackView.alignment = .center
+         stackView.spacing = 0
+         stackView.axis = .horizontal
+         return stackView
+    }()
+    
+    private lazy var howHabitsWorkContentLabel: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.font = UIFont.theme(id: .medium16)
+        label.textColor = UIColor.theme(.dark75)
+        label.text = presenter.getlabelForKey(key: "lng.howHabitsWork.content.label.text")
+        label.numberOfLines = 0
+        label.isHidden = true
+        return label
+    }()
+    
+    private lazy var howHabitsWorkVerticalStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [howHabitsWorkHorizontalStackView, howHabitsWorkContentLabel])
+         stackView.distribution = .fill
+         stackView.alignment = .fill
+         stackView.spacing = 0
+         stackView.axis = .vertical
+         return stackView
+    }()
+    
     private lazy var mainStackView: UIStackView = {
-       let stackView = UIStackView(arrangedSubviews: [whatIsaHabitVerticalStackView, howHabitsAffectYourLifeVerticalStackView, FreeSpaceView()])
+        let  botttomSpaceView = FreeSpaceView()
+        botttomSpaceView.heightAnchor.constraint(equalToConstant: 40).isActive = true
+       let stackView = UIStackView(arrangedSubviews: [whatIsaHabitVerticalStackView, howHabitsAffectYourLifeVerticalStackView, howHabitsWorkVerticalStackView, FreeSpaceView(), continueButton, botttomSpaceView])
         stackView.distribution = .fill
         stackView.alignment = .fill
         stackView.spacing = 24
@@ -121,6 +167,12 @@ class PostiveHabitInfoViewViewController: RegisterAcoNavigationController {
         content.backgroundColor = UIColor.white
         content.translatesAutoresizingMaskIntoConstraints = false
         return content
+    }()
+    
+    private lazy var continueButton: RegisterACOButton = {
+        let button = RegisterACOButton(frame: .zero)
+        button.config(buttonStyle: .primary, title: presenter.getlabelForKey(key: "lng.common.continue"), action: didTapContinue)
+        return button
     }()
         
     init (presenter: PostiveHabitInfoViewPresenterProtocol) {
@@ -180,6 +232,16 @@ class PostiveHabitInfoViewViewController: RegisterAcoNavigationController {
     @objc
     private func howHabitsAffectYourLifeSwichValue() {
         howHabitsAfectYourLifeContentLabel.isHidden = !howHabitsAffectYourLifeSwitchButton.isOn
+    }
+    
+    @objc
+    private func howHabitWorkSwitchValue() {
+        howHabitsWorkContentLabel.isHidden = !howHabitsWorkSwitchButton.isOn
+    }
+    
+    @objc
+    private func didTapContinue() {
+        
     }
     
 }
