@@ -123,6 +123,8 @@ class PostiveHabitInfoViewViewController: RegisterAcoNavigationController {
          return stackView
     }()
     
+    
+    
     private lazy var howHabitsWorkContentLabel: UILabel = {
         let label = UILabel(frame: .zero)
         label.font = UIFont.theme(id: .medium16)
