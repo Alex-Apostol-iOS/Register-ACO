@@ -23,11 +23,12 @@ class RegisterFromPresenter {
 
 extension RegisterFromPresenter: RegisterFromPresenterProtocol {
     func didTapSubmit(viewModel: RegisterFormViewModel) {
-        let user = RegisterACOUser(phone: viewModel.phone, password: viewModel.password, id: nil, surname: viewModel.surname, email: viewModel.email, name: viewModel.secondSurname, secondSurname: viewModel.secondSurname)
+        let user = RegisterACOUser(phone: viewModel.phone, password: viewModel.password, id: nil, surname: viewModel.surname, email: viewModel.email.lowercased(), name: viewModel.secondSurname, secondSurname: viewModel.secondSurname)
         interactor.postUser(user: user) { result in
             switch result {
             case .success(let dtoUser):
                 self.dtoUser = dtoUser
+                self.coordinatorOutput(.goToHome)
             case .failure(let error):
                 print(error)
             }
