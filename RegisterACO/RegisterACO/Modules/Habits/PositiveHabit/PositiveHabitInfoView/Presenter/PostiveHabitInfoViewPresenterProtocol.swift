@@ -9,5 +9,5 @@
 import Foundation
 
 protocol PostiveHabitInfoViewPresenterProtocol: GetLabel {
-    
+    func didPressStartButton()
 }

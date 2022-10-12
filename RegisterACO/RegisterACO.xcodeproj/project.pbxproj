@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D039EDC28F71B7A000FC5C9 /* HabitStepInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D039ED228F71B79000FC5C9 /* HabitStepInteractorProtocol.swift */; };
+		9D039EDD28F71B7A000FC5C9 /* HabitStepPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D039ED328F71B79000FC5C9 /* HabitStepPresenter.swift */; };
+		9D039EDE28F71B7A000FC5C9 /* HabitStepViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D039ED428F71B79000FC5C9 /* HabitStepViewControllerProtocol.swift */; };
+		9D039EDF28F71B7A000FC5C9 /* HabitStepPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D039ED528F71B79000FC5C9 /* HabitStepPresenterProtocol.swift */; };
+		9D039EE028F71B7A000FC5C9 /* HabitStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D039ED628F71B79000FC5C9 /* HabitStepViewController.swift */; };
+		9D039EE128F71B7A000FC5C9 /* HabitStepBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D039ED728F71B79000FC5C9 /* HabitStepBuilder.swift */; };
+		9D039EE228F71B7A000FC5C9 /* HabitStepInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D039ED828F71B79000FC5C9 /* HabitStepInteractor.swift */; };
+		9D039EE328F71B7A000FC5C9 /* HabitStepDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D039ED928F71B79000FC5C9 /* HabitStepDataManagerProtocol.swift */; };
+		9D039EE428F71B7A000FC5C9 /* HabitStepOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D039EDA28F71B79000FC5C9 /* HabitStepOutput.swift */; };
+		9D039EE528F71B7A000FC5C9 /* HabitStepDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D039EDB28F71B79000FC5C9 /* HabitStepDataManager.swift */; };
 		B40D30FD280858AE002C1396 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D30FC280858AE002C1396 /* AppDelegate.swift */; };
 		B40D30FF280858AE002C1396 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D30FE280858AE002C1396 /* SceneDelegate.swift */; };
 		B40D3107280858AE002C1396 /* RegisterACO.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B40D3105280858AE002C1396 /* RegisterACO.xcdatamodeld */; };
@@ -149,6 +159,16 @@
 		13133E5C59BD45F445B7E812 /* Pods-RegisterACO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RegisterACO.release.xcconfig"; path = "Target Support Files/Pods-RegisterACO/Pods-RegisterACO.release.xcconfig"; sourceTree = "<group>"; };
 		40A3A5F11283A45636049278 /* Pods-RegisterACO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RegisterACO.debug.xcconfig"; path = "Target Support Files/Pods-RegisterACO/Pods-RegisterACO.debug.xcconfig"; sourceTree = "<group>"; };
 		590A60A5953D89FCABD09D0F /* Pods_RegisterACO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RegisterACO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D039ED228F71B79000FC5C9 /* HabitStepInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitStepInteractorProtocol.swift; sourceTree = "<group>"; };
+		9D039ED328F71B79000FC5C9 /* HabitStepPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitStepPresenter.swift; sourceTree = "<group>"; };
+		9D039ED428F71B79000FC5C9 /* HabitStepViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitStepViewControllerProtocol.swift; sourceTree = "<group>"; };
+		9D039ED528F71B79000FC5C9 /* HabitStepPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitStepPresenterProtocol.swift; sourceTree = "<group>"; };
+		9D039ED628F71B79000FC5C9 /* HabitStepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitStepViewController.swift; sourceTree = "<group>"; };
+		9D039ED728F71B79000FC5C9 /* HabitStepBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitStepBuilder.swift; sourceTree = "<group>"; };
+		9D039ED828F71B79000FC5C9 /* HabitStepInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitStepInteractor.swift; sourceTree = "<group>"; };
+		9D039ED928F71B79000FC5C9 /* HabitStepDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitStepDataManagerProtocol.swift; sourceTree = "<group>"; };
+		9D039EDA28F71B79000FC5C9 /* HabitStepOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitStepOutput.swift; sourceTree = "<group>"; };
+		9D039EDB28F71B79000FC5C9 /* HabitStepDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitStepDataManager.swift; sourceTree = "<group>"; };
 		B40D30F9280858AD002C1396 /* RegisterACO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RegisterACO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B40D30FC280858AE002C1396 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B40D30FE280858AE002C1396 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -311,6 +331,72 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		9D039ED028F71B33000FC5C9 /* Habits */ = {
+			isa = PBXGroup;
+			children = (
+				9D039ED128F71B42000FC5C9 /* Components */,
+				B4DA94CF287043FA000EFB60 /* PositiveHabit */,
+			);
+			path = Habits;
+			sourceTree = "<group>";
+		};
+		9D039ED128F71B42000FC5C9 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				9D039EEA28F71B9B000FC5C9 /* Builder */,
+				9D039EE928F71B92000FC5C9 /* DataManager */,
+				9D039EE828F71B8C000FC5C9 /* Interactor */,
+				9D039EE728F71B85000FC5C9 /* Presenter */,
+				9D039EE628F71B80000FC5C9 /* View */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		9D039EE628F71B80000FC5C9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9D039EDA28F71B79000FC5C9 /* HabitStepOutput.swift */,
+				9D039ED628F71B79000FC5C9 /* HabitStepViewController.swift */,
+				9D039ED428F71B79000FC5C9 /* HabitStepViewControllerProtocol.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9D039EE728F71B85000FC5C9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9D039ED528F71B79000FC5C9 /* HabitStepPresenterProtocol.swift */,
+				9D039ED328F71B79000FC5C9 /* HabitStepPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		9D039EE828F71B8C000FC5C9 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				9D039ED828F71B79000FC5C9 /* HabitStepInteractor.swift */,
+				9D039ED228F71B79000FC5C9 /* HabitStepInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		9D039EE928F71B92000FC5C9 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				9D039ED928F71B79000FC5C9 /* HabitStepDataManagerProtocol.swift */,
+				9D039EDB28F71B79000FC5C9 /* HabitStepDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		9D039EEA28F71B9B000FC5C9 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				9D039ED728F71B79000FC5C9 /* HabitStepBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
 		ADDD343129DAE07932E74B84 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -404,7 +490,7 @@
 		B40D3129280863D0002C1396 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				B4DA94CF287043FA000EFB60 /* PositiveHabit */,
+				9D039ED028F71B33000FC5C9 /* Habits */,
 				B442C3D0284264CE00A6781B /* ReusableModules */,
 				B44AA751283A757900383413 /* TabBarModules */,
 				B4832EDB283229050024A950 /* Login */,
@@ -1288,6 +1374,7 @@
 				B40D317C280AD27F002C1396 /* Login_RegisterInteractor.swift in Sources */,
 				B4DA94E2287044C3000EFB60 /* PostiveHabitInfoViewDataManagerProtocol.swift in Sources */,
 				B44386F42815373F00ADACC5 /* RegisterFromInteractorProtocol.swift in Sources */,
+				9D039EDC28F71B7A000FC5C9 /* HabitStepInteractorProtocol.swift in Sources */,
 				B40D3136280863FB002C1396 /* StarterViewControllerProtocol.swift in Sources */,
 				B4DA94E1287044C3000EFB60 /* PostiveHabitInfoViewInteractor.swift in Sources */,
 				B40D3188280AD5F5002C1396 /* RegisterAcoNavigationController.swift in Sources */,
@@ -1314,11 +1401,14 @@
 				B44386F82815373F00ADACC5 /* RegisterFromViewController.swift in Sources */,
 				B4DA94E0287044C3000EFB60 /* PostiveHabitInfoViewBuilder.swift in Sources */,
 				B44386FD2815373F00ADACC5 /* RegisterFromDataManager.swift in Sources */,
+				9D039EE328F71B7A000FC5C9 /* HabitStepDataManagerProtocol.swift in Sources */,
 				B4832EEF28322DAF0024A950 /* LoginDataManager.swift in Sources */,
 				B44AA762283A75A900383413 /* TabBarViewControllerBuilder.swift in Sources */,
 				B442C3B82841258600A6781B /* ProfilePresenter.swift in Sources */,
+				9D039EDE28F71B7A000FC5C9 /* HabitStepViewControllerProtocol.swift in Sources */,
 				B40D3138280863FB002C1396 /* StarterViewController.swift in Sources */,
 				B40D3139280863FB002C1396 /* StarterBuilder.swift in Sources */,
+				9D039EE428F71B7A000FC5C9 /* HabitStepOutput.swift in Sources */,
 				B442C3D928426EB900A6781B /* TabBarCoordinator.swift in Sources */,
 				B4832EEA28322DAF0024A950 /* LoginViewController.swift in Sources */,
 				B442C3D7284269AF00A6781B /* ProfileCoordinator.swift in Sources */,
@@ -1326,17 +1416,21 @@
 				B4B531AD28202FFE00D49EE5 /* DtoUser.swift in Sources */,
 				B40D3107280858AE002C1396 /* RegisterACO.xcdatamodeld in Sources */,
 				B442C3CB2841FCE200A6781B /* ProfileTableViewCell.swift in Sources */,
+				9D039EE028F71B7A000FC5C9 /* HabitStepViewController.swift in Sources */,
 				B4C60A7D2827A8BF007DBE70 /* HomeListUserTableViewCell.swift in Sources */,
 				B4832EF6283231010024A950 /* LoginViewModel.swift in Sources */,
 				B40D312028085A54002C1396 /* Builder.swift in Sources */,
 				B4832EE928322DAF0024A950 /* LoginPresenterProtocol.swift in Sources */,
 				B4832F2F28392A220024A950 /* MemoryCacheManager.swift in Sources */,
 				B428E18B28436EBE006D38AD /* AlertViewModel.swift in Sources */,
+				9D039EDF28F71B7A000FC5C9 /* HabitStepPresenterProtocol.swift in Sources */,
 				B44AA75D283A75A900383413 /* TabBarViewControllerInteractorProtocol.swift in Sources */,
 				B40D3179280AD27F002C1396 /* Login_RegisterPresenterProtocol.swift in Sources */,
 				B442C3BF2841258600A6781B /* ProfileOutput.swift in Sources */,
 				B4832EE728322DAF0024A950 /* LoginPresenter.swift in Sources */,
+				9D039EDD28F71B7A000FC5C9 /* HabitStepPresenter.swift in Sources */,
 				B44386F92815373F00ADACC5 /* RegisterFromBuilder.swift in Sources */,
+				9D039EE228F71B7A000FC5C9 /* HabitStepInteractor.swift in Sources */,
 				B40D317E280AD27F002C1396 /* Login_RegisterOutput.swift in Sources */,
 				B40D317A280AD27F002C1396 /* Login_RegisterViewController.swift in Sources */,
 				B44386FB2815373F00ADACC5 /* RegisterFromDataManagerProtocol.swift in Sources */,
@@ -1352,6 +1446,7 @@
 				B4C60A742826423C007DBE70 /* HomeDataManager.swift in Sources */,
 				B44AA765283A75A900383413 /* TabBarViewControllerOutput.swift in Sources */,
 				B40D3176280AD27F002C1396 /* Login_RegisterInteractorProtocol.swift in Sources */,
+				9D039EE528F71B7A000FC5C9 /* HabitStepDataManager.swift in Sources */,
 				B40D312428085A54002C1396 /* Coordinator.swift in Sources */,
 				B40D3178280AD27F002C1396 /* Login_RegisterViewControllerProtocol.swift in Sources */,
 				B4DA94DD287044C3000EFB60 /* PostiveHabitInfoViewViewControllerProtocol.swift in Sources */,
@@ -1378,6 +1473,7 @@
 				B44387072815917500ADACC5 /* RegisterACOTextField.swift in Sources */,
 				B40D312128085A54002C1396 /* Loader.swift in Sources */,
 				B40D312828085A62002C1396 /* MainCoordinator.swift in Sources */,
+				9D039EE128F71B7A000FC5C9 /* HabitStepBuilder.swift in Sources */,
 				B4832EF9283232490024A950 /* Constants.swift in Sources */,
 				B40D3169280AB173002C1396 /* LabelsProtocol.swift in Sources */,
 				B4C60A702826423C007DBE70 /* HomeBuilder.swift in Sources */,

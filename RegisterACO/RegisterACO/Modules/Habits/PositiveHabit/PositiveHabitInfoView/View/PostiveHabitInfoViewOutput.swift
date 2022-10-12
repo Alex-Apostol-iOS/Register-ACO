@@ -9,4 +9,5 @@
 import Foundation
 
 enum PostiveHabitInfoViewOutput {
+    case goToPositiveHabitStep
 }

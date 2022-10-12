@@ -12,6 +12,8 @@ class PositiveHabitCoordinator: Coordinator {
      enum PositiveHabitCoordinatorState {
         case initial
         case willShowPositiveHabitInfoView
+        case didShowPositiveHabitInfoView
+        case showPositiveHabitStep
     }
     
     private let navigator: UINavigationController
@@ -32,7 +34,9 @@ class PositiveHabitCoordinator: Coordinator {
         switch next(nextState: state) {
         case .willShowPositiveHabitInfoView:
             showPositiveHabitInfoView()
-        case .initial:
+        case .showPositiveHabitStep:
+            showPositiveHabitStep()
+        case .initial, .didShowPositiveHabitInfoView:
             fatalError("no implementation for \(next(nextState: state)) on PositiveHabitCoordinator")
         }
     }
@@ -41,12 +45,25 @@ class PositiveHabitCoordinator: Coordinator {
         switch nextState {
         case .initial:
             return .willShowPositiveHabitInfoView
+        case .didShowPositiveHabitInfoView:
+            return .showPositiveHabitStep
         default: return nextState
         }
     }
     
     private func showPositiveHabitInfoView() {
-        let vc = PostiveHabitInfoViewBuilder { _ in
+        let vc = PostiveHabitInfoViewBuilder { [weak self] output in
+            switch output {
+            case .goToPositiveHabitStep:
+                self?.state = .didShowPositiveHabitInfoView
+                self?.loop()
+            }
+        }.build()
+        navigator.pushViewController(vc, animated: true)
+    }
+    
+    private func showPositiveHabitStep() {
+        let vc = HabitStepBuilder { _ in
             
         }.build()
         navigator.pushViewController(vc, animated: true)

@@ -20,5 +20,7 @@ class PostiveHabitInfoViewPresenter {
 }
 
 extension PostiveHabitInfoViewPresenter: PostiveHabitInfoViewPresenterProtocol {
-    
+    func didPressStartButton() {
+        coordinatorOutput(.goToPositiveHabitStep)
+    }
 }

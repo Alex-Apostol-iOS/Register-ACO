@@ -243,7 +243,7 @@ class PostiveHabitInfoViewViewController: RegisterAcoNavigationController {
     
     @objc
     private func didTapContinue() {
-        
+        presenter.didPressStartButton()
     }
     
 }
