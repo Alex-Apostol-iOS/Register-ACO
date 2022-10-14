@@ -141,6 +141,10 @@ class RegisterACOTextField: UIStackView {
         }
     }
     
+    func setText(text: String) {
+        textField.text = text
+    }
+    
     @objc
     private func toggleHiddenText() {
         toggleTextFieldSecureText = !toggleTextFieldSecureText

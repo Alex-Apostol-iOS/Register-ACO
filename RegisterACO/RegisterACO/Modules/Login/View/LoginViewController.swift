@@ -72,6 +72,11 @@ class LoginViewController: RegisterAcoNavigationController {
         buttonSubscriber = model.validateCredentials
             .receive(on: RunLoop.main)
             .assign(to: \.isEnabled, on: submitButton)
+        
+        #if DEBUG
+        emailTextField.setText(text: "alex@gmail.com")
+        passwordTextField.setText(text:"Teladoc1!") 
+        #endif
     }
     
     private func setUpMainStackViewLayout() {

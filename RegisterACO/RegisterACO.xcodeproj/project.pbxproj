@@ -17,6 +17,7 @@
 		9D039EE328F71B7A000FC5C9 /* HabitStepDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D039ED928F71B79000FC5C9 /* HabitStepDataManagerProtocol.swift */; };
 		9D039EE428F71B7A000FC5C9 /* HabitStepOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D039EDA28F71B79000FC5C9 /* HabitStepOutput.swift */; };
 		9D039EE528F71B7A000FC5C9 /* HabitStepDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D039EDB28F71B79000FC5C9 /* HabitStepDataManager.swift */; };
+		9D6042DF28F92FAA00211A9E /* RegisterACOTextArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6042DE28F92FAA00211A9E /* RegisterACOTextArea.swift */; };
 		B40D30FD280858AE002C1396 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D30FC280858AE002C1396 /* AppDelegate.swift */; };
 		B40D30FF280858AE002C1396 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D30FE280858AE002C1396 /* SceneDelegate.swift */; };
 		B40D3107280858AE002C1396 /* RegisterACO.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B40D3105280858AE002C1396 /* RegisterACO.xcdatamodeld */; };
@@ -169,6 +170,7 @@
 		9D039ED928F71B79000FC5C9 /* HabitStepDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitStepDataManagerProtocol.swift; sourceTree = "<group>"; };
 		9D039EDA28F71B79000FC5C9 /* HabitStepOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitStepOutput.swift; sourceTree = "<group>"; };
 		9D039EDB28F71B79000FC5C9 /* HabitStepDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitStepDataManager.swift; sourceTree = "<group>"; };
+		9D6042DE28F92FAA00211A9E /* RegisterACOTextArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterACOTextArea.swift; sourceTree = "<group>"; };
 		B40D30F9280858AD002C1396 /* RegisterACO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RegisterACO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B40D30FC280858AE002C1396 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B40D30FE280858AE002C1396 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -343,11 +345,7 @@
 		9D039ED128F71B42000FC5C9 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				9D039EEA28F71B9B000FC5C9 /* Builder */,
-				9D039EE928F71B92000FC5C9 /* DataManager */,
-				9D039EE828F71B8C000FC5C9 /* Interactor */,
-				9D039EE728F71B85000FC5C9 /* Presenter */,
-				9D039EE628F71B80000FC5C9 /* View */,
+				9D6042DC28F92BE100211A9E /* BasicStepController */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -395,6 +393,26 @@
 				9D039ED728F71B79000FC5C9 /* HabitStepBuilder.swift */,
 			);
 			path = Builder;
+			sourceTree = "<group>";
+		};
+		9D6042DC28F92BE100211A9E /* BasicStepController */ = {
+			isa = PBXGroup;
+			children = (
+				9D039EEA28F71B9B000FC5C9 /* Builder */,
+				9D039EE928F71B92000FC5C9 /* DataManager */,
+				9D039EE828F71B8C000FC5C9 /* Interactor */,
+				9D039EE728F71B85000FC5C9 /* Presenter */,
+				9D039EE628F71B80000FC5C9 /* View */,
+			);
+			path = BasicStepController;
+			sourceTree = "<group>";
+		};
+		9D6042DD28F92F5600211A9E /* TextArea */ = {
+			isa = PBXGroup;
+			children = (
+				9D6042DE28F92FAA00211A9E /* RegisterACOTextArea.swift */,
+			);
+			path = TextArea;
 			sourceTree = "<group>";
 		};
 		ADDD343129DAE07932E74B84 /* Frameworks */ = {
@@ -547,6 +565,7 @@
 		B40D31432809619C002C1396 /* Componenets */ = {
 			isa = PBXGroup;
 			children = (
+				9D6042DD28F92F5600211A9E /* TextArea */,
 				B4938481287347F600C14FAC /* RegisterACOSwitchButton */,
 				B442C3CC2842052A00A6781B /* ReusableView */,
 				B4C60A7A2827A897007DBE70 /* TableViewCells */,
@@ -1429,6 +1448,7 @@
 				B442C3BF2841258600A6781B /* ProfileOutput.swift in Sources */,
 				B4832EE728322DAF0024A950 /* LoginPresenter.swift in Sources */,
 				9D039EDD28F71B7A000FC5C9 /* HabitStepPresenter.swift in Sources */,
+				9D6042DF28F92FAA00211A9E /* RegisterACOTextArea.swift in Sources */,
 				B44386F92815373F00ADACC5 /* RegisterFromBuilder.swift in Sources */,
 				9D039EE228F71B7A000FC5C9 /* HabitStepInteractor.swift in Sources */,
 				B40D317E280AD27F002C1396 /* Login_RegisterOutput.swift in Sources */,

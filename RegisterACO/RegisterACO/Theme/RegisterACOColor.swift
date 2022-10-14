@@ -17,6 +17,7 @@ extension UIColor {
         case red50
         case dark25
         case dark75
+        case dark100
         case backGrounOpaqueOveraly
     }
     
@@ -59,6 +60,8 @@ extension UIColor {
             return UIColor(hexString: "#161719")
         case .backGrounOpaqueOveraly:
             return UIColor(hexString: "#0D1B25",alpha: 0.7)
+        case .dark100:
+            return UIColor(hexString: "0D0E0F")
         }
     }
 }
