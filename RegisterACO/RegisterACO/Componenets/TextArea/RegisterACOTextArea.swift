@@ -12,11 +12,31 @@ class RegisterACOTextArea: UIView {
     
     private var placeHolder: String = ""
     
+    private lazy var clearIcon: UIButton = {
+        let imageView = UIButton(frame: .zero)
+        imageView.setImage(UIImage(named: "cross")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        imageView.tintColor = UIColor.theme(.baseLight20)
+        imageView.heightAnchor.constraint(equalToConstant: 24).isActive = true
+        imageView.widthAnchor.constraint(equalToConstant: 24).isActive = true
+        imageView.contentMode = .scaleAspectFit
+        imageView.addTarget(self, action: #selector(didTapClearIcon), for: .touchUpInside)
+        return imageView
+    }()
+    
     private lazy var textView: UITextView = {
         let textView = UITextView(frame: .zero)
         textView.textColor = UIColor.theme(.dark75)
         textView.font = UIFont.theme(id: .medium14)
+        textView.delegate = self
         return textView
+    }()
+    
+    private lazy var textViewStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [textView])
+        stackView.distribution = .fill
+        stackView.axis = .vertical
+        stackView.spacing = 0
+        return stackView
     }()
     
     override init(frame: CGRect) {
@@ -41,15 +61,31 @@ class RegisterACOTextArea: UIView {
         self.layer.borderWidth = 1
         self.layer.cornerRadius = 8
         setUpTextViewLayout()
+        setUpClearIconLayout()
     }
     
     private func setUpTextViewLayout() {
-        self.addSubview(textView)
-        textView.translatesAutoresizingMaskIntoConstraints = false
-        textView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
-        textView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
-        textView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        textView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        self.addSubview(textViewStackView)
+        textViewStackView.translatesAutoresizingMaskIntoConstraints = false
+        textViewStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+        textViewStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+        textViewStackView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        textViewStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+    }
+    
+    private func setUpClearIconLayout() {
+        self.addSubview(clearIcon)
+        clearIcon.translatesAutoresizingMaskIntoConstraints = false
+        clearIcon.topAnchor.constraint(equalTo: self.topAnchor, constant: 8).isActive = true
+        clearIcon.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16).isActive = true
+    }
+    
+    
+    
+    @objc
+    private func didTapClearIcon() {
+        textView.text = ""
+        textView.resignFirstResponder()
     }
     
 }

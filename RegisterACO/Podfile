@@ -8,4 +8,5 @@ target 'RegisterACO' do
   # Pods for RegisterACO
   pod 'Alamofire', '~> 5.4'
   pod 'SDWebImage', '~> 5.0'
+  pod 'IQKeyboardManagerSwift'
 end

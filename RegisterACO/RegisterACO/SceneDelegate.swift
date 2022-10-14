@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -31,6 +32,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
         window?.overrideUserInterfaceStyle = .light
+        
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.shouldShowToolbarPlaceholder = false
+        IQKeyboardManager.shared.toolbarBarTintColor = UIColor.theme(.primary100)
+        IQKeyboardManager.shared.toolbarTintColor = .white
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

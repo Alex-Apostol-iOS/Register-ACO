@@ -74,7 +74,7 @@ class LoginViewController: RegisterAcoNavigationController {
             .assign(to: \.isEnabled, on: submitButton)
         
         #if DEBUG
-        emailTextField.setText(text: "alex@gmail.com")
+        emailTextField.setText(text: "alexa@gmail.com")
         passwordTextField.setText(text:"Teladoc1!") 
         #endif
     }
