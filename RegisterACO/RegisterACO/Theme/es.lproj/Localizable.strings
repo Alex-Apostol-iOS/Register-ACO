@@ -40,4 +40,13 @@ Tus resultados son los indicadores reactivos de tus hábitos. La cantidad de din
 "lng.common.continue" = "Empieza";
 "lng.habit.how.habit.work" = "Como funccionan los hábitos";
 "lng.howHabitsWork.content.label.text" = "Los hábitos con frecuencia no parecen provocar ningún cambio hasta que se alcanza un punto crítico, un umbral. Uno siempre espera realizar progresos de manera lineal y ascendente, por ello es frustrante cuando por períodos de días, semanas e incluso meses los cambios parecen no funcionar y uno tiene la sensación de permanecer en el mismo sitio. Es el sello de cualquier proceso acumulativo: los resultados más poderosos toman su tiempo y se retrasan. Esta es una de las razones por las que es tan difícil desarrollar hábitos que perduren. Para que los hábitos realmente generen un cambio, deben subsistir lo suficiente como para rebasar una meseta donde no se producen cambios perceptibles. Yo la llamo meseta de potencial latente. Cuando al fin logras ir más allá de la meseta del potencial latente, la gente considera que el hecho es un éxito conseguido de la noche a la mañana. El común de la gente solo percibe los eventos más llamativos y no se detiene a ver todo el trabajo y el esfuerzo que tienen detrás. Pero tú sabes que todo el trabajo que has invertido durante mucho tiempo, cuando parecía que no estabas haciendo ningún progreso, es lo que realmente hizo posible el cambio";
+"lng.obviousHabit.nav.title" = "Llena el Registro de hábitos";
+"lng.obviousHabit.title" = "¿Cómo lo puedo hacer obvio?";
+"lng.obviousHabit.description" = "Usa la estrategia de acumulación de hábitos: «Después de [HÁBITO ACTUAL] yo haré [NUEVO HÁBITO].";
+"lng.obviousHabit.textArea.placeHolder" = "Escribe el hábito actual";
+"lng.obviousHabit.textArea.NewHabit.placeHolder" = "Escribe el nuevo hábito";
+"lng.common.continue" = "Continuar";
+"lng.common.seeExamples" = "Ver ejemplos";
+
+
 

@@ -115,12 +115,16 @@ class MainCoordinator: Coordinator {
     }
     
     private func showLogin() {
-        let vc = LoginBuilder { [weak self] output in
-            switch output {
-            case .goToHome:
-                self?.state = .willShowHomeFlow
-                self?.loop()
-            }
+//        let vc = LoginBuilder { [weak self] output in
+//            switch output {
+//            case .goToHome:
+//                self?.state = .willShowHomeFlow
+//                self?.loop()
+//            }
+//        }.build()
+        
+        let vc = HabitStepBuilder { _ in
+            
         }.build()
         navigator.pushViewController(vc, animated: true)
     }

@@ -41,4 +41,11 @@ Your results are the reactive indicators of your habits. The amount of money you
 "lng.common.continue" = "Start";
 "lng.habit.how.habit.work" = "How habits work";
 "lng.howHabitsWork.content.label.text" = "Habits often don't seem to cause any change until a critical point, a threshold, is reached. One always expects to make progress in a linear and bottom-up manner, which is why it is frustrating when for periods of days, weeks and even months the changes do not seem to work and one has the feeling of staying in the same place. It is the hallmark of any cumulative process: the most powerful results take time and are delayed. This is one of the reasons why it is so difficult to develop habits that last. For habits to actually create change, they must persist long enough to break through a plateau where no perceptible change occurs. I call it a plateau of latent potential. When you finally get past the plateau of latent potential, people consider it an overnight success. The common people only perceive the most striking events and do not stop to see all the work and effort behind them. But you know that all the work you've put in for a long time, when it seemed like you weren't making any progress, is what really made the change possible.";
+"lng.obviousHabit.nav.title" = "Fill out the Habit Log";
+"lng.obviousHabit.title" = "How can I make it obvious?";
+"lng.obviousHabit.description" = "Use the habit accumulation strategy: “After [CURRENT HABIT] I will do [NEW HABIT].";
+"lng.obviousHabit.textArea.placeHolder" = "Write the current habit";
+"lng.obviousHabit.textArea.NewHabit.placeHolder" = "Write the new habit";
+"lng.common.continue" = "Continue";
+"lng.common.seeExamples" = "See examples";
 

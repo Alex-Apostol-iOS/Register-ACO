@@ -50,6 +50,8 @@ class RegisterACOButton: UIButton {
             self.backgroundColor = UIColor.theme(.red100)
         case .secondary:
             self.backgroundColor = UIColor.theme(.primary50)
+        case .positiveAction:
+            self.backgroundColor = UIColor.theme(.green100)
         }
     }
     
@@ -61,6 +63,8 @@ class RegisterACOButton: UIButton {
             return UIColor.white
         case .secondary:
             return UIColor.theme(.primary100)
+        case .positiveAction:
+            return UIColor.white
         }
     }
     
@@ -76,5 +80,6 @@ enum ButtonStyle {
     case primary
     case negativeAction
     case secondary
+    case positiveAction
     
 }

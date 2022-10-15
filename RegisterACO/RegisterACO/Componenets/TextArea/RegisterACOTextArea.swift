@@ -25,7 +25,7 @@ class RegisterACOTextArea: UIView {
     
     private lazy var textView: UITextView = {
         let textView = UITextView(frame: .zero)
-        textView.textColor = UIColor.theme(.dark75)
+        textView.textColor = UIColor.theme(.dark50)
         textView.font = UIFont.theme(id: .medium14)
         textView.delegate = self
         return textView
@@ -104,7 +104,7 @@ extension RegisterACOTextArea: UITextViewDelegate {
         if textView.text.isEmpty {
             textView.text = placeHolder
             textView.textColor = UIColor.theme(.baseLight20)
-            self.layer.borderColor = UIColor.theme(.baseLight20).cgColor
         }
+        self.layer.borderColor = UIColor.theme(.baseLight20).cgColor
     }
 }

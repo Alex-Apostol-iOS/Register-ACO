@@ -32,33 +32,61 @@ class HabitStepViewController: RegisterAcoNavigationController {
     
     lazy var titleLabel: UILabel = {
         let label = UILabel(frame: .zero)
-        label.font = UIFont.theme(id: .semiBold24)
+        label.font = UIFont.theme(id: .semiBold18)
         label.textColor = UIColor.theme(.dark100)
         label.numberOfLines = 2
-        label.text = "TEST TILE"
+        label.text = "lng.obviousHabit.title".localized
         return label
     }()
     
     lazy var descriptionLabel: UILabel = {
         let label = UILabel(frame: .zero)
-        label.font = UIFont.theme(id: .medium16)
-        label.textColor = UIColor.theme(.dark75)
+        label.font = UIFont.theme(id: .medium14)
+        label.textColor = UIColor.theme(.dark50)
         label.numberOfLines = 0
-        label.text = "Tests description, ests description ests description ests description ests description ests description ests description ests description ests description ests description"
+        label.text = "lng.obviousHabit.description".localized
         return label
     }()
     
-    private lazy var textView: RegisterACOTextArea = {
+    private lazy var currentHabitTextView: RegisterACOTextArea = {
         let textArea = RegisterACOTextArea(frame: .zero)
-        textArea.configure(placeHolder: "test placeHolder", shouldGrow: true)
-        textArea.heightAnchor.constraint(greaterThanOrEqualToConstant: 96).isActive = true
+        textArea.configure(placeHolder: "lng.obviousHabit.textArea.placeHolder".localized, shouldGrow: true)
+        textArea.heightAnchor.constraint(equalToConstant: 96).isActive = true
         return textArea
+    }()
+    
+    private lazy var newHabitTextView: RegisterACOTextArea = {
+        let textArea = RegisterACOTextArea(frame: .zero)
+        textArea.configure(placeHolder: "lng.obviousHabit.textArea.NewHabit.placeHolder".localized, shouldGrow: true)
+        textArea.heightAnchor.constraint(equalToConstant: 96).isActive = true
+        return textArea
+    }()
+    
+    private lazy var seeExampleButton: RegisterACOButton = {
+        let button = RegisterACOButton(frame: .zero)
+        button.config(buttonStyle: .secondary, title: "lng.common.seeExamples".localized, action: didTapSeeExamples)
+        return button
+    }()
+    
+    private lazy var continueButton: RegisterACOButton = {
+        let button = RegisterACOButton(frame: .zero)
+        button.config(buttonStyle: .primary, title: "lng.common.continue".localized, action: didTapContinue)
+        return button
+    }()
+    
+    private lazy var buttonsStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [seeExampleButton, continueButton])
+        stackView.distribution = .fillEqually
+        stackView.alignment = .fill
+        stackView.axis = .horizontal
+        stackView.spacing = 24
+        return stackView
     }()
     
     private lazy var mainStackView: UIStackView = {
         let bottomSpaceView = FreeSpaceView()
         bottomSpaceView.heightAnchor.constraint(equalToConstant: 80).isActive = true
-        let stackView = UIStackView(arrangedSubviews: [titleLabel, descriptionLabel, textView, FreeSpaceView(), bottomSpaceView])
+        let stackView = UIStackView(arrangedSubviews: [titleLabel, descriptionLabel, currentHabitTextView, newHabitTextView, FreeSpaceView(), buttonsStackView,  bottomSpaceView])
         stackView.distribution = .fill
         stackView.alignment = .fill
         stackView.axis = .vertical
@@ -81,6 +109,7 @@ class HabitStepViewController: RegisterAcoNavigationController {
         setUpScrollViewLayout()
         setUpContentViewLayout()
         setUpMainStackViewLayout()
+        configTitle(title: "lng.obviousHabit.nav.title".localized)
         
     }
     
@@ -91,7 +120,7 @@ class HabitStepViewController: RegisterAcoNavigationController {
         mainStackView.topAnchor.constraint(equalTo: self.customContentView.topAnchor, constant: 16).isActive = true
         mainStackView.leadingAnchor.constraint(equalTo: self.customContentView.leadingAnchor, constant: 16).isActive = true
         mainStackView.trailingAnchor.constraint(equalTo: self.customContentView.trailingAnchor, constant: -16).isActive = true
-        let constraint = self.mainStackView.bottomAnchor.constraint(greaterThanOrEqualTo: self.customContentView.bottomAnchor, constant: 0)
+        let constraint = self.mainStackView.bottomAnchor.constraint(greaterThanOrEqualTo: self.customContentView.safeAreaLayoutGuide.bottomAnchor, constant: -40)
         constraint.priority = UILayoutPriority(250)
         constraint.isActive = true
     }
@@ -115,6 +144,17 @@ class HabitStepViewController: RegisterAcoNavigationController {
         customContentView.widthAnchor.constraint(equalTo:    self.view.widthAnchor).isActive = true
         customContentView.heightAnchor.constraint(greaterThanOrEqualTo:  self.view.heightAnchor).isActive = true
     }
+    
+    @objc
+    private func didTapSeeExamples() {
+        
+    }
+    
+    @objc
+    private func didTapContinue() {
+        
+    }
+    
     
 }
 
