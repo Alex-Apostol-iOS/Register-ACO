@@ -47,6 +47,13 @@ Tus resultados son los indicadores reactivos de tus hábitos. La cantidad de din
 "lng.obviousHabit.textArea.NewHabit.placeHolder" = "Escribe el nuevo hábito";
 "lng.common.continue" = "Continuar";
 "lng.common.seeExamples" = "Ver ejemplos";
-
+"lng.obviousHabit.example1" = "Meditación. Después de servirme mi café cada mañana, voy a meditar durante un minuto.";
+"lng.obviousHabit.example2" = "Ejercicio. Después de quitarme los zapatos de trabajo, inmediatamente me pondré los tenis
+para hacer ejercicio.";
+"lng.obviousHabit.example3" = "Gratitud. Después de sentarme a cenar, mencionaré algo que sucedió ese día y por lo que estoy
+muy agradecido.";
+"lng.obviousHabit.example4" = "Matrimonio. Después de acostarme por la noche, le daré un beso a mi esposa.";
+"lng.obviousHabit.example5"  = "Seguridad. Después de ponerme mis tenis para correr, enviaré un mensaje de texto a un amigo o
+familiar para avisar dónde voy a correr y cuánto tiempo tardaré en regresar."
 
 

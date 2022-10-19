@@ -9,5 +9,5 @@
 import Foundation
 
 protocol HabitStepPresenterProtocol: AnyObject {
-    
+    func didTapSeeExamples()
 }

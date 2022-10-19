@@ -20,5 +20,7 @@ class HabitStepPresenter {
 }
 
 extension HabitStepPresenter: HabitStepPresenterProtocol {
-    
+    func didTapSeeExamples() {
+        coordinatorOutput(.goToDetailViewController)
+    }
 }

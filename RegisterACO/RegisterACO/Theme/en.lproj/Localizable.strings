@@ -48,4 +48,12 @@ Your results are the reactive indicators of your habits. The amount of money you
 "lng.obviousHabit.textArea.NewHabit.placeHolder" = "Write the new habit";
 "lng.common.continue" = "Continue";
 "lng.common.seeExamples" = "See examples";
+"lng.obviousHabit.example1" = "Meditation. After I pour my coffee each morning, I go to meditate for a minute.";
+"lng.obviousHabit.example2" = "Exercise. After taking off my work shoes, I will immediately put on my sneakers.
+To do exercise.";
+"lng.obviousHabit.example3" = "Gratitude. After I sit down to dinner, I'll mention something that happened that day and what I'm
+very thankful";
+"lng.obviousHabit.example4" = "Marriage. After I go to bed at night, I will give my wife a kiss.";
+"lng.obviousHabit.example5"  = "Security. After I put on my running shoes, I'll text a friend or
+familiar to let me know where I am going to run and how long it will take to return."
 

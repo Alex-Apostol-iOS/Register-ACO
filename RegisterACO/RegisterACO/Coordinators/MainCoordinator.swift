@@ -86,16 +86,21 @@ class MainCoordinator: Coordinator {
     }
     
     private func showLoginRegister(type: LoginRegisterUserType) {
-        let vc = Login_RegisterBuilder(type: type) { output in
-            switch output {
-            case .goToRegisterForm:
-                self.state = .didShowLoginRegisterFlow(ouput: .goToRegisterForm)
-                self.loop()
-            case .goToLogin:
-                self.state = .didShowLoginRegisterFlow(ouput: .goToLogin)
-                self.loop()
-            }
+//        let vc = Login_RegisterBuilder(type: type) { output in
+//            switch output {
+//            case .goToRegisterForm:
+//                self.state = .didShowLoginRegisterFlow(ouput: .goToRegisterForm)
+//                self.loop()
+//            case .goToLogin:
+//                self.state = .didShowLoginRegisterFlow(ouput: .goToLogin)
+//                self.loop()
+//            }
+//        }.build()
+        
+        let vc = HabitStepBuilder { _ in
+            
         }.build()
+        
         self.navigator.pushViewController(vc, animated: true)
     }
     
