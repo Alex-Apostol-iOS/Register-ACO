@@ -14,10 +14,14 @@ class PositiveHabitCoordinator: Coordinator {
         case willShowPositiveHabitInfoView
         case didShowPositiveHabitInfoView
         case showPositiveHabitStep
+        case didShowHabitStep
+        case willShowHabitStepDetail
+        case willShowNextStep
     }
     
     private let navigator: UINavigationController
     private var state: PositiveHabitCoordinatorState
+    private var modelImplementation = BasicStepControllerHelperImplementation()
     
     
     init(on navigator: UINavigationController, with state: PositiveHabitCoordinatorState = .initial) {
@@ -36,7 +40,11 @@ class PositiveHabitCoordinator: Coordinator {
             showPositiveHabitInfoView()
         case .showPositiveHabitStep:
             showPositiveHabitStep()
-        case .initial, .didShowPositiveHabitInfoView:
+        case .willShowHabitStepDetail:
+            goToHabitStepDetail()
+        case .willShowNextStep:
+            showPositiveHabitStep()
+        case .initial, .didShowPositiveHabitInfoView, .didShowHabitStep:
             fatalError("no implementation for \(next(nextState: state)) on PositiveHabitCoordinator")
         }
     }
@@ -47,6 +55,8 @@ class PositiveHabitCoordinator: Coordinator {
             return .willShowPositiveHabitInfoView
         case .didShowPositiveHabitInfoView:
             return .showPositiveHabitStep
+        case .didShowHabitStep:
+            return .willShowHabitStepDetail
         default: return nextState
         }
     }
@@ -63,10 +73,25 @@ class PositiveHabitCoordinator: Coordinator {
     }
     
     private func showPositiveHabitStep() {
-        let vc = HabitStepBuilder { _ in
-            
+        let vc = HabitStepBuilder(modelImplementation: modelImplementation) { [weak self] output in
+            switch output { 
+            case .goToDetailViewController:
+                self?.state = .didShowHabitStep
+                self?.loop()
+            case .goToNextStep:
+                self?.state = .willShowNextStep
+                self?.loop()
+                self?.modelImplementation.currentStep += 1
+            }
         }.build()
         navigator.pushViewController(vc, animated: true)
+    }
+    
+    private func goToHabitStepDetail() {
+        let viewDataModel = modelImplementation.createModel(for: BasicStepControllerModelType.allCases[modelImplementation.currentStep])
+        let vc = BasicDetailViewController(dataModel: viewDataModel)
+        vc.modalPresentationStyle = .fullScreen
+        navigator.present(vc, animated: true)
     }
     
 }

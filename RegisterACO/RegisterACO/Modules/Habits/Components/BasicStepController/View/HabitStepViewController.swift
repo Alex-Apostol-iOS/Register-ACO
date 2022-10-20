@@ -11,6 +11,7 @@ import UIKit
 class HabitStepViewController: RegisterAcoNavigationController {
     
     private let presenter: HabitStepPresenterProtocol
+    private let viewModel: HabitStepModel
     
     
     private lazy var scrollView: UIScrollView = {
@@ -35,7 +36,7 @@ class HabitStepViewController: RegisterAcoNavigationController {
         label.font = UIFont.theme(id: .semiBold18)
         label.textColor = UIColor.theme(.dark100)
         label.numberOfLines = 2
-        label.text = "lng.obviousHabit.title".localized
+        label.text = viewModel.titleKey.localized
         return label
     }()
     
@@ -44,33 +45,35 @@ class HabitStepViewController: RegisterAcoNavigationController {
         label.font = UIFont.theme(id: .medium14)
         label.textColor = UIColor.theme(.dark50)
         label.numberOfLines = 0
-        label.text = "lng.obviousHabit.description".localized
+        label.text = viewModel.descriptionKey.localized
         return label
     }()
     
     private lazy var currentHabitTextView: RegisterACOTextArea = {
         let textArea = RegisterACOTextArea(frame: .zero)
-        textArea.configure(placeHolder: "lng.obviousHabit.textArea.placeHolder".localized, shouldGrow: true)
+        textArea.configure(placeHolder: viewModel.firstTextAreaPlaceHolderKey.localized, shouldGrow: true)
         textArea.heightAnchor.constraint(equalToConstant: 96).isActive = true
         return textArea
     }()
     
     private lazy var newHabitTextView: RegisterACOTextArea = {
         let textArea = RegisterACOTextArea(frame: .zero)
-        textArea.configure(placeHolder: "lng.obviousHabit.textArea.NewHabit.placeHolder".localized, shouldGrow: true)
+        textArea.configure(placeHolder: viewModel.secondTextAreaPlaceHolderKey.localized, shouldGrow: true)
         textArea.heightAnchor.constraint(equalToConstant: 96).isActive = true
         return textArea
     }()
     
     private lazy var seeExampleButton: RegisterACOButton = {
         let button = RegisterACOButton(frame: .zero)
-        button.config(buttonStyle: .secondary, title: "lng.common.seeExamples".localized, action: didTapSeeExamples)
+        button.config(buttonStyle: .secondary, title: viewModel.secondaryButtonModel.titleKey.localized, action: didTapSeeExamples)
+        button.isHidden = viewModel.secondaryButtonModel.shouldHideButton
         return button
     }()
     
     private lazy var continueButton: RegisterACOButton = {
         let button = RegisterACOButton(frame: .zero)
-        button.config(buttonStyle: .primary, title: "lng.common.continue".localized, action: didTapContinue)
+        button.config(buttonStyle: .primary, title: viewModel.mainButtonModel.titleKey.localized, action: didTapContinue)
+        button.isHidden = viewModel.mainButtonModel.shouldHideButton
         return button
     }()
     
@@ -93,9 +96,15 @@ class HabitStepViewController: RegisterAcoNavigationController {
         stackView.spacing = 24
         return stackView
     }()
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        presenter.updateStep()
+    }
         
     init (presenter: HabitStepPresenterProtocol) {
         self.presenter = presenter
+        self.viewModel = presenter.viewModel
         super.init(nibName: nil, bundle: nil)
         
     }
@@ -109,7 +118,7 @@ class HabitStepViewController: RegisterAcoNavigationController {
         setUpScrollViewLayout()
         setUpContentViewLayout()
         setUpMainStackViewLayout()
-        configTitle(title: "lng.obviousHabit.nav.title".localized)
+        configTitle(title: viewModel.navTtleKey.localized)
         
     }
     
@@ -147,7 +156,7 @@ class HabitStepViewController: RegisterAcoNavigationController {
     
     @objc
     private func didTapSeeExamples() {
-        
+        presenter.didTapSeeExamples()
     }
     
     @objc

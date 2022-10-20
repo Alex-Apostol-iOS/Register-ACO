@@ -10,4 +10,7 @@ import Foundation
 
 protocol HabitStepPresenterProtocol: AnyObject {
     func didTapSeeExamples()
+    var viewModel: HabitStepModel {get}
+    func didTapContinue()
+    func updateStep()
 }

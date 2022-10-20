@@ -10,6 +10,7 @@ import Foundation
 
 protocol BasicStepControllerHelper: AnyObject {
     func createModel(for useCase: BasicStepControllerModelType) -> BasicDetailViewDataModel
+    func createHabitModel(for useCase: BasicStepControllerModelType) -> HabitStepModel
 }
 
 extension BasicStepControllerHelper {
@@ -27,9 +28,48 @@ extension BasicStepControllerHelper {
             return dataModel
         }
     }
+    
+    func createHabitModel(for useCase: BasicStepControllerModelType) -> HabitStepModel {
+        switch useCase {
+        case .makeItObviousExampleModel:
+            let dataModel = HabitStepModel(
+                navTtleKey: "lng.obviousHabit.nav.title",
+                titleKey: "lng.obviousHabit.title",
+                descriptionKey: "lng.obviousHabit.description",
+                firstTextAreaPlaceHolderKey: "lng.obviousHabit.textArea.placeHolder",
+                secondTextAreaPlaceHolderKey: "lng.obviousHabit.textArea.NewHabit.placeHolder",
+                mainButtonModel: HabitStepButtonModel(
+                    titleKey: "lng.common.continue"
+                ),
+                secondaryButtonModel: HabitStepButtonModel(
+                    titleKey: "lng.common.seeExamples"
+                )
+            )
+            return dataModel
+        }
+    }
 }
 
 
-enum BasicStepControllerModelType {
+enum BasicStepControllerModelType: CaseIterable {
     case makeItObviousExampleModel
+}
+
+class BasicStepControllerHelperImplementation: BasicStepControllerHelper {
+    var currentStep = 0
+}
+
+struct HabitStepModel {
+    let navTtleKey: String
+    let titleKey: String
+    let descriptionKey: String
+    let firstTextAreaPlaceHolderKey: String
+    let secondTextAreaPlaceHolderKey: String
+    let mainButtonModel: HabitStepButtonModel
+    let secondaryButtonModel: HabitStepButtonModel
+}
+
+struct HabitStepButtonModel {
+    let titleKey: String
+    let shouldHideButton: Bool = false
 }
