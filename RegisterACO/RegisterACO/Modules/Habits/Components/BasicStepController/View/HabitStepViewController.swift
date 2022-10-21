@@ -99,7 +99,9 @@ class HabitStepViewController: RegisterAcoNavigationController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        presenter.updateStep()
+        if self.isMovingFromParent {
+            presenter.updateStep()
+        }
     }
         
     init (presenter: HabitStepPresenterProtocol) {
@@ -161,7 +163,7 @@ class HabitStepViewController: RegisterAcoNavigationController {
     
     @objc
     private func didTapContinue() {
-        
+        presenter.didTapContinue()
     }
     
     

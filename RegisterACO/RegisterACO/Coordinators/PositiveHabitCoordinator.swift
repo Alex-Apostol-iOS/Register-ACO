@@ -21,12 +21,13 @@ class PositiveHabitCoordinator: Coordinator {
     
     private let navigator: UINavigationController
     private var state: PositiveHabitCoordinatorState
-    private var modelImplementation = BasicStepControllerHelperImplementation()
+    private let modelImplementation:  BasicStepControllerHelperImplementation
     
     
     init(on navigator: UINavigationController, with state: PositiveHabitCoordinatorState = .initial) {
         self.navigator = navigator
         self.state = state
+        modelImplementation = BasicStepControllerHelperImplementation()
     }
     
     func start() {
@@ -80,8 +81,9 @@ class PositiveHabitCoordinator: Coordinator {
                 self?.loop()
             case .goToNextStep:
                 self?.state = .willShowNextStep
-                self?.loop()
                 self?.modelImplementation.currentStep += 1
+                self?.loop()
+                
             }
         }.build()
         navigator.pushViewController(vc, animated: true)
