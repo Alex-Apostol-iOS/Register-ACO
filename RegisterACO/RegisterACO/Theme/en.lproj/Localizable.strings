@@ -56,4 +56,26 @@ very thankful";
 "lng.obviousHabit.example4" = "Marriage. After I go to bed at night, I will give my wife a kiss.";
 "lng.obviousHabit.example5"  = "Security. After I put on my running shoes, I'll text a friend or
 familiar to let me know where I am going to run and how long it will take to return.";
+"lng.attractHabit.nav.title" = "Make it attractive";
+"lng.attractHabit.title" = "How to make a habit irresistible";
+"lng.attractHabit.description" = "After [HABIT I NEED], I will do [HABIT I WANT]";
+"lng.attractHabit.example1" = "If you want to read the news, but need to express more gratitude:
+1. After I have my coffee in the morning, I will mention one thing that happened the day before and
+for which I am very grateful (what I need).
+2. After giving thanks for what happened, I will read the newspapers (what I want)";
+
+"lng.attractHabit.example2" = "If you want to watch sports, but need to make sales calls:
+1. After I get back from lunch, I'll call three potential clients (what I need).
+2. After calling three potential clients, I will see what is broadcast on the sports channel
+(what I want).";
+
+"lng.attractHabit.example3" = "If you want to review your Facebook account, but need more exercise:
+1. After I get my phone out, I'll do ten burpees (what I need).
+2. After doing ten burpees, I'll check my Facebook account (which I want).";
+
+"lng.attractHabit.example4" = "The hope is that you'll eventually feel like calling three clients or doing ten burpees, because you know that when you're done, you'll be able to watch sports shows you like or check your Facebook account. Doing what you need to do means that you will have the opportunity to do what you love.";
+
+"lng.attractHabit.firstTextField.placeHolder" = "Write the habit you need";
+"lng.attractHabit.secondTextField.placeHolder" = "Write the habit you want";
+
 

@@ -26,6 +26,14 @@ extension BasicStepControllerHelper {
                 "lng.obviousHabit.example5"
             ])
             return dataModel
+        case .makeItAttarctive:
+            let dataModel = BasicDetailViewDataModel(titleKey: "lng.attractHabit.nav.title", labelKeys: [
+                "lng.attractHabit.example1",
+                "lng.attractHabit.example2",
+                "lng.attractHabit.example3",
+                "lng.attractHabit.example4"
+            ])
+            return dataModel
         }
     }
     
@@ -46,6 +54,21 @@ extension BasicStepControllerHelper {
                 )
             )
             return dataModel
+        case .makeItAttarctive:
+            let dataModel = HabitStepModel(
+                navTtleKey: "lng.attractHabit.nav.title",
+                titleKey: "lng.attractHabit.title",
+                descriptionKey: "lng.attractHabit.description",
+                firstTextAreaPlaceHolderKey: "lng.attractHabit.firstTextField.placeHolder",
+                secondTextAreaPlaceHolderKey: "lng.attractHabit.secondTextField.placeHolder",
+                mainButtonModel: HabitStepButtonModel(
+                    titleKey: "lng.common.continue"
+                ),
+                secondaryButtonModel: HabitStepButtonModel(
+                    titleKey: "lng.common.seeExamples"
+                )
+            )
+            return dataModel
         }
     }
 }
@@ -53,6 +76,7 @@ extension BasicStepControllerHelper {
 
 enum BasicStepControllerModelType: CaseIterable {
     case makeItObviousExampleModel
+    case makeItAttarctive
 }
 
 class BasicStepControllerHelperImplementation: BasicStepControllerHelper {
