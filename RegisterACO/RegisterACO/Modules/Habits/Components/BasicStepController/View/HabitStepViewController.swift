@@ -108,6 +108,7 @@ class HabitStepViewController: RegisterAcoNavigationController {
         self.presenter = presenter
         self.viewModel = presenter.viewModel
         super.init(nibName: nil, bundle: nil)
+        self.restorationIdentifier = "\(viewModel.navTtleKey)"
         
     }
     

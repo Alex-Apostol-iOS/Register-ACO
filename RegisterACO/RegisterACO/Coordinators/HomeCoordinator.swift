@@ -23,7 +23,6 @@ class HomeCoordinator: Coordinator, GetLabel {
     init(with navigator: UINavigationController) {
         self.navigator = navigator
         currentState = .initial
-        postiveHabitChildCoordinator = PositiveHabitCoordinator(on: navigator)
     }
     
     func start() {
@@ -45,7 +44,7 @@ class HomeCoordinator: Coordinator, GetLabel {
     func manageHomeInternalNavigation(with output: HomeOutput) {
         switch output {
         case .goToPositiveHabitFlow:
-            postiveHabitChildCoordinator?.start()
+            goToPostiveHabitChildCoordinator()
         case .goToNegativeHabitFlow:
             break
         }
@@ -59,5 +58,11 @@ class HomeCoordinator: Coordinator, GetLabel {
             return .willShowDefaultView
         default: return state
         }
+    }
+    
+    private func goToPostiveHabitChildCoordinator() {
+        postiveHabitChildCoordinator = nil
+        postiveHabitChildCoordinator = PositiveHabitCoordinator(on: navigator)
+        postiveHabitChildCoordinator?.start()
     }
 }

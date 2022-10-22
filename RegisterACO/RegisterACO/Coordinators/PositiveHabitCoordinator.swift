@@ -22,12 +22,14 @@ class PositiveHabitCoordinator: Coordinator {
     private let navigator: UINavigationController
     private var state: PositiveHabitCoordinatorState
     private let modelImplementation:  BasicStepControllerHelperImplementation
+    private var stepsVcs: [UIViewController]
     
     
     init(on navigator: UINavigationController, with state: PositiveHabitCoordinatorState = .initial) {
         self.navigator = navigator
         self.state = state
         modelImplementation = BasicStepControllerHelperImplementation()
+        stepsVcs = []
     }
     
     func start() {
@@ -86,7 +88,10 @@ class PositiveHabitCoordinator: Coordinator {
                 
             }
         }.build()
-        navigator.pushViewController(vc, animated: true)
+        stepsVcs.append(vc)
+        let cacheViewController = stepsVcs[modelImplementation.currentStep]
+        
+        navigator.pushViewController(cacheViewController, animated: true)
     }
     
     private func goToHabitStepDetail() {
