@@ -16,7 +16,16 @@ class RegisterAcoNavigationController: UIViewController, GetLabel {
         return label
     }()
     
-   
+    var rightBarButtonAction: (() -> Void)?
+    
+    private lazy var rightBarButtonItem: UIBarButtonItem = {
+        let image = UIImage(named: "close")?.withRenderingMode(.alwaysTemplate).withTintColor(.white)
+        let view = UIBarButtonItem(image: image, landscapeImagePhone: nil, style: .plain, target: self, action: #selector(didTapRightBarButtonItem))
+        view.tintColor = .white
+        return view
+    }()
+    
+    
     override func viewDidLoad() {
         configureNavBarTintColor()
         self.navigationController?.navigationBar.tintColor = .white
@@ -52,6 +61,17 @@ class RegisterAcoNavigationController: UIViewController, GetLabel {
     func configTitle(title: String) {
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.theme(id: .bold14), NSAttributedString.Key.foregroundColor: UIColor.white]
         self.title = title
+    }
+    
+    func configTitleAndCloseIcon(title: String) {
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.theme(id: .bold14), NSAttributedString.Key.foregroundColor: UIColor.white]
+        self.title = title
+        self.navigationItem.rightBarButtonItem = rightBarButtonItem
+    }
+    
+    @objc
+    private func didTapRightBarButtonItem() {
+        rightBarButtonAction?()
     }
 }
 

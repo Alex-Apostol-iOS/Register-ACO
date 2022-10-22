@@ -13,4 +13,5 @@ protocol HabitStepPresenterProtocol: AnyObject {
     var viewModel: HabitStepModel {get}
     func didTapContinue()
     func updateStep()
+    func didNavTapCloseIcon()
 }

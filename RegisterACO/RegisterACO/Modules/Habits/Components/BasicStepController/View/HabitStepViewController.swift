@@ -121,7 +121,8 @@ class HabitStepViewController: RegisterAcoNavigationController {
         setUpScrollViewLayout()
         setUpContentViewLayout()
         setUpMainStackViewLayout()
-        configTitle(title: viewModel.navTtleKey.localized)
+        configTitleAndCloseIcon(title: viewModel.navTtleKey.localized)
+        super.rightBarButtonAction = didTapNavCloseIcon
         
     }
     
@@ -167,9 +168,16 @@ class HabitStepViewController: RegisterAcoNavigationController {
         presenter.didTapContinue()
     }
     
+    private func didTapNavCloseIcon() {
+        presenter.didNavTapCloseIcon()
+    }
+    
     
 }
 
-extension HabitStepViewController: HabitStepViewProtocol{
-    // TODO: Implement View Output Methods
+extension HabitStepViewController: HabitStepViewProtocol {
+    
+    func goBack() {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
 }

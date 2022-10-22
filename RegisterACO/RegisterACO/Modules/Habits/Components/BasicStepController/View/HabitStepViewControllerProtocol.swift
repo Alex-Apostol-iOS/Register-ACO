@@ -8,6 +8,6 @@
 
 import UIKit
 
-protocol HabitStepViewProtocol: AnyObject {
-    
+protocol HabitStepViewProtocol: ModalAlerViewControllerProtocol {
+    func goBack()
 }

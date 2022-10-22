@@ -19,6 +19,19 @@ class HabitStepPresenter {
         self.interactor = interactor
         self.coordinatorOutput = coordinnatorOutput
     }
+    
+    private func createAlerViewControllerModel() -> AlertViewModel {
+        let model = AlertViewModel(
+            title: "lng.alert.flow.exit.title",
+            subtitle: "lng.alert.flow.exit.subtitle",
+            mainButtonTitle: "lng.common.yes",
+            secondaryButttonTitle: "lng.common.no") { [weak self] in
+                self?.view?.hideAlert()
+                self?.view?.goBack()
+                
+            }
+        return model
+    }
 }
 
 extension HabitStepPresenter: HabitStepPresenterProtocol {
@@ -37,5 +50,10 @@ extension HabitStepPresenter: HabitStepPresenterProtocol {
         if modelImplementation.currentStep != 0 {
             modelImplementation.currentStep -= 1
         }
+    }
+    
+    func didNavTapCloseIcon() {
+        let model = createAlerViewControllerModel()
+        view?.showAlert(with: model)
     }
 }

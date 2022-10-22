@@ -15,7 +15,7 @@ class AlertViewController: UIViewController, GetLabel {
         let label = UILabel(frame: .zero)
         label.font = UIFont.theme(id: .bold18)
         label.textColor = UIColor.theme(.dark75)
-        label.text = getlabelForKey(key: model.title)
+        label.text = model.title.localized
         label.textAlignment = .center
         return label
     }()
@@ -24,7 +24,7 @@ class AlertViewController: UIViewController, GetLabel {
         let label = UILabel(frame: .zero)
         label.font = UIFont.theme(id: .medium14)
         label.textColor = UIColor.theme(.baseLight20)
-        label.text = getlabelForKey(key: model.subtitle)
+        label.text = model.subtitle.localized
         label.textAlignment = .center
         return label
     }()
@@ -49,13 +49,13 @@ class AlertViewController: UIViewController, GetLabel {
     
     private lazy var primaryButton: RegisterACOButton = {
         let button = RegisterACOButton(frame: .zero)
-        button.config(buttonStyle: .primary, title: getlabelForKey(key: model.mainButtonTitle), action: didTapPrimaryButton)
+        button.config(buttonStyle: .primary, title: model.mainButtonTitle.localized, action: didTapPrimaryButton)
         return button
     }()
     
     private lazy var secondaryButton: RegisterACOButton = {
         let button = RegisterACOButton(frame: .zero)
-        button.config(buttonStyle: .secondary, title: getlabelForKey(key: model.secondaryButttonTitle), action: didTapSecondatButton)
+        button.config(buttonStyle: .secondary, title: model.secondaryButttonTitle.localized, action: didTapSecondatButton)
         return button
     }()
     

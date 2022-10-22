@@ -77,5 +77,7 @@ for which I am very grateful (what I need).
 
 "lng.attractHabit.firstTextField.placeHolder" = "Write the habit you need";
 "lng.attractHabit.secondTextField.placeHolder" = "Write the habit you want";
+"lng.alert.flow.exit.title" = "Quieres cancelar el proceso?";
+"lng.alert.flow.exit.subtitle" = "Todo los cambios de perderán";
 
 

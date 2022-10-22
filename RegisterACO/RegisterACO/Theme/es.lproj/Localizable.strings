@@ -75,7 +75,8 @@ por la cual estoy muy agradecido (lo que necesito).
 "lng.attractHabit.example4" = "La esperanza es que finalmente sientas deseos de llamar a tres clientes o de hacer diez burpees, porque sabes que cuando hayas concluido, podrás ver los programas deportivos que te gustan o revisar tu cuenta de Facebook. Hacer lo que necesitas hacer significa que tendrás la oportunidad de hacer lo que te gusta.";
 "lng.attractHabit.firstTextField.placeHolder" = "Escribe el hábito que necesitas";
 "lng.attractHabit.secondTextField.placeHolder" = "Escribe el hábito que quieres";
-
+"lng.alert.flow.exit.title" = "Do you want to cancel the process?";
+"lng.alert.flow.exit.subtitle" = "All changes will be lost";
 
 
 
