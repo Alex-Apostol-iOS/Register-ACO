@@ -32,7 +32,7 @@ class RegisterACOButton: UIButton {
     func config(buttonStyle: ButtonStyle, title: String, action: @escaping() -> Void) {
         self.buttonAction = action
         self.addTarget(self, action: #selector(didPressButton), for: .touchUpInside)
-        let attributeString = NSAttributedString(string: title, attributes: [NSAttributedString.Key.font : UIFont.theme(id: .regular18), NSAttributedString.Key.foregroundColor: getButtonTitleColor(buttonStyle: buttonStyle)])
+        let attributeString = NSAttributedString(string: title, attributes: [NSAttributedString.Key.font : UIFont.theme(id: .semiBold18), NSAttributedString.Key.foregroundColor: getButtonTitleColor(buttonStyle: buttonStyle)])
         DispatchQueue.main.async {
             self.setAttributedTitle(attributeString, for: .normal)
         }
