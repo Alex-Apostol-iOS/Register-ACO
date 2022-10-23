@@ -20,6 +20,7 @@ extension UIColor {
         case dark100
         case backGrounOpaqueOveraly
         case green100
+        case baseLight40
     }
     
     convenience init(hexString: String, alpha: CGFloat = 1.0) {
@@ -65,6 +66,8 @@ extension UIColor {
             return UIColor(hexString: "0D0E0F")
         case .green100:
             return UIColor(hexString: "#00A86B")
+        case .baseLight40:
+            return UIColor(hexString: "#E3E5E5")
         }
     }
 }

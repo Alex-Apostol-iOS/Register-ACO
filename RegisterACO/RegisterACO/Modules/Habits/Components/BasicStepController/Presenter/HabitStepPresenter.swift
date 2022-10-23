@@ -32,6 +32,10 @@ class HabitStepPresenter {
             }
         return model
     }
+    
+    private var isLastStep: Bool {
+        modelImplementation.currentStep == (BasicStepControllerModelType.allCases.count - 1)
+    }
 }
 
 extension HabitStepPresenter: HabitStepPresenterProtocol {
@@ -43,7 +47,11 @@ extension HabitStepPresenter: HabitStepPresenterProtocol {
     }
     
     func didTapContinue() {
-        coordinatorOutput(.goToNextStep)
+        if !isLastStep {
+            coordinatorOutput(.goToNextStep)
+        } else {
+            
+        }
     }
     
     func updateStep() {
@@ -55,5 +63,10 @@ extension HabitStepPresenter: HabitStepPresenterProtocol {
     func didNavTapCloseIcon() {
         let model = createAlerViewControllerModel()
         view?.showAlert(with: model)
+    }
+    
+    var flowProgress: Float {
+        let progress =  100 / (BasicStepControllerModelType.allCases.count - 1)
+        return (Float(progress) / 100) * Float(modelImplementation.currentStep)
     }
 }

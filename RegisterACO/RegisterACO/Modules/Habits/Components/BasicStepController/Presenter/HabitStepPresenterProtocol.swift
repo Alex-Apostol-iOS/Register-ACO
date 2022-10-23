@@ -14,4 +14,5 @@ protocol HabitStepPresenterProtocol: AnyObject {
     func didTapContinue()
     func updateStep()
     func didNavTapCloseIcon()
+    var flowProgress: Float {get}
 }

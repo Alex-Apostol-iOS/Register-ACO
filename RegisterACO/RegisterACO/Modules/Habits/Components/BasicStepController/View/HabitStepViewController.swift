@@ -13,6 +13,11 @@ class HabitStepViewController: RegisterAcoNavigationController {
     private let presenter: HabitStepPresenterProtocol
     private let viewModel: HabitStepModel
     
+    private lazy var progressView: RegisterACOProgressView = {
+        let view = RegisterACOProgressView(frame: .zero)
+        return view
+    }()
+    
     
     private lazy var scrollView: UIScrollView = {
        let scroll = UIScrollView()
@@ -120,7 +125,9 @@ class HabitStepViewController: RegisterAcoNavigationController {
         super.viewDidLoad()
         setUpScrollViewLayout()
         setUpContentViewLayout()
+        setUpProgressViewLayout()
         setUpMainStackViewLayout()
+        progressView.setProgress(presenter.flowProgress, animated: false)
         configTitleAndCloseIcon(title: viewModel.navTtleKey.localized)
         super.rightBarButtonAction = didTapNavCloseIcon
         
@@ -130,7 +137,7 @@ class HabitStepViewController: RegisterAcoNavigationController {
         self.customContentView.addSubview(mainStackView)
         mainStackView.translatesAutoresizingMaskIntoConstraints = false
        
-        mainStackView.topAnchor.constraint(equalTo: self.customContentView.topAnchor, constant: 16).isActive = true
+        mainStackView.topAnchor.constraint(equalTo: progressView.bottomAnchor, constant: 16).isActive = true
         mainStackView.leadingAnchor.constraint(equalTo: self.customContentView.leadingAnchor, constant: 16).isActive = true
         mainStackView.trailingAnchor.constraint(equalTo: self.customContentView.trailingAnchor, constant: -16).isActive = true
         let constraint = self.mainStackView.bottomAnchor.constraint(greaterThanOrEqualTo: self.customContentView.safeAreaLayoutGuide.bottomAnchor, constant: -40)
@@ -156,6 +163,14 @@ class HabitStepViewController: RegisterAcoNavigationController {
         customContentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -80).isActive = true
         customContentView.widthAnchor.constraint(equalTo:    self.view.widthAnchor).isActive = true
         customContentView.heightAnchor.constraint(greaterThanOrEqualTo:  self.view.heightAnchor).isActive = true
+    }
+    
+    private func setUpProgressViewLayout() {
+        customContentView.addSubview(progressView)
+        progressView.translatesAutoresizingMaskIntoConstraints = false
+        progressView.topAnchor.constraint(equalTo: customContentView.topAnchor, constant: 16).isActive = true
+        progressView.centerXAnchor.constraint(equalTo: customContentView.centerXAnchor).isActive = true
+        progressView.widthAnchor.constraint(equalToConstant: 100).isActive = true
     }
     
     @objc
