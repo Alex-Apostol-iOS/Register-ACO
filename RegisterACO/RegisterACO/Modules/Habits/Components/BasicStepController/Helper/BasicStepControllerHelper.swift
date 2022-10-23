@@ -85,7 +85,7 @@ extension BasicStepControllerHelper {
                 firstTextAreaPlaceHolderKey: "lng.makeItEasy.firstTextField.placeHolder",
                 secondTextAreaPlaceHolderKey: "lng.makeItEasy.secondTextField.placeHolder",
                 mainButtonModel: HabitStepButtonModel(
-                    titleKey: "lng.common.continue"
+                    titleKey: "lng.common.confirm"
                 ),
                 secondaryButtonModel: HabitStepButtonModel(
                     titleKey: "lng.common.seeExamples"

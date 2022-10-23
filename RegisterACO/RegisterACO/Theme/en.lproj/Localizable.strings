@@ -88,5 +88,6 @@ for which I am very grateful (what I need).
 "lng.makeItEasy.description" = "Reduces tension and resistance. Reduce the number of steps between you and your good habits. \n Set the scene to make your future actions easier.";
 "lng.makeItEasy.firstTextField.placeHolder" = "How are you going to reduce the tension between you and your habit?";
 "lng.makeItEasy.secondTextField.placeHolder" = "How are you going to prepare the environment to make this habit easy?";
+"lng.common.confirm" = "Confirm";
 
 
