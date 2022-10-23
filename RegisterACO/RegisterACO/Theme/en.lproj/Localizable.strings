@@ -79,5 +79,14 @@ for which I am very grateful (what I need).
 "lng.attractHabit.secondTextField.placeHolder" = "Write the habit you want";
 "lng.alert.flow.exit.title" = "Do you want to cancel the process?";
 "lng.alert.flow.exit.subtitle" = "All changes will be lost";
+"lng.makeItEasy.nav.title" = "Make it simple";
+"lng.makeItEasy.nav.title" = "Go slowly, but don't back down";
+"lng.makeItEasy.example1" = "Although it would be logical to start with the simplest and smallest, it is common to try to start big. When you dream of making a change, you are inevitably overwhelmed by emotion and end up trying to do too much in too little time. The best way to counteract this tendency is to use the two-minute rule,5 which states: “When you start a new habit, it shouldn't take more than two minutes to start.";
+"lng.makeItEasy.example2" = "Do you want to draw more? Put your pencils, pens, notebooks, and other drawing tools on your desk, where they are easily accessible.";
+"lng.makeItEasy.example3" = "Do you want to exercise? Prepare appropriate clothing, shoes, gym bag, and water bottle in advance";
+"lng.makeItEasy.example4" = "Do you want to improve your diet? On weekends, peel and chop mounds of fruits and vegetables and place them in plastic containers in the refrigerator. This will allow you to have easy access to healthy, ready-to-eat options throughout the week.";
+"lng.makeItEasy.description" = "Reduces tension and resistance. Reduce the number of steps between you and your good habits. \n Set the scene to make your future actions easier.";
+"lng.makeItEasy.firstTextField.placeHolder" = "How are you going to reduce the tension between you and your habit?";
+"lng.makeItEasy.secondTextField.placeHolder" = "How are you going to prepare the environment to make this habit easy?";
 
 

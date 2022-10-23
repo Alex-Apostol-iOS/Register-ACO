@@ -71,6 +71,7 @@ class RegisterACOTextArea: UIView {
         textViewStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
         textViewStackView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         textViewStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        textView.textContainerInset = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 32)
     }
     
     private func setUpClearIconLayout() {

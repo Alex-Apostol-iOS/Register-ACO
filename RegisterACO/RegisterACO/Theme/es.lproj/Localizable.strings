@@ -77,6 +77,15 @@ por la cual estoy muy agradecido (lo que necesito).
 "lng.attractHabit.secondTextField.placeHolder" = "Escribe el hábito que quieres";
 "lng.alert.flow.exit.title" = "Quieres cancelar el proceso?";
 "lng.alert.flow.exit.subtitle" = "Todo los cambios de perderán";
+"lng.makeItEasy.nav.title" = "Hacerlo sencillo";
+"lng.makeItEasy.title" = "Avanza despacio, pero no des marcha atrás";
+"lng.makeItEasy.example1" = "A pesar de que lo lógico sería empezar por lo más sencillo y pequeño, es común tratar de empezar por lo grande. Cuando sueñas con hacer un cambio, la emoción te domina de manera inevitable y terminas tratando de hacer demasiadas cosas en poco tiempo. La mejor manera de contrarrestar esta tendencia es usar la regla de los dos minutos,5 la cual establece: «Cuando empiezas un nuevo hábito, no debe tomarte más de dos minutos";
+"lng.makeItEasy.example2" = "¿Quieres dibujar más? Coloca tus lápices, plumas, cuadernos y otras herramientas de dibujo sobre tu escritorio, donde sean fácilmente accesibles.";
+"lng.makeItEasy.example3" = "¿Quieres hacer ejercicio? Prepara con anticipación la ropa apropiada, los zapatos, la maleta del gimnasio y la botella de agua.";
+"lng.makeItEasy.example4" = "¿Quieres mejorar tu dieta? Los fines de semana pela y pica montones de frutas y verduras y colócalos en contenedores de plástico en el refrigerador. Esto te permitirá tener fácil acceso a opciones saludables y listas para comer durante toda la semana.";
+"lng.makeItEasy.description" = "Reduce la tensión y la resistencia. Reduce el número de pasos entre tú y tus buenos hábitos. \nPrepara el ambiente para hacer que tus futuras acciones sean más sencillas.";
+"lng.makeItEasy.firstTextField.placeHolder" = "Como vas a reducir la tension entre tu y tu hábito?";
+"lng.makeItEasy.secondTextField.placeHolder" = "Como vas a preparar el ambiente para hacer sencillo este hábito?";
 
 
 
