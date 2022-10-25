@@ -17,6 +17,7 @@
 		9D039EE328F71B7A000FC5C9 /* HabitStepDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D039ED928F71B79000FC5C9 /* HabitStepDataManagerProtocol.swift */; };
 		9D039EE428F71B7A000FC5C9 /* HabitStepOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D039EDA28F71B79000FC5C9 /* HabitStepOutput.swift */; };
 		9D039EE528F71B7A000FC5C9 /* HabitStepDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D039EDB28F71B79000FC5C9 /* HabitStepDataManager.swift */; };
+		9D08AC682907A75400D4454A /* BasicStepViewControllerStepDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D08AC672907A75400D4454A /* BasicStepViewControllerStepDTO.swift */; };
 		9D1BCF1628FFBDE5002D0A73 /* BasicDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1BCF1528FFBDE5002D0A73 /* BasicDetailViewController.swift */; };
 		9D1BCF1928FFC7BE002D0A73 /* BasicStepControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1BCF1828FFC7BE002D0A73 /* BasicStepControllerHelper.swift */; };
 		9D6042DF28F92FAA00211A9E /* RegisterACOTextArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6042DE28F92FAA00211A9E /* RegisterACOTextArea.swift */; };
@@ -174,6 +175,7 @@
 		9D039ED928F71B79000FC5C9 /* HabitStepDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitStepDataManagerProtocol.swift; sourceTree = "<group>"; };
 		9D039EDA28F71B79000FC5C9 /* HabitStepOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitStepOutput.swift; sourceTree = "<group>"; };
 		9D039EDB28F71B79000FC5C9 /* HabitStepDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitStepDataManager.swift; sourceTree = "<group>"; };
+		9D08AC672907A75400D4454A /* BasicStepViewControllerStepDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicStepViewControllerStepDTO.swift; sourceTree = "<group>"; };
 		9D1BCF1528FFBDE5002D0A73 /* BasicDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicDetailViewController.swift; sourceTree = "<group>"; };
 		9D1BCF1828FFC7BE002D0A73 /* BasicStepControllerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicStepControllerHelper.swift; sourceTree = "<group>"; };
 		9D6042DE28F92FAA00211A9E /* RegisterACOTextArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterACOTextArea.swift; sourceTree = "<group>"; };
@@ -403,6 +405,14 @@
 			path = Builder;
 			sourceTree = "<group>";
 		};
+		9D08AC662907A73B00D4454A /* Dto */ = {
+			isa = PBXGroup;
+			children = (
+				9D08AC672907A75400D4454A /* BasicStepViewControllerStepDTO.swift */,
+			);
+			path = Dto;
+			sourceTree = "<group>";
+		};
 		9D1BCF1328FFBC82002D0A73 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -430,6 +440,7 @@
 		9D6042DC28F92BE100211A9E /* BasicStepController */ = {
 			isa = PBXGroup;
 			children = (
+				9D08AC662907A73B00D4454A /* Dto */,
 				9D1BCF1728FFC7AD002D0A73 /* Helper */,
 				9D039EEA28F71B9B000FC5C9 /* Builder */,
 				9D039EE928F71B92000FC5C9 /* DataManager */,
@@ -1538,6 +1549,7 @@
 				B4832F2B283925B10024A950 /* Cache.swift in Sources */,
 				B442C3C02841258600A6781B /* ProfileDataManager.swift in Sources */,
 				B4FFE7A72854D91A0037A278 /* FeatureCardItem.swift in Sources */,
+				9D08AC682907A75400D4454A /* BasicStepViewControllerStepDTO.swift in Sources */,
 				B40D313D280863FB002C1396 /* StarterDataManager.swift in Sources */,
 				B4C60A722826423C007DBE70 /* HomeDataManagerProtocol.swift in Sources */,
 				B4FFE7A92855CF670037A278 /* UIImageView+Extensions.swift in Sources */,

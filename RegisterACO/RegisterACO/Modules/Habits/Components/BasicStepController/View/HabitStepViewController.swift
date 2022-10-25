@@ -180,7 +180,7 @@ class HabitStepViewController: RegisterAcoNavigationController {
     
     @objc
     private func didTapContinue() {
-        presenter.didTapContinue()
+        presenter.didTapContinue(answer1: currentHabitTextView.text, answer2: newHabitTextView.text)
     }
     
     private func didTapNavCloseIcon() {

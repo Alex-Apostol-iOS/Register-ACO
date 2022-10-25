@@ -89,6 +89,10 @@ class RegisterACOTextArea: UIView {
         textView.resignFirstResponder()
     }
     
+    var text: String {
+        return textView.text
+    }
+    
 }
 
 extension RegisterACOTextArea: UITextViewDelegate {

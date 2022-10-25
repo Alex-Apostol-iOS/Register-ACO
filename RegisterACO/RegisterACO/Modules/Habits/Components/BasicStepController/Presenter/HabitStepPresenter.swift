@@ -46,12 +46,19 @@ extension HabitStepPresenter: HabitStepPresenterProtocol {
         coordinatorOutput(.goToDetailViewController)
     }
     
-    func didTapContinue() {
+    func didTapContinue(answer1: String, answer2: String) {
         if !isLastStep {
-            coordinatorOutput(.goToNextStep)
+            coordinatorOutput(.goToNextStep(stepData: buildStepDTO(title: viewModel.titleKey.localized, answer1: answer1, answer2: answer2)))
         } else {
             
         }
+    }
+    
+    private func buildStepDTO(title: String, answer1: String, answer2: String) -> BasicStepViewControllerStepDTO {
+        return BasicStepViewControllerStepDTO (
+            title: title,
+            answer1: answer1,
+            answer2: answer2)
     }
     
     func updateStep() {

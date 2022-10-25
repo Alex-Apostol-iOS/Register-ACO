@@ -23,6 +23,7 @@ class PositiveHabitCoordinator: Coordinator {
     private var state: PositiveHabitCoordinatorState
     private let modelImplementation:  BasicStepControllerHelperImplementation
     private var stepsVcs: [UIViewController]
+    private let basicStepViewControllerStepDTOContainer : BasicStepViewControllerStepDTOContainer
     
     
     init(on navigator: UINavigationController, with state: PositiveHabitCoordinatorState = .initial) {
@@ -30,6 +31,7 @@ class PositiveHabitCoordinator: Coordinator {
         self.state = state
         modelImplementation = BasicStepControllerHelperImplementation()
         stepsVcs = []
+        basicStepViewControllerStepDTOContainer = BasicStepViewControllerStepDTOContainer()
     }
     
     func start() {
@@ -81,9 +83,10 @@ class PositiveHabitCoordinator: Coordinator {
             case .goToDetailViewController:
                 self?.state = .didShowHabitStep
                 self?.loop()
-            case .goToNextStep:
+            case .goToNextStep(let habitStepData):
                 self?.state = .willShowNextStep
                 self?.modelImplementation.currentStep += 1
+                self?.updateStepData(with: habitStepData)
                 self?.loop()
                 
             }
@@ -99,6 +102,15 @@ class PositiveHabitCoordinator: Coordinator {
         let vc = BasicDetailViewController(dataModel: viewDataModel)
         vc.modalPresentationStyle = .fullScreen
         navigator.present(vc, animated: true)
+    }
+    
+    private func updateStepData(with model: BasicStepViewControllerStepDTO) {
+        removeDuplacateStepDataIfNeeded(for: model)
+        basicStepViewControllerStepDTOContainer.stepData.append(model)
+    }
+    
+    private func removeDuplacateStepDataIfNeeded(for model: BasicStepViewControllerStepDTO) {
+        basicStepViewControllerStepDTOContainer.stepData.removeAll(where: {$0.title == model.title})
     }
     
 }
