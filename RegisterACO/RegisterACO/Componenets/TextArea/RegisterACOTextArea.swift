@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 
 class RegisterACOTextArea: UIView {
@@ -38,6 +39,12 @@ class RegisterACOTextArea: UIView {
         stackView.spacing = 0
         return stackView
     }()
+    
+    var publisher: AnyPublisher<String, Never> {
+        get {
+            return textView.textPublisher
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)

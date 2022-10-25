@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import Combine
 
 class HabitStepViewController: RegisterAcoNavigationController {
     
     private let presenter: HabitStepPresenterProtocol
     private let viewModel: HabitStepModel
+    private let verificationModel = BasicStepViewModel()
+    private var cancellableSet: Set<AnyCancellable> = []
+    
+    private var buttonSubscriber: AnyCancellable?
     
     private lazy var progressView: RegisterACOProgressView = {
         let view = RegisterACOProgressView(frame: .zero)
@@ -58,6 +63,10 @@ class HabitStepViewController: RegisterAcoNavigationController {
         let textArea = RegisterACOTextArea(frame: .zero)
         textArea.configure(placeHolder: viewModel.firstTextAreaPlaceHolderKey.localized, shouldGrow: true)
         textArea.heightAnchor.constraint(equalToConstant: 96).isActive = true
+        textArea.publisher
+            .sink { text in
+                self.verificationModel.firstTextField = text
+            }.store(in: &cancellableSet)
         return textArea
     }()
     
@@ -65,6 +74,11 @@ class HabitStepViewController: RegisterAcoNavigationController {
         let textArea = RegisterACOTextArea(frame: .zero)
         textArea.configure(placeHolder: viewModel.secondTextAreaPlaceHolderKey.localized, shouldGrow: true)
         textArea.heightAnchor.constraint(equalToConstant: 96).isActive = true
+        
+        textArea.publisher
+            .sink { text in
+                self.verificationModel.secondTextField = text
+            }.store(in: &cancellableSet)
         return textArea
     }()
     
@@ -130,6 +144,16 @@ class HabitStepViewController: RegisterAcoNavigationController {
         progressView.setProgress(presenter.flowProgress, animated: false)
         configTitleAndCloseIcon(title: viewModel.navTtleKey.localized)
         super.rightBarButtonAction = didTapNavCloseIcon
+        
+        buttonSubscriber = verificationModel.validateFirstsSurnameAndPhone
+            .receive(on: RunLoop.main)
+            .assign(to: \.isEnabled, on: continueButton)
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         
     }
     
