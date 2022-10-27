@@ -24,9 +24,16 @@ class RegisterACOTextArea: UIView {
         return imageView
     }()
     
+    private lazy var placeHolderLabel: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.textColor = UIColor.theme(.baseLight20)
+        label.font = UIFont.theme(id: .medium14)
+        return label
+    }()
+    
     private lazy var textView: UITextView = {
         let textView = UITextView(frame: .zero)
-        textView.textColor = UIColor.theme(.dark50)
+        textView.textColor = UIColor.theme(.dark75)
         textView.font = UIFont.theme(id: .medium14)
         textView.delegate = self
         return textView
@@ -57,8 +64,7 @@ class RegisterACOTextArea: UIView {
     }
     
     func configure(placeHolder: String, shouldGrow: Bool)  {
-        textView.text = placeHolder
-        textView.textColor = UIColor.theme(.baseLight20)
+        placeHolderLabel.text = placeHolder
         self.placeHolder = placeHolder
         textView.isScrollEnabled = shouldGrow
     }
@@ -69,6 +75,7 @@ class RegisterACOTextArea: UIView {
         self.layer.cornerRadius = 8
         setUpTextViewLayout()
         setUpClearIconLayout()
+        setUpPlaceHolderLayout()
     }
     
     private func setUpTextViewLayout() {
@@ -88,12 +95,23 @@ class RegisterACOTextArea: UIView {
         clearIcon.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16).isActive = true
     }
     
+    private func setUpPlaceHolderLayout() {
+        self.addSubview(placeHolderLabel)
+        placeHolderLabel.translatesAutoresizingMaskIntoConstraints = false
+        placeHolderLabel.leadingAnchor.constraint(equalTo: textViewStackView.leadingAnchor, constant: 16).isActive = true
+        placeHolderLabel.topAnchor.constraint(equalTo: textViewStackView.topAnchor, constant: 16).isActive = true
+        placeHolderLabel.trailingAnchor.constraint(equalTo: clearIcon.trailingAnchor, constant: 16).isActive = true
+    }
     
-    
+
     @objc
     private func didTapClearIcon() {
         textView.text = ""
+        textView.delegate?.textViewDidEndEditing?(textView)
+        textView.delegate?.textViewDidChange?(textView)
         textView.resignFirstResponder()
+        placeHolderLabel.isHidden = false
+        textView.textContainer.didChangeValue(forKey: UITextView.textDidChangeNotification.rawValue)
     }
     
     var text: String {
@@ -105,18 +123,24 @@ class RegisterACOTextArea: UIView {
 extension RegisterACOTextArea: UITextViewDelegate {
     
     func textViewDidBeginEditing(_ textView: UITextView) {
-        if textView.textColor == UIColor.theme(.baseLight20) {
+        if textView.text.isEmpty {
             textView.text = nil
-            textView.textColor = UIColor.theme(.dark75)
-            self.layer.borderColor = UIColor.theme(.primary100).cgColor
+            placeHolderLabel.isHidden = true
         }
+        self.layer.borderColor = UIColor.theme(.primary100).cgColor
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text.isEmpty {
-            textView.text = placeHolder
-            textView.textColor = UIColor.theme(.baseLight20)
+            placeHolderLabel.isHidden = false
         }
         self.layer.borderColor = UIColor.theme(.baseLight20).cgColor
+    }
+    
+    func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
+        if textView.text == "" {
+        self.placeHolderLabel.isHidden = true
+        }
+        return true
     }
 }
