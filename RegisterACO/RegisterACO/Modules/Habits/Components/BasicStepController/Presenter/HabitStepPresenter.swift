@@ -50,7 +50,14 @@ extension HabitStepPresenter: HabitStepPresenterProtocol {
         if !isLastStep {
             coordinatorOutput(.goToNextStep(stepData: buildStepDTO(title: viewModel.titleKey.localized, answer1: answer1, answer2: answer2)))
         } else {
-            
+            interactor.postPositiveHabit { result in
+                switch result {
+                case .success(let success):
+                    print(success)
+                case .failure(let failure):
+                    print(failure)
+                }
+            }
         }
     }
     

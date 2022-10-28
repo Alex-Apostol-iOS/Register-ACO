@@ -28,6 +28,7 @@ class RegisterACOTextArea: UIView {
         let label = UILabel(frame: .zero)
         label.textColor = UIColor.theme(.baseLight20)
         label.font = UIFont.theme(id: .medium14)
+        label.numberOfLines = 0
         return label
     }()
     
@@ -100,7 +101,7 @@ class RegisterACOTextArea: UIView {
         placeHolderLabel.translatesAutoresizingMaskIntoConstraints = false
         placeHolderLabel.leadingAnchor.constraint(equalTo: textViewStackView.leadingAnchor, constant: 16).isActive = true
         placeHolderLabel.topAnchor.constraint(equalTo: textViewStackView.topAnchor, constant: 16).isActive = true
-        placeHolderLabel.trailingAnchor.constraint(equalTo: clearIcon.trailingAnchor, constant: 16).isActive = true
+        placeHolderLabel.trailingAnchor.constraint(equalTo: clearIcon.leadingAnchor, constant: -16).isActive = true
     }
     
 

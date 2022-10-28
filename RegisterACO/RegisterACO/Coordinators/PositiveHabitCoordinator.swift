@@ -78,7 +78,7 @@ class PositiveHabitCoordinator: Coordinator {
     }
     
     private func showPositiveHabitStep() {
-        let vc = HabitStepBuilder(modelImplementation: modelImplementation) { [weak self] output in
+        let vc = HabitStepBuilder(stepData:basicStepViewControllerStepDTOContainer, modelImplementation: modelImplementation) { [weak self] output in
             switch output { 
             case .goToDetailViewController:
                 self?.state = .didShowHabitStep

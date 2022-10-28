@@ -13,15 +13,17 @@ class HabitStepBuilder: Builder {
     
     private var coordinatorOutput: (HabitStepOutput) -> Void
     private let modelImplementation: BasicStepControllerHelperImplementation
-    
-    init(modelImplementation: BasicStepControllerHelperImplementation, coordinnatorOutput: @escaping (HabitStepOutput) -> Void) {
+    private let stepData: BasicStepViewControllerStepDTOContainer
+
+    init(stepData: BasicStepViewControllerStepDTOContainer, modelImplementation: BasicStepControllerHelperImplementation, coordinnatorOutput: @escaping (HabitStepOutput) -> Void) {
+        self.stepData = stepData
         self.modelImplementation = modelImplementation
         self.coordinatorOutput = coordinnatorOutput
     }
     
     func build() -> UIViewController {
         let dataManager = HabitStepDataManager()
-        let interactor = HabitStepInteractor(dataManager: dataManager)
+        let interactor = HabitStepInteractor(stepData: stepData, dataManager: dataManager)
         let presenter = HabitStepPresenter(modelImplementation: modelImplementation, interactor: interactor, coordinnatorOutput: coordinatorOutput)
         let view = HabitStepViewController(presenter: presenter)
         presenter.view = view
