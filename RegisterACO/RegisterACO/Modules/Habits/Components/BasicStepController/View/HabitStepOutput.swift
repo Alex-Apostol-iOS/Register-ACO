@@ -11,4 +11,5 @@ import Foundation
 enum HabitStepOutput {
     case goToDetailViewController
     case goToNextStep(stepData: BasicStepViewControllerStepDTO)
+    case goToAllDone(habit: DtoPostiveHabit)
 }

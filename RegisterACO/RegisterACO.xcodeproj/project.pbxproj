@@ -24,6 +24,7 @@
 		9D6042DF28F92FAA00211A9E /* RegisterACOTextArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6042DE28F92FAA00211A9E /* RegisterACOTextArea.swift */; };
 		9D6FBFF02904467900C38B35 /* ModalAlerViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6FBFEF2904467900C38B35 /* ModalAlerViewControllerProtocol.swift */; };
 		9D6FBFF329057EC200C38B35 /* RegisterACOProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6FBFF229057EC200C38B35 /* RegisterACOProgressBar.swift */; };
+		9DBFA0AC290D03E5009593E8 /* RegisterACOAllDone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0AB290D03E5009593E8 /* RegisterACOAllDone.swift */; };
 		9DF2254F290B98F90045D026 /* DtoPositiveHabit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF2254E290B98F90045D026 /* DtoPositiveHabit.swift */; };
 		B40D30FD280858AE002C1396 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D30FC280858AE002C1396 /* AppDelegate.swift */; };
 		B40D30FF280858AE002C1396 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D30FE280858AE002C1396 /* SceneDelegate.swift */; };
@@ -184,6 +185,7 @@
 		9D6042DE28F92FAA00211A9E /* RegisterACOTextArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterACOTextArea.swift; sourceTree = "<group>"; };
 		9D6FBFEF2904467900C38B35 /* ModalAlerViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalAlerViewControllerProtocol.swift; sourceTree = "<group>"; };
 		9D6FBFF229057EC200C38B35 /* RegisterACOProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterACOProgressBar.swift; sourceTree = "<group>"; };
+		9DBFA0AB290D03E5009593E8 /* RegisterACOAllDone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterACOAllDone.swift; sourceTree = "<group>"; };
 		9DF2254E290B98F90045D026 /* DtoPositiveHabit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DtoPositiveHabit.swift; sourceTree = "<group>"; };
 		B40D30F9280858AD002C1396 /* RegisterACO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RegisterACO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B40D30FC280858AE002C1396 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -421,6 +423,7 @@
 		9D1BCF1328FFBC82002D0A73 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				9DBFA0AA290D03B7009593E8 /* RegisterACOAllDone */,
 				9D1BCF1428FFBDCC002D0A73 /* BasicDetailViewController */,
 			);
 			path = ViewControllers;
@@ -478,6 +481,14 @@
 				9D6FBFF229057EC200C38B35 /* RegisterACOProgressBar.swift */,
 			);
 			path = ProgressBar;
+			sourceTree = "<group>";
+		};
+		9DBFA0AA290D03B7009593E8 /* RegisterACOAllDone */ = {
+			isa = PBXGroup;
+			children = (
+				9DBFA0AB290D03E5009593E8 /* RegisterACOAllDone.swift */,
+			);
+			path = RegisterACOAllDone;
 			sourceTree = "<group>";
 		};
 		ADDD343129DAE07932E74B84 /* Frameworks */ = {
@@ -1453,6 +1464,7 @@
 				B40D3137280863FB002C1396 /* StarterPresenterProtocol.swift in Sources */,
 				B442C3BB2841258600A6781B /* ProfileViewController.swift in Sources */,
 				B4C60A6D2826423C007DBE70 /* HomeViewControllerProtocol.swift in Sources */,
+				9DBFA0AC290D03E5009593E8 /* RegisterACOAllDone.swift in Sources */,
 				B4DA94DB287044C3000EFB60 /* PostiveHabitInfoViewInteractorProtocol.swift in Sources */,
 				B40D314828098A2F002C1396 /* RegisterACOColor.swift in Sources */,
 				B4C60A81282832CB007DBE70 /* KeychainHelper.swift in Sources */,

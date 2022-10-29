@@ -17,6 +17,7 @@ class PositiveHabitCoordinator: Coordinator {
         case didShowHabitStep
         case willShowHabitStepDetail
         case willShowNextStep
+         case willShowAllDone(habit: DtoPostiveHabit)
     }
     
     private let navigator: UINavigationController
@@ -49,6 +50,8 @@ class PositiveHabitCoordinator: Coordinator {
             goToHabitStepDetail()
         case .willShowNextStep:
             showPositiveHabitStep()
+        case .willShowAllDone(let habit):
+            showAllDone()
         case .initial, .didShowPositiveHabitInfoView, .didShowHabitStep:
             fatalError("no implementation for \(next(nextState: state)) on PositiveHabitCoordinator")
         }
@@ -88,7 +91,9 @@ class PositiveHabitCoordinator: Coordinator {
                 self?.modelImplementation.currentStep += 1
                 self?.updateStepData(with: habitStepData)
                 self?.loop()
-                
+            case .goToAllDone(let habit):
+                self?.state = .willShowAllDone(habit: habit)
+                self?.loop()
             }
         }.build()
         stepsVcs.append(vc)
@@ -114,5 +119,11 @@ class PositiveHabitCoordinator: Coordinator {
         } else {
             basicStepViewControllerStepDTOContainer.stepData.append(model)
         }
+    }
+    
+    private func showAllDone() {
+        let vc = RegisterACOAllDone()
+        vc.modalPresentationStyle = .fullScreen
+        navigator.present(vc, animated: true)
     }
 }
