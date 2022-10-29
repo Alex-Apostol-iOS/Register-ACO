@@ -38,7 +38,7 @@ automatic way. Habits that at first may seem small and insignificant, will be tr
 "lng.howHabitsAffectYourLife.label.text" = "How habits affect your life";
 "lng.howHabitsAffectYourLife.content.label.text" = "A small change in your daily habits can lead your life to a completely different destination. It doesn't matter how successful you are right now. What matters is determining if your habits are leading you to the path of success. If you are a millionaire but spend more than you earn each month, then you are on a bad path. If your consumption habits do not change, you will not end well. On the other hand, if you're broke but manage to save a little each month, then you're on a path to financial freedom, even if it takes longer than you'd like to do so.
 Your results are the reactive indicators of your habits. The amount of money you have is a reactive indicator of your financial habits. Your current weight is an indicator of your eating habits. Your knowledge is a reactive indicator of your study habits. The appearance of your house is a reactive indicator of your habits of order and cleanliness. In the end you get what you repeat";
-"lng.common.continue" = "Start";
+"lng.common.start" = "Start";
 "lng.habit.how.habit.work" = "How habits work";
 "lng.howHabitsWork.content.label.text" = "Habits often don't seem to cause any change until a critical point, a threshold, is reached. One always expects to make progress in a linear and bottom-up manner, which is why it is frustrating when for periods of days, weeks and even months the changes do not seem to work and one has the feeling of staying in the same place. It is the hallmark of any cumulative process: the most powerful results take time and are delayed. This is one of the reasons why it is so difficult to develop habits that last. For habits to actually create change, they must persist long enough to break through a plateau where no perceptible change occurs. I call it a plateau of latent potential. When you finally get past the plateau of latent potential, people consider it an overnight success. The common people only perceive the most striking events and do not stop to see all the work and effort behind them. But you know that all the work you've put in for a long time, when it seemed like you weren't making any progress, is what really made the change possible.";
 "lng.obviousHabit.nav.title" = "Fill out the Habit Log";
@@ -90,5 +90,6 @@ for which I am very grateful (what I need).
 "lng.makeItEasy.secondTextField.placeHolder" = "How are you going to prepare the environment to make this habit easy?";
 "lng.common.confirm" = "Confirm";
 "lng.common.see.resume" = "See summary";
+"lng.common.positiveHabit.allDone.title" = "Congratulations, a small change in your daily habits can lead your life to a completely different destination.";
 
 

@@ -25,6 +25,12 @@
 		9D6FBFF02904467900C38B35 /* ModalAlerViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6FBFEF2904467900C38B35 /* ModalAlerViewControllerProtocol.swift */; };
 		9D6FBFF329057EC200C38B35 /* RegisterACOProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6FBFF229057EC200C38B35 /* RegisterACOProgressBar.swift */; };
 		9DBFA0AC290D03E5009593E8 /* RegisterACOAllDone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0AB290D03E5009593E8 /* RegisterACOAllDone.swift */; };
+		9DBFA0AE290D7508009593E8 /* RegisterAllDoneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0AD290D7508009593E8 /* RegisterAllDoneViewModel.swift */; };
+		9DBFA0B0290D756B009593E8 /* RegisterAllDoneViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0AF290D756B009593E8 /* RegisterAllDoneViewOutput.swift */; };
+		9DBFA0B2290D759B009593E8 /* RegisterAllDoneViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0B1290D759B009593E8 /* RegisterAllDoneViewProtocol.swift */; };
+		9DBFA0B4290D75AB009593E8 /* RegisterAllDonePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0B3290D75AB009593E8 /* RegisterAllDonePresenterProtocol.swift */; };
+		9DBFA0B9290D75C3009593E8 /* RegisterAllDoneBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0B8290D75C3009593E8 /* RegisterAllDoneBuilder.swift */; };
+		9DBFA0BB290D761E009593E8 /* RegisterAllDoneViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0BA290D761E009593E8 /* RegisterAllDoneViewPresenter.swift */; };
 		9DF2254F290B98F90045D026 /* DtoPositiveHabit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF2254E290B98F90045D026 /* DtoPositiveHabit.swift */; };
 		B40D30FD280858AE002C1396 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D30FC280858AE002C1396 /* AppDelegate.swift */; };
 		B40D30FF280858AE002C1396 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D30FE280858AE002C1396 /* SceneDelegate.swift */; };
@@ -186,6 +192,12 @@
 		9D6FBFEF2904467900C38B35 /* ModalAlerViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalAlerViewControllerProtocol.swift; sourceTree = "<group>"; };
 		9D6FBFF229057EC200C38B35 /* RegisterACOProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterACOProgressBar.swift; sourceTree = "<group>"; };
 		9DBFA0AB290D03E5009593E8 /* RegisterACOAllDone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterACOAllDone.swift; sourceTree = "<group>"; };
+		9DBFA0AD290D7508009593E8 /* RegisterAllDoneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAllDoneViewModel.swift; sourceTree = "<group>"; };
+		9DBFA0AF290D756B009593E8 /* RegisterAllDoneViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAllDoneViewOutput.swift; sourceTree = "<group>"; };
+		9DBFA0B1290D759B009593E8 /* RegisterAllDoneViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAllDoneViewProtocol.swift; sourceTree = "<group>"; };
+		9DBFA0B3290D75AB009593E8 /* RegisterAllDonePresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAllDonePresenterProtocol.swift; sourceTree = "<group>"; };
+		9DBFA0B8290D75C3009593E8 /* RegisterAllDoneBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAllDoneBuilder.swift; sourceTree = "<group>"; };
+		9DBFA0BA290D761E009593E8 /* RegisterAllDoneViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAllDoneViewPresenter.swift; sourceTree = "<group>"; };
 		9DF2254E290B98F90045D026 /* DtoPositiveHabit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DtoPositiveHabit.swift; sourceTree = "<group>"; };
 		B40D30F9280858AD002C1396 /* RegisterACO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RegisterACO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B40D30FC280858AE002C1396 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -486,9 +498,39 @@
 		9DBFA0AA290D03B7009593E8 /* RegisterACOAllDone */ = {
 			isa = PBXGroup;
 			children = (
-				9DBFA0AB290D03E5009593E8 /* RegisterACOAllDone.swift */,
+				9DBFA0B7290D75B8009593E8 /* Builder */,
+				9DBFA0B6290D75B3009593E8 /* Presenter */,
+				9DBFA0B5290D75AE009593E8 /* View */,
 			);
 			path = RegisterACOAllDone;
+			sourceTree = "<group>";
+		};
+		9DBFA0B5290D75AE009593E8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9DBFA0AD290D7508009593E8 /* RegisterAllDoneViewModel.swift */,
+				9DBFA0AF290D756B009593E8 /* RegisterAllDoneViewOutput.swift */,
+				9DBFA0AB290D03E5009593E8 /* RegisterACOAllDone.swift */,
+				9DBFA0B1290D759B009593E8 /* RegisterAllDoneViewProtocol.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9DBFA0B6290D75B3009593E8 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9DBFA0B3290D75AB009593E8 /* RegisterAllDonePresenterProtocol.swift */,
+				9DBFA0BA290D761E009593E8 /* RegisterAllDoneViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		9DBFA0B7290D75B8009593E8 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				9DBFA0B8290D75C3009593E8 /* RegisterAllDoneBuilder.swift */,
+			);
+			path = Builder;
 			sourceTree = "<group>";
 		};
 		ADDD343129DAE07932E74B84 /* Frameworks */ = {
@@ -1480,6 +1522,7 @@
 				9DF2254F290B98F90045D026 /* DtoPositiveHabit.swift in Sources */,
 				B4DA94E1287044C3000EFB60 /* PostiveHabitInfoViewInteractor.swift in Sources */,
 				B40D3188280AD5F5002C1396 /* RegisterAcoNavigationController.swift in Sources */,
+				9DBFA0B0290D756B009593E8 /* RegisterAllDoneViewOutput.swift in Sources */,
 				B4B531AA281ED18000D49EE5 /* Publisher+Extension.swift in Sources */,
 				B40D3145280961BC002C1396 /* RegisterACOButton.swift in Sources */,
 				B40D317D280AD27F002C1396 /* Login_RegisterDataManagerProtocol.swift in Sources */,
@@ -1534,6 +1577,7 @@
 				B4832EE728322DAF0024A950 /* LoginPresenter.swift in Sources */,
 				9D039EDD28F71B7A000FC5C9 /* HabitStepPresenter.swift in Sources */,
 				9D6042DF28F92FAA00211A9E /* RegisterACOTextArea.swift in Sources */,
+				9DBFA0AE290D7508009593E8 /* RegisterAllDoneViewModel.swift in Sources */,
 				B44386F92815373F00ADACC5 /* RegisterFromBuilder.swift in Sources */,
 				9D039EE228F71B7A000FC5C9 /* HabitStepInteractor.swift in Sources */,
 				B40D317E280AD27F002C1396 /* Login_RegisterOutput.swift in Sources */,
@@ -1545,11 +1589,14 @@
 				B44AA760283A75A900383413 /* TabBarViewControllerPresenterProtocol.swift in Sources */,
 				B44AA75F283A75A900383413 /* TabBarViewControllerViewControllerProtocol.swift in Sources */,
 				B40D311728085A41002C1396 /* ServiceProxy.swift in Sources */,
+				9DBFA0B4290D75AB009593E8 /* RegisterAllDonePresenterProtocol.swift in Sources */,
 				B4832EEC28322DAF0024A950 /* LoginInteractor.swift in Sources */,
 				B442C3BE2841258600A6781B /* ProfileDataManagerProtocol.swift in Sources */,
 				B40D313C280863FB002C1396 /* StarterOutput.swift in Sources */,
 				B4DA94DC287044C3000EFB60 /* PostiveHabitInfoViewPresenter.swift in Sources */,
 				B4C60A742826423C007DBE70 /* HomeDataManager.swift in Sources */,
+				9DBFA0B9290D75C3009593E8 /* RegisterAllDoneBuilder.swift in Sources */,
+				9DBFA0BB290D761E009593E8 /* RegisterAllDoneViewPresenter.swift in Sources */,
 				B44AA765283A75A900383413 /* TabBarViewControllerOutput.swift in Sources */,
 				B40D3176280AD27F002C1396 /* Login_RegisterInteractorProtocol.swift in Sources */,
 				9D039EE528F71B7A000FC5C9 /* HabitStepDataManager.swift in Sources */,
@@ -1577,6 +1624,7 @@
 				B4832F2D28392A090024A950 /* CacheEntry.swift in Sources */,
 				B44AA766283A75A900383413 /* TabBarViewControllerDataManager.swift in Sources */,
 				B40D3177280AD27F002C1396 /* Login_RegisterPresenter.swift in Sources */,
+				9DBFA0B2290D759B009593E8 /* RegisterAllDoneViewProtocol.swift in Sources */,
 				B44387072815917500ADACC5 /* RegisterACOTextField.swift in Sources */,
 				B40D312128085A54002C1396 /* Loader.swift in Sources */,
 				B40D312828085A62002C1396 /* MainCoordinator.swift in Sources */,

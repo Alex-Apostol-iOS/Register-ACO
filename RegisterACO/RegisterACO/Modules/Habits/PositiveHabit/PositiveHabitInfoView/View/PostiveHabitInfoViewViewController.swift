@@ -173,7 +173,7 @@ class PostiveHabitInfoViewViewController: RegisterAcoNavigationController {
     
     private lazy var continueButton: RegisterACOButton = {
         let button = RegisterACOButton(frame: .zero)
-        button.config(buttonStyle: .primary, title: presenter.getlabelForKey(key: "lng.common.continue"), action: didTapContinue)
+        button.config(buttonStyle: .primary, title: presenter.getlabelForKey(key: "lng.common.start"), action: didTapContinue)
         return button
     }()
         

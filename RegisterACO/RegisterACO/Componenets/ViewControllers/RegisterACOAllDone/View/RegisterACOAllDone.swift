@@ -9,6 +9,9 @@ import UIKit
 
 class RegisterACOAllDone: UIViewController {
     
+    private let presenter: RegisterAllDoneViewPresenterProtocol
+    private let viewModel: RegisterAllDoneViewModel
+    
     private lazy var allDoneImageView: UIImageView = {
         let view = UIImageView()
         view.image = UIImage(named: "success")
@@ -22,8 +25,8 @@ class RegisterACOAllDone: UIViewController {
         let label = UILabel(frame: .zero)
         label.font = UIFont.theme(id: .semiBold18)
         label.textColor = UIColor.theme(.dark100)
-        label.numberOfLines = 2
-        label.text = ""
+        label.numberOfLines = 0
+        label.text = viewModel.titleLabelKey.localized
         return label
     }()
     
@@ -40,13 +43,13 @@ class RegisterACOAllDone: UIViewController {
     
     private lazy var secondaryButton: RegisterACOButton = {
         let button = RegisterACOButton(frame: .zero)
-        button.config(buttonStyle: .secondary, title: "lng.common.continue".localized, action: didTapSeeExamples)
+        button.config(buttonStyle: .secondary, title: viewModel.secondaryButtonTitleKey.localized, action: didTapSecondaryButton)
         return button
     }()
     
     private lazy var mainButton: RegisterACOButton = {
         let button = RegisterACOButton(frame: .zero)
-        button.config(buttonStyle: .primary, title: "lng.common.seeDetail".localized, action: didTapContinue)
+        button.config(buttonStyle: .primary, title: viewModel.mainButtonTitleKey.localized, action: didTapMainButton)
         return button
     }()
     
@@ -60,12 +63,14 @@ class RegisterACOAllDone: UIViewController {
     }()
     
     
-    init() {
+    init(presenter: RegisterAllDoneViewPresenterProtocol) {
+        self.presenter = presenter
+        viewModel = presenter.viewModel
         super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) {
-        super.init(coder: coder)
+        fatalError("coder not implemented")
     }
     
     override func viewDidLoad() {
@@ -112,17 +117,21 @@ class RegisterACOAllDone: UIViewController {
     }
     
     @objc
-    private func didTapSeeExamples() {
-        
+    private func didTapSecondaryButton() {
+        presenter.didPressSecondaryButton()
     }
     
     @objc
-    private func didTapContinue() {
-        
+    private func didTapMainButton() {
+        presenter.didPressMainButton()
     }
     
     @objc
     private func didTapCloseIcon() {
         dismiss(animated: true)
     }
+}
+
+extension RegisterACOAllDone: RegisterAllDoneViewProtocol {
+    
 }

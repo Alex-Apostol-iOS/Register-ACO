@@ -122,7 +122,22 @@ class PositiveHabitCoordinator: Coordinator {
     }
     
     private func showAllDone() {
-        let vc = RegisterACOAllDone()
+        let viewModel = RegisterAllDoneViewModel(
+            titleLabelKey: "lng.common.positiveHabit.allDone.title",
+            mainButtonTitleKey: "lng.common.continue",
+            secondaryButtonTitleKey: "lng.common.seeDetail"
+        )
+        let vc = RegisterAllDoneBuilder(viewModel: viewModel) { [weak self] output in
+            switch output {
+            case .secondaryButton:
+                break
+            case .mainButton:
+                let topVc = self?.navigator.presentedViewController
+                topVc?.dismiss(animated: true, completion: {
+                    self?.navigator.popToRootViewController(animated: true)
+                })
+            }
+        }.build()
         vc.modalPresentationStyle = .fullScreen
         navigator.present(vc, animated: true)
     }
