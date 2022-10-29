@@ -9,5 +9,5 @@
 import Foundation
 
 protocol HabitStepInteractorProtocol : AnyObject {
-    func postPositiveHabit(completion: @escaping (Result<Bool, Error>) -> Void) 
+    func postPositiveHabit(lastAnswer:BasicStepViewControllerStepDTO, completion: @escaping (Result<DtoPostiveHabit?, Error>) -> Void)
 }

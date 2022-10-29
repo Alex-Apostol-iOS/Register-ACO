@@ -9,5 +9,5 @@
 import Foundation
 
 protocol HabitStepDataManagerProtocol : AnyObject {
-    func postPositiveHabit(habit: DtoPostiveHabit, completion: @escaping (Result<Bool, Error>) -> Void)
+    func postPositiveHabit(habit: DtoPostiveHabit, completion: @escaping (Result<DtoPostiveHabit?, Error>) -> Void)
 }

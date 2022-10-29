@@ -21,31 +21,29 @@ class HabitStepInteractor: HabitStepInteractorProtocol {
         self.dataManager = dataManager
     }
     
-    func postPositiveHabit(completion: @escaping (Result<Bool, Error>) -> Void) {
+    func postPositiveHabit(lastAnswer:BasicStepViewControllerStepDTO, completion: @escaping (Result<DtoPostiveHabit?, Error>) -> Void) {
         
-        
-        for step in stepData.stepData {
-            print(step)
-        }
-        
-        return
+        let firstStepData = stepData.stepData[0]
+        let secondStepData = stepData.stepData[1]
+        let firstThirdData = lastAnswer
+       
         
         guard let user = user?.user else {return}
         let dtoHabit = DtoPostiveHabit(
             user: user,
-            name: "Habit",
-            obviousAnswer: "voy a comer",
-            attractiveAnswer: "attractiveAnswer",
-            easyAnswer: "easyAnswer",
-            satisfactionAnswer: "satisfactionAnswer",
-            startDate: "startDate",
-            habitAcumultationStrategy: DtoHabitAcumultationStrategy(actualHabit: "actual", newHabit: "new"),
+            name: firstStepData.answer1,
+            obviousAnswer: firstThirdData.answer1,
+            attractiveAnswer: secondStepData.answer1,
+            easyAnswer: firstThirdData.answer2,
+            satisfactionAnswer: secondStepData.answer2,
+            startDate: Date().debugDescription,
+            habitAcumultationStrategy: DtoHabitAcumultationStrategy(actualHabit: firstStepData.answer2, newHabit: firstStepData.answer1),
             habitImplementationStrategy: nil )
         
         dataManager.postPositiveHabit(habit: dtoHabit) { result in
             switch result {
-            case .success(_):
-                completion(.success(true))
+            case .success(let habit):
+                completion(.success(habit))
             case .failure(let failure):
                 completion(.failure(failure))
             }

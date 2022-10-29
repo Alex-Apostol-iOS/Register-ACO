@@ -105,12 +105,14 @@ class PositiveHabitCoordinator: Coordinator {
     }
     
     private func updateStepData(with model: BasicStepViewControllerStepDTO) {
-        removeDuplacateStepDataIfNeeded(for: model)
-        basicStepViewControllerStepDTOContainer.stepData.append(model)
+        let stepIndex = basicStepViewControllerStepDTOContainer.stepData.firstIndex { dataModel in
+            dataModel.title == model.title
+        }
+        
+        if let stepIndex = stepIndex {
+            basicStepViewControllerStepDTOContainer.stepData[stepIndex] = model
+        } else {
+            basicStepViewControllerStepDTOContainer.stepData.append(model)
+        }
     }
-    
-    private func removeDuplacateStepDataIfNeeded(for model: BasicStepViewControllerStepDTO) {
-        basicStepViewControllerStepDTOContainer.stepData.removeAll(where: {$0.title == model.title})
-    }
-    
 }
