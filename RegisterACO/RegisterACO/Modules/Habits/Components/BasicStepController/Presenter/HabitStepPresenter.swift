@@ -48,9 +48,9 @@ extension HabitStepPresenter: HabitStepPresenterProtocol {
     
     func didTapContinue(answer1: String, answer2: String) {
         if !isLastStep {
-            coordinatorOutput(.goToNextStep(stepData: buildStepDTO(title: viewModel.titleKey.localized, answer1: answer1, answer2: answer2)))
+            coordinatorOutput(.goToNextStep(stepData: buildStepDTO(title: viewModel.titleKey.localized, question1: viewModel.firstTextAreaPlaceHolderKey.localized, question2: viewModel.secondTextAreaPlaceHolderKey.localized, answer1: answer1, answer2: answer2)))
         } else {
-            interactor.postPositiveHabit(lastAnswer: buildStepDTO(title: viewModel.titleKey.localized, answer1: answer1, answer2: answer2)) { [weak self] result in
+            interactor.postPositiveHabit(lastAnswer: buildStepDTO(title: viewModel.titleKey.localized, question1: viewModel.firstTextAreaPlaceHolderKey.localized, question2: viewModel.secondTextAreaPlaceHolderKey.localized, answer1: answer1, answer2: answer2)) { [weak self] result in
                 switch result {
                 case .success(let habit):
                     guard let habit = habit else {return}
@@ -62,10 +62,12 @@ extension HabitStepPresenter: HabitStepPresenterProtocol {
         }
     }
     
-    private func buildStepDTO(title: String, answer1: String, answer2: String) -> BasicStepViewControllerStepDTO {
+    private func buildStepDTO(title: String, question1: String, question2: String, answer1: String, answer2: String) -> BasicStepViewControllerStepDTO {
         return BasicStepViewControllerStepDTO (
             title: title,
+            question1: question1,
             answer1: answer1,
+            question2: question2,
             answer2: answer2)
     }
     

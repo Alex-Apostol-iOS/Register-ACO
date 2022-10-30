@@ -18,6 +18,7 @@ class RegisterACOAllDone: UIViewController {
         view.contentMode = .scaleAspectFit
         view.heightAnchor.constraint(equalToConstant: 128).isActive = true
         view.widthAnchor.constraint(equalToConstant: 128).isActive = true
+        view.isHidden = true
         return view
     }()
     

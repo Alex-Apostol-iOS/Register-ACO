@@ -17,7 +17,8 @@ class PositiveHabitCoordinator: Coordinator {
         case didShowHabitStep
         case willShowHabitStepDetail
         case willShowNextStep
-         case willShowAllDone(habit: DtoPostiveHabit)
+        case willShowAllDone(habit: DtoPostiveHabit)
+        case willShowFormResume
     }
     
     private let navigator: UINavigationController
@@ -50,8 +51,10 @@ class PositiveHabitCoordinator: Coordinator {
             goToHabitStepDetail()
         case .willShowNextStep:
             showPositiveHabitStep()
-        case .willShowAllDone(let habit):
+        case .willShowAllDone(_):
             showAllDone()
+        case .willShowFormResume:
+            showFormResume()
         case .initial, .didShowPositiveHabitInfoView, .didShowHabitStep:
             fatalError("no implementation for \(next(nextState: state)) on PositiveHabitCoordinator")
         }
@@ -130,7 +133,8 @@ class PositiveHabitCoordinator: Coordinator {
         let vc = RegisterAllDoneBuilder(viewModel: viewModel) { [weak self] output in
             switch output {
             case .secondaryButton:
-                break
+                self?.state = .willShowFormResume
+                self?.loop()
             case .mainButton:
                 let topVc = self?.navigator.presentedViewController
                 topVc?.dismiss(animated: true, completion: {
@@ -140,5 +144,15 @@ class PositiveHabitCoordinator: Coordinator {
         }.build()
         vc.modalPresentationStyle = .fullScreen
         navigator.present(vc, animated: true)
+    }
+    
+    private func showFormResume() {
+        let habitDetailModel = HabitDetailModel(positiveHabit: basicStepViewControllerStepDTOContainer)
+        let vc = HabitDetailBuilder(habitModel: habitDetailModel) { _ in
+            
+        }.build()
+        vc.modalPresentationStyle = .fullScreen
+        let topVc = self.navigator.presentedViewController
+        topVc?.present(vc, animated: true)
     }
 }

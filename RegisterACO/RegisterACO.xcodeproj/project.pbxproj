@@ -41,6 +41,7 @@
 		9DBFA0CE290D7D30009593E8 /* HabitDetailDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0C4290D7D30009593E8 /* HabitDetailDataManagerProtocol.swift */; };
 		9DBFA0CF290D7D30009593E8 /* HabitDetailOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0C5290D7D30009593E8 /* HabitDetailOutput.swift */; };
 		9DBFA0D0290D7D30009593E8 /* HabitDetailDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0C6290D7D30009593E8 /* HabitDetailDataManager.swift */; };
+		9DBFA0D7290E66F3009593E8 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0D6290E66F3009593E8 /* UITableView+Extension.swift */; };
 		9DF2254F290B98F90045D026 /* DtoPositiveHabit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF2254E290B98F90045D026 /* DtoPositiveHabit.swift */; };
 		B40D30FD280858AE002C1396 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D30FC280858AE002C1396 /* AppDelegate.swift */; };
 		B40D30FF280858AE002C1396 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D30FE280858AE002C1396 /* SceneDelegate.swift */; };
@@ -218,6 +219,7 @@
 		9DBFA0C4290D7D30009593E8 /* HabitDetailDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailDataManagerProtocol.swift; sourceTree = "<group>"; };
 		9DBFA0C5290D7D30009593E8 /* HabitDetailOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailOutput.swift; sourceTree = "<group>"; };
 		9DBFA0C6290D7D30009593E8 /* HabitDetailDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailDataManager.swift; sourceTree = "<group>"; };
+		9DBFA0D6290E66F3009593E8 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		9DF2254E290B98F90045D026 /* DtoPositiveHabit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DtoPositiveHabit.swift; sourceTree = "<group>"; };
 		B40D30F9280858AD002C1396 /* RegisterACO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RegisterACO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B40D30FC280858AE002C1396 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -903,6 +905,7 @@
 				B40D315F2809C465002C1396 /* UIView+extensions.swift */,
 				B4FFE7A82855CF670037A278 /* UIImageView+Extensions.swift */,
 				B4FFE7AA2855DA080037A278 /* UIViewController+extensions.swift */,
+				9DBFA0D6290E66F3009593E8 /* UITableView+Extension.swift */,
 			);
 			path = UIHelpers;
 			sourceTree = "<group>";
@@ -1672,6 +1675,7 @@
 				B44386FB2815373F00ADACC5 /* RegisterFromDataManagerProtocol.swift in Sources */,
 				B40D30FD280858AE002C1396 /* AppDelegate.swift in Sources */,
 				B4C60A712826423C007DBE70 /* HomeInteractor.swift in Sources */,
+				9DBFA0D7290E66F3009593E8 /* UITableView+Extension.swift in Sources */,
 				B44AA760283A75A900383413 /* TabBarViewControllerPresenterProtocol.swift in Sources */,
 				B44AA75F283A75A900383413 /* TabBarViewControllerViewControllerProtocol.swift in Sources */,
 				B40D311728085A41002C1396 /* ServiceProxy.swift in Sources */,

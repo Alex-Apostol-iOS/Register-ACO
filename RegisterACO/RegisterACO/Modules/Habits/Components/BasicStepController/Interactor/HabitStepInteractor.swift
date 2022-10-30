@@ -25,6 +25,7 @@ class HabitStepInteractor: HabitStepInteractorProtocol {
         
         let firstStepData = stepData.stepData[0]
         let secondStepData = stepData.stepData[1]
+        stepData.stepData.append(lastAnswer)
         let firstThirdData = lastAnswer
        
         

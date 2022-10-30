@@ -9,5 +9,5 @@
 import Foundation
 
 protocol HabitDetailPresenterProtocol: AnyObject {
-    
+    func viewDidLoad()
 }

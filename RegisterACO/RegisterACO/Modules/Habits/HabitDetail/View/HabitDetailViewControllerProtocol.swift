@@ -9,5 +9,5 @@
 import UIKit
 
 protocol HabitDetailViewProtocol: AnyObject {
-    
+    func layout(with content: HabitDetailSection)
 }

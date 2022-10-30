@@ -12,15 +12,17 @@ import UIKit
 class HabitDetailBuilder: Builder {
     
     private var coordinatorOutput: (HabitDetailOutput) -> Void
+    private let habitModel: HabitDetailModel
     
-    init(coordinnatorOutput: @escaping (HabitDetailOutput) -> Void) {
+    init(habitModel: HabitDetailModel, coordinnatorOutput: @escaping (HabitDetailOutput) -> Void) {
+        self.habitModel = habitModel
         self.coordinatorOutput = coordinnatorOutput
     }
     
     func build() -> UIViewController {
         let dataManager = HabitDetailDataManager()
         let interactor = HabitDetailInteractor(dataManager: dataManager)
-        let presenter = HabitDetailPresenter(interactor: interactor, coordinnatorOutput: coordinatorOutput)
+        let presenter = HabitDetailPresenter(habitModel: habitModel, interactor: interactor, coordinnatorOutput: coordinatorOutput)
         let view = HabitDetailViewController(presenter: presenter)
         presenter.view = view
         return view
