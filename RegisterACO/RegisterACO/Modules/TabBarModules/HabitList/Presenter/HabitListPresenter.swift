@@ -20,5 +20,14 @@ class HabitListPresenter {
 }
 
 extension HabitListPresenter: HabitListPresenterProtocol {
-    
+    func viewDidLoad() {
+        interactor.getHabits { result in
+            switch result {
+            case .success(let success):
+                print(success)
+            case .failure(let failure):
+                print(failure)
+            }
+        }
+    }
 }

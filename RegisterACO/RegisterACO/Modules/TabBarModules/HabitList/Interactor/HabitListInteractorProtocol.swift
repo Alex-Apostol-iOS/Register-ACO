@@ -9,5 +9,5 @@
 import Foundation
 
 protocol HabitListInteractorProtocol : AnyObject {
-
+    func getHabits(completion: @escaping (Result<[DtoPostiveHabit], Error>) -> Void)
 }
