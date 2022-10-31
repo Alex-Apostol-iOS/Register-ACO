@@ -42,6 +42,16 @@
 		9DBFA0CF290D7D30009593E8 /* HabitDetailOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0C5290D7D30009593E8 /* HabitDetailOutput.swift */; };
 		9DBFA0D0290D7D30009593E8 /* HabitDetailDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0C6290D7D30009593E8 /* HabitDetailDataManager.swift */; };
 		9DBFA0D7290E66F3009593E8 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0D6290E66F3009593E8 /* UITableView+Extension.swift */; };
+		9DBFA0E5290F9C8E009593E8 /* HabitListInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0DB290F9C8E009593E8 /* HabitListInteractorProtocol.swift */; };
+		9DBFA0E6290F9C8E009593E8 /* HabitListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0DC290F9C8E009593E8 /* HabitListPresenter.swift */; };
+		9DBFA0E7290F9C8E009593E8 /* HabitListViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0DD290F9C8E009593E8 /* HabitListViewControllerProtocol.swift */; };
+		9DBFA0E8290F9C8E009593E8 /* HabitListPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0DE290F9C8E009593E8 /* HabitListPresenterProtocol.swift */; };
+		9DBFA0E9290F9C8E009593E8 /* HabitListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0DF290F9C8E009593E8 /* HabitListViewController.swift */; };
+		9DBFA0EA290F9C8E009593E8 /* HabitListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0E0290F9C8E009593E8 /* HabitListBuilder.swift */; };
+		9DBFA0EB290F9C8E009593E8 /* HabitListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0E1290F9C8E009593E8 /* HabitListInteractor.swift */; };
+		9DBFA0EC290F9C8E009593E8 /* HabitListDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0E2290F9C8E009593E8 /* HabitListDataManagerProtocol.swift */; };
+		9DBFA0ED290F9C8E009593E8 /* HabitListOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0E3290F9C8E009593E8 /* HabitListOutput.swift */; };
+		9DBFA0EE290F9C8E009593E8 /* HabitListDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0E4290F9C8E009593E8 /* HabitListDataManager.swift */; };
 		9DF2254F290B98F90045D026 /* DtoPositiveHabit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF2254E290B98F90045D026 /* DtoPositiveHabit.swift */; };
 		B40D30FD280858AE002C1396 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D30FC280858AE002C1396 /* AppDelegate.swift */; };
 		B40D30FF280858AE002C1396 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D30FE280858AE002C1396 /* SceneDelegate.swift */; };
@@ -220,6 +230,16 @@
 		9DBFA0C5290D7D30009593E8 /* HabitDetailOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailOutput.swift; sourceTree = "<group>"; };
 		9DBFA0C6290D7D30009593E8 /* HabitDetailDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailDataManager.swift; sourceTree = "<group>"; };
 		9DBFA0D6290E66F3009593E8 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		9DBFA0DB290F9C8E009593E8 /* HabitListInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListInteractorProtocol.swift; sourceTree = "<group>"; };
+		9DBFA0DC290F9C8E009593E8 /* HabitListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListPresenter.swift; sourceTree = "<group>"; };
+		9DBFA0DD290F9C8E009593E8 /* HabitListViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListViewControllerProtocol.swift; sourceTree = "<group>"; };
+		9DBFA0DE290F9C8E009593E8 /* HabitListPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListPresenterProtocol.swift; sourceTree = "<group>"; };
+		9DBFA0DF290F9C8E009593E8 /* HabitListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListViewController.swift; sourceTree = "<group>"; };
+		9DBFA0E0290F9C8E009593E8 /* HabitListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListBuilder.swift; sourceTree = "<group>"; };
+		9DBFA0E1290F9C8E009593E8 /* HabitListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListInteractor.swift; sourceTree = "<group>"; };
+		9DBFA0E2290F9C8E009593E8 /* HabitListDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListDataManagerProtocol.swift; sourceTree = "<group>"; };
+		9DBFA0E3290F9C8E009593E8 /* HabitListOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListOutput.swift; sourceTree = "<group>"; };
+		9DBFA0E4290F9C8E009593E8 /* HabitListDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListDataManager.swift; sourceTree = "<group>"; };
 		9DF2254E290B98F90045D026 /* DtoPositiveHabit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DtoPositiveHabit.swift; sourceTree = "<group>"; };
 		B40D30F9280858AD002C1396 /* RegisterACO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RegisterACO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B40D30FC280858AE002C1396 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -609,6 +629,63 @@
 			isa = PBXGroup;
 			children = (
 				9DBFA0C2290D7D30009593E8 /* HabitDetailBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		9DBFA0D8290F9C53009593E8 /* HabitList */ = {
+			isa = PBXGroup;
+			children = (
+				9DBFA0F3290F9CB4009593E8 /* Builder */,
+				9DBFA0F1290F9CA7009593E8 /* DataManager */,
+				9DBFA0F2290F9CAD009593E8 /* Interactor */,
+				9DBFA0F0290F9CA0009593E8 /* Presenter */,
+				9DBFA0EF290F9C9B009593E8 /* View */,
+			);
+			path = HabitList;
+			sourceTree = "<group>";
+		};
+		9DBFA0EF290F9C9B009593E8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9DBFA0DF290F9C8E009593E8 /* HabitListViewController.swift */,
+				9DBFA0DD290F9C8E009593E8 /* HabitListViewControllerProtocol.swift */,
+				9DBFA0E3290F9C8E009593E8 /* HabitListOutput.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9DBFA0F0290F9CA0009593E8 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9DBFA0DE290F9C8E009593E8 /* HabitListPresenterProtocol.swift */,
+				9DBFA0DC290F9C8E009593E8 /* HabitListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		9DBFA0F1290F9CA7009593E8 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				9DBFA0E2290F9C8E009593E8 /* HabitListDataManagerProtocol.swift */,
+				9DBFA0E4290F9C8E009593E8 /* HabitListDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		9DBFA0F2290F9CAD009593E8 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				9DBFA0E1290F9C8E009593E8 /* HabitListInteractor.swift */,
+				9DBFA0DB290F9C8E009593E8 /* HabitListInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		9DBFA0F3290F9CB4009593E8 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				9DBFA0E0290F9C8E009593E8 /* HabitListBuilder.swift */,
 			);
 			path = Builder;
 			sourceTree = "<group>";
@@ -1131,6 +1208,7 @@
 		B44AA751283A757900383413 /* TabBarModules */ = {
 			isa = PBXGroup;
 			children = (
+				9DBFA0D8290F9C53009593E8 /* HabitList */,
 				B442C3AC2841257100A6781B /* Profile */,
 				B44AA752283A758500383413 /* TabBar */,
 				B4C60A5D282572A8007DBE70 /* HomeModule */,
@@ -1599,6 +1677,7 @@
 				B40D317B280AD27F002C1396 /* Login_RegisterBuilder.swift in Sources */,
 				B40D317C280AD27F002C1396 /* Login_RegisterInteractor.swift in Sources */,
 				B4DA94E2287044C3000EFB60 /* PostiveHabitInfoViewDataManagerProtocol.swift in Sources */,
+				9DBFA0E8290F9C8E009593E8 /* HabitListPresenterProtocol.swift in Sources */,
 				B44386F42815373F00ADACC5 /* RegisterFromInteractorProtocol.swift in Sources */,
 				9D039EDC28F71B7A000FC5C9 /* HabitStepInteractorProtocol.swift in Sources */,
 				B40D3136280863FB002C1396 /* StarterViewControllerProtocol.swift in Sources */,
@@ -1623,11 +1702,14 @@
 				B44AA761283A75A900383413 /* TabBarViewControllerViewController.swift in Sources */,
 				B4C60A6B2826423C007DBE70 /* HomeInteractorProtocol.swift in Sources */,
 				B44386FC2815373F00ADACC5 /* RegisterFromOutput.swift in Sources */,
+				9DBFA0E9290F9C8E009593E8 /* HabitListViewController.swift in Sources */,
 				B40D313A280863FB002C1396 /* StarterInteractor.swift in Sources */,
+				9DBFA0EC290F9C8E009593E8 /* HabitListDataManagerProtocol.swift in Sources */,
 				B442C3B72841258600A6781B /* ProfileInteractorProtocol.swift in Sources */,
 				B4832EED28322DAF0024A950 /* LoginDataManagerProtocol.swift in Sources */,
 				9D1BCF1628FFBDE5002D0A73 /* BasicDetailViewController.swift in Sources */,
 				9DBFA0CF290D7D30009593E8 /* HabitDetailOutput.swift in Sources */,
+				9DBFA0E6290F9C8E009593E8 /* HabitListPresenter.swift in Sources */,
 				B4DA94DF287044C3000EFB60 /* PostiveHabitInfoViewViewController.swift in Sources */,
 				B44AA75E283A75A900383413 /* TabBarViewControllerPresenter.swift in Sources */,
 				B4DA94DE287044C3000EFB60 /* PostiveHabitInfoViewPresenterProtocol.swift in Sources */,
@@ -1645,9 +1727,11 @@
 				B40D3139280863FB002C1396 /* StarterBuilder.swift in Sources */,
 				9D039EE428F71B7A000FC5C9 /* HabitStepOutput.swift in Sources */,
 				B442C3D928426EB900A6781B /* TabBarCoordinator.swift in Sources */,
+				9DBFA0EA290F9C8E009593E8 /* HabitListBuilder.swift in Sources */,
 				B4832EEA28322DAF0024A950 /* LoginViewController.swift in Sources */,
 				B442C3D7284269AF00A6781B /* ProfileCoordinator.swift in Sources */,
 				B4C60A5F282572E0007DBE70 /* HomeCoordinator.swift in Sources */,
+				9DBFA0E5290F9C8E009593E8 /* HabitListInteractorProtocol.swift in Sources */,
 				B4B531AD28202FFE00D49EE5 /* DtoUser.swift in Sources */,
 				9DBFA0CC290D7D30009593E8 /* HabitDetailBuilder.swift in Sources */,
 				B40D3107280858AE002C1396 /* RegisterACO.xcdatamodeld in Sources */,
@@ -1669,8 +1753,10 @@
 				9DBFA0AE290D7508009593E8 /* RegisterAllDoneViewModel.swift in Sources */,
 				B44386F92815373F00ADACC5 /* RegisterFromBuilder.swift in Sources */,
 				9D039EE228F71B7A000FC5C9 /* HabitStepInteractor.swift in Sources */,
+				9DBFA0EB290F9C8E009593E8 /* HabitListInteractor.swift in Sources */,
 				B40D317E280AD27F002C1396 /* Login_RegisterOutput.swift in Sources */,
 				B40D317A280AD27F002C1396 /* Login_RegisterViewController.swift in Sources */,
+				9DBFA0ED290F9C8E009593E8 /* HabitListOutput.swift in Sources */,
 				9D6FBFF329057EC200C38B35 /* RegisterACOProgressBar.swift in Sources */,
 				B44386FB2815373F00ADACC5 /* RegisterFromDataManagerProtocol.swift in Sources */,
 				B40D30FD280858AE002C1396 /* AppDelegate.swift in Sources */,
@@ -1721,6 +1807,7 @@
 				B40D312128085A54002C1396 /* Loader.swift in Sources */,
 				B40D312828085A62002C1396 /* MainCoordinator.swift in Sources */,
 				9D039EE128F71B7A000FC5C9 /* HabitStepBuilder.swift in Sources */,
+				9DBFA0EE290F9C8E009593E8 /* HabitListDataManager.swift in Sources */,
 				B4832EF9283232490024A950 /* Constants.swift in Sources */,
 				B40D3169280AB173002C1396 /* LabelsProtocol.swift in Sources */,
 				B4C60A702826423C007DBE70 /* HomeBuilder.swift in Sources */,
@@ -1732,6 +1819,7 @@
 				B4C60A6C2826423C007DBE70 /* HomePresenter.swift in Sources */,
 				B44AA763283A75A900383413 /* TabBarViewControllerInteractor.swift in Sources */,
 				B40D31602809C465002C1396 /* UIView+extensions.swift in Sources */,
+				9DBFA0E7290F9C8E009593E8 /* HabitListViewControllerProtocol.swift in Sources */,
 				B40D3135280863FB002C1396 /* StarterPresenter.swift in Sources */,
 				B4DA94CE28704179000EFB60 /* PositiveHabitCoordinator.swift in Sources */,
 				B442C3BA2841258600A6781B /* ProfilePresenterProtocol.swift in Sources */,
