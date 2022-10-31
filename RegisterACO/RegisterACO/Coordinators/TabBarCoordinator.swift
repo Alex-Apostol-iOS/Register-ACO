@@ -20,12 +20,14 @@ class TabBarCoordinator: Coordinator, GetLabel {
     
     private let homeChildCoordinator: HomeCoordinator
     private let profileChildCoordinator: ProfileCoordinator
+    private let habitListCoordinator: HabitListCoordinator
     
     init(on navigator: UINavigationController, with state: TabBarCoordinatorState) {
         self.navigator = navigator
         self.currentState = state
         homeChildCoordinator = HomeCoordinator(with: navigator)
         profileChildCoordinator =  ProfileCoordinator(on: navigator)
+        habitListCoordinator = HabitListCoordinator(on: navigator, with: .inital)
         
     }
     
@@ -59,9 +61,15 @@ class TabBarCoordinator: Coordinator, GetLabel {
         
         tabBarvc.append(homeTabBarModel)
         
+        let habitListTabBarModel = TabBarModel(vc: buildHabitListModule(), image: UIImage(named: "habitList")?.withRenderingMode(.alwaysTemplate).withTintColor(UIColor.theme(.primary100)) ?? UIImage(), title: "lng.habitList.tab.title".localized)
+        
+        tabBarvc.append(habitListTabBarModel)
+        
         let profileTabBarModel = TabBarModel(vc: buildProfileModule() , image: UIImage(named: "user_icon-1")?.withRenderingMode(.alwaysTemplate).withTintColor(UIColor.theme(.primary100)) ?? UIImage(), title: getlabelForKey(key: "lng.common.profile"))
         
         tabBarvc.append(profileTabBarModel)
+        
+       
         return tabBarvc
     }
     
@@ -83,8 +91,15 @@ class TabBarCoordinator: Coordinator, GetLabel {
     }
     
     private func buildProfileModule() -> UIViewController {
-        let vc = ProfileBuilder { output in
-            self.profileChildCoordinator.manageProfileInternalNavigation(output: output)
+        let vc = ProfileBuilder { [weak self] output in
+            self?.profileChildCoordinator.manageProfileInternalNavigation(output: output)
+        }.build()
+        return vc
+    }
+    
+    private func buildHabitListModule() -> UIViewController {
+        let vc = HabitListBuilder {[weak self] output in
+            self?.habitListCoordinator.manageHabitListInternalNavigation(with: output)
         }.build()
         return vc
     }
