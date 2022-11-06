@@ -22,6 +22,17 @@ class HabitListPresenter {
         let separatedRawDate = rawDate.split(separator: " ")
         return String(separatedRawDate.first ?? "")
     }
+    
+    private func sortHabitByDate(habits: [DtoPostiveHabit]) -> [DtoPostiveHabit] {
+       
+        return habits.sorted(by: {
+            let dateFromatter = DateFormatter()
+            dateFromatter.dateFormat = "YY-MM-DD"
+            guard let date1 = dateFromatter.date(from: self.parseDateToReadableDate(rawDate: $0.startDate)),
+                  let date2 = dateFromatter.date(from: self.parseDateToReadableDate(rawDate: $1.startDate)) else {return false}
+            return date1 < date2
+        })
+    }
 }
 
 extension HabitListPresenter: HabitListPresenterProtocol {
@@ -37,7 +48,7 @@ extension HabitListPresenter: HabitListPresenterProtocol {
         interactor.getHabits { [weak self] result in
             switch result {
             case .success(let postiveHabits):
-                self?.view?.layout(with: postiveHabits)
+                self?.view?.layout(with: self?.sortHabitByDate(habits: postiveHabits) ?? [])
             case .failure(let failure):
                 print(failure)
             }
