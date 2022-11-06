@@ -10,4 +10,5 @@ import Foundation
 
 protocol HabitListPresenterProtocol: AnyObject {
     func viewDidLoad()
+    func buildListItemModel(from postiveHabit: DtoPostiveHabit) -> HabitListViewModel
 }

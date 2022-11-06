@@ -91,8 +91,8 @@ class TabBarCoordinator: Coordinator, GetLabel {
     }
     
     private func buildProfileModule() -> UIViewController {
-        let vc = ProfileBuilder { [weak self] output in
-            self?.profileChildCoordinator.manageProfileInternalNavigation(output: output)
+        let vc = ProfileBuilder {  output in
+            self.profileChildCoordinator.manageProfileInternalNavigation(output: output)
         }.build()
         return vc
     }

@@ -55,4 +55,30 @@ extension HTTPHeadersHelper {
 
        return headers
     }
+    
+    func buildBearerAuthHeader() {
+        
+    }
+}
+
+class HttpHeadersImplementaion: HTTPHeadersHelper {
+    
+    static let sharedInstance = HttpHeadersImplementaion()
+    
+    @Cache(.userSession)
+    private var user: DtoUser?
+    
+    func buildBearerAuthHeader() -> HTTPHeaders {
+        guard let token = user?.token else {return HTTPHeaders()}
+        
+        let usedToken = "Bearer \(token)"
+        
+        let headers = HTTPHeaders(
+            [ HTTPHeader(name: "Authorization" , value: usedToken)
+            ]
+        )
+        
+        return headers
+    }
+    
 }

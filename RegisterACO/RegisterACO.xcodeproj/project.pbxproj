@@ -53,6 +53,8 @@
 		9DBFA0ED290F9C8E009593E8 /* HabitListOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0E3290F9C8E009593E8 /* HabitListOutput.swift */; };
 		9DBFA0EE290F9C8E009593E8 /* HabitListDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0E4290F9C8E009593E8 /* HabitListDataManager.swift */; };
 		9DBFA0F5290F9E24009593E8 /* HabitListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0F4290F9E24009593E8 /* HabitListCoordinator.swift */; };
+		9DC807112917A4C6009692EE /* HabitListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC807102917A4C6009692EE /* HabitListView.swift */; };
+		9DC807132917AAAC009692EE /* HabitListViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC807122917AAAC009692EE /* HabitListViewTableViewCell.swift */; };
 		9DF2254F290B98F90045D026 /* DtoPositiveHabit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF2254E290B98F90045D026 /* DtoPositiveHabit.swift */; };
 		B40D30FD280858AE002C1396 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D30FC280858AE002C1396 /* AppDelegate.swift */; };
 		B40D30FF280858AE002C1396 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D30FE280858AE002C1396 /* SceneDelegate.swift */; };
@@ -242,6 +244,8 @@
 		9DBFA0E3290F9C8E009593E8 /* HabitListOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListOutput.swift; sourceTree = "<group>"; };
 		9DBFA0E4290F9C8E009593E8 /* HabitListDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListDataManager.swift; sourceTree = "<group>"; };
 		9DBFA0F4290F9E24009593E8 /* HabitListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListCoordinator.swift; sourceTree = "<group>"; };
+		9DC807102917A4C6009692EE /* HabitListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListView.swift; sourceTree = "<group>"; };
+		9DC807122917AAAC009692EE /* HabitListViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListViewTableViewCell.swift; sourceTree = "<group>"; };
 		9DF2254E290B98F90045D026 /* DtoPositiveHabit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DtoPositiveHabit.swift; sourceTree = "<group>"; };
 		B40D30F9280858AD002C1396 /* RegisterACO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RegisterACO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B40D30FC280858AE002C1396 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -692,6 +696,14 @@
 			path = Builder;
 			sourceTree = "<group>";
 		};
+		9DC8070F2917A4B3009692EE /* HabitListView */ = {
+			isa = PBXGroup;
+			children = (
+				9DC807102917A4C6009692EE /* HabitListView.swift */,
+			);
+			path = HabitListView;
+			sourceTree = "<group>";
+		};
 		ADDD343129DAE07932E74B84 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1093,6 +1105,7 @@
 		B442C3CC2842052A00A6781B /* ReusableView */ = {
 			isa = PBXGroup;
 			children = (
+				9DC8070F2917A4B3009692EE /* HabitListView */,
 				9D6FBFF129057EAF00C38B35 /* ProgressBar */,
 				B4FFE7A52854D8F40037A278 /* FeatureCardItem */,
 				B442C3CD2842053D00A6781B /* RegisterUserInfoHeader */,
@@ -1448,6 +1461,7 @@
 			isa = PBXGroup;
 			children = (
 				B442C3C72841FCBB00A6781B /* ModulesCells */,
+				9DC807122917AAAC009692EE /* HabitListViewTableViewCell.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -1802,6 +1816,7 @@
 				B40D313D280863FB002C1396 /* StarterDataManager.swift in Sources */,
 				B4C60A722826423C007DBE70 /* HomeDataManagerProtocol.swift in Sources */,
 				B4FFE7A92855CF670037A278 /* UIImageView+Extensions.swift in Sources */,
+				9DC807112917A4C6009692EE /* HabitListView.swift in Sources */,
 				B4DA94E3287044C3000EFB60 /* PostiveHabitInfoViewOutput.swift in Sources */,
 				B4832F2D28392A090024A950 /* CacheEntry.swift in Sources */,
 				B44AA766283A75A900383413 /* TabBarViewControllerDataManager.swift in Sources */,
@@ -1827,6 +1842,7 @@
 				B40D3135280863FB002C1396 /* StarterPresenter.swift in Sources */,
 				B4DA94CE28704179000EFB60 /* PositiveHabitCoordinator.swift in Sources */,
 				B442C3BA2841258600A6781B /* ProfilePresenterProtocol.swift in Sources */,
+				9DC807132917AAAC009692EE /* HabitListViewTableViewCell.swift in Sources */,
 				9D6FBFF02904467900C38B35 /* ModalAlerViewControllerProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

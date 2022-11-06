@@ -13,7 +13,7 @@ class LoginPresenter {
     weak var view: LoginViewProtocol?
     private var coordinatorOutput: (LoginOutput) -> Void
     @Cache(.userSession)
-    var user: DtoUser?
+    private var user: DtoUser?
 
     init(interactor: LoginInteractorProtocol, coordinnatorOutput: @escaping (LoginOutput) -> Void) {
         self.interactor = interactor

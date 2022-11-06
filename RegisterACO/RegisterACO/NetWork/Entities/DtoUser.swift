@@ -10,12 +10,12 @@ import Foundation
 // MARK: - DtoUser
 struct DtoUser: Codable {
     let token: String?
-    let user: RegisterACOUser?
+    var user: RegisterACOUser?
 }
 
 // MARK: - User
 struct RegisterACOUser: Codable, Hashable {
-    let phone, password, id, surname: String?
+    var phone, password, id, surname: String?
     let email, name, secondSurname: String?
 }
 

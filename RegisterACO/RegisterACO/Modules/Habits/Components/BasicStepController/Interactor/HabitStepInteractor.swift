@@ -26,16 +26,16 @@ class HabitStepInteractor: HabitStepInteractorProtocol {
         let firstStepData = stepData.stepData[0]
         let secondStepData = stepData.stepData[1]
         stepData.stepData.append(lastAnswer)
-        let firstThirdData = lastAnswer
+        let thirdStepData = lastAnswer
        
         
         guard let user = user?.user else {return}
         let dtoHabit = DtoPostiveHabit(
             user: user,
             name: firstStepData.answer1,
-            obviousAnswer: firstThirdData.answer1,
+            obviousAnswer: thirdStepData.answer1,
             attractiveAnswer: secondStepData.answer1,
-            easyAnswer: firstThirdData.answer2,
+            easyAnswer: thirdStepData.answer2,
             satisfactionAnswer: secondStepData.answer2,
             startDate: Date().debugDescription,
             habitAcumultationStrategy: DtoHabitAcumultationStrategy(actualHabit: firstStepData.answer2, newHabit: firstStepData.answer1),

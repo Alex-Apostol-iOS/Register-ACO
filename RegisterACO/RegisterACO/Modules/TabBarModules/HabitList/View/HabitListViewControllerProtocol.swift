@@ -9,5 +9,5 @@
 import UIKit
 
 protocol HabitListViewProtocol: AnyObject {
-    
+    func layout(with content: [DtoPostiveHabit])
 }

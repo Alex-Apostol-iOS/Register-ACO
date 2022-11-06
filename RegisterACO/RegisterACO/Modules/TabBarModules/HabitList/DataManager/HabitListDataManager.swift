@@ -10,9 +10,12 @@ import Foundation
 
 class HabitListDataManager: HabitListDataManagerProtocol {
     private let serviceProxy = AppManager.serviceProxy
+    @Cache(.userSession)
+    private var user: DtoUser?
     
     func getHabits(completion: @escaping (Result<[DtoPostiveHabit], Error>) -> Void) {
-        serviceProxy.getItems(url: Endpoint.habit.rawValue+Endpoint.getPositiveHabits.rawValue, type: [DtoPostiveHabit].self, parameters: [:]) { result in
+        let userID = user?.user?.id ?? ""
+        serviceProxy.getItems(url: Endpoint.habit.rawValue+Endpoint.getPositiveHabits.rawValue, type: [DtoPostiveHabit].self, parameters: ["userID": userID], headers: HttpHeadersImplementaion.sharedInstance.buildBearerAuthHeader()) { result in
             switch result {
             case .success(let habitsList):
                 completion(.success(habitsList))
