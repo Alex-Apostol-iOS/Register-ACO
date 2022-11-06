@@ -12,5 +12,6 @@ struct RegisterAllDoneViewModel {
     let titleLabelKey: String
     let mainButtonTitleKey: String
     let secondaryButtonTitleKey: String
+    var closeIconCustomAction: (() -> Void)?
     
 }

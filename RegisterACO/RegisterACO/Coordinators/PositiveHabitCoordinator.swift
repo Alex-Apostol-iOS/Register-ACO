@@ -128,7 +128,8 @@ class PositiveHabitCoordinator: Coordinator {
         let viewModel = RegisterAllDoneViewModel(
             titleLabelKey: "lng.common.positiveHabit.allDone.title",
             mainButtonTitleKey: "lng.common.continue",
-            secondaryButtonTitleKey: "lng.common.seeDetail"
+            secondaryButtonTitleKey: "lng.common.seeDetail",
+            closeIconCustomAction: closeIconCustomAction
         )
         let vc = RegisterAllDoneBuilder(viewModel: viewModel) { [weak self] output in
             switch output {
@@ -136,14 +137,22 @@ class PositiveHabitCoordinator: Coordinator {
                 self?.state = .willShowFormResume
                 self?.loop()
             case .mainButton:
-                let topVc = self?.navigator.presentedViewController
-                topVc?.dismiss(animated: true, completion: {
-                    self?.navigator.popToRootViewController(animated: true)
-                })
+                self?.allDoneFinishNavigation()
             }
         }.build()
         vc.modalPresentationStyle = .fullScreen
         navigator.present(vc, animated: true)
+    }
+    
+    private func closeIconCustomAction() {
+        self.navigator.popToRootViewController(animated: true)
+    }
+    
+    private func allDoneFinishNavigation() {
+        let topVc = self.navigator.presentedViewController
+        topVc?.dismiss(animated: true, completion: {
+            self.navigator.popToRootViewController(animated: true)
+        })
     }
     
     private func showFormResume() {

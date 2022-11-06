@@ -129,7 +129,7 @@ class RegisterACOAllDone: UIViewController {
     
     @objc
     private func didTapCloseIcon() {
-        dismiss(animated: true)
+        dismiss(animated: true, completion: presenter.customCloseIconAction)
     }
 }
 

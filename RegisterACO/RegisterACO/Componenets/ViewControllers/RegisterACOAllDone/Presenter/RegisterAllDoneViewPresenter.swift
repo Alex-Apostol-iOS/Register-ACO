@@ -31,4 +31,8 @@ extension RegisterAllDoneViewPresenter: RegisterAllDoneViewPresenterProtocol {
     func didPressSecondaryButton() {
         coordinatorOutput(.secondaryButton)
     }
+    
+    func customCloseIconAction() {
+        viewModel.closeIconCustomAction?()
+    }
 }
