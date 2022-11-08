@@ -75,6 +75,9 @@ class BasicDetailViewController: UIViewController {
         setUpTitleLayout()
         setUpMainStackViewLayout()
         populateMainStackViewWith(examples: dataModel.labelKeys)
+        if !self.isBeingPresented {
+            closeIcon.isHidden = true
+        }
     }
     
     private func setUpCloseIconLayout() {

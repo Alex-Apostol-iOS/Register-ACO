@@ -37,10 +37,33 @@ class HabitListPresenter {
 
 extension HabitListPresenter: HabitListPresenterProtocol {
     
+    func buildHabitDetailModel(from item: DtoPostiveHabit ) -> BasicDetailViewDataModel {
+        let habitDetailModel = BasicDetailViewDataModel(
+            titleKey: item.name,
+            labelKeys: ["lng.attractHabit.title",
+                        "lng.obviousHabit.description",
+                        item.habitAcumultationStrategy?.actualHabit ?? "",
+                        item.habitAcumultationStrategy?.newHabit ?? "" ,
+                        "lng.attractHabit.title",
+                        "lng.attractHabit.description",
+                         item.attractiveAnswer,
+                        item.satisfactionAnswer,
+                        "lng.makeItEasy.title",
+                        "lng.makeItEasy.description",
+                        item.easyAnswer,
+            ])
+        return habitDetailModel
+    }
+    
+    func didTapCell(item: DtoPostiveHabit) {
+        
+        coordinatorOutput(.goToHabitDetail(detailModel: buildHabitDetailModel(from: item)))
+    }
+    
     func buildListItemModel(from postiveHabit: DtoPostiveHabit) -> HabitListViewModel {
         return HabitListViewModel(
-            title: "lng.common.positiveHabit".localized,
-            subtitle: postiveHabit.name,
+            title: postiveHabit.name,
+            subtitle: "lng.common.positiveHabit".localized,
             date: parseDateToReadableDate(rawDate: postiveHabit.startDate))
     }
     

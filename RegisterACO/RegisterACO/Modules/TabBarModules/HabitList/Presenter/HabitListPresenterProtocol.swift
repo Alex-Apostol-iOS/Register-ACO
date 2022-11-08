@@ -11,4 +11,6 @@ import Foundation
 protocol HabitListPresenterProtocol: AnyObject {
     func viewDidLoad()
     func buildListItemModel(from postiveHabit: DtoPostiveHabit) -> HabitListViewModel
+    func didTapCell(item: DtoPostiveHabit)
+    func buildHabitDetailModel(from item: DtoPostiveHabit ) -> BasicDetailViewDataModel
 }
