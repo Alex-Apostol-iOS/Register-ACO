@@ -38,7 +38,7 @@ class HabitStepInteractor: HabitStepInteractorProtocol {
             easyAnswer: thirdStepData.answer2,
             satisfactionAnswer: secondStepData.answer2,
             startDate: Date().debugDescription,
-            habitAcumultationStrategy: DtoHabitAcumultationStrategy(actualHabit: firstStepData.answer2, newHabit: firstStepData.answer1),
+            habitAcumultationStrategy: DtoHabitAcumultationStrategy(actualHabit: firstStepData.answer1, newHabit: firstStepData.answer2),
             habitImplementationStrategy: nil )
         
         dataManager.postPositiveHabit(habit: dtoHabit) { result in

@@ -40,16 +40,17 @@ extension HabitListPresenter: HabitListPresenterProtocol {
     func buildHabitDetailModel(from item: DtoPostiveHabit ) -> BasicDetailViewDataModel {
         let habitDetailModel = BasicDetailViewDataModel(
             titleKey: item.name,
-            labelKeys: ["lng.attractHabit.title",
-                        "lng.obviousHabit.description",
+            labelKeys: ["lng.obviousHabit.textArea.placeHolder",
                         item.habitAcumultationStrategy?.actualHabit ?? "",
+                        "lng.obviousHabit.textArea.NewHabit.placeHolder",
                         item.habitAcumultationStrategy?.newHabit ?? "" ,
-                        "lng.attractHabit.title",
-                        "lng.attractHabit.description",
-                         item.attractiveAnswer,
+                        "lng.attractHabit.firstTextField.placeHolder",
+                        item.attractiveAnswer,
+                        "lng.attractHabit.secondTextField.placeHolder",
                         item.satisfactionAnswer,
-                        "lng.makeItEasy.title",
-                        "lng.makeItEasy.description",
+                        "lng.makeItEasy.firstTextField.placeHolder",
+                        item.obviousAnswer,
+                        "lng.makeItEasy.secondTextField.placeHolder",
                         item.easyAnswer,
             ])
         return habitDetailModel
@@ -62,7 +63,7 @@ extension HabitListPresenter: HabitListPresenterProtocol {
     
     func buildListItemModel(from postiveHabit: DtoPostiveHabit) -> HabitListViewModel {
         return HabitListViewModel(
-            title: postiveHabit.name,
+            title: postiveHabit.habitAcumultationStrategy?.newHabit ?? "",
             subtitle: "lng.common.positiveHabit".localized,
             date: parseDateToReadableDate(rawDate: postiveHabit.startDate))
     }
