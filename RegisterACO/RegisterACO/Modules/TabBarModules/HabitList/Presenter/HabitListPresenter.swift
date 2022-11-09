@@ -12,6 +12,7 @@ class HabitListPresenter {
     private var interactor: HabitListInteractorProtocol
     weak var view: HabitListViewProtocol?
     private var coordinatorOutput: (HabitListOutput) -> Void
+    private var currentSelectedHabit: DtoPostiveHabit?
     
     init(interactor: HabitListInteractorProtocol, coordinnatorOutput: @escaping (HabitListOutput) -> Void) {
         self.interactor = interactor
@@ -35,13 +36,21 @@ class HabitListPresenter {
     }
     
     func deleteHabit() {
-        
+        interactor.deleteHabit(name: currentSelectedHabit?.name ?? "") { result in
+            switch result {
+            case .success(let success):
+                print(success)
+            case .failure(let failure):
+                print(failure)
+            }
+        }
     }
 }
 
 extension HabitListPresenter: HabitListPresenterProtocol {
     
     func buildHabitDetailModel(from item: DtoPostiveHabit ) -> BasicDetailViewDataModel {
+        self.currentSelectedHabit = item
         let habitDetailModel = BasicDetailViewDataModel(
             titleKey: item.name,
             labelKeys: ["lng.obviousHabit.textArea.placeHolder",

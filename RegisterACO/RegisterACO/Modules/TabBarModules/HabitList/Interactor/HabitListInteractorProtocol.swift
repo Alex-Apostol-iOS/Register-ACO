@@ -10,4 +10,5 @@ import Foundation
 
 protocol HabitListInteractorProtocol : AnyObject {
     func getHabits(completion: @escaping (Result<[DtoPostiveHabit], Error>) -> Void)
+    func deleteHabit(name: String, completion: @escaping (Result<Bool, Error>) -> Void)
 }

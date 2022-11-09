@@ -14,4 +14,5 @@ enum Endpoint: String {
     case habit = "/habit"
     case postPositiveHabit = "/positive"
     case getPositiveHabits = "/Allpositive"
+    case deletePostiveHabits = "/deletePositiveHabit"
 }

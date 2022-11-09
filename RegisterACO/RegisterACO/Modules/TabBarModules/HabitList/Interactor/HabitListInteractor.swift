@@ -26,4 +26,15 @@ class HabitListInteractor: HabitListInteractorProtocol {
             }
         }
     }
+    
+    func deleteHabit(name: String, completion: @escaping (Result<Bool, Error>) -> Void) {
+        dataManager.deleteHabit(name: name) { result in
+            switch result {
+            case .success(_):
+                completion(.success(true))
+            case .failure(let failure):
+                completion(.failure(failure))
+            }
+        }
+    }
 }

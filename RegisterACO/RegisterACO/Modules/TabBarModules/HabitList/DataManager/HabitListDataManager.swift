@@ -24,4 +24,15 @@ class HabitListDataManager: HabitListDataManagerProtocol {
             }
         }
     }
+    
+    func deleteHabit(name: String, completion: @escaping (Result<Bool, Error>) -> Void) {
+        serviceProxy.deleteItemNoResponse(url: Endpoint.habit.rawValue+Endpoint.deletePostiveHabits.rawValue, parameters: ["habitName": name], headers: HttpHeadersImplementaion.sharedInstance.buildBearerAuthHeader()) { result in
+            switch result {
+            case .success(_):
+                completion(.success(true))
+            case .failure(let failure):
+                completion(.failure(failure))
+            }
+        }
+    }
 }
