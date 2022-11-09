@@ -33,6 +33,10 @@ class HabitListPresenter {
             return date1 < date2
         })
     }
+    
+    func deleteHabit() {
+        
+    }
 }
 
 extension HabitListPresenter: HabitListPresenterProtocol {
@@ -52,7 +56,12 @@ extension HabitListPresenter: HabitListPresenterProtocol {
                         item.obviousAnswer,
                         "lng.makeItEasy.secondTextField.placeHolder",
                         item.easyAnswer,
-            ])
+            ],
+            shouldHideButton: false,
+            buttonTitle: "lng.delete.habit",
+            buttonAction: deleteHabit,
+            buttonStyle: .negativeAction
+            )
         return habitDetailModel
     }
     

@@ -57,6 +57,13 @@ class BasicDetailViewController: UIViewController {
         return stackView
     }()
     
+    private lazy var button: RegisterACOButton = {
+        let button = RegisterACOButton(frame: .zero)
+        button.isHidden = dataModel.shouldHideButton
+        button.config(buttonStyle:dataModel.buttonStyle , title: dataModel.buttonTitle?.localized ?? "", action: dataModel.buttonAction ?? {})
+        return button
+    }()
+    
     init(dataModel: BasicDetailViewDataModel) {
         self.dataModel = dataModel
         super.init(nibName: nil, bundle: nil)
@@ -78,6 +85,7 @@ class BasicDetailViewController: UIViewController {
         if !self.isBeingPresented {
             closeIcon.isHidden = true
         }
+        setUpButtonLayout()
     }
     
     private func setUpCloseIconLayout() {
@@ -127,6 +135,14 @@ class BasicDetailViewController: UIViewController {
         customContentView.heightAnchor.constraint(greaterThanOrEqualTo:  self.view.heightAnchor).isActive = true
     }
     
+    private func setUpButtonLayout() {
+        view.addSubview(button)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
+        button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
+        button.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -37).isActive = true
+    }
+    
     @objc
     private func didTapCloseIcon() {
         dismiss(animated: true)
@@ -158,4 +174,8 @@ class BasicDetailViewController: UIViewController {
 struct BasicDetailViewDataModel {
     let titleKey: String
     let labelKeys: [String]
+    var shouldHideButton: Bool = true
+    var buttonTitle: String? = nil
+    var buttonAction: (() -> Void)? = nil
+    var buttonStyle: ButtonStyle = .primary
 }
