@@ -95,3 +95,4 @@ for which I am very grateful (what I need).
 "lng.habitList.tab.title" = "Your habits";
 "lng.common.positiveHabit" = "Hábito positivo";
 "lng.delete.habit" = "Delete Habit";
+"lng.noHabit.infoLabel.text" = "You don't have any habit";

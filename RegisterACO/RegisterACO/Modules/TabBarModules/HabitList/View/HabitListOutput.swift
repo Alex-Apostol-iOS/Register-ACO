@@ -10,4 +10,5 @@ import Foundation
 
 enum HabitListOutput {
     case goToHabitDetail(detailModel: BasicDetailViewDataModel)
+    case dismissPresentedVC
 }

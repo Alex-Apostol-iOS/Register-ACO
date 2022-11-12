@@ -36,10 +36,12 @@ class HabitListPresenter {
     }
     
     func deleteHabit() {
-        interactor.deleteHabit(name: currentSelectedHabit?.name ?? "") { result in
+        view?.showLoader()
+        interactor.deleteHabit(name: currentSelectedHabit?.name ?? "") { [weak self] result in
+            self?.view?.hideLoader()
             switch result {
-            case .success(let success):
-                print(success)
+            case .success(_):
+                self?.coordinatorOutput(.dismissPresentedVC)
             case .failure(let failure):
                 print(failure)
             }

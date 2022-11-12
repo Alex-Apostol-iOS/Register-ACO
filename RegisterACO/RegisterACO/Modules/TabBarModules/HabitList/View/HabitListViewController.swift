@@ -20,6 +20,12 @@ class HabitListViewController: RegisterAcoNavigationController {
         view.showsVerticalScrollIndicator = false
         return view
     }()
+    
+    private lazy var noDataView: RegisterACONoDataView = {
+        let view = RegisterACONoDataView(frame: .zero)
+        view.configure(text: "lng.noHabit.infoLabel.text".localized)
+        return view
+    }()
         
     init (presenter: HabitListPresenterProtocol) {
         self.presenter = presenter
@@ -35,7 +41,6 @@ class HabitListViewController: RegisterAcoNavigationController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        setupTableVliewLayout()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -52,12 +57,32 @@ class HabitListViewController: RegisterAcoNavigationController {
         tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 16).isActive = true
     }
     
+    private func setUpNoDataViewLayout() {
+        view.addSubview(noDataView)
+        noDataView.translatesAutoresizingMaskIntoConstraints = false
+        noDataView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        noDataView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+    }
+    
+    private func controlContentLayout() {
+        if content.isEmpty {
+            tableView.removeFromSuperview()
+            noDataView.removeFromSuperview()
+            setUpNoDataViewLayout()
+        } else {
+            noDataView.removeFromSuperview()
+            tableView.removeFromSuperview()
+            setupTableVliewLayout()
+        }
+    }
+    
 }
 
 extension HabitListViewController: HabitListViewProtocol{
     func layout(with content: [DtoPostiveHabit]) {
         self.content = content
         tableView.reloadData()
+        controlContentLayout()
     }
 }
 

@@ -21,6 +21,7 @@
 		9D08AC6A2907AE6C00D4454A /* BasicStepViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D08AC692907AE6C00D4454A /* BasicStepViewModel.swift */; };
 		9D1BCF1628FFBDE5002D0A73 /* BasicDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1BCF1528FFBDE5002D0A73 /* BasicDetailViewController.swift */; };
 		9D1BCF1928FFC7BE002D0A73 /* BasicStepControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1BCF1828FFC7BE002D0A73 /* BasicStepControllerHelper.swift */; };
+		9D2355A6291F961900322047 /* RegisterACONoDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2355A5291F961900322047 /* RegisterACONoDataView.swift */; };
 		9D6042DF28F92FAA00211A9E /* RegisterACOTextArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6042DE28F92FAA00211A9E /* RegisterACOTextArea.swift */; };
 		9D6FBFF02904467900C38B35 /* ModalAlerViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6FBFEF2904467900C38B35 /* ModalAlerViewControllerProtocol.swift */; };
 		9D6FBFF329057EC200C38B35 /* RegisterACOProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6FBFF229057EC200C38B35 /* RegisterACOProgressBar.swift */; };
@@ -212,6 +213,7 @@
 		9D08AC692907AE6C00D4454A /* BasicStepViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicStepViewModel.swift; sourceTree = "<group>"; };
 		9D1BCF1528FFBDE5002D0A73 /* BasicDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicDetailViewController.swift; sourceTree = "<group>"; };
 		9D1BCF1828FFC7BE002D0A73 /* BasicStepControllerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicStepControllerHelper.swift; sourceTree = "<group>"; };
+		9D2355A5291F961900322047 /* RegisterACONoDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterACONoDataView.swift; sourceTree = "<group>"; };
 		9D6042DE28F92FAA00211A9E /* RegisterACOTextArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterACOTextArea.swift; sourceTree = "<group>"; };
 		9D6FBFEF2904467900C38B35 /* ModalAlerViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalAlerViewControllerProtocol.swift; sourceTree = "<group>"; };
 		9D6FBFF229057EC200C38B35 /* RegisterACOProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterACOProgressBar.swift; sourceTree = "<group>"; };
@@ -504,6 +506,22 @@
 				9D1BCF1828FFC7BE002D0A73 /* BasicStepControllerHelper.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		9D2355A3291F960200322047 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9D2355A4291F960800322047 /* NoDataView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9D2355A4291F960800322047 /* NoDataView */ = {
+			isa = PBXGroup;
+			children = (
+				9D2355A5291F961900322047 /* RegisterACONoDataView.swift */,
+			);
+			path = NoDataView;
 			sourceTree = "<group>";
 		};
 		9D6042DC28F92BE100211A9E /* BasicStepController */ = {
@@ -855,6 +873,7 @@
 		B40D31432809619C002C1396 /* Componenets */ = {
 			isa = PBXGroup;
 			children = (
+				9D2355A3291F960200322047 /* Views */,
 				9D1BCF1328FFBC82002D0A73 /* ViewControllers */,
 				9D6042DD28F92F5600211A9E /* TextArea */,
 				B4938481287347F600C14FAC /* RegisterACOSwitchButton */,
@@ -1807,6 +1826,7 @@
 				B4832EE828322DAF0024A950 /* LoginViewControllerProtocol.swift in Sources */,
 				B44386FA2815373F00ADACC5 /* RegisterFromInteractor.swift in Sources */,
 				B40D3134280863FB002C1396 /* StarterInteractorProtocol.swift in Sources */,
+				9D2355A6291F961900322047 /* RegisterACONoDataView.swift in Sources */,
 				B4B531B12820315800D49EE5 /* Encodable+extensions.swift in Sources */,
 				B442C3BD2841258600A6781B /* ProfileInteractor.swift in Sources */,
 				B4832F2B283925B10024A950 /* Cache.swift in Sources */,

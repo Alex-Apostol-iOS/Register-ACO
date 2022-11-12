@@ -12,6 +12,7 @@ class HabitListCoordinator: Coordinator {
     enum HabitListCoordinatorState {
         case inital
         case willShowHabitDetail(model: BasicDetailViewDataModel)
+        case willDismmisPresentedVC
     }
     
     private var currentState: HabitListCoordinatorState
@@ -34,6 +35,8 @@ class HabitListCoordinator: Coordinator {
            break
        case .willShowHabitDetail(let model):
            showHabitDetail(for: model)
+       case .willDismmisPresentedVC:
+           dissmissPresentedVC()
        }
    }
     
@@ -41,6 +44,9 @@ class HabitListCoordinator: Coordinator {
         switch output {
         case .goToHabitDetail(let model):
             self.currentState = .willShowHabitDetail(model: model)
+            self.loop()
+        case .dismissPresentedVC:
+            self.currentState = .willDismmisPresentedVC
             self.loop()
         }
     }
@@ -55,6 +61,10 @@ class HabitListCoordinator: Coordinator {
         let vc = BasicDetailViewController(dataModel: model)
         
         navigator.pushViewController(vc, animated: true)
+    }
+    
+    private func dissmissPresentedVC() {
+        navigator.popViewController(animated: true)
     }
 }
 
