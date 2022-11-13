@@ -8,7 +8,7 @@
 import UIKit
 import SDWebImage
 
-class BasicDetailViewController: UIViewController {
+class BasicDetailViewController: UIViewController, ModalAlerViewControllerProtocol {
     
     let dataModel: BasicDetailViewDataModel
     
@@ -60,7 +60,7 @@ class BasicDetailViewController: UIViewController {
     private lazy var button: RegisterACOButton = {
         let button = RegisterACOButton(frame: .zero)
         button.isHidden = dataModel.shouldHideButton
-        button.config(buttonStyle:dataModel.buttonStyle , title: dataModel.buttonTitle?.localized ?? "", action: dataModel.buttonAction ?? {})
+        button.config(buttonStyle:dataModel.buttonStyle , title: dataModel.buttonTitle?.localized ?? "", action: didTapButton)
         return button
     }()
     
@@ -168,6 +168,29 @@ class BasicDetailViewController: UIViewController {
         
         mainStackView.addArrangedSubview(FreeSpaceView())
     }
+    
+    @objc
+    private func didTapButton()  {
+        if dataModel.showInfoViewForButtonAction {
+            showInfoViewForButtonAction()
+        } else {
+            dataModel.buttonAction?()
+        }
+        
+    }
+    
+    private func buildAlertViewModel() -> AlertViewModel {
+        AlertViewModel(title: "lng.delete.habit".localized, subtitle: "lng.delete.habit.info.subtitle".localized, mainButtonTitle: "lng.common.yes", secondaryButttonTitle: "lng.common.no", mainButtonAction: detailButonButtonInfoModalMainButtonAction)
+    }
+    
+    private func showInfoViewForButtonAction() {
+        showAlert(with: buildAlertViewModel())
+    }
+    
+    private func detailButonButtonInfoModalMainButtonAction() {
+        dataModel.buttonAction?()
+        hideAlert()
+    }
 }
 
 
@@ -178,4 +201,5 @@ struct BasicDetailViewDataModel {
     var buttonTitle: String? = nil
     var buttonAction: (() -> Void)? = nil
     var buttonStyle: ButtonStyle = .primary
+    var showInfoViewForButtonAction = false
 }

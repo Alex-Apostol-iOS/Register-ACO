@@ -71,7 +71,8 @@ extension HabitListPresenter: HabitListPresenterProtocol {
             shouldHideButton: false,
             buttonTitle: "lng.delete.habit",
             buttonAction: deleteHabit,
-            buttonStyle: .negativeAction
+            buttonStyle: .negativeAction,
+            showInfoViewForButtonAction: true
             )
         return habitDetailModel
     }

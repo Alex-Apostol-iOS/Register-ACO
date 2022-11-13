@@ -26,6 +26,7 @@ class AlertViewController: UIViewController, GetLabel {
         label.textColor = UIColor.theme(.baseLight20)
         label.text = model.subtitle.localized
         label.textAlignment = .center
+        label.numberOfLines = 0
         return label
     }()
     
