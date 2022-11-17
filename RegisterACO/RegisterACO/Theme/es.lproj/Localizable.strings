@@ -1,0 +1,98 @@
+/* 
+  Localizable.strings
+  RegisterACO
+
+  Created by Alex Apostol on 16/4/22.
+  
+*/
+"lng.distribuitor" = "Distribuidor";
+"lng.seller" = "Vendedor";
+"lng.back" = "Atras";
+"lng.login" = "Entrar";
+"lng.register" = "Registrarse";
+"lng.registerFormNavTitle" = "Formulario de inscripción";
+"lng.commonName" = "Nombre";
+"lng.commonSurname" = "Apellido";
+"lng.commonSecondSurname" = "Segundo Apellido";
+"lng.commonEmail" = "Correo";
+"lng.commonPhone" = "Telefono";
+"lng.commonPassword" = "Contraseña";
+"lng.commonPasswordConfirm" = "Confirma tu Contraseña";
+"lng.commonSubmit" = "Enviar";
+"lng.common.passwordFieldText" = "La contraseña debe contener caracteres especiales, mayusculas y numeros";
+"lng.common.home" = "Inicio";
+"lng.common.profile" = "Perfil";
+"lng.common.username" = "Nombre";
+"lng.common.logout" = "Salir";
+"lng.common.yes" = "Si";
+"lng.common.no" = "No";
+"lng.logout.subtitle" = "Seguro que quieres salir?";
+"lng.logout.homeFeatureCard.positiveHabit.subtitle" = "Empieza a cambiar tu vida";
+"lng.logout.homeFeatureCard.positiveHabit.title" = "Crea nuevos hábitos";
+"lng.logout.homeFeatureCard.negativeHabit.subtitle" = "Alejate de todo lo contraproducente";
+"lng.logout.homeFeatureCard.negativeHabit.title" = "Elimina malos hábitos";
+"lng.whatIsAHabit.textView.text" = "Un hábito es una rutina o conducta que se practica con regularidad y, en muchos casos, de
+manera automática. Los hábitos que en un principio pueden parecer pequeños y poco significativos, se transformarán en resultados extraordinarios si tienes la voluntad de mantenerlos durante varios años";
+"lng.whatIsAHabit.label.text" = "Que és un hábito?";
+"lng.howHabitsAffectYourLife.label.text" = "Cómo afectan tu vida los hábitos";
+"lng.howHabitsAffectYourLife.content.label.text" = "Un pequeño cambio en tus hábitos cotidianos puede conducir tu vida a un destino completamente distinto. No importa cuán exitoso seas en este preciso momento. Lo que importa es determinar si tus hábitos te están conduciendo hacia el camino del éxito. Si eres millonario pero gastas más de lo que ganas cada mes, entonces estás siguiendo una mala trayectoria. Si tus hábitos de consumo no cambian, no vas a terminar bien. En cambio, si estás en quiebra pero consigues ahorrar un poco cada mes, entonces te encuentras en un camino que te conducirá a la libertad financiera, aun si lograrlo te toma más tiempo del que te gustaría.
+Tus resultados son los indicadores reactivos de tus hábitos. La cantidad de dinero que posees es un indicador reactivo de tus hábitos financieros. Tu peso actual es un indicador reactivo de tus hábitos alimenticios. Tu conocimiento es un indicador reactivo de tus hábitos de estudio. El aspecto de tu casa es un indicador reactivo de tus hábitos de orden y limpieza. Al final obtienes lo que repites";
+"lng.common.start" = "Empieza";
+"lng.habit.how.habit.work" = "Como funccionan los hábitos";
+"lng.howHabitsWork.content.label.text" = "Los hábitos con frecuencia no parecen provocar ningún cambio hasta que se alcanza un punto crítico, un umbral. Uno siempre espera realizar progresos de manera lineal y ascendente, por ello es frustrante cuando por períodos de días, semanas e incluso meses los cambios parecen no funcionar y uno tiene la sensación de permanecer en el mismo sitio. Es el sello de cualquier proceso acumulativo: los resultados más poderosos toman su tiempo y se retrasan. Esta es una de las razones por las que es tan difícil desarrollar hábitos que perduren. Para que los hábitos realmente generen un cambio, deben subsistir lo suficiente como para rebasar una meseta donde no se producen cambios perceptibles. Yo la llamo meseta de potencial latente. Cuando al fin logras ir más allá de la meseta del potencial latente, la gente considera que el hecho es un éxito conseguido de la noche a la mañana. El común de la gente solo percibe los eventos más llamativos y no se detiene a ver todo el trabajo y el esfuerzo que tienen detrás. Pero tú sabes que todo el trabajo que has invertido durante mucho tiempo, cuando parecía que no estabas haciendo ningún progreso, es lo que realmente hizo posible el cambio";
+"lng.obviousHabit.nav.title" = "Llena el Registro de hábitos";
+"lng.obviousHabit.title" = "¿Cómo lo puedo hacer obvio?";
+"lng.obviousHabit.description" = "Usa la estrategia de acumulación de hábitos: «Después de [HÁBITO ACTUAL] yo haré [NUEVO HÁBITO].";
+"lng.obviousHabit.textArea.placeHolder" = "Escribe el hábito actual";
+"lng.obviousHabit.textArea.NewHabit.placeHolder" = "Escribe el nuevo hábito";
+"lng.common.continue" = "Continuar";
+"lng.common.seeExamples" = "Ver ejemplos";
+"lng.obviousHabit.example1" = "Meditación. Después de servirme mi café cada mañana, voy a meditar durante un minuto.";
+"lng.obviousHabit.example2" = "Ejercicio. Después de quitarme los zapatos de trabajo, inmediatamente me pondré los tenis
+para hacer ejercicio.";
+"lng.obviousHabit.example3" = "Gratitud. Después de sentarme a cenar, mencionaré algo que sucedió ese día y por lo que estoy
+muy agradecido.";
+"lng.obviousHabit.example4" = "Matrimonio. Después de acostarme por la noche, le daré un beso a mi esposa.";
+"lng.obviousHabit.example5"  = "Seguridad. Después de ponerme mis tenis para correr, enviaré un mensaje de texto a un amigo o
+familiar para avisar dónde voy a correr y cuánto tiempo tardaré en regresar.";
+"lng.attractHabit.nav.title" = "Hacerlo atractivo";
+"lng.attractHabit.title" = "Cómo lograr que un hábito sea irresistible";
+"lng.attractHabit.description" = "Después de [HÁBITO QUE NECESITO], yo haré [HÁBITO QUE QUIERO]";
+"lng.attractHabit.example1" = "Si quieres leer las noticias, pero necesitas expresar más gratitud:
+1. Después de tomar mi café por la mañana, mencionaré una cosa que sucedió el día anterior y
+por la cual estoy muy agradecido (lo que necesito).
+2. Después de dar gracias por lo que sucedió, voy a leer los periódicos (lo que quiero)";
+
+"lng.attractHabit.example2" = "Si quieres ver deportes, pero necesitas hacer llamadas de ventas:
+1. Después de regresar de comer, llamaré a tres clientes potenciales (lo que necesito).
+2. Después de llamar a tres clientes potenciales, veré lo que se transmite en el canal deportivo
+(lo que quiero).";
+
+"lng.attractHabit.example3" = "Si quieres revisar tu cuenta de Facebook, pero necesitas hacer más ejercicio:
+1. Después de sacar mi teléfono, haré diez burpees (lo que necesito).
+2. Depués de hacer diez burpees, revisaré mi cuenta de Facebook (lo que quiero).";
+
+"lng.attractHabit.example4" = "La esperanza es que finalmente sientas deseos de llamar a tres clientes o de hacer diez burpees, porque sabes que cuando hayas concluido, podrás ver los programas deportivos que te gustan o revisar tu cuenta de Facebook. Hacer lo que necesitas hacer significa que tendrás la oportunidad de hacer lo que te gusta.";
+"lng.attractHabit.firstTextField.placeHolder" = "Escribe el hábito que necesitas";
+"lng.attractHabit.secondTextField.placeHolder" = "Escribe el hábito que quieres";
+"lng.alert.flow.exit.title" = "Quieres cancelar el proceso?";
+"lng.alert.flow.exit.subtitle" = "Todo los cambios de perderán";
+"lng.makeItEasy.nav.title" = "Hacerlo sencillo";
+"lng.makeItEasy.title" = "Avanza despacio, pero no des marcha atrás";
+"lng.makeItEasy.example1" = "A pesar de que lo lógico sería empezar por lo más sencillo y pequeño, es común tratar de empezar por lo grande. Cuando sueñas con hacer un cambio, la emoción te domina de manera inevitable y terminas tratando de hacer demasiadas cosas en poco tiempo. La mejor manera de contrarrestar esta tendencia es usar la regla de los dos minutos,5 la cual establece: «Cuando empiezas un nuevo hábito, no debe tomarte más de dos minutos";
+"lng.makeItEasy.example2" = "¿Quieres dibujar más? Coloca tus lápices, plumas, cuadernos y otras herramientas de dibujo sobre tu escritorio, donde sean fácilmente accesibles.";
+"lng.makeItEasy.example3" = "¿Quieres hacer ejercicio? Prepara con anticipación la ropa apropiada, los zapatos, la maleta del gimnasio y la botella de agua.";
+"lng.makeItEasy.example4" = "¿Quieres mejorar tu dieta? Los fines de semana pela y pica montones de frutas y verduras y colócalos en contenedores de plástico en el refrigerador. Esto te permitirá tener fácil acceso a opciones saludables y listas para comer durante toda la semana.";
+"lng.makeItEasy.description" = "Reduce la tensión y la resistencia. Reduce el número de pasos entre tú y tus buenos hábitos. \nPrepara el ambiente para hacer que tus futuras acciones sean más sencillas.";
+"lng.makeItEasy.firstTextField.placeHolder" = "Como vas a reducir la tension entre tu y tu hábito?";
+"lng.makeItEasy.secondTextField.placeHolder" = "Como vas a preparar el ambiente para hacer sencillo este hábito?";
+"lng.common.confirm" = "Confirmar";
+"lng.common.seeDetail" = "Ver resumen";
+"lng.common.positiveHabit.allDone.title" = "Enhorabuena pequeño cambio en tus hábitos cotidianos puede conducir tu vida a un destino completamente distinto";
+"lng.habitResume.title" = "Resumen";
+"lng.habitList.tab.title" = "Tus Hábitos";
+"lng.common.positiveHabit" = "Hábito positivo";
+"lng.delete.habit" = "Borrar Hábito";
+"lng.noHabit.infoLabel.text" = "No tienes ningún hábito creado";
+"lng.delete.habit.info.subtitle" = "Seguro que quieres eliminar este hábito? Se perderá para siempre!";
+

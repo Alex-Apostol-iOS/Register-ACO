@@ -7,25 +7,387 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D039EDC28F71B7A000FC5C9 /* HabitStepInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D039ED228F71B79000FC5C9 /* HabitStepInteractorProtocol.swift */; };
+		9D039EDD28F71B7A000FC5C9 /* HabitStepPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D039ED328F71B79000FC5C9 /* HabitStepPresenter.swift */; };
+		9D039EDE28F71B7A000FC5C9 /* HabitStepViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D039ED428F71B79000FC5C9 /* HabitStepViewControllerProtocol.swift */; };
+		9D039EDF28F71B7A000FC5C9 /* HabitStepPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D039ED528F71B79000FC5C9 /* HabitStepPresenterProtocol.swift */; };
+		9D039EE028F71B7A000FC5C9 /* HabitStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D039ED628F71B79000FC5C9 /* HabitStepViewController.swift */; };
+		9D039EE128F71B7A000FC5C9 /* HabitStepBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D039ED728F71B79000FC5C9 /* HabitStepBuilder.swift */; };
+		9D039EE228F71B7A000FC5C9 /* HabitStepInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D039ED828F71B79000FC5C9 /* HabitStepInteractor.swift */; };
+		9D039EE328F71B7A000FC5C9 /* HabitStepDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D039ED928F71B79000FC5C9 /* HabitStepDataManagerProtocol.swift */; };
+		9D039EE428F71B7A000FC5C9 /* HabitStepOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D039EDA28F71B79000FC5C9 /* HabitStepOutput.swift */; };
+		9D039EE528F71B7A000FC5C9 /* HabitStepDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D039EDB28F71B79000FC5C9 /* HabitStepDataManager.swift */; };
+		9D08AC682907A75400D4454A /* BasicStepViewControllerStepDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D08AC672907A75400D4454A /* BasicStepViewControllerStepDTO.swift */; };
+		9D08AC6A2907AE6C00D4454A /* BasicStepViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D08AC692907AE6C00D4454A /* BasicStepViewModel.swift */; };
+		9D1BCF1628FFBDE5002D0A73 /* BasicDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1BCF1528FFBDE5002D0A73 /* BasicDetailViewController.swift */; };
+		9D1BCF1928FFC7BE002D0A73 /* BasicStepControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1BCF1828FFC7BE002D0A73 /* BasicStepControllerHelper.swift */; };
+		9D2355A6291F961900322047 /* RegisterACONoDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2355A5291F961900322047 /* RegisterACONoDataView.swift */; };
+		9D6042DF28F92FAA00211A9E /* RegisterACOTextArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6042DE28F92FAA00211A9E /* RegisterACOTextArea.swift */; };
+		9D6FBFF02904467900C38B35 /* ModalAlerViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6FBFEF2904467900C38B35 /* ModalAlerViewControllerProtocol.swift */; };
+		9D6FBFF329057EC200C38B35 /* RegisterACOProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6FBFF229057EC200C38B35 /* RegisterACOProgressBar.swift */; };
+		9DBFA0AC290D03E5009593E8 /* RegisterACOAllDone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0AB290D03E5009593E8 /* RegisterACOAllDone.swift */; };
+		9DBFA0AE290D7508009593E8 /* RegisterAllDoneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0AD290D7508009593E8 /* RegisterAllDoneViewModel.swift */; };
+		9DBFA0B0290D756B009593E8 /* RegisterAllDoneViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0AF290D756B009593E8 /* RegisterAllDoneViewOutput.swift */; };
+		9DBFA0B2290D759B009593E8 /* RegisterAllDoneViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0B1290D759B009593E8 /* RegisterAllDoneViewProtocol.swift */; };
+		9DBFA0B4290D75AB009593E8 /* RegisterAllDonePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0B3290D75AB009593E8 /* RegisterAllDonePresenterProtocol.swift */; };
+		9DBFA0B9290D75C3009593E8 /* RegisterAllDoneBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0B8290D75C3009593E8 /* RegisterAllDoneBuilder.swift */; };
+		9DBFA0BB290D761E009593E8 /* RegisterAllDoneViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0BA290D761E009593E8 /* RegisterAllDoneViewPresenter.swift */; };
+		9DBFA0C7290D7D30009593E8 /* HabitDetailInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0BD290D7D30009593E8 /* HabitDetailInteractorProtocol.swift */; };
+		9DBFA0C8290D7D30009593E8 /* HabitDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0BE290D7D30009593E8 /* HabitDetailPresenter.swift */; };
+		9DBFA0C9290D7D30009593E8 /* HabitDetailViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0BF290D7D30009593E8 /* HabitDetailViewControllerProtocol.swift */; };
+		9DBFA0CA290D7D30009593E8 /* HabitDetailPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0C0290D7D30009593E8 /* HabitDetailPresenterProtocol.swift */; };
+		9DBFA0CB290D7D30009593E8 /* HabitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0C1290D7D30009593E8 /* HabitDetailViewController.swift */; };
+		9DBFA0CC290D7D30009593E8 /* HabitDetailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0C2290D7D30009593E8 /* HabitDetailBuilder.swift */; };
+		9DBFA0CD290D7D30009593E8 /* HabitDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0C3290D7D30009593E8 /* HabitDetailInteractor.swift */; };
+		9DBFA0CE290D7D30009593E8 /* HabitDetailDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0C4290D7D30009593E8 /* HabitDetailDataManagerProtocol.swift */; };
+		9DBFA0CF290D7D30009593E8 /* HabitDetailOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0C5290D7D30009593E8 /* HabitDetailOutput.swift */; };
+		9DBFA0D0290D7D30009593E8 /* HabitDetailDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0C6290D7D30009593E8 /* HabitDetailDataManager.swift */; };
+		9DBFA0D7290E66F3009593E8 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0D6290E66F3009593E8 /* UITableView+Extension.swift */; };
+		9DBFA0E5290F9C8E009593E8 /* HabitListInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0DB290F9C8E009593E8 /* HabitListInteractorProtocol.swift */; };
+		9DBFA0E6290F9C8E009593E8 /* HabitListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0DC290F9C8E009593E8 /* HabitListPresenter.swift */; };
+		9DBFA0E7290F9C8E009593E8 /* HabitListViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0DD290F9C8E009593E8 /* HabitListViewControllerProtocol.swift */; };
+		9DBFA0E8290F9C8E009593E8 /* HabitListPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0DE290F9C8E009593E8 /* HabitListPresenterProtocol.swift */; };
+		9DBFA0E9290F9C8E009593E8 /* HabitListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0DF290F9C8E009593E8 /* HabitListViewController.swift */; };
+		9DBFA0EA290F9C8E009593E8 /* HabitListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0E0290F9C8E009593E8 /* HabitListBuilder.swift */; };
+		9DBFA0EB290F9C8E009593E8 /* HabitListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0E1290F9C8E009593E8 /* HabitListInteractor.swift */; };
+		9DBFA0EC290F9C8E009593E8 /* HabitListDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0E2290F9C8E009593E8 /* HabitListDataManagerProtocol.swift */; };
+		9DBFA0ED290F9C8E009593E8 /* HabitListOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0E3290F9C8E009593E8 /* HabitListOutput.swift */; };
+		9DBFA0EE290F9C8E009593E8 /* HabitListDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0E4290F9C8E009593E8 /* HabitListDataManager.swift */; };
+		9DBFA0F5290F9E24009593E8 /* HabitListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0F4290F9E24009593E8 /* HabitListCoordinator.swift */; };
+		9DC807112917A4C6009692EE /* HabitListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC807102917A4C6009692EE /* HabitListView.swift */; };
+		9DC807132917AAAC009692EE /* HabitListViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC807122917AAAC009692EE /* HabitListViewTableViewCell.swift */; };
+		9DF2254F290B98F90045D026 /* DtoPositiveHabit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF2254E290B98F90045D026 /* DtoPositiveHabit.swift */; };
 		B40D30FD280858AE002C1396 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D30FC280858AE002C1396 /* AppDelegate.swift */; };
 		B40D30FF280858AE002C1396 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D30FE280858AE002C1396 /* SceneDelegate.swift */; };
-		B40D3101280858AE002C1396 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D3100280858AE002C1396 /* ViewController.swift */; };
-		B40D3104280858AE002C1396 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B40D3102280858AE002C1396 /* Main.storyboard */; };
 		B40D3107280858AE002C1396 /* RegisterACO.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B40D3105280858AE002C1396 /* RegisterACO.xcdatamodeld */; };
 		B40D3109280858B1002C1396 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B40D3108280858B1002C1396 /* Assets.xcassets */; };
 		B40D310C280858B1002C1396 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B40D310A280858B1002C1396 /* LaunchScreen.storyboard */; };
+		B40D311728085A41002C1396 /* ServiceProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D311428085A41002C1396 /* ServiceProxy.swift */; };
+		B40D311828085A41002C1396 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D311628085A41002C1396 /* Endpoint.swift */; };
+		B40D312028085A54002C1396 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D311A28085A54002C1396 /* Builder.swift */; };
+		B40D312128085A54002C1396 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D311B28085A54002C1396 /* Loader.swift */; };
+		B40D312428085A54002C1396 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D311E28085A54002C1396 /* Coordinator.swift */; };
+		B40D312828085A62002C1396 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D312728085A62002C1396 /* MainCoordinator.swift */; };
+		B40D3134280863FB002C1396 /* StarterInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D312A280863FB002C1396 /* StarterInteractorProtocol.swift */; };
+		B40D3135280863FB002C1396 /* StarterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D312B280863FB002C1396 /* StarterPresenter.swift */; };
+		B40D3136280863FB002C1396 /* StarterViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D312C280863FB002C1396 /* StarterViewControllerProtocol.swift */; };
+		B40D3137280863FB002C1396 /* StarterPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D312D280863FB002C1396 /* StarterPresenterProtocol.swift */; };
+		B40D3138280863FB002C1396 /* StarterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D312E280863FB002C1396 /* StarterViewController.swift */; };
+		B40D3139280863FB002C1396 /* StarterBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D312F280863FB002C1396 /* StarterBuilder.swift */; };
+		B40D313A280863FB002C1396 /* StarterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D3130280863FB002C1396 /* StarterInteractor.swift */; };
+		B40D313B280863FB002C1396 /* StarterDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D3131280863FB002C1396 /* StarterDataManagerProtocol.swift */; };
+		B40D313C280863FB002C1396 /* StarterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D3132280863FB002C1396 /* StarterOutput.swift */; };
+		B40D313D280863FB002C1396 /* StarterDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D3133280863FB002C1396 /* StarterDataManager.swift */; };
+		B40D3145280961BC002C1396 /* RegisterACOButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D3144280961BC002C1396 /* RegisterACOButton.swift */; };
+		B40D314828098A2F002C1396 /* RegisterACOColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D314728098A2F002C1396 /* RegisterACOColor.swift */; };
+		B40D315328098D0B002C1396 /* Inter-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B40D314A28098D0A002C1396 /* Inter-ExtraLight.ttf */; };
+		B40D315428098D0B002C1396 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B40D314B28098D0A002C1396 /* Inter-Regular.ttf */; };
+		B40D315528098D0B002C1396 /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B40D314C28098D0A002C1396 /* Inter-Medium.ttf */; };
+		B40D315628098D0B002C1396 /* Inter-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B40D314D28098D0A002C1396 /* Inter-Black.ttf */; };
+		B40D315728098D0B002C1396 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B40D314E28098D0A002C1396 /* Inter-SemiBold.ttf */; };
+		B40D315828098D0B002C1396 /* Inter-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B40D314F28098D0B002C1396 /* Inter-Light.ttf */; };
+		B40D315928098D0B002C1396 /* Inter-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B40D315028098D0B002C1396 /* Inter-Thin.ttf */; };
+		B40D315A28098D0B002C1396 /* Inter-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B40D315128098D0B002C1396 /* Inter-ExtraBold.ttf */; };
+		B40D315B28098D0B002C1396 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B40D315228098D0B002C1396 /* Inter-Bold.ttf */; };
+		B40D315D28098E7A002C1396 /* RegisterACOFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D315C28098E7A002C1396 /* RegisterACOFont.swift */; };
+		B40D31602809C465002C1396 /* UIView+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D315F2809C465002C1396 /* UIView+extensions.swift */; };
+		B40D3164280AB00F002C1396 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B40D3166280AB00F002C1396 /* Localizable.strings */; };
+		B40D3169280AB173002C1396 /* LabelsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D3168280AB173002C1396 /* LabelsProtocol.swift */; };
+		B40D3176280AD27F002C1396 /* Login_RegisterInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D316C280AD27F002C1396 /* Login_RegisterInteractorProtocol.swift */; };
+		B40D3177280AD27F002C1396 /* Login_RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D316D280AD27F002C1396 /* Login_RegisterPresenter.swift */; };
+		B40D3178280AD27F002C1396 /* Login_RegisterViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D316E280AD27F002C1396 /* Login_RegisterViewControllerProtocol.swift */; };
+		B40D3179280AD27F002C1396 /* Login_RegisterPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D316F280AD27F002C1396 /* Login_RegisterPresenterProtocol.swift */; };
+		B40D317A280AD27F002C1396 /* Login_RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D3170280AD27F002C1396 /* Login_RegisterViewController.swift */; };
+		B40D317B280AD27F002C1396 /* Login_RegisterBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D3171280AD27F002C1396 /* Login_RegisterBuilder.swift */; };
+		B40D317C280AD27F002C1396 /* Login_RegisterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D3172280AD27F002C1396 /* Login_RegisterInteractor.swift */; };
+		B40D317D280AD27F002C1396 /* Login_RegisterDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D3173280AD27F002C1396 /* Login_RegisterDataManagerProtocol.swift */; };
+		B40D317E280AD27F002C1396 /* Login_RegisterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D3174280AD27F002C1396 /* Login_RegisterOutput.swift */; };
+		B40D317F280AD27F002C1396 /* Login_RegisterDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D3175280AD27F002C1396 /* Login_RegisterDataManager.swift */; };
+		B40D3188280AD5F5002C1396 /* RegisterAcoNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D3187280AD5F5002C1396 /* RegisterAcoNavigationController.swift */; };
+		B428E18B28436EBE006D38AD /* AlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B428E18A28436EBE006D38AD /* AlertViewModel.swift */; };
+		B428E1902843BA5F006D38AD /* UIApplication+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B428E18F2843BA5F006D38AD /* UIApplication+extension.swift */; };
+		B442C3B72841258600A6781B /* ProfileInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B442C3AD2841258500A6781B /* ProfileInteractorProtocol.swift */; };
+		B442C3B82841258600A6781B /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B442C3AE2841258500A6781B /* ProfilePresenter.swift */; };
+		B442C3B92841258600A6781B /* ProfileViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B442C3AF2841258500A6781B /* ProfileViewControllerProtocol.swift */; };
+		B442C3BA2841258600A6781B /* ProfilePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B442C3B02841258500A6781B /* ProfilePresenterProtocol.swift */; };
+		B442C3BB2841258600A6781B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B442C3B12841258500A6781B /* ProfileViewController.swift */; };
+		B442C3BC2841258600A6781B /* ProfileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B442C3B22841258500A6781B /* ProfileBuilder.swift */; };
+		B442C3BD2841258600A6781B /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B442C3B32841258500A6781B /* ProfileInteractor.swift */; };
+		B442C3BE2841258600A6781B /* ProfileDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B442C3B42841258500A6781B /* ProfileDataManagerProtocol.swift */; };
+		B442C3BF2841258600A6781B /* ProfileOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B442C3B52841258500A6781B /* ProfileOutput.swift */; };
+		B442C3C02841258600A6781B /* ProfileDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B442C3B62841258500A6781B /* ProfileDataManager.swift */; };
+		B442C3CB2841FCE200A6781B /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B442C3CA2841FCE200A6781B /* ProfileTableViewCell.swift */; };
+		B442C3CF2842055300A6781B /* RegisterUserInfoHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B442C3CE2842055300A6781B /* RegisterUserInfoHeader.swift */; };
+		B442C3D3284264F500A6781B /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B442C3D2284264F500A6781B /* AlertViewController.swift */; };
+		B442C3D7284269AF00A6781B /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B442C3D6284269AF00A6781B /* ProfileCoordinator.swift */; };
+		B442C3D928426EB900A6781B /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B442C3D828426EB900A6781B /* TabBarCoordinator.swift */; };
+		B44386F42815373F00ADACC5 /* RegisterFromInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44386EA2815373F00ADACC5 /* RegisterFromInteractorProtocol.swift */; };
+		B44386F52815373F00ADACC5 /* RegisterFromPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44386EB2815373F00ADACC5 /* RegisterFromPresenter.swift */; };
+		B44386F62815373F00ADACC5 /* RegisterFromViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44386EC2815373F00ADACC5 /* RegisterFromViewControllerProtocol.swift */; };
+		B44386F72815373F00ADACC5 /* RegisterFromPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44386ED2815373F00ADACC5 /* RegisterFromPresenterProtocol.swift */; };
+		B44386F82815373F00ADACC5 /* RegisterFromViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44386EE2815373F00ADACC5 /* RegisterFromViewController.swift */; };
+		B44386F92815373F00ADACC5 /* RegisterFromBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44386EF2815373F00ADACC5 /* RegisterFromBuilder.swift */; };
+		B44386FA2815373F00ADACC5 /* RegisterFromInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44386F02815373F00ADACC5 /* RegisterFromInteractor.swift */; };
+		B44386FB2815373F00ADACC5 /* RegisterFromDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44386F12815373F00ADACC5 /* RegisterFromDataManagerProtocol.swift */; };
+		B44386FC2815373F00ADACC5 /* RegisterFromOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44386F22815373F00ADACC5 /* RegisterFromOutput.swift */; };
+		B44386FD2815373F00ADACC5 /* RegisterFromDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44386F32815373F00ADACC5 /* RegisterFromDataManager.swift */; };
+		B4438704281556DB00ADACC5 /* RegisterFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4438703281556DB00ADACC5 /* RegisterFormViewModel.swift */; };
+		B44387072815917500ADACC5 /* RegisterACOTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44387062815917500ADACC5 /* RegisterACOTextField.swift */; };
+		B44AA75D283A75A900383413 /* TabBarViewControllerInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44AA753283A75A900383413 /* TabBarViewControllerInteractorProtocol.swift */; };
+		B44AA75E283A75A900383413 /* TabBarViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44AA754283A75A900383413 /* TabBarViewControllerPresenter.swift */; };
+		B44AA75F283A75A900383413 /* TabBarViewControllerViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44AA755283A75A900383413 /* TabBarViewControllerViewControllerProtocol.swift */; };
+		B44AA760283A75A900383413 /* TabBarViewControllerPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44AA756283A75A900383413 /* TabBarViewControllerPresenterProtocol.swift */; };
+		B44AA761283A75A900383413 /* TabBarViewControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44AA757283A75A900383413 /* TabBarViewControllerViewController.swift */; };
+		B44AA762283A75A900383413 /* TabBarViewControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44AA758283A75A900383413 /* TabBarViewControllerBuilder.swift */; };
+		B44AA763283A75A900383413 /* TabBarViewControllerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44AA759283A75A900383413 /* TabBarViewControllerInteractor.swift */; };
+		B44AA764283A75A900383413 /* TabBarViewControllerDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44AA75A283A75A900383413 /* TabBarViewControllerDataManagerProtocol.swift */; };
+		B44AA765283A75A900383413 /* TabBarViewControllerOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44AA75B283A75A900383413 /* TabBarViewControllerOutput.swift */; };
+		B44AA766283A75A900383413 /* TabBarViewControllerDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44AA75C283A75A900383413 /* TabBarViewControllerDataManager.swift */; };
+		B4832EE628322DAF0024A950 /* LoginInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4832EDC28322DAE0024A950 /* LoginInteractorProtocol.swift */; };
+		B4832EE728322DAF0024A950 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4832EDD28322DAE0024A950 /* LoginPresenter.swift */; };
+		B4832EE828322DAF0024A950 /* LoginViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4832EDE28322DAE0024A950 /* LoginViewControllerProtocol.swift */; };
+		B4832EE928322DAF0024A950 /* LoginPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4832EDF28322DAE0024A950 /* LoginPresenterProtocol.swift */; };
+		B4832EEA28322DAF0024A950 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4832EE028322DAE0024A950 /* LoginViewController.swift */; };
+		B4832EEB28322DAF0024A950 /* LoginBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4832EE128322DAE0024A950 /* LoginBuilder.swift */; };
+		B4832EEC28322DAF0024A950 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4832EE228322DAE0024A950 /* LoginInteractor.swift */; };
+		B4832EED28322DAF0024A950 /* LoginDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4832EE328322DAE0024A950 /* LoginDataManagerProtocol.swift */; };
+		B4832EEE28322DAF0024A950 /* LoginOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4832EE428322DAE0024A950 /* LoginOutput.swift */; };
+		B4832EEF28322DAF0024A950 /* LoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4832EE528322DAE0024A950 /* LoginDataManager.swift */; };
+		B4832EF6283231010024A950 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4832EF5283231010024A950 /* LoginViewModel.swift */; };
+		B4832EF9283232490024A950 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4832EF8283232490024A950 /* Constants.swift */; };
+		B4832F282838C1A80024A950 /* HTTPHeadersHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4832F272838C1A70024A950 /* HTTPHeadersHelper.swift */; };
+		B4832F2B283925B10024A950 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4832F2A283925B00024A950 /* Cache.swift */; };
+		B4832F2D28392A090024A950 /* CacheEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4832F2C28392A090024A950 /* CacheEntry.swift */; };
+		B4832F2F28392A220024A950 /* MemoryCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4832F2E28392A220024A950 /* MemoryCacheManager.swift */; };
+		B49384832873480C00C14FAC /* RegisterACOSwitchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49384822873480C00C14FAC /* RegisterACOSwitchButton.swift */; };
+		B4B531AA281ED18000D49EE5 /* Publisher+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B531A9281ED18000D49EE5 /* Publisher+Extension.swift */; };
+		B4B531AD28202FFE00D49EE5 /* DtoUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B531AC28202FFE00D49EE5 /* DtoUser.swift */; };
+		B4B531AF282030B900D49EE5 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B531AE282030B900D49EE5 /* AppManager.swift */; };
+		B4B531B12820315800D49EE5 /* Encodable+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B531B02820315800D49EE5 /* Encodable+extensions.swift */; };
+		B4C60A5F282572E0007DBE70 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C60A5E282572E0007DBE70 /* HomeCoordinator.swift */; };
+		B4C60A6B2826423C007DBE70 /* HomeInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C60A612826423C007DBE70 /* HomeInteractorProtocol.swift */; };
+		B4C60A6C2826423C007DBE70 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C60A622826423C007DBE70 /* HomePresenter.swift */; };
+		B4C60A6D2826423C007DBE70 /* HomeViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C60A632826423C007DBE70 /* HomeViewControllerProtocol.swift */; };
+		B4C60A6E2826423C007DBE70 /* HomePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C60A642826423C007DBE70 /* HomePresenterProtocol.swift */; };
+		B4C60A6F2826423C007DBE70 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C60A652826423C007DBE70 /* HomeViewController.swift */; };
+		B4C60A702826423C007DBE70 /* HomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C60A662826423C007DBE70 /* HomeBuilder.swift */; };
+		B4C60A712826423C007DBE70 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C60A672826423C007DBE70 /* HomeInteractor.swift */; };
+		B4C60A722826423C007DBE70 /* HomeDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C60A682826423C007DBE70 /* HomeDataManagerProtocol.swift */; };
+		B4C60A732826423C007DBE70 /* HomeOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C60A692826423C007DBE70 /* HomeOutput.swift */; };
+		B4C60A742826423C007DBE70 /* HomeDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C60A6A2826423C007DBE70 /* HomeDataManager.swift */; };
+		B4C60A7D2827A8BF007DBE70 /* HomeListUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C60A7C2827A8BF007DBE70 /* HomeListUserTableViewCell.swift */; };
+		B4C60A7F2827C290007DBE70 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C60A7E2827C290007DBE70 /* UITableViewCell+Extension.swift */; };
+		B4C60A81282832CB007DBE70 /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C60A80282832CB007DBE70 /* KeychainHelper.swift */; };
+		B4DA94CE28704179000EFB60 /* PositiveHabitCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DA94CD28704179000EFB60 /* PositiveHabitCoordinator.swift */; };
+		B4DA94DB287044C3000EFB60 /* PostiveHabitInfoViewInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DA94D1287044C3000EFB60 /* PostiveHabitInfoViewInteractorProtocol.swift */; };
+		B4DA94DC287044C3000EFB60 /* PostiveHabitInfoViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DA94D2287044C3000EFB60 /* PostiveHabitInfoViewPresenter.swift */; };
+		B4DA94DD287044C3000EFB60 /* PostiveHabitInfoViewViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DA94D3287044C3000EFB60 /* PostiveHabitInfoViewViewControllerProtocol.swift */; };
+		B4DA94DE287044C3000EFB60 /* PostiveHabitInfoViewPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DA94D4287044C3000EFB60 /* PostiveHabitInfoViewPresenterProtocol.swift */; };
+		B4DA94DF287044C3000EFB60 /* PostiveHabitInfoViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DA94D5287044C3000EFB60 /* PostiveHabitInfoViewViewController.swift */; };
+		B4DA94E0287044C3000EFB60 /* PostiveHabitInfoViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DA94D6287044C3000EFB60 /* PostiveHabitInfoViewBuilder.swift */; };
+		B4DA94E1287044C3000EFB60 /* PostiveHabitInfoViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DA94D7287044C3000EFB60 /* PostiveHabitInfoViewInteractor.swift */; };
+		B4DA94E2287044C3000EFB60 /* PostiveHabitInfoViewDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DA94D8287044C3000EFB60 /* PostiveHabitInfoViewDataManagerProtocol.swift */; };
+		B4DA94E3287044C3000EFB60 /* PostiveHabitInfoViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DA94D9287044C3000EFB60 /* PostiveHabitInfoViewOutput.swift */; };
+		B4DA94E4287044C3000EFB60 /* PostiveHabitInfoViewDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DA94DA287044C3000EFB60 /* PostiveHabitInfoViewDataManager.swift */; };
+		B4FFE7A72854D91A0037A278 /* FeatureCardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FFE7A62854D91A0037A278 /* FeatureCardItem.swift */; };
+		B4FFE7A92855CF670037A278 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FFE7A82855CF670037A278 /* UIImageView+Extensions.swift */; };
+		B4FFE7AB2855DA080037A278 /* UIViewController+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FFE7AA2855DA080037A278 /* UIViewController+extensions.swift */; };
+		C7DD8466CA29468BFF1F049B /* Pods_RegisterACO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 590A60A5953D89FCABD09D0F /* Pods_RegisterACO.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		13133E5C59BD45F445B7E812 /* Pods-RegisterACO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RegisterACO.release.xcconfig"; path = "Target Support Files/Pods-RegisterACO/Pods-RegisterACO.release.xcconfig"; sourceTree = "<group>"; };
+		40A3A5F11283A45636049278 /* Pods-RegisterACO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RegisterACO.debug.xcconfig"; path = "Target Support Files/Pods-RegisterACO/Pods-RegisterACO.debug.xcconfig"; sourceTree = "<group>"; };
+		590A60A5953D89FCABD09D0F /* Pods_RegisterACO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RegisterACO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D039ED228F71B79000FC5C9 /* HabitStepInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitStepInteractorProtocol.swift; sourceTree = "<group>"; };
+		9D039ED328F71B79000FC5C9 /* HabitStepPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitStepPresenter.swift; sourceTree = "<group>"; };
+		9D039ED428F71B79000FC5C9 /* HabitStepViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitStepViewControllerProtocol.swift; sourceTree = "<group>"; };
+		9D039ED528F71B79000FC5C9 /* HabitStepPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitStepPresenterProtocol.swift; sourceTree = "<group>"; };
+		9D039ED628F71B79000FC5C9 /* HabitStepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitStepViewController.swift; sourceTree = "<group>"; };
+		9D039ED728F71B79000FC5C9 /* HabitStepBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitStepBuilder.swift; sourceTree = "<group>"; };
+		9D039ED828F71B79000FC5C9 /* HabitStepInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitStepInteractor.swift; sourceTree = "<group>"; };
+		9D039ED928F71B79000FC5C9 /* HabitStepDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitStepDataManagerProtocol.swift; sourceTree = "<group>"; };
+		9D039EDA28F71B79000FC5C9 /* HabitStepOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitStepOutput.swift; sourceTree = "<group>"; };
+		9D039EDB28F71B79000FC5C9 /* HabitStepDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitStepDataManager.swift; sourceTree = "<group>"; };
+		9D08AC672907A75400D4454A /* BasicStepViewControllerStepDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicStepViewControllerStepDTO.swift; sourceTree = "<group>"; };
+		9D08AC692907AE6C00D4454A /* BasicStepViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicStepViewModel.swift; sourceTree = "<group>"; };
+		9D1BCF1528FFBDE5002D0A73 /* BasicDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicDetailViewController.swift; sourceTree = "<group>"; };
+		9D1BCF1828FFC7BE002D0A73 /* BasicStepControllerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicStepControllerHelper.swift; sourceTree = "<group>"; };
+		9D2355A5291F961900322047 /* RegisterACONoDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterACONoDataView.swift; sourceTree = "<group>"; };
+		9D6042DE28F92FAA00211A9E /* RegisterACOTextArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterACOTextArea.swift; sourceTree = "<group>"; };
+		9D6FBFEF2904467900C38B35 /* ModalAlerViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalAlerViewControllerProtocol.swift; sourceTree = "<group>"; };
+		9D6FBFF229057EC200C38B35 /* RegisterACOProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterACOProgressBar.swift; sourceTree = "<group>"; };
+		9DBFA0AB290D03E5009593E8 /* RegisterACOAllDone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterACOAllDone.swift; sourceTree = "<group>"; };
+		9DBFA0AD290D7508009593E8 /* RegisterAllDoneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAllDoneViewModel.swift; sourceTree = "<group>"; };
+		9DBFA0AF290D756B009593E8 /* RegisterAllDoneViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAllDoneViewOutput.swift; sourceTree = "<group>"; };
+		9DBFA0B1290D759B009593E8 /* RegisterAllDoneViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAllDoneViewProtocol.swift; sourceTree = "<group>"; };
+		9DBFA0B3290D75AB009593E8 /* RegisterAllDonePresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAllDonePresenterProtocol.swift; sourceTree = "<group>"; };
+		9DBFA0B8290D75C3009593E8 /* RegisterAllDoneBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAllDoneBuilder.swift; sourceTree = "<group>"; };
+		9DBFA0BA290D761E009593E8 /* RegisterAllDoneViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAllDoneViewPresenter.swift; sourceTree = "<group>"; };
+		9DBFA0BD290D7D30009593E8 /* HabitDetailInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailInteractorProtocol.swift; sourceTree = "<group>"; };
+		9DBFA0BE290D7D30009593E8 /* HabitDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailPresenter.swift; sourceTree = "<group>"; };
+		9DBFA0BF290D7D30009593E8 /* HabitDetailViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailViewControllerProtocol.swift; sourceTree = "<group>"; };
+		9DBFA0C0290D7D30009593E8 /* HabitDetailPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailPresenterProtocol.swift; sourceTree = "<group>"; };
+		9DBFA0C1290D7D30009593E8 /* HabitDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailViewController.swift; sourceTree = "<group>"; };
+		9DBFA0C2290D7D30009593E8 /* HabitDetailBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailBuilder.swift; sourceTree = "<group>"; };
+		9DBFA0C3290D7D30009593E8 /* HabitDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailInteractor.swift; sourceTree = "<group>"; };
+		9DBFA0C4290D7D30009593E8 /* HabitDetailDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailDataManagerProtocol.swift; sourceTree = "<group>"; };
+		9DBFA0C5290D7D30009593E8 /* HabitDetailOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailOutput.swift; sourceTree = "<group>"; };
+		9DBFA0C6290D7D30009593E8 /* HabitDetailDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailDataManager.swift; sourceTree = "<group>"; };
+		9DBFA0D6290E66F3009593E8 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		9DBFA0DB290F9C8E009593E8 /* HabitListInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListInteractorProtocol.swift; sourceTree = "<group>"; };
+		9DBFA0DC290F9C8E009593E8 /* HabitListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListPresenter.swift; sourceTree = "<group>"; };
+		9DBFA0DD290F9C8E009593E8 /* HabitListViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListViewControllerProtocol.swift; sourceTree = "<group>"; };
+		9DBFA0DE290F9C8E009593E8 /* HabitListPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListPresenterProtocol.swift; sourceTree = "<group>"; };
+		9DBFA0DF290F9C8E009593E8 /* HabitListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListViewController.swift; sourceTree = "<group>"; };
+		9DBFA0E0290F9C8E009593E8 /* HabitListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListBuilder.swift; sourceTree = "<group>"; };
+		9DBFA0E1290F9C8E009593E8 /* HabitListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListInteractor.swift; sourceTree = "<group>"; };
+		9DBFA0E2290F9C8E009593E8 /* HabitListDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListDataManagerProtocol.swift; sourceTree = "<group>"; };
+		9DBFA0E3290F9C8E009593E8 /* HabitListOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListOutput.swift; sourceTree = "<group>"; };
+		9DBFA0E4290F9C8E009593E8 /* HabitListDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListDataManager.swift; sourceTree = "<group>"; };
+		9DBFA0F4290F9E24009593E8 /* HabitListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListCoordinator.swift; sourceTree = "<group>"; };
+		9DC807102917A4C6009692EE /* HabitListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListView.swift; sourceTree = "<group>"; };
+		9DC807122917AAAC009692EE /* HabitListViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListViewTableViewCell.swift; sourceTree = "<group>"; };
+		9DF2254E290B98F90045D026 /* DtoPositiveHabit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DtoPositiveHabit.swift; sourceTree = "<group>"; };
 		B40D30F9280858AD002C1396 /* RegisterACO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RegisterACO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B40D30FC280858AE002C1396 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B40D30FE280858AE002C1396 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B40D3100280858AE002C1396 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B40D3103280858AE002C1396 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B40D3106280858AE002C1396 /* RegisterACO.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RegisterACO.xcdatamodel; sourceTree = "<group>"; };
 		B40D3108280858B1002C1396 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B40D310B280858B1002C1396 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B40D310D280858B1002C1396 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B40D311428085A41002C1396 /* ServiceProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceProxy.swift; sourceTree = "<group>"; };
+		B40D311628085A41002C1396 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		B40D311A28085A54002C1396 /* Builder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
+		B40D311B28085A54002C1396 /* Loader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+		B40D311E28085A54002C1396 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		B40D312728085A62002C1396 /* MainCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		B40D312A280863FB002C1396 /* StarterInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterInteractorProtocol.swift; sourceTree = "<group>"; };
+		B40D312B280863FB002C1396 /* StarterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterPresenter.swift; sourceTree = "<group>"; };
+		B40D312C280863FB002C1396 /* StarterViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterViewControllerProtocol.swift; sourceTree = "<group>"; };
+		B40D312D280863FB002C1396 /* StarterPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterPresenterProtocol.swift; sourceTree = "<group>"; };
+		B40D312E280863FB002C1396 /* StarterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterViewController.swift; sourceTree = "<group>"; };
+		B40D312F280863FB002C1396 /* StarterBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterBuilder.swift; sourceTree = "<group>"; };
+		B40D3130280863FB002C1396 /* StarterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterInteractor.swift; sourceTree = "<group>"; };
+		B40D3131280863FB002C1396 /* StarterDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterDataManagerProtocol.swift; sourceTree = "<group>"; };
+		B40D3132280863FB002C1396 /* StarterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterOutput.swift; sourceTree = "<group>"; };
+		B40D3133280863FB002C1396 /* StarterDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterDataManager.swift; sourceTree = "<group>"; };
+		B40D3144280961BC002C1396 /* RegisterACOButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterACOButton.swift; sourceTree = "<group>"; };
+		B40D314728098A2F002C1396 /* RegisterACOColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterACOColor.swift; sourceTree = "<group>"; };
+		B40D314A28098D0A002C1396 /* Inter-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraLight.ttf"; sourceTree = "<group>"; };
+		B40D314B28098D0A002C1396 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
+		B40D314C28098D0A002C1396 /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
+		B40D314D28098D0A002C1396 /* Inter-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Black.ttf"; sourceTree = "<group>"; };
+		B40D314E28098D0A002C1396 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
+		B40D314F28098D0B002C1396 /* Inter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light.ttf"; sourceTree = "<group>"; };
+		B40D315028098D0B002C1396 /* Inter-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Thin.ttf"; sourceTree = "<group>"; };
+		B40D315128098D0B002C1396 /* Inter-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraBold.ttf"; sourceTree = "<group>"; };
+		B40D315228098D0B002C1396 /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
+		B40D315C28098E7A002C1396 /* RegisterACOFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterACOFont.swift; sourceTree = "<group>"; };
+		B40D315F2809C465002C1396 /* UIView+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extensions.swift"; sourceTree = "<group>"; };
+		B40D3161280AAFC1002C1396 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		B40D3165280AB00F002C1396 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B40D3167280AB011002C1396 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B40D3168280AB173002C1396 /* LabelsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelsProtocol.swift; sourceTree = "<group>"; };
+		B40D316C280AD27F002C1396 /* Login_RegisterInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_RegisterInteractorProtocol.swift; sourceTree = "<group>"; };
+		B40D316D280AD27F002C1396 /* Login_RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_RegisterPresenter.swift; sourceTree = "<group>"; };
+		B40D316E280AD27F002C1396 /* Login_RegisterViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_RegisterViewControllerProtocol.swift; sourceTree = "<group>"; };
+		B40D316F280AD27F002C1396 /* Login_RegisterPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_RegisterPresenterProtocol.swift; sourceTree = "<group>"; };
+		B40D3170280AD27F002C1396 /* Login_RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_RegisterViewController.swift; sourceTree = "<group>"; };
+		B40D3171280AD27F002C1396 /* Login_RegisterBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_RegisterBuilder.swift; sourceTree = "<group>"; };
+		B40D3172280AD27F002C1396 /* Login_RegisterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_RegisterInteractor.swift; sourceTree = "<group>"; };
+		B40D3173280AD27F002C1396 /* Login_RegisterDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_RegisterDataManagerProtocol.swift; sourceTree = "<group>"; };
+		B40D3174280AD27F002C1396 /* Login_RegisterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_RegisterOutput.swift; sourceTree = "<group>"; };
+		B40D3175280AD27F002C1396 /* Login_RegisterDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_RegisterDataManager.swift; sourceTree = "<group>"; };
+		B40D3187280AD5F5002C1396 /* RegisterAcoNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAcoNavigationController.swift; sourceTree = "<group>"; };
+		B428E18A28436EBE006D38AD /* AlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewModel.swift; sourceTree = "<group>"; };
+		B428E18F2843BA5F006D38AD /* UIApplication+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+extension.swift"; sourceTree = "<group>"; };
+		B442C3AD2841258500A6781B /* ProfileInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractorProtocol.swift; sourceTree = "<group>"; };
+		B442C3AE2841258500A6781B /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		B442C3AF2841258500A6781B /* ProfileViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewControllerProtocol.swift; sourceTree = "<group>"; };
+		B442C3B02841258500A6781B /* ProfilePresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenterProtocol.swift; sourceTree = "<group>"; };
+		B442C3B12841258500A6781B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		B442C3B22841258500A6781B /* ProfileBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBuilder.swift; sourceTree = "<group>"; };
+		B442C3B32841258500A6781B /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
+		B442C3B42841258500A6781B /* ProfileDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataManagerProtocol.swift; sourceTree = "<group>"; };
+		B442C3B52841258500A6781B /* ProfileOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileOutput.swift; sourceTree = "<group>"; };
+		B442C3B62841258500A6781B /* ProfileDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataManager.swift; sourceTree = "<group>"; };
+		B442C3CA2841FCE200A6781B /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		B442C3CE2842055300A6781B /* RegisterUserInfoHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserInfoHeader.swift; sourceTree = "<group>"; };
+		B442C3D2284264F500A6781B /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		B442C3D6284269AF00A6781B /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
+		B442C3D828426EB900A6781B /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		B44386EA2815373F00ADACC5 /* RegisterFromInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFromInteractorProtocol.swift; sourceTree = "<group>"; };
+		B44386EB2815373F00ADACC5 /* RegisterFromPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFromPresenter.swift; sourceTree = "<group>"; };
+		B44386EC2815373F00ADACC5 /* RegisterFromViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFromViewControllerProtocol.swift; sourceTree = "<group>"; };
+		B44386ED2815373F00ADACC5 /* RegisterFromPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFromPresenterProtocol.swift; sourceTree = "<group>"; };
+		B44386EE2815373F00ADACC5 /* RegisterFromViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFromViewController.swift; sourceTree = "<group>"; };
+		B44386EF2815373F00ADACC5 /* RegisterFromBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFromBuilder.swift; sourceTree = "<group>"; };
+		B44386F02815373F00ADACC5 /* RegisterFromInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFromInteractor.swift; sourceTree = "<group>"; };
+		B44386F12815373F00ADACC5 /* RegisterFromDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFromDataManagerProtocol.swift; sourceTree = "<group>"; };
+		B44386F22815373F00ADACC5 /* RegisterFromOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFromOutput.swift; sourceTree = "<group>"; };
+		B44386F32815373F00ADACC5 /* RegisterFromDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFromDataManager.swift; sourceTree = "<group>"; };
+		B4438703281556DB00ADACC5 /* RegisterFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFormViewModel.swift; sourceTree = "<group>"; };
+		B44387062815917500ADACC5 /* RegisterACOTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterACOTextField.swift; sourceTree = "<group>"; };
+		B44AA753283A75A900383413 /* TabBarViewControllerInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewControllerInteractorProtocol.swift; sourceTree = "<group>"; };
+		B44AA754283A75A900383413 /* TabBarViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewControllerPresenter.swift; sourceTree = "<group>"; };
+		B44AA755283A75A900383413 /* TabBarViewControllerViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewControllerViewControllerProtocol.swift; sourceTree = "<group>"; };
+		B44AA756283A75A900383413 /* TabBarViewControllerPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewControllerPresenterProtocol.swift; sourceTree = "<group>"; };
+		B44AA757283A75A900383413 /* TabBarViewControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewControllerViewController.swift; sourceTree = "<group>"; };
+		B44AA758283A75A900383413 /* TabBarViewControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewControllerBuilder.swift; sourceTree = "<group>"; };
+		B44AA759283A75A900383413 /* TabBarViewControllerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewControllerInteractor.swift; sourceTree = "<group>"; };
+		B44AA75A283A75A900383413 /* TabBarViewControllerDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewControllerDataManagerProtocol.swift; sourceTree = "<group>"; };
+		B44AA75B283A75A900383413 /* TabBarViewControllerOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewControllerOutput.swift; sourceTree = "<group>"; };
+		B44AA75C283A75A900383413 /* TabBarViewControllerDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewControllerDataManager.swift; sourceTree = "<group>"; };
+		B4832EDC28322DAE0024A950 /* LoginInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractorProtocol.swift; sourceTree = "<group>"; };
+		B4832EDD28322DAE0024A950 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		B4832EDE28322DAE0024A950 /* LoginViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerProtocol.swift; sourceTree = "<group>"; };
+		B4832EDF28322DAE0024A950 /* LoginPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterProtocol.swift; sourceTree = "<group>"; };
+		B4832EE028322DAE0024A950 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B4832EE128322DAE0024A950 /* LoginBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBuilder.swift; sourceTree = "<group>"; };
+		B4832EE228322DAE0024A950 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		B4832EE328322DAE0024A950 /* LoginDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataManagerProtocol.swift; sourceTree = "<group>"; };
+		B4832EE428322DAE0024A950 /* LoginOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginOutput.swift; sourceTree = "<group>"; };
+		B4832EE528322DAE0024A950 /* LoginDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataManager.swift; sourceTree = "<group>"; };
+		B4832EF5283231010024A950 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		B4832EF8283232490024A950 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B4832F272838C1A70024A950 /* HTTPHeadersHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeadersHelper.swift; sourceTree = "<group>"; };
+		B4832F2A283925B00024A950 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+		B4832F2C28392A090024A950 /* CacheEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheEntry.swift; sourceTree = "<group>"; };
+		B4832F2E28392A220024A950 /* MemoryCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryCacheManager.swift; sourceTree = "<group>"; };
+		B49384822873480C00C14FAC /* RegisterACOSwitchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterACOSwitchButton.swift; sourceTree = "<group>"; };
+		B4B531A9281ED18000D49EE5 /* Publisher+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+Extension.swift"; sourceTree = "<group>"; };
+		B4B531AC28202FFE00D49EE5 /* DtoUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DtoUser.swift; sourceTree = "<group>"; };
+		B4B531AE282030B900D49EE5 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		B4B531B02820315800D49EE5 /* Encodable+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+extensions.swift"; sourceTree = "<group>"; };
+		B4C60A5E282572E0007DBE70 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		B4C60A612826423C007DBE70 /* HomeInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorProtocol.swift; sourceTree = "<group>"; };
+		B4C60A622826423C007DBE70 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		B4C60A632826423C007DBE70 /* HomeViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerProtocol.swift; sourceTree = "<group>"; };
+		B4C60A642826423C007DBE70 /* HomePresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterProtocol.swift; sourceTree = "<group>"; };
+		B4C60A652826423C007DBE70 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B4C60A662826423C007DBE70 /* HomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBuilder.swift; sourceTree = "<group>"; };
+		B4C60A672826423C007DBE70 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		B4C60A682826423C007DBE70 /* HomeDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataManagerProtocol.swift; sourceTree = "<group>"; };
+		B4C60A692826423C007DBE70 /* HomeOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeOutput.swift; sourceTree = "<group>"; };
+		B4C60A6A2826423C007DBE70 /* HomeDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataManager.swift; sourceTree = "<group>"; };
+		B4C60A7C2827A8BF007DBE70 /* HomeListUserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListUserTableViewCell.swift; sourceTree = "<group>"; };
+		B4C60A7E2827C290007DBE70 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
+		B4C60A80282832CB007DBE70 /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
+		B4DA94CD28704179000EFB60 /* PositiveHabitCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositiveHabitCoordinator.swift; sourceTree = "<group>"; };
+		B4DA94D1287044C3000EFB60 /* PostiveHabitInfoViewInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostiveHabitInfoViewInteractorProtocol.swift; sourceTree = "<group>"; };
+		B4DA94D2287044C3000EFB60 /* PostiveHabitInfoViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostiveHabitInfoViewPresenter.swift; sourceTree = "<group>"; };
+		B4DA94D3287044C3000EFB60 /* PostiveHabitInfoViewViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostiveHabitInfoViewViewControllerProtocol.swift; sourceTree = "<group>"; };
+		B4DA94D4287044C3000EFB60 /* PostiveHabitInfoViewPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostiveHabitInfoViewPresenterProtocol.swift; sourceTree = "<group>"; };
+		B4DA94D5287044C3000EFB60 /* PostiveHabitInfoViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostiveHabitInfoViewViewController.swift; sourceTree = "<group>"; };
+		B4DA94D6287044C3000EFB60 /* PostiveHabitInfoViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostiveHabitInfoViewBuilder.swift; sourceTree = "<group>"; };
+		B4DA94D7287044C3000EFB60 /* PostiveHabitInfoViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostiveHabitInfoViewInteractor.swift; sourceTree = "<group>"; };
+		B4DA94D8287044C3000EFB60 /* PostiveHabitInfoViewDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostiveHabitInfoViewDataManagerProtocol.swift; sourceTree = "<group>"; };
+		B4DA94D9287044C3000EFB60 /* PostiveHabitInfoViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostiveHabitInfoViewOutput.swift; sourceTree = "<group>"; };
+		B4DA94DA287044C3000EFB60 /* PostiveHabitInfoViewDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostiveHabitInfoViewDataManager.swift; sourceTree = "<group>"; };
+		B4FFE7A62854D91A0037A278 /* FeatureCardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCardItem.swift; sourceTree = "<group>"; };
+		B4FFE7A82855CF670037A278 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		B4FFE7AA2855DA080037A278 /* UIViewController+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +395,348 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7DD8466CA29468BFF1F049B /* Pods_RegisterACO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02E1C8D8D9B67D6BAB3745B8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				40A3A5F11283A45636049278 /* Pods-RegisterACO.debug.xcconfig */,
+				13133E5C59BD45F445B7E812 /* Pods-RegisterACO.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9D039ED028F71B33000FC5C9 /* Habits */ = {
+			isa = PBXGroup;
+			children = (
+				9DBFA0BC290D7D1F009593E8 /* HabitDetail */,
+				9D039ED128F71B42000FC5C9 /* Components */,
+				B4DA94CF287043FA000EFB60 /* PositiveHabit */,
+			);
+			path = Habits;
+			sourceTree = "<group>";
+		};
+		9D039ED128F71B42000FC5C9 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				9D6042DC28F92BE100211A9E /* BasicStepController */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		9D039EE628F71B80000FC5C9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9D039EDA28F71B79000FC5C9 /* HabitStepOutput.swift */,
+				9D039ED628F71B79000FC5C9 /* HabitStepViewController.swift */,
+				9D039ED428F71B79000FC5C9 /* HabitStepViewControllerProtocol.swift */,
+				9D08AC692907AE6C00D4454A /* BasicStepViewModel.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9D039EE728F71B85000FC5C9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9D039ED528F71B79000FC5C9 /* HabitStepPresenterProtocol.swift */,
+				9D039ED328F71B79000FC5C9 /* HabitStepPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		9D039EE828F71B8C000FC5C9 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				9D039ED828F71B79000FC5C9 /* HabitStepInteractor.swift */,
+				9D039ED228F71B79000FC5C9 /* HabitStepInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		9D039EE928F71B92000FC5C9 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				9D039ED928F71B79000FC5C9 /* HabitStepDataManagerProtocol.swift */,
+				9D039EDB28F71B79000FC5C9 /* HabitStepDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		9D039EEA28F71B9B000FC5C9 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				9D039ED728F71B79000FC5C9 /* HabitStepBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		9D08AC662907A73B00D4454A /* Dto */ = {
+			isa = PBXGroup;
+			children = (
+				9D08AC672907A75400D4454A /* BasicStepViewControllerStepDTO.swift */,
+			);
+			path = Dto;
+			sourceTree = "<group>";
+		};
+		9D1BCF1328FFBC82002D0A73 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9DBFA0AA290D03B7009593E8 /* RegisterACOAllDone */,
+				9D1BCF1428FFBDCC002D0A73 /* BasicDetailViewController */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9D1BCF1428FFBDCC002D0A73 /* BasicDetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9D1BCF1528FFBDE5002D0A73 /* BasicDetailViewController.swift */,
+			);
+			path = BasicDetailViewController;
+			sourceTree = "<group>";
+		};
+		9D1BCF1728FFC7AD002D0A73 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				9D1BCF1828FFC7BE002D0A73 /* BasicStepControllerHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		9D2355A3291F960200322047 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9D2355A4291F960800322047 /* NoDataView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9D2355A4291F960800322047 /* NoDataView */ = {
+			isa = PBXGroup;
+			children = (
+				9D2355A5291F961900322047 /* RegisterACONoDataView.swift */,
+			);
+			path = NoDataView;
+			sourceTree = "<group>";
+		};
+		9D6042DC28F92BE100211A9E /* BasicStepController */ = {
+			isa = PBXGroup;
+			children = (
+				9D08AC662907A73B00D4454A /* Dto */,
+				9D1BCF1728FFC7AD002D0A73 /* Helper */,
+				9D039EEA28F71B9B000FC5C9 /* Builder */,
+				9D039EE928F71B92000FC5C9 /* DataManager */,
+				9D039EE828F71B8C000FC5C9 /* Interactor */,
+				9D039EE728F71B85000FC5C9 /* Presenter */,
+				9D039EE628F71B80000FC5C9 /* View */,
+			);
+			path = BasicStepController;
+			sourceTree = "<group>";
+		};
+		9D6042DD28F92F5600211A9E /* TextArea */ = {
+			isa = PBXGroup;
+			children = (
+				9D6042DE28F92FAA00211A9E /* RegisterACOTextArea.swift */,
+			);
+			path = TextArea;
+			sourceTree = "<group>";
+		};
+		9D6FBFEE2904466000C38B35 /* AlertProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				9D6FBFEF2904467900C38B35 /* ModalAlerViewControllerProtocol.swift */,
+			);
+			path = AlertProtocol;
+			sourceTree = "<group>";
+		};
+		9D6FBFF129057EAF00C38B35 /* ProgressBar */ = {
+			isa = PBXGroup;
+			children = (
+				9D6FBFF229057EC200C38B35 /* RegisterACOProgressBar.swift */,
+			);
+			path = ProgressBar;
+			sourceTree = "<group>";
+		};
+		9DBFA0AA290D03B7009593E8 /* RegisterACOAllDone */ = {
+			isa = PBXGroup;
+			children = (
+				9DBFA0B7290D75B8009593E8 /* Builder */,
+				9DBFA0B6290D75B3009593E8 /* Presenter */,
+				9DBFA0B5290D75AE009593E8 /* View */,
+			);
+			path = RegisterACOAllDone;
+			sourceTree = "<group>";
+		};
+		9DBFA0B5290D75AE009593E8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9DBFA0AD290D7508009593E8 /* RegisterAllDoneViewModel.swift */,
+				9DBFA0AF290D756B009593E8 /* RegisterAllDoneViewOutput.swift */,
+				9DBFA0AB290D03E5009593E8 /* RegisterACOAllDone.swift */,
+				9DBFA0B1290D759B009593E8 /* RegisterAllDoneViewProtocol.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9DBFA0B6290D75B3009593E8 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9DBFA0B3290D75AB009593E8 /* RegisterAllDonePresenterProtocol.swift */,
+				9DBFA0BA290D761E009593E8 /* RegisterAllDoneViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		9DBFA0B7290D75B8009593E8 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				9DBFA0B8290D75C3009593E8 /* RegisterAllDoneBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		9DBFA0BC290D7D1F009593E8 /* HabitDetail */ = {
+			isa = PBXGroup;
+			children = (
+				9DBFA0D5290D7D5F009593E8 /* Builder */,
+				9DBFA0D4290D7D51009593E8 /* DataManager */,
+				9DBFA0D3290D7D4A009593E8 /* Interactor */,
+				9DBFA0D2290D7D45009593E8 /* Presenter */,
+				9DBFA0D1290D7D40009593E8 /* View */,
+			);
+			path = HabitDetail;
+			sourceTree = "<group>";
+		};
+		9DBFA0D1290D7D40009593E8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9DBFA0BF290D7D30009593E8 /* HabitDetailViewControllerProtocol.swift */,
+				9DBFA0C5290D7D30009593E8 /* HabitDetailOutput.swift */,
+				9DBFA0C1290D7D30009593E8 /* HabitDetailViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9DBFA0D2290D7D45009593E8 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9DBFA0C0290D7D30009593E8 /* HabitDetailPresenterProtocol.swift */,
+				9DBFA0BE290D7D30009593E8 /* HabitDetailPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		9DBFA0D3290D7D4A009593E8 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				9DBFA0C3290D7D30009593E8 /* HabitDetailInteractor.swift */,
+				9DBFA0BD290D7D30009593E8 /* HabitDetailInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		9DBFA0D4290D7D51009593E8 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				9DBFA0C4290D7D30009593E8 /* HabitDetailDataManagerProtocol.swift */,
+				9DBFA0C6290D7D30009593E8 /* HabitDetailDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		9DBFA0D5290D7D5F009593E8 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				9DBFA0C2290D7D30009593E8 /* HabitDetailBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		9DBFA0D8290F9C53009593E8 /* HabitList */ = {
+			isa = PBXGroup;
+			children = (
+				9DBFA0F3290F9CB4009593E8 /* Builder */,
+				9DBFA0F1290F9CA7009593E8 /* DataManager */,
+				9DBFA0F2290F9CAD009593E8 /* Interactor */,
+				9DBFA0F0290F9CA0009593E8 /* Presenter */,
+				9DBFA0EF290F9C9B009593E8 /* View */,
+			);
+			path = HabitList;
+			sourceTree = "<group>";
+		};
+		9DBFA0EF290F9C9B009593E8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9DBFA0DF290F9C8E009593E8 /* HabitListViewController.swift */,
+				9DBFA0DD290F9C8E009593E8 /* HabitListViewControllerProtocol.swift */,
+				9DBFA0E3290F9C8E009593E8 /* HabitListOutput.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9DBFA0F0290F9CA0009593E8 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9DBFA0DE290F9C8E009593E8 /* HabitListPresenterProtocol.swift */,
+				9DBFA0DC290F9C8E009593E8 /* HabitListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		9DBFA0F1290F9CA7009593E8 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				9DBFA0E2290F9C8E009593E8 /* HabitListDataManagerProtocol.swift */,
+				9DBFA0E4290F9C8E009593E8 /* HabitListDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		9DBFA0F2290F9CAD009593E8 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				9DBFA0E1290F9C8E009593E8 /* HabitListInteractor.swift */,
+				9DBFA0DB290F9C8E009593E8 /* HabitListInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		9DBFA0F3290F9CB4009593E8 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				9DBFA0E0290F9C8E009593E8 /* HabitListBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		9DC8070F2917A4B3009692EE /* HabitListView */ = {
+			isa = PBXGroup;
+			children = (
+				9DC807102917A4C6009692EE /* HabitListView.swift */,
+			);
+			path = HabitListView;
+			sourceTree = "<group>";
+		};
+		ADDD343129DAE07932E74B84 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				590A60A5953D89FCABD09D0F /* Pods_RegisterACO.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B40D30F0280858AD002C1396 = {
 			isa = PBXGroup;
 			children = (
 				B40D30FB280858AD002C1396 /* RegisterACO */,
 				B40D30FA280858AD002C1396 /* Products */,
+				02E1C8D8D9B67D6BAB3745B8 /* Pods */,
+				ADDD343129DAE07932E74B84 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,16 +751,819 @@
 		B40D30FB280858AD002C1396 /* RegisterACO */ = {
 			isa = PBXGroup;
 			children = (
+				B4832EF7283232330024A950 /* Constants */,
+				B40D311328085A41002C1396 /* NetWork */,
+				B40D311928085A54002C1396 /* Common */,
+				B40D314628098A1B002C1396 /* Theme */,
+				B40D312628085A62002C1396 /* Coordinators */,
+				B40D315E2809C44F002C1396 /* Utils */,
+				B40D3129280863D0002C1396 /* Modules */,
+				B40D31432809619C002C1396 /* Componenets */,
 				B40D30FC280858AE002C1396 /* AppDelegate.swift */,
 				B40D30FE280858AE002C1396 /* SceneDelegate.swift */,
-				B40D3100280858AE002C1396 /* ViewController.swift */,
-				B40D3102280858AE002C1396 /* Main.storyboard */,
 				B40D3108280858B1002C1396 /* Assets.xcassets */,
 				B40D310A280858B1002C1396 /* LaunchScreen.storyboard */,
 				B40D310D280858B1002C1396 /* Info.plist */,
 				B40D3105280858AE002C1396 /* RegisterACO.xcdatamodeld */,
 			);
 			path = RegisterACO;
+			sourceTree = "<group>";
+		};
+		B40D311328085A41002C1396 /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				B4832F29283925A60024A950 /* Cache */,
+				B4832F272838C1A70024A950 /* HTTPHeadersHelper.swift */,
+				B40D311428085A41002C1396 /* ServiceProxy.swift */,
+				B40D311528085A41002C1396 /* Endpoint */,
+				B4B531AB28202FD900D49EE5 /* Entities */,
+			);
+			path = NetWork;
+			sourceTree = "<group>";
+		};
+		B40D311528085A41002C1396 /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				B40D311628085A41002C1396 /* Endpoint.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		B40D311928085A54002C1396 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B40D311A28085A54002C1396 /* Builder.swift */,
+				B40D311B28085A54002C1396 /* Loader.swift */,
+				B40D311E28085A54002C1396 /* Coordinator.swift */,
+				B4C60A80282832CB007DBE70 /* KeychainHelper.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		B40D312628085A62002C1396 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				B40D312728085A62002C1396 /* MainCoordinator.swift */,
+				B4C60A5E282572E0007DBE70 /* HomeCoordinator.swift */,
+				B442C3D6284269AF00A6781B /* ProfileCoordinator.swift */,
+				B442C3D828426EB900A6781B /* TabBarCoordinator.swift */,
+				B4DA94CD28704179000EFB60 /* PositiveHabitCoordinator.swift */,
+				9DBFA0F4290F9E24009593E8 /* HabitListCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		B40D3129280863D0002C1396 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				9D039ED028F71B33000FC5C9 /* Habits */,
+				B442C3D0284264CE00A6781B /* ReusableModules */,
+				B44AA751283A757900383413 /* TabBarModules */,
+				B4832EDB283229050024A950 /* Login */,
+				B4C60A5C28257245007DBE70 /* StarterModule */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		B40D313E28086402002C1396 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				B40D312F280863FB002C1396 /* StarterBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		B40D313F2808640A002C1396 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B40D312C280863FB002C1396 /* StarterViewControllerProtocol.swift */,
+				B40D312E280863FB002C1396 /* StarterViewController.swift */,
+				B40D3132280863FB002C1396 /* StarterOutput.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B40D31402808640F002C1396 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B40D312D280863FB002C1396 /* StarterPresenterProtocol.swift */,
+				B40D312B280863FB002C1396 /* StarterPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B40D314128086415002C1396 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				B40D3131280863FB002C1396 /* StarterDataManagerProtocol.swift */,
+				B40D3133280863FB002C1396 /* StarterDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		B40D314228086429002C1396 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B40D3130280863FB002C1396 /* StarterInteractor.swift */,
+				B40D312A280863FB002C1396 /* StarterInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B40D31432809619C002C1396 /* Componenets */ = {
+			isa = PBXGroup;
+			children = (
+				9D2355A3291F960200322047 /* Views */,
+				9D1BCF1328FFBC82002D0A73 /* ViewControllers */,
+				9D6042DD28F92F5600211A9E /* TextArea */,
+				B4938481287347F600C14FAC /* RegisterACOSwitchButton */,
+				B442C3CC2842052A00A6781B /* ReusableView */,
+				B4C60A7A2827A897007DBE70 /* TableViewCells */,
+				B44387052815916300ADACC5 /* TextField */,
+				B40D3186280AD5E6002C1396 /* NavigationController */,
+				B40D3185280AD5DE002C1396 /* Buttons */,
+			);
+			path = Componenets;
+			sourceTree = "<group>";
+		};
+		B40D314628098A1B002C1396 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				B40D314928098CFD002C1396 /* Fonts */,
+				B40D314728098A2F002C1396 /* RegisterACOColor.swift */,
+				B40D3166280AB00F002C1396 /* Localizable.strings */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		B40D314928098CFD002C1396 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B40D314D28098D0A002C1396 /* Inter-Black.ttf */,
+				B40D315228098D0B002C1396 /* Inter-Bold.ttf */,
+				B40D315128098D0B002C1396 /* Inter-ExtraBold.ttf */,
+				B40D314A28098D0A002C1396 /* Inter-ExtraLight.ttf */,
+				B40D314F28098D0B002C1396 /* Inter-Light.ttf */,
+				B40D314C28098D0A002C1396 /* Inter-Medium.ttf */,
+				B40D314B28098D0A002C1396 /* Inter-Regular.ttf */,
+				B40D314E28098D0A002C1396 /* Inter-SemiBold.ttf */,
+				B40D315028098D0B002C1396 /* Inter-Thin.ttf */,
+				B40D315C28098E7A002C1396 /* RegisterACOFont.swift */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		B40D315E2809C44F002C1396 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B428E18D2843BA29006D38AD /* DataHelpers */,
+				B428E18C2843BA1D006D38AD /* UIHelpers */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B40D316A280AD22D002C1396 /* Starter */ = {
+			isa = PBXGroup;
+			children = (
+				B40D314228086429002C1396 /* Interactor */,
+				B40D314128086415002C1396 /* DataManager */,
+				B40D31402808640F002C1396 /* Presenter */,
+				B40D313F2808640A002C1396 /* View */,
+				B40D313E28086402002C1396 /* Builder */,
+			);
+			path = Starter;
+			sourceTree = "<group>";
+		};
+		B40D316B280AD242002C1396 /* Login_Register */ = {
+			isa = PBXGroup;
+			children = (
+				B40D3184280AD29D002C1396 /* Builder */,
+				B40D3183280AD294002C1396 /* DataManager */,
+				B40D3182280AD28E002C1396 /* Interactor */,
+				B40D3181280AD289002C1396 /* Presenter */,
+				B40D3180280AD284002C1396 /* View */,
+			);
+			path = Login_Register;
+			sourceTree = "<group>";
+		};
+		B40D3180280AD284002C1396 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B40D3170280AD27F002C1396 /* Login_RegisterViewController.swift */,
+				B40D316E280AD27F002C1396 /* Login_RegisterViewControllerProtocol.swift */,
+				B40D3174280AD27F002C1396 /* Login_RegisterOutput.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B40D3181280AD289002C1396 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B40D316F280AD27F002C1396 /* Login_RegisterPresenterProtocol.swift */,
+				B40D316D280AD27F002C1396 /* Login_RegisterPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B40D3182280AD28E002C1396 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B40D3172280AD27F002C1396 /* Login_RegisterInteractor.swift */,
+				B40D316C280AD27F002C1396 /* Login_RegisterInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B40D3183280AD294002C1396 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				B40D3173280AD27F002C1396 /* Login_RegisterDataManagerProtocol.swift */,
+				B40D3175280AD27F002C1396 /* Login_RegisterDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		B40D3184280AD29D002C1396 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				B40D3171280AD27F002C1396 /* Login_RegisterBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		B40D3185280AD5DE002C1396 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				B40D3144280961BC002C1396 /* RegisterACOButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		B40D3186280AD5E6002C1396 /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				B40D3187280AD5F5002C1396 /* RegisterAcoNavigationController.swift */,
+			);
+			path = NavigationController;
+			sourceTree = "<group>";
+		};
+		B428E18C2843BA1D006D38AD /* UIHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				B4C60A7E2827C290007DBE70 /* UITableViewCell+Extension.swift */,
+				B4B531A9281ED18000D49EE5 /* Publisher+Extension.swift */,
+				B40D3168280AB173002C1396 /* LabelsProtocol.swift */,
+				B40D315F2809C465002C1396 /* UIView+extensions.swift */,
+				B4FFE7A82855CF670037A278 /* UIImageView+Extensions.swift */,
+				B4FFE7AA2855DA080037A278 /* UIViewController+extensions.swift */,
+				9DBFA0D6290E66F3009593E8 /* UITableView+Extension.swift */,
+			);
+			path = UIHelpers;
+			sourceTree = "<group>";
+		};
+		B428E18D2843BA29006D38AD /* DataHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				B4B531B02820315800D49EE5 /* Encodable+extensions.swift */,
+				B4B531AE282030B900D49EE5 /* AppManager.swift */,
+				B428E18F2843BA5F006D38AD /* UIApplication+extension.swift */,
+			);
+			path = DataHelpers;
+			sourceTree = "<group>";
+		};
+		B442C3AC2841257100A6781B /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				B442C3C5284125A800A6781B /* Builder */,
+				B442C3C4284125A000A6781B /* DataManager */,
+				B442C3C32841259A00A6781B /* Interactor */,
+				B442C3C22841259300A6781B /* Presenter */,
+				B442C3C12841258D00A6781B /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		B442C3C12841258D00A6781B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B442C3B12841258500A6781B /* ProfileViewController.swift */,
+				B442C3AF2841258500A6781B /* ProfileViewControllerProtocol.swift */,
+				B442C3B52841258500A6781B /* ProfileOutput.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B442C3C22841259300A6781B /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B442C3B02841258500A6781B /* ProfilePresenterProtocol.swift */,
+				B442C3AE2841258500A6781B /* ProfilePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B442C3C32841259A00A6781B /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B442C3B32841258500A6781B /* ProfileInteractor.swift */,
+				B442C3AD2841258500A6781B /* ProfileInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B442C3C4284125A000A6781B /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				B442C3B42841258500A6781B /* ProfileDataManagerProtocol.swift */,
+				B442C3B62841258500A6781B /* ProfileDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		B442C3C5284125A800A6781B /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				B442C3B22841258500A6781B /* ProfileBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		B442C3C62841FCA100A6781B /* ProfileTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				B442C3CA2841FCE200A6781B /* ProfileTableViewCell.swift */,
+			);
+			path = ProfileTableViewCell;
+			sourceTree = "<group>";
+		};
+		B442C3C72841FCBB00A6781B /* ModulesCells */ = {
+			isa = PBXGroup;
+			children = (
+				B442C3C92841FCCD00A6781B /* Profile */,
+				B442C3C82841FCC500A6781B /* Home */,
+			);
+			path = ModulesCells;
+			sourceTree = "<group>";
+		};
+		B442C3C82841FCC500A6781B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B4C60A7B2827A8A8007DBE70 /* HomeListUserTableViewCell */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B442C3C92841FCCD00A6781B /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				B442C3C62841FCA100A6781B /* ProfileTableViewCell */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		B442C3CC2842052A00A6781B /* ReusableView */ = {
+			isa = PBXGroup;
+			children = (
+				9DC8070F2917A4B3009692EE /* HabitListView */,
+				9D6FBFF129057EAF00C38B35 /* ProgressBar */,
+				B4FFE7A52854D8F40037A278 /* FeatureCardItem */,
+				B442C3CD2842053D00A6781B /* RegisterUserInfoHeader */,
+			);
+			path = ReusableView;
+			sourceTree = "<group>";
+		};
+		B442C3CD2842053D00A6781B /* RegisterUserInfoHeader */ = {
+			isa = PBXGroup;
+			children = (
+				B442C3CE2842055300A6781B /* RegisterUserInfoHeader.swift */,
+			);
+			path = RegisterUserInfoHeader;
+			sourceTree = "<group>";
+		};
+		B442C3D0284264CE00A6781B /* ReusableModules */ = {
+			isa = PBXGroup;
+			children = (
+				B442C3D1284264DC00A6781B /* Alert */,
+			);
+			path = ReusableModules;
+			sourceTree = "<group>";
+		};
+		B442C3D1284264DC00A6781B /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				9D6FBFEE2904466000C38B35 /* AlertProtocol */,
+				B442C3D42842652000A6781B /* Model */,
+				B442C3D52842652400A6781B /* View */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		B442C3D42842652000A6781B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B428E18A28436EBE006D38AD /* AlertViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B442C3D52842652400A6781B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B442C3D2284264F500A6781B /* AlertViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B44386E92815372200ADACC5 /* RegisterFrom */ = {
+			isa = PBXGroup;
+			children = (
+				B44387022815375C00ADACC5 /* Builder */,
+				B44387012815375500ADACC5 /* DataManager */,
+				B44387002815374F00ADACC5 /* Interactor */,
+				B44386FF2815374900ADACC5 /* Presenter */,
+				B44386FE2815374400ADACC5 /* View */,
+			);
+			path = RegisterFrom;
+			sourceTree = "<group>";
+		};
+		B44386FE2815374400ADACC5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B44386F22815373F00ADACC5 /* RegisterFromOutput.swift */,
+				B44386EE2815373F00ADACC5 /* RegisterFromViewController.swift */,
+				B44386EC2815373F00ADACC5 /* RegisterFromViewControllerProtocol.swift */,
+				B4438703281556DB00ADACC5 /* RegisterFormViewModel.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B44386FF2815374900ADACC5 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B44386ED2815373F00ADACC5 /* RegisterFromPresenterProtocol.swift */,
+				B44386EB2815373F00ADACC5 /* RegisterFromPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B44387002815374F00ADACC5 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B44386EA2815373F00ADACC5 /* RegisterFromInteractorProtocol.swift */,
+				B44386F02815373F00ADACC5 /* RegisterFromInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B44387012815375500ADACC5 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				B44386F12815373F00ADACC5 /* RegisterFromDataManagerProtocol.swift */,
+				B44386F32815373F00ADACC5 /* RegisterFromDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		B44387022815375C00ADACC5 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				B44386EF2815373F00ADACC5 /* RegisterFromBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		B44387052815916300ADACC5 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				B44387062815917500ADACC5 /* RegisterACOTextField.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
+		B44AA751283A757900383413 /* TabBarModules */ = {
+			isa = PBXGroup;
+			children = (
+				9DBFA0D8290F9C53009593E8 /* HabitList */,
+				B442C3AC2841257100A6781B /* Profile */,
+				B44AA752283A758500383413 /* TabBar */,
+				B4C60A5D282572A8007DBE70 /* HomeModule */,
+			);
+			path = TabBarModules;
+			sourceTree = "<group>";
+		};
+		B44AA752283A758500383413 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				B44AA76B283A75DB00383413 /* Builder */,
+				B44AA769283A75CD00383413 /* DataManager */,
+				B44AA76A283A75D300383413 /* Interactor */,
+				B44AA768283A75C600383413 /* Presenter */,
+				B44AA767283A75BF00383413 /* View */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		B44AA767283A75BF00383413 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B44AA75B283A75A900383413 /* TabBarViewControllerOutput.swift */,
+				B44AA757283A75A900383413 /* TabBarViewControllerViewController.swift */,
+				B44AA755283A75A900383413 /* TabBarViewControllerViewControllerProtocol.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B44AA768283A75C600383413 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B44AA756283A75A900383413 /* TabBarViewControllerPresenterProtocol.swift */,
+				B44AA754283A75A900383413 /* TabBarViewControllerPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B44AA769283A75CD00383413 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				B44AA75A283A75A900383413 /* TabBarViewControllerDataManagerProtocol.swift */,
+				B44AA75C283A75A900383413 /* TabBarViewControllerDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		B44AA76A283A75D300383413 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B44AA759283A75A900383413 /* TabBarViewControllerInteractor.swift */,
+				B44AA753283A75A900383413 /* TabBarViewControllerInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B44AA76B283A75DB00383413 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				B44AA758283A75A900383413 /* TabBarViewControllerBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		B4832EDB283229050024A950 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B4832EF428322E740024A950 /* Builder */,
+				B4832EF228322E690024A950 /* DataManager */,
+				B4832EF328322E6F0024A950 /* Interactor */,
+				B4832EF128322E5F0024A950 /* Presenter */,
+				B4832EF028322E580024A950 /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		B4832EF028322E580024A950 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B4832EE028322DAE0024A950 /* LoginViewController.swift */,
+				B4832EDE28322DAE0024A950 /* LoginViewControllerProtocol.swift */,
+				B4832EE428322DAE0024A950 /* LoginOutput.swift */,
+				B4832EF5283231010024A950 /* LoginViewModel.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B4832EF128322E5F0024A950 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B4832EDD28322DAE0024A950 /* LoginPresenter.swift */,
+				B4832EDF28322DAE0024A950 /* LoginPresenterProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B4832EF228322E690024A950 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				B4832EE328322DAE0024A950 /* LoginDataManagerProtocol.swift */,
+				B4832EE528322DAE0024A950 /* LoginDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		B4832EF328322E6F0024A950 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B4832EDC28322DAE0024A950 /* LoginInteractorProtocol.swift */,
+				B4832EE228322DAE0024A950 /* LoginInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B4832EF428322E740024A950 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				B4832EE128322DAE0024A950 /* LoginBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		B4832EF7283232330024A950 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				B4832EF8283232490024A950 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		B4832F29283925A60024A950 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				B4832F2A283925B00024A950 /* Cache.swift */,
+				B4832F2C28392A090024A950 /* CacheEntry.swift */,
+				B4832F2E28392A220024A950 /* MemoryCacheManager.swift */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		B4938481287347F600C14FAC /* RegisterACOSwitchButton */ = {
+			isa = PBXGroup;
+			children = (
+				B49384822873480C00C14FAC /* RegisterACOSwitchButton.swift */,
+			);
+			path = RegisterACOSwitchButton;
+			sourceTree = "<group>";
+		};
+		B4B531AB28202FD900D49EE5 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				B4B531AC28202FFE00D49EE5 /* DtoUser.swift */,
+				9DF2254E290B98F90045D026 /* DtoPositiveHabit.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		B4C60A5C28257245007DBE70 /* StarterModule */ = {
+			isa = PBXGroup;
+			children = (
+				B40D316B280AD242002C1396 /* Login_Register */,
+				B44386E92815372200ADACC5 /* RegisterFrom */,
+				B40D316A280AD22D002C1396 /* Starter */,
+			);
+			path = StarterModule;
+			sourceTree = "<group>";
+		};
+		B4C60A5D282572A8007DBE70 /* HomeModule */ = {
+			isa = PBXGroup;
+			children = (
+				B4C60A6028264223007DBE70 /* Home */,
+			);
+			path = HomeModule;
+			sourceTree = "<group>";
+		};
+		B4C60A6028264223007DBE70 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B4C60A7928264269007DBE70 /* Builder */,
+				B4C60A7828264260007DBE70 /* DataManager */,
+				B4C60A7728264259007DBE70 /* Interactor */,
+				B4C60A762826424A007DBE70 /* Presenter */,
+				B4C60A7528264243007DBE70 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B4C60A7528264243007DBE70 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B4C60A632826423C007DBE70 /* HomeViewControllerProtocol.swift */,
+				B4C60A692826423C007DBE70 /* HomeOutput.swift */,
+				B4C60A652826423C007DBE70 /* HomeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B4C60A762826424A007DBE70 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B4C60A642826423C007DBE70 /* HomePresenterProtocol.swift */,
+				B4C60A622826423C007DBE70 /* HomePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B4C60A7728264259007DBE70 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B4C60A612826423C007DBE70 /* HomeInteractorProtocol.swift */,
+				B4C60A672826423C007DBE70 /* HomeInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B4C60A7828264260007DBE70 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				B4C60A682826423C007DBE70 /* HomeDataManagerProtocol.swift */,
+				B4C60A6A2826423C007DBE70 /* HomeDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		B4C60A7928264269007DBE70 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				B4C60A662826423C007DBE70 /* HomeBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		B4C60A7A2827A897007DBE70 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				B442C3C72841FCBB00A6781B /* ModulesCells */,
+				9DC807122917AAAC009692EE /* HabitListViewTableViewCell.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		B4C60A7B2827A8A8007DBE70 /* HomeListUserTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				B4C60A7C2827A8BF007DBE70 /* HomeListUserTableViewCell.swift */,
+			);
+			path = HomeListUserTableViewCell;
+			sourceTree = "<group>";
+		};
+		B4DA94CF287043FA000EFB60 /* PositiveHabit */ = {
+			isa = PBXGroup;
+			children = (
+				B4DA94D028704408000EFB60 /* PositiveHabitInfoView */,
+			);
+			path = PositiveHabit;
+			sourceTree = "<group>";
+		};
+		B4DA94D028704408000EFB60 /* PositiveHabitInfoView */ = {
+			isa = PBXGroup;
+			children = (
+				B4DA94E9287044E7000EFB60 /* Builder */,
+				B4DA94E8287044E1000EFB60 /* DataManager */,
+				B4DA94E7287044D7000EFB60 /* Interactor */,
+				B4DA94E6287044D1000EFB60 /* Presenter */,
+				B4DA94E5287044CB000EFB60 /* View */,
+			);
+			path = PositiveHabitInfoView;
+			sourceTree = "<group>";
+		};
+		B4DA94E5287044CB000EFB60 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B4DA94D9287044C3000EFB60 /* PostiveHabitInfoViewOutput.swift */,
+				B4DA94D5287044C3000EFB60 /* PostiveHabitInfoViewViewController.swift */,
+				B4DA94D3287044C3000EFB60 /* PostiveHabitInfoViewViewControllerProtocol.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B4DA94E6287044D1000EFB60 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B4DA94D4287044C3000EFB60 /* PostiveHabitInfoViewPresenterProtocol.swift */,
+				B4DA94D2287044C3000EFB60 /* PostiveHabitInfoViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B4DA94E7287044D7000EFB60 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B4DA94D1287044C3000EFB60 /* PostiveHabitInfoViewInteractorProtocol.swift */,
+				B4DA94D7287044C3000EFB60 /* PostiveHabitInfoViewInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B4DA94E8287044E1000EFB60 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				B4DA94D8287044C3000EFB60 /* PostiveHabitInfoViewDataManagerProtocol.swift */,
+				B4DA94DA287044C3000EFB60 /* PostiveHabitInfoViewDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		B4DA94E9287044E7000EFB60 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				B4DA94D6287044C3000EFB60 /* PostiveHabitInfoViewBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		B4FFE7A52854D8F40037A278 /* FeatureCardItem */ = {
+			isa = PBXGroup;
+			children = (
+				B4FFE7A62854D91A0037A278 /* FeatureCardItem.swift */,
+			);
+			path = FeatureCardItem;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +1573,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B40D3110280858B1002C1396 /* Build configuration list for PBXNativeTarget "RegisterACO" */;
 			buildPhases = (
+				FE9A1E1A98B1D9F9ED0843FA /* [CP] Check Pods Manifest.lock */,
 				B40D30F5280858AD002C1396 /* Sources */,
 				B40D30F6280858AD002C1396 /* Frameworks */,
 				B40D30F7280858AD002C1396 /* Resources */,
+				F6048F6BABFFDEC65B4ED7A8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -112,6 +1610,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = B40D30F0280858AD002C1396;
 			productRefGroup = B40D30FA280858AD002C1396 /* Products */;
@@ -129,42 +1628,264 @@
 			buildActionMask = 2147483647;
 			files = (
 				B40D310C280858B1002C1396 /* LaunchScreen.storyboard in Resources */,
+				B40D3164280AB00F002C1396 /* Localizable.strings in Resources */,
+				B40D315628098D0B002C1396 /* Inter-Black.ttf in Resources */,
+				B40D315B28098D0B002C1396 /* Inter-Bold.ttf in Resources */,
+				B40D315928098D0B002C1396 /* Inter-Thin.ttf in Resources */,
+				B40D315828098D0B002C1396 /* Inter-Light.ttf in Resources */,
+				B40D315328098D0B002C1396 /* Inter-ExtraLight.ttf in Resources */,
+				B40D315A28098D0B002C1396 /* Inter-ExtraBold.ttf in Resources */,
+				B40D315428098D0B002C1396 /* Inter-Regular.ttf in Resources */,
+				B40D315528098D0B002C1396 /* Inter-Medium.ttf in Resources */,
 				B40D3109280858B1002C1396 /* Assets.xcassets in Resources */,
-				B40D3104280858AE002C1396 /* Main.storyboard in Resources */,
+				B40D315728098D0B002C1396 /* Inter-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F6048F6BABFFDEC65B4ED7A8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RegisterACO/Pods-RegisterACO-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RegisterACO/Pods-RegisterACO-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RegisterACO/Pods-RegisterACO-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE9A1E1A98B1D9F9ED0843FA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RegisterACO-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B40D30F5280858AD002C1396 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4DA94E4287044C3000EFB60 /* PostiveHabitInfoViewDataManager.swift in Sources */,
+				9DBFA0C7290D7D30009593E8 /* HabitDetailInteractorProtocol.swift in Sources */,
+				B40D317F280AD27F002C1396 /* Login_RegisterDataManager.swift in Sources */,
+				B4C60A6E2826423C007DBE70 /* HomePresenterProtocol.swift in Sources */,
+				B4C60A6F2826423C007DBE70 /* HomeViewController.swift in Sources */,
+				B4C60A7F2827C290007DBE70 /* UITableViewCell+Extension.swift in Sources */,
+				9D08AC6A2907AE6C00D4454A /* BasicStepViewModel.swift in Sources */,
+				B4B531AF282030B900D49EE5 /* AppManager.swift in Sources */,
+				B40D3137280863FB002C1396 /* StarterPresenterProtocol.swift in Sources */,
+				B442C3BB2841258600A6781B /* ProfileViewController.swift in Sources */,
+				B4C60A6D2826423C007DBE70 /* HomeViewControllerProtocol.swift in Sources */,
+				9DBFA0AC290D03E5009593E8 /* RegisterACOAllDone.swift in Sources */,
+				9DBFA0C8290D7D30009593E8 /* HabitDetailPresenter.swift in Sources */,
+				B4DA94DB287044C3000EFB60 /* PostiveHabitInfoViewInteractorProtocol.swift in Sources */,
+				B40D314828098A2F002C1396 /* RegisterACOColor.swift in Sources */,
+				B4C60A81282832CB007DBE70 /* KeychainHelper.swift in Sources */,
+				B44AA764283A75A900383413 /* TabBarViewControllerDataManagerProtocol.swift in Sources */,
+				B442C3D3284264F500A6781B /* AlertViewController.swift in Sources */,
+				B44386F62815373F00ADACC5 /* RegisterFromViewControllerProtocol.swift in Sources */,
+				B40D317B280AD27F002C1396 /* Login_RegisterBuilder.swift in Sources */,
+				B40D317C280AD27F002C1396 /* Login_RegisterInteractor.swift in Sources */,
+				B4DA94E2287044C3000EFB60 /* PostiveHabitInfoViewDataManagerProtocol.swift in Sources */,
+				9DBFA0E8290F9C8E009593E8 /* HabitListPresenterProtocol.swift in Sources */,
+				B44386F42815373F00ADACC5 /* RegisterFromInteractorProtocol.swift in Sources */,
+				9D039EDC28F71B7A000FC5C9 /* HabitStepInteractorProtocol.swift in Sources */,
+				B40D3136280863FB002C1396 /* StarterViewControllerProtocol.swift in Sources */,
+				9DF2254F290B98F90045D026 /* DtoPositiveHabit.swift in Sources */,
+				B4DA94E1287044C3000EFB60 /* PostiveHabitInfoViewInteractor.swift in Sources */,
+				B40D3188280AD5F5002C1396 /* RegisterAcoNavigationController.swift in Sources */,
+				9DBFA0B0290D756B009593E8 /* RegisterAllDoneViewOutput.swift in Sources */,
+				B4B531AA281ED18000D49EE5 /* Publisher+Extension.swift in Sources */,
+				B40D3145280961BC002C1396 /* RegisterACOButton.swift in Sources */,
+				B40D317D280AD27F002C1396 /* Login_RegisterDataManagerProtocol.swift in Sources */,
+				B4832EEE28322DAF0024A950 /* LoginOutput.swift in Sources */,
+				9DBFA0CE290D7D30009593E8 /* HabitDetailDataManagerProtocol.swift in Sources */,
+				9DBFA0CD290D7D30009593E8 /* HabitDetailInteractor.swift in Sources */,
+				B442C3B92841258600A6781B /* ProfileViewControllerProtocol.swift in Sources */,
+				9D1BCF1928FFC7BE002D0A73 /* BasicStepControllerHelper.swift in Sources */,
+				B40D313B280863FB002C1396 /* StarterDataManagerProtocol.swift in Sources */,
+				9DBFA0F5290F9E24009593E8 /* HabitListCoordinator.swift in Sources */,
+				B442C3BC2841258600A6781B /* ProfileBuilder.swift in Sources */,
+				B4FFE7AB2855DA080037A278 /* UIViewController+extensions.swift in Sources */,
+				B40D315D28098E7A002C1396 /* RegisterACOFont.swift in Sources */,
+				B4832EE628322DAF0024A950 /* LoginInteractorProtocol.swift in Sources */,
+				B4832F282838C1A80024A950 /* HTTPHeadersHelper.swift in Sources */,
+				B44AA761283A75A900383413 /* TabBarViewControllerViewController.swift in Sources */,
+				B4C60A6B2826423C007DBE70 /* HomeInteractorProtocol.swift in Sources */,
+				B44386FC2815373F00ADACC5 /* RegisterFromOutput.swift in Sources */,
+				9DBFA0E9290F9C8E009593E8 /* HabitListViewController.swift in Sources */,
+				B40D313A280863FB002C1396 /* StarterInteractor.swift in Sources */,
+				9DBFA0EC290F9C8E009593E8 /* HabitListDataManagerProtocol.swift in Sources */,
+				B442C3B72841258600A6781B /* ProfileInteractorProtocol.swift in Sources */,
+				B4832EED28322DAF0024A950 /* LoginDataManagerProtocol.swift in Sources */,
+				9D1BCF1628FFBDE5002D0A73 /* BasicDetailViewController.swift in Sources */,
+				9DBFA0CF290D7D30009593E8 /* HabitDetailOutput.swift in Sources */,
+				9DBFA0E6290F9C8E009593E8 /* HabitListPresenter.swift in Sources */,
+				B4DA94DF287044C3000EFB60 /* PostiveHabitInfoViewViewController.swift in Sources */,
+				B44AA75E283A75A900383413 /* TabBarViewControllerPresenter.swift in Sources */,
+				B4DA94DE287044C3000EFB60 /* PostiveHabitInfoViewPresenterProtocol.swift in Sources */,
+				B44386F82815373F00ADACC5 /* RegisterFromViewController.swift in Sources */,
+				B4DA94E0287044C3000EFB60 /* PostiveHabitInfoViewBuilder.swift in Sources */,
+				B44386FD2815373F00ADACC5 /* RegisterFromDataManager.swift in Sources */,
+				9DBFA0CB290D7D30009593E8 /* HabitDetailViewController.swift in Sources */,
+				9D039EE328F71B7A000FC5C9 /* HabitStepDataManagerProtocol.swift in Sources */,
+				9DBFA0C9290D7D30009593E8 /* HabitDetailViewControllerProtocol.swift in Sources */,
+				B4832EEF28322DAF0024A950 /* LoginDataManager.swift in Sources */,
+				B44AA762283A75A900383413 /* TabBarViewControllerBuilder.swift in Sources */,
+				B442C3B82841258600A6781B /* ProfilePresenter.swift in Sources */,
+				9D039EDE28F71B7A000FC5C9 /* HabitStepViewControllerProtocol.swift in Sources */,
+				B40D3138280863FB002C1396 /* StarterViewController.swift in Sources */,
+				B40D3139280863FB002C1396 /* StarterBuilder.swift in Sources */,
+				9D039EE428F71B7A000FC5C9 /* HabitStepOutput.swift in Sources */,
+				B442C3D928426EB900A6781B /* TabBarCoordinator.swift in Sources */,
+				9DBFA0EA290F9C8E009593E8 /* HabitListBuilder.swift in Sources */,
+				B4832EEA28322DAF0024A950 /* LoginViewController.swift in Sources */,
+				B442C3D7284269AF00A6781B /* ProfileCoordinator.swift in Sources */,
+				B4C60A5F282572E0007DBE70 /* HomeCoordinator.swift in Sources */,
+				9DBFA0E5290F9C8E009593E8 /* HabitListInteractorProtocol.swift in Sources */,
+				B4B531AD28202FFE00D49EE5 /* DtoUser.swift in Sources */,
+				9DBFA0CC290D7D30009593E8 /* HabitDetailBuilder.swift in Sources */,
 				B40D3107280858AE002C1396 /* RegisterACO.xcdatamodeld in Sources */,
-				B40D3101280858AE002C1396 /* ViewController.swift in Sources */,
+				B442C3CB2841FCE200A6781B /* ProfileTableViewCell.swift in Sources */,
+				9D039EE028F71B7A000FC5C9 /* HabitStepViewController.swift in Sources */,
+				B4C60A7D2827A8BF007DBE70 /* HomeListUserTableViewCell.swift in Sources */,
+				B4832EF6283231010024A950 /* LoginViewModel.swift in Sources */,
+				B40D312028085A54002C1396 /* Builder.swift in Sources */,
+				B4832EE928322DAF0024A950 /* LoginPresenterProtocol.swift in Sources */,
+				B4832F2F28392A220024A950 /* MemoryCacheManager.swift in Sources */,
+				B428E18B28436EBE006D38AD /* AlertViewModel.swift in Sources */,
+				9D039EDF28F71B7A000FC5C9 /* HabitStepPresenterProtocol.swift in Sources */,
+				B44AA75D283A75A900383413 /* TabBarViewControllerInteractorProtocol.swift in Sources */,
+				B40D3179280AD27F002C1396 /* Login_RegisterPresenterProtocol.swift in Sources */,
+				B442C3BF2841258600A6781B /* ProfileOutput.swift in Sources */,
+				B4832EE728322DAF0024A950 /* LoginPresenter.swift in Sources */,
+				9D039EDD28F71B7A000FC5C9 /* HabitStepPresenter.swift in Sources */,
+				9D6042DF28F92FAA00211A9E /* RegisterACOTextArea.swift in Sources */,
+				9DBFA0AE290D7508009593E8 /* RegisterAllDoneViewModel.swift in Sources */,
+				B44386F92815373F00ADACC5 /* RegisterFromBuilder.swift in Sources */,
+				9D039EE228F71B7A000FC5C9 /* HabitStepInteractor.swift in Sources */,
+				9DBFA0EB290F9C8E009593E8 /* HabitListInteractor.swift in Sources */,
+				B40D317E280AD27F002C1396 /* Login_RegisterOutput.swift in Sources */,
+				B40D317A280AD27F002C1396 /* Login_RegisterViewController.swift in Sources */,
+				9DBFA0ED290F9C8E009593E8 /* HabitListOutput.swift in Sources */,
+				9D6FBFF329057EC200C38B35 /* RegisterACOProgressBar.swift in Sources */,
+				B44386FB2815373F00ADACC5 /* RegisterFromDataManagerProtocol.swift in Sources */,
 				B40D30FD280858AE002C1396 /* AppDelegate.swift in Sources */,
+				B4C60A712826423C007DBE70 /* HomeInteractor.swift in Sources */,
+				9DBFA0D7290E66F3009593E8 /* UITableView+Extension.swift in Sources */,
+				B44AA760283A75A900383413 /* TabBarViewControllerPresenterProtocol.swift in Sources */,
+				B44AA75F283A75A900383413 /* TabBarViewControllerViewControllerProtocol.swift in Sources */,
+				B40D311728085A41002C1396 /* ServiceProxy.swift in Sources */,
+				9DBFA0B4290D75AB009593E8 /* RegisterAllDonePresenterProtocol.swift in Sources */,
+				B4832EEC28322DAF0024A950 /* LoginInteractor.swift in Sources */,
+				9DBFA0CA290D7D30009593E8 /* HabitDetailPresenterProtocol.swift in Sources */,
+				B442C3BE2841258600A6781B /* ProfileDataManagerProtocol.swift in Sources */,
+				B40D313C280863FB002C1396 /* StarterOutput.swift in Sources */,
+				B4DA94DC287044C3000EFB60 /* PostiveHabitInfoViewPresenter.swift in Sources */,
+				9DBFA0D0290D7D30009593E8 /* HabitDetailDataManager.swift in Sources */,
+				B4C60A742826423C007DBE70 /* HomeDataManager.swift in Sources */,
+				9DBFA0B9290D75C3009593E8 /* RegisterAllDoneBuilder.swift in Sources */,
+				9DBFA0BB290D761E009593E8 /* RegisterAllDoneViewPresenter.swift in Sources */,
+				B44AA765283A75A900383413 /* TabBarViewControllerOutput.swift in Sources */,
+				B40D3176280AD27F002C1396 /* Login_RegisterInteractorProtocol.swift in Sources */,
+				9D039EE528F71B7A000FC5C9 /* HabitStepDataManager.swift in Sources */,
+				B40D312428085A54002C1396 /* Coordinator.swift in Sources */,
+				B40D3178280AD27F002C1396 /* Login_RegisterViewControllerProtocol.swift in Sources */,
+				B4DA94DD287044C3000EFB60 /* PostiveHabitInfoViewViewControllerProtocol.swift in Sources */,
+				B44386F72815373F00ADACC5 /* RegisterFromPresenterProtocol.swift in Sources */,
+				B4438704281556DB00ADACC5 /* RegisterFormViewModel.swift in Sources */,
+				B428E1902843BA5F006D38AD /* UIApplication+extension.swift in Sources */,
+				B49384832873480C00C14FAC /* RegisterACOSwitchButton.swift in Sources */,
+				B40D311828085A41002C1396 /* Endpoint.swift in Sources */,
+				B4832EE828322DAF0024A950 /* LoginViewControllerProtocol.swift in Sources */,
+				B44386FA2815373F00ADACC5 /* RegisterFromInteractor.swift in Sources */,
+				B40D3134280863FB002C1396 /* StarterInteractorProtocol.swift in Sources */,
+				9D2355A6291F961900322047 /* RegisterACONoDataView.swift in Sources */,
+				B4B531B12820315800D49EE5 /* Encodable+extensions.swift in Sources */,
+				B442C3BD2841258600A6781B /* ProfileInteractor.swift in Sources */,
+				B4832F2B283925B10024A950 /* Cache.swift in Sources */,
+				B442C3C02841258600A6781B /* ProfileDataManager.swift in Sources */,
+				B4FFE7A72854D91A0037A278 /* FeatureCardItem.swift in Sources */,
+				9D08AC682907A75400D4454A /* BasicStepViewControllerStepDTO.swift in Sources */,
+				B40D313D280863FB002C1396 /* StarterDataManager.swift in Sources */,
+				B4C60A722826423C007DBE70 /* HomeDataManagerProtocol.swift in Sources */,
+				B4FFE7A92855CF670037A278 /* UIImageView+Extensions.swift in Sources */,
+				9DC807112917A4C6009692EE /* HabitListView.swift in Sources */,
+				B4DA94E3287044C3000EFB60 /* PostiveHabitInfoViewOutput.swift in Sources */,
+				B4832F2D28392A090024A950 /* CacheEntry.swift in Sources */,
+				B44AA766283A75A900383413 /* TabBarViewControllerDataManager.swift in Sources */,
+				B40D3177280AD27F002C1396 /* Login_RegisterPresenter.swift in Sources */,
+				9DBFA0B2290D759B009593E8 /* RegisterAllDoneViewProtocol.swift in Sources */,
+				B44387072815917500ADACC5 /* RegisterACOTextField.swift in Sources */,
+				B40D312128085A54002C1396 /* Loader.swift in Sources */,
+				B40D312828085A62002C1396 /* MainCoordinator.swift in Sources */,
+				9D039EE128F71B7A000FC5C9 /* HabitStepBuilder.swift in Sources */,
+				9DBFA0EE290F9C8E009593E8 /* HabitListDataManager.swift in Sources */,
+				B4832EF9283232490024A950 /* Constants.swift in Sources */,
+				B40D3169280AB173002C1396 /* LabelsProtocol.swift in Sources */,
+				B4C60A702826423C007DBE70 /* HomeBuilder.swift in Sources */,
 				B40D30FF280858AE002C1396 /* SceneDelegate.swift in Sources */,
+				B442C3CF2842055300A6781B /* RegisterUserInfoHeader.swift in Sources */,
+				B44386F52815373F00ADACC5 /* RegisterFromPresenter.swift in Sources */,
+				B4C60A732826423C007DBE70 /* HomeOutput.swift in Sources */,
+				B4832EEB28322DAF0024A950 /* LoginBuilder.swift in Sources */,
+				B4C60A6C2826423C007DBE70 /* HomePresenter.swift in Sources */,
+				B44AA763283A75A900383413 /* TabBarViewControllerInteractor.swift in Sources */,
+				B40D31602809C465002C1396 /* UIView+extensions.swift in Sources */,
+				9DBFA0E7290F9C8E009593E8 /* HabitListViewControllerProtocol.swift in Sources */,
+				B40D3135280863FB002C1396 /* StarterPresenter.swift in Sources */,
+				B4DA94CE28704179000EFB60 /* PositiveHabitCoordinator.swift in Sources */,
+				B442C3BA2841258600A6781B /* ProfilePresenterProtocol.swift in Sources */,
+				9DC807132917AAAC009692EE /* HabitListViewTableViewCell.swift in Sources */,
+				9D6FBFF02904467900C38B35 /* ModalAlerViewControllerProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B40D3102280858AE002C1396 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B40D3103280858AE002C1396 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B40D310A280858B1002C1396 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				B40D310B280858B1002C1396 /* Base */,
+				B40D3161280AAFC1002C1396 /* es */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		B40D3166280AB00F002C1396 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B40D3165280AB00F002C1396 /* en */,
+				B40D3167280AB011002C1396 /* es */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -174,6 +1895,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -221,7 +1943,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -235,6 +1957,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -276,7 +1999,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -288,6 +2011,7 @@
 		};
 		B40D3111280858B1002C1396 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40A3A5F11283A45636049278 /* Pods-RegisterACO.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -298,7 +2022,7 @@
 				INFOPLIST_FILE = RegisterACO/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -317,6 +2041,7 @@
 		};
 		B40D3112280858B1002C1396 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13133E5C59BD45F445B7E812 /* Pods-RegisterACO.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -327,7 +2052,7 @@
 				INFOPLIST_FILE = RegisterACO/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

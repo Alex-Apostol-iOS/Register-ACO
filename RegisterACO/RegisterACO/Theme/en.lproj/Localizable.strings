@@ -1,0 +1,99 @@
+/* 
+  Localizable.strings
+  RegisterACO
+
+  Created by Alex Apostol on 16/4/22.
+  
+*/
+
+"lng.distribuitor" = "Distributor";
+"lng.seller" = "Seller";
+"lng.back" = "Back";
+"lng.login" = "Login";
+"lng.register" = "Register";
+"lng.registerFormNavTitle" = "Register form";
+"lng.commonName" = "Name";
+"lng.commonSurname" = "Surname";
+"lng.commonSecondSurname" = "Second Surname";
+"lng.commonEmail" = "Email";
+"lng.commonPhone" = "Phone";
+"lng.commonPassword" = "Password";
+"lng.commonPasswordConfirm" = "Confirm Password";
+"lng.commonSubmit" = "Submit";
+"lng.common.passwordFieldText" = "Passord must containt special characters, uppercased, and numbers";
+"lng.common.home" = "Home";
+"lng.common.profile" = "Profile";
+"lng.common.username" = "Username";
+"lng.common.logout" = "Logout";
+"lng.common.yes" = "Yes";
+"lng.common.no" = "No";
+"lng.logout.subtitle" = "Are you sure you wanna logout?";
+"lng.logout.homeFeatureCard.positiveHabit.subtitle" = "Start changing your life";
+"lng.logout.homeFeatureCard.positiveHabit.title" = "Create new habits";
+"lng.logout.homeFeatureCard.negativeHabit.subtitle" = "Remove all that is harm to you";
+"lng.logout.homeFeatureCard.negativeHabit.title" = "Remove harming habits";
+"lng.whatIsAHabit.textView.text" = "A habit is a routine or behavior that is practiced regularly and, in many cases,
+automatic way. Habits that at first may seem small and insignificant, will be transformed into extraordinary results if are maintained for several years";
+"lng.whatIsAHabit.label.text" = "What is a habit?";
+"lng.howHabitsAffectYourLife.label.text" = "How habits affect your life";
+"lng.howHabitsAffectYourLife.content.label.text" = "A small change in your daily habits can lead your life to a completely different destination. It doesn't matter how successful you are right now. What matters is determining if your habits are leading you to the path of success. If you are a millionaire but spend more than you earn each month, then you are on a bad path. If your consumption habits do not change, you will not end well. On the other hand, if you're broke but manage to save a little each month, then you're on a path to financial freedom, even if it takes longer than you'd like to do so.
+Your results are the reactive indicators of your habits. The amount of money you have is a reactive indicator of your financial habits. Your current weight is an indicator of your eating habits. Your knowledge is a reactive indicator of your study habits. The appearance of your house is a reactive indicator of your habits of order and cleanliness. In the end you get what you repeat";
+"lng.common.start" = "Start";
+"lng.habit.how.habit.work" = "How habits work";
+"lng.howHabitsWork.content.label.text" = "Habits often don't seem to cause any change until a critical point, a threshold, is reached. One always expects to make progress in a linear and bottom-up manner, which is why it is frustrating when for periods of days, weeks and even months the changes do not seem to work and one has the feeling of staying in the same place. It is the hallmark of any cumulative process: the most powerful results take time and are delayed. This is one of the reasons why it is so difficult to develop habits that last. For habits to actually create change, they must persist long enough to break through a plateau where no perceptible change occurs. I call it a plateau of latent potential. When you finally get past the plateau of latent potential, people consider it an overnight success. The common people only perceive the most striking events and do not stop to see all the work and effort behind them. But you know that all the work you've put in for a long time, when it seemed like you weren't making any progress, is what really made the change possible.";
+"lng.obviousHabit.nav.title" = "Fill out the Habit Log";
+"lng.obviousHabit.title" = "How can I make it obvious?";
+"lng.obviousHabit.description" = "Use the habit accumulation strategy: “After [CURRENT HABIT] I will do [NEW HABIT].";
+"lng.obviousHabit.textArea.placeHolder" = "Write the current habit";
+"lng.obviousHabit.textArea.NewHabit.placeHolder" = "Write the new habit";
+"lng.common.continue" = "Continue";
+"lng.common.seeExamples" = "See examples";
+"lng.obviousHabit.example1" = "Meditation. After I pour my coffee each morning, I go to meditate for a minute.";
+"lng.obviousHabit.example2" = "Exercise. After taking off my work shoes, I will immediately put on my sneakers.
+To do exercise.";
+"lng.obviousHabit.example3" = "Gratitude. After I sit down to dinner, I'll mention something that happened that day and what I'm
+very thankful";
+"lng.obviousHabit.example4" = "Marriage. After I go to bed at night, I will give my wife a kiss.";
+"lng.obviousHabit.example5"  = "Security. After I put on my running shoes, I'll text a friend or
+familiar to let me know where I am going to run and how long it will take to return.";
+"lng.attractHabit.nav.title" = "Make it attractive";
+"lng.attractHabit.title" = "How to make a habit irresistible";
+"lng.attractHabit.description" = "After [HABIT I NEED], I will do [HABIT I WANT]";
+"lng.attractHabit.example1" = "If you want to read the news, but need to express more gratitude:
+1. After I have my coffee in the morning, I will mention one thing that happened the day before and
+for which I am very grateful (what I need).
+2. After giving thanks for what happened, I will read the newspapers (what I want)";
+
+"lng.attractHabit.example2" = "If you want to watch sports, but need to make sales calls:
+1. After I get back from lunch, I'll call three potential clients (what I need).
+2. After calling three potential clients, I will see what is broadcast on the sports channel
+(what I want).";
+
+"lng.attractHabit.example3" = "If you want to review your Facebook account, but need more exercise:
+1. After I get my phone out, I'll do ten burpees (what I need).
+2. After doing ten burpees, I'll check my Facebook account (which I want).";
+
+"lng.attractHabit.example4" = "The hope is that you'll eventually feel like calling three clients or doing ten burpees, because you know that when you're done, you'll be able to watch sports shows you like or check your Facebook account. Doing what you need to do means that you will have the opportunity to do what you love.";
+
+"lng.attractHabit.firstTextField.placeHolder" = "Write the habit you need";
+"lng.attractHabit.secondTextField.placeHolder" = "Write the habit you want";
+"lng.alert.flow.exit.title" = "Do you want to cancel the process?";
+"lng.alert.flow.exit.subtitle" = "All changes will be lost";
+"lng.makeItEasy.nav.title" = "Make it simple";
+"lng.makeItEasy.nav.title" = "Go slowly, but don't back down";
+"lng.makeItEasy.example1" = "Although it would be logical to start with the simplest and smallest, it is common to try to start big. When you dream of making a change, you are inevitably overwhelmed by emotion and end up trying to do too much in too little time. The best way to counteract this tendency is to use the two-minute rule,5 which states: “When you start a new habit, it shouldn't take more than two minutes to start.";
+"lng.makeItEasy.example2" = "Do you want to draw more? Put your pencils, pens, notebooks, and other drawing tools on your desk, where they are easily accessible.";
+"lng.makeItEasy.example3" = "Do you want to exercise? Prepare appropriate clothing, shoes, gym bag, and water bottle in advance";
+"lng.makeItEasy.example4" = "Do you want to improve your diet? On weekends, peel and chop mounds of fruits and vegetables and place them in plastic containers in the refrigerator. This will allow you to have easy access to healthy, ready-to-eat options throughout the week.";
+"lng.makeItEasy.description" = "Reduces tension and resistance. Reduce the number of steps between you and your good habits. \n Set the scene to make your future actions easier.";
+"lng.makeItEasy.firstTextField.placeHolder" = "How are you going to reduce the tension between you and your habit?";
+"lng.makeItEasy.secondTextField.placeHolder" = "How are you going to prepare the environment to make this habit easy?";
+"lng.common.confirm" = "Confirm";
+"lng.common.see.resume" = "See summary";
+"lng.common.positiveHabit.allDone.title" = "Congratulations, a small change in your daily habits can lead your life to a completely different destination.";
+"lng.habitResume.title" = "Summary";
+"lng.habitList.tab.title" = "Your habits";
+"lng.common.positiveHabit" = "Hábito positivo";
+"lng.delete.habit" = "Delete Habit";
+"lng.noHabit.infoLabel.text" = "You don't have any habit";
+"lng.delete.habit.info.subtitle" = "Are you sure you want to delete this habit? It will be lost forever!";
