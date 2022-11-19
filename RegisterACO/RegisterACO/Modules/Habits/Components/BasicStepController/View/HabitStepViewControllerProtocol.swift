@@ -8,6 +8,6 @@
 
 import UIKit
 
-protocol HabitStepViewProtocol: ModalAlerViewControllerProtocol {
+protocol HabitStepViewProtocol: ModalAlerViewControllerProtocol, ShowToastAlert {
     func goBack()
 }

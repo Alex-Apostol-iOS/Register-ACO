@@ -95,4 +95,5 @@ por la cual estoy muy agradecido (lo que necesito).
 "lng.delete.habit" = "Borrar Hábito";
 "lng.noHabit.infoLabel.text" = "No tienes ningún hábito creado";
 "lng.delete.habit.info.subtitle" = "Seguro que quieres eliminar este hábito? Se perderá para siempre!";
+"lng.common.error.toast.message" = "Ha ocurrido un error por favor intentalo más tarde";
 

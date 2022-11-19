@@ -56,6 +56,8 @@
 		9DBFA0F5290F9E24009593E8 /* HabitListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBFA0F4290F9E24009593E8 /* HabitListCoordinator.swift */; };
 		9DC807112917A4C6009692EE /* HabitListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC807102917A4C6009692EE /* HabitListView.swift */; };
 		9DC807132917AAAC009692EE /* HabitListViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC807122917AAAC009692EE /* HabitListViewTableViewCell.swift */; };
+		9DD8FC292928D9FB005890AF /* ToastAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD8FC282928D9FB005890AF /* ToastAlert.swift */; };
+		9DD8FC2B2928DA54005890AF /* UIViewController+protocolHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD8FC2A2928DA54005890AF /* UIViewController+protocolHelpers.swift */; };
 		9DF2254F290B98F90045D026 /* DtoPositiveHabit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF2254E290B98F90045D026 /* DtoPositiveHabit.swift */; };
 		B40D30FD280858AE002C1396 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D30FC280858AE002C1396 /* AppDelegate.swift */; };
 		B40D30FF280858AE002C1396 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D30FE280858AE002C1396 /* SceneDelegate.swift */; };
@@ -248,6 +250,8 @@
 		9DBFA0F4290F9E24009593E8 /* HabitListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListCoordinator.swift; sourceTree = "<group>"; };
 		9DC807102917A4C6009692EE /* HabitListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListView.swift; sourceTree = "<group>"; };
 		9DC807122917AAAC009692EE /* HabitListViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListViewTableViewCell.swift; sourceTree = "<group>"; };
+		9DD8FC282928D9FB005890AF /* ToastAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastAlert.swift; sourceTree = "<group>"; };
+		9DD8FC2A2928DA54005890AF /* UIViewController+protocolHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+protocolHelpers.swift"; sourceTree = "<group>"; };
 		9DF2254E290B98F90045D026 /* DtoPositiveHabit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DtoPositiveHabit.swift; sourceTree = "<group>"; };
 		B40D30F9280858AD002C1396 /* RegisterACO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RegisterACO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B40D30FC280858AE002C1396 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -722,6 +726,22 @@
 			path = HabitListView;
 			sourceTree = "<group>";
 		};
+		9DD8FC262928D9E4005890AF /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				9DD8FC272928D9E9005890AF /* ToastAlert */,
+			);
+			path = Alerts;
+			sourceTree = "<group>";
+		};
+		9DD8FC272928D9E9005890AF /* ToastAlert */ = {
+			isa = PBXGroup;
+			children = (
+				9DD8FC282928D9FB005890AF /* ToastAlert.swift */,
+			);
+			path = ToastAlert;
+			sourceTree = "<group>";
+		};
 		ADDD343129DAE07932E74B84 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -873,6 +893,7 @@
 		B40D31432809619C002C1396 /* Componenets */ = {
 			isa = PBXGroup;
 			children = (
+				9DD8FC262928D9E4005890AF /* Alerts */,
 				9D2355A3291F960200322047 /* Views */,
 				9D1BCF1328FFBC82002D0A73 /* ViewControllers */,
 				9D6042DD28F92F5600211A9E /* TextArea */,
@@ -1017,6 +1038,7 @@
 				B4FFE7A82855CF670037A278 /* UIImageView+Extensions.swift */,
 				B4FFE7AA2855DA080037A278 /* UIViewController+extensions.swift */,
 				9DBFA0D6290E66F3009593E8 /* UITableView+Extension.swift */,
+				9DD8FC2A2928DA54005890AF /* UIViewController+protocolHelpers.swift */,
 			);
 			path = UIHelpers;
 			sourceTree = "<group>";
@@ -1737,6 +1759,7 @@
 				B4832EE628322DAF0024A950 /* LoginInteractorProtocol.swift in Sources */,
 				B4832F282838C1A80024A950 /* HTTPHeadersHelper.swift in Sources */,
 				B44AA761283A75A900383413 /* TabBarViewControllerViewController.swift in Sources */,
+				9DD8FC292928D9FB005890AF /* ToastAlert.swift in Sources */,
 				B4C60A6B2826423C007DBE70 /* HomeInteractorProtocol.swift in Sources */,
 				B44386FC2815373F00ADACC5 /* RegisterFromOutput.swift in Sources */,
 				9DBFA0E9290F9C8E009593E8 /* HabitListViewController.swift in Sources */,
@@ -1775,6 +1798,7 @@
 				B442C3CB2841FCE200A6781B /* ProfileTableViewCell.swift in Sources */,
 				9D039EE028F71B7A000FC5C9 /* HabitStepViewController.swift in Sources */,
 				B4C60A7D2827A8BF007DBE70 /* HomeListUserTableViewCell.swift in Sources */,
+				9DD8FC2B2928DA54005890AF /* UIViewController+protocolHelpers.swift in Sources */,
 				B4832EF6283231010024A950 /* LoginViewModel.swift in Sources */,
 				B40D312028085A54002C1396 /* Builder.swift in Sources */,
 				B4832EE928322DAF0024A950 /* LoginPresenterProtocol.swift in Sources */,

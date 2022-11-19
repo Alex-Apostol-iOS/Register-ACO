@@ -28,19 +28,19 @@ class RegisterFormViewModel {
     private let spanishphoneStringPredicate = NSPredicate(format: "SELF MATCHES %@", Constants.spanishphoneStringPredicate.rawValue)
     
     private var validateFirstNameAndEmail: AnyPublisher<Bool, Never> {
-        return Publishers.CombineLatest($email, $firstName)
-            .map { email, firstName in
-                return self.emailPredicate.evaluate(with: email) && self.noEmptyStringPredicate.evaluate(with: firstName)
+        return Publishers.CombineLatest3($email, $firstName, $surname)
+            .map { email, firstName , surname in
+                return self.emailPredicate.evaluate(with: email) && self.noEmptyStringPredicate.evaluate(with: firstName)  && self.noEmptyStringPredicate.evaluate(with: surname)
             }.eraseToAnyPublisher()
     }
     
-   private var validateFirstsSurnameAndPhone: AnyPublisher<Bool, Never> {
-        return Publishers.CombineLatest($surname, $phone)
-            .map { surname, phone in
-                return  self.noEmptyStringPredicate.evaluate(with: surname) && self.spanishphoneStringPredicate.evaluate(with: phone)
-            }.eraseToAnyPublisher()
-    }
-    
+//   private var validateFirstsSurnameAndPhone: AnyPublisher<Bool, Never> {
+//        return Publishers.CombineLatest($surname)
+//            .map { surname, phone in
+//                return  self.noEmptyStringPredicate.evaluate(with: surname))
+//            }.eraseToAnyPublisher()
+//    }
+//
     private var validatePasswords: AnyPublisher<Bool, Never> {
         return Publishers.CombineLatest($password, $ConfirmedPassword)
             .map { password, ConfirmedPassword in
@@ -49,10 +49,10 @@ class RegisterFormViewModel {
     }
     
     var validateCredentaials: AnyPublisher<Bool, Never> {
-        return Publishers.CombineLatest3(validateFirstNameAndEmail, validateFirstsSurnameAndPhone, validatePasswords)
+        return Publishers.CombineLatest(validateFirstNameAndEmail, validatePasswords)
             .receive(on: RunLoop.main)
-            .map { isFirstNameAndEmail, isFirstNameAndPasswordValid, isPasswordsValid in
-                return isFirstNameAndEmail && isFirstNameAndPasswordValid && isPasswordsValid
+            .map { isFirstNameAndEmail, isPasswordsValid in
+                return isFirstNameAndEmail && isPasswordsValid
             }.eraseToAnyPublisher()
     }
     

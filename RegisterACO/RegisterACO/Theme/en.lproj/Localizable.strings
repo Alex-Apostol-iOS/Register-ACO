@@ -97,3 +97,4 @@ for which I am very grateful (what I need).
 "lng.delete.habit" = "Delete Habit";
 "lng.noHabit.infoLabel.text" = "You don't have any habit";
 "lng.delete.habit.info.subtitle" = "Are you sure you want to delete this habit? It will be lost forever!";
+"lng.common.error.toast.message" = "An error has occurred please try again later";

@@ -8,6 +8,6 @@
 
 import UIKit
 
-protocol HabitListViewProtocol: AnyObject, Loader {
+protocol HabitListViewProtocol: Loader, ShowToastAlert {
     func layout(with content: [DtoPostiveHabit])
 }

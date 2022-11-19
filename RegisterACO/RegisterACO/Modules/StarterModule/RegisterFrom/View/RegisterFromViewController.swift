@@ -72,16 +72,16 @@ class RegisterFromViewController: RegisterAcoNavigationController {
         return textField
     }()
     
-    private lazy var phoneTextField: RegisterACOTextField = {
-        let textField = RegisterACOTextField(frame: .zero)
-        textField.configure(placeHolder: presenter.getlabelForKey(key: "lng.commonPhone"), type: .phone)
-       
-        textField.publisher
-            .sink { text in
-                self.model.phone = text
-            }.store(in: &cancellableSet)
-        return textField
-    }()
+//    private lazy var phoneTextField: RegisterACOTextField = {
+//        let textField = RegisterACOTextField(frame: .zero)
+//        textField.configure(placeHolder: presenter.getlabelForKey(key: "lng.commonPhone"), type: .phone)
+//
+//        textField.publisher
+//            .sink { text in
+//                self.model.phone = text
+//            }.store(in: &cancellableSet)
+//        return textField
+//    }()
     
     private lazy var passwordConfirmTextField: RegisterACOTextField = {
         let textField = RegisterACOTextField(frame: .zero)
@@ -119,7 +119,7 @@ class RegisterFromViewController: RegisterAcoNavigationController {
     private lazy var mainStackView: UIStackView = {
         let view = FreeSpaceView()
         view.heightAnchor.constraint(equalToConstant: 40).isActive = true
-       let stackView = UIStackView(arrangedSubviews: [nameTextField, surnameTextField, secondSurnameTextField, emailTextField, phoneTextField,passwordTextField, passwordConfirmTextField, FreeSpaceView(), submitButton, view])
+       let stackView = UIStackView(arrangedSubviews: [nameTextField, surnameTextField, secondSurnameTextField, emailTextField,passwordTextField, passwordConfirmTextField, FreeSpaceView(), submitButton, view])
         stackView.distribution  = .fill
         stackView.alignment = .fill
         stackView.axis = .vertical

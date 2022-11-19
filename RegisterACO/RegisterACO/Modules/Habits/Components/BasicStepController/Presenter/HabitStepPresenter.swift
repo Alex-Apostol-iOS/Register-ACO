@@ -57,6 +57,7 @@ extension HabitStepPresenter: HabitStepPresenterProtocol {
                     self?.coordinatorOutput(.goToAllDone(habit: habit))
                 case .failure(let failure):
                     print(failure)
+                    self?.view?.showGenericErrorToastMessage()
                 }
             }
         }

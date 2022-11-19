@@ -56,7 +56,7 @@ class MainCoordinator: Coordinator {
     private func next(_ nextState: MainCoordinatorState) -> MainCoordinatorState {
         switch nextState {
         case .initial:
-            return .willShowLogin
+            return .willShowLoginRegisterFlow(type: .distribuitor)
         case .didShowLogin(type: let type):
             return .willShowLoginRegisterFlow(type: type)
         case .didShowLoginRegisterFlow(ouput: let ouput):

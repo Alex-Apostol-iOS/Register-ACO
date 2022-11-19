@@ -42,8 +42,8 @@ class HabitListPresenter {
             switch result {
             case .success(_):
                 self?.coordinatorOutput(.dismissPresentedVC)
-            case .failure(let failure):
-                print(failure)
+            case .failure(_):
+                self?.view?.showGenericErrorToastMessage()
             }
         }
     }
@@ -94,8 +94,8 @@ extension HabitListPresenter: HabitListPresenterProtocol {
             switch result {
             case .success(let postiveHabits):
                 self?.view?.layout(with: self?.sortHabitByDate(habits: postiveHabits) ?? [])
-            case .failure(let failure):
-                print(failure)
+            case .failure(_):
+                self?.view?.showGenericErrorToastMessage()
             }
         }
     }
