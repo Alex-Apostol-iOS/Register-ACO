@@ -13,12 +13,14 @@ enum RegisterACOFont {
     case bold14
     case bold16
     case bold18
+    case bold32
     
     case light10
     case light12
     case light14
     case light16
     case light18
+    case light20
     
     case medium10
     case medium12
@@ -56,6 +58,8 @@ extension UIFont {
             return UIFont(descriptor: UIFontDescriptor(name: "Inter-Bold", size: 16), size: 16.0)
         case .bold18:
             return UIFont(descriptor: UIFontDescriptor(name: "Inter-Bold", size: 18), size: 18.0)
+        case .bold32:
+            return UIFont(descriptor: UIFontDescriptor(name: "Inter-Bold", size: 32), size: 32.0)
         case .light10:
             return UIFont(descriptor: UIFontDescriptor(name: "Inter-Light", size: 10), size: 10.0)
         case .light12:
@@ -66,6 +70,8 @@ extension UIFont {
             return UIFont(descriptor: UIFontDescriptor(name: "Inter-Light", size: 16), size: 16.0)
         case .light18:
             return UIFont(descriptor: UIFontDescriptor(name: "Inter-Light", size: 18), size: 18.0)
+        case .light20:
+            return UIFont(descriptor: UIFontDescriptor(name: "Inter-Light", size: 20), size: 20.0)
         case .medium10:
             return UIFont(descriptor: UIFontDescriptor(name: "Inter-Medium", size: 10), size: 10.0)
         case .medium12:

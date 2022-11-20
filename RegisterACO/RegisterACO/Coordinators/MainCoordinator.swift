@@ -97,7 +97,7 @@ class MainCoordinator: Coordinator {
             }
         }.build()
         
-        self.navigator.pushViewController(vc, animated: true)
+        self.navigator.setViewControllers([vc], animated: true)
     }
     
     private func showRegisterForm() {

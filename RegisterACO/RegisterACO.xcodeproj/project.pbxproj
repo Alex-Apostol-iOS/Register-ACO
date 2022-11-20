@@ -58,6 +58,7 @@
 		9DC807132917AAAC009692EE /* HabitListViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC807122917AAAC009692EE /* HabitListViewTableViewCell.swift */; };
 		9DD8FC292928D9FB005890AF /* ToastAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD8FC282928D9FB005890AF /* ToastAlert.swift */; };
 		9DD8FC2B2928DA54005890AF /* UIViewController+protocolHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD8FC2A2928DA54005890AF /* UIViewController+protocolHelpers.swift */; };
+		9DD8FC2F292A2049005890AF /* StarCarrouselCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD8FC2E292A2049005890AF /* StarCarrouselCollectionViewCell.swift */; };
 		9DF2254F290B98F90045D026 /* DtoPositiveHabit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF2254E290B98F90045D026 /* DtoPositiveHabit.swift */; };
 		B40D30FD280858AE002C1396 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D30FC280858AE002C1396 /* AppDelegate.swift */; };
 		B40D30FF280858AE002C1396 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D30FE280858AE002C1396 /* SceneDelegate.swift */; };
@@ -252,6 +253,7 @@
 		9DC807122917AAAC009692EE /* HabitListViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListViewTableViewCell.swift; sourceTree = "<group>"; };
 		9DD8FC282928D9FB005890AF /* ToastAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastAlert.swift; sourceTree = "<group>"; };
 		9DD8FC2A2928DA54005890AF /* UIViewController+protocolHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+protocolHelpers.swift"; sourceTree = "<group>"; };
+		9DD8FC2E292A2049005890AF /* StarCarrouselCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarCarrouselCollectionViewCell.swift; sourceTree = "<group>"; };
 		9DF2254E290B98F90045D026 /* DtoPositiveHabit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DtoPositiveHabit.swift; sourceTree = "<group>"; };
 		B40D30F9280858AD002C1396 /* RegisterACO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RegisterACO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B40D30FC280858AE002C1396 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -742,6 +744,22 @@
 			path = ToastAlert;
 			sourceTree = "<group>";
 		};
+		9DD8FC2C292A200A005890AF /* ColletionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				9DD8FC2D292A201A005890AF /* StartCarrouselColllectionViewCell */,
+			);
+			path = ColletionViewCells;
+			sourceTree = "<group>";
+		};
+		9DD8FC2D292A201A005890AF /* StartCarrouselColllectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				9DD8FC2E292A2049005890AF /* StarCarrouselCollectionViewCell.swift */,
+			);
+			path = StartCarrouselColllectionViewCell;
+			sourceTree = "<group>";
+		};
 		ADDD343129DAE07932E74B84 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -893,6 +911,7 @@
 		B40D31432809619C002C1396 /* Componenets */ = {
 			isa = PBXGroup;
 			children = (
+				9DD8FC2C292A200A005890AF /* ColletionViewCells */,
 				9DD8FC262928D9E4005890AF /* Alerts */,
 				9D2355A3291F960200322047 /* Views */,
 				9D1BCF1328FFBC82002D0A73 /* ViewControllers */,
@@ -1826,6 +1845,7 @@
 				B44AA760283A75A900383413 /* TabBarViewControllerPresenterProtocol.swift in Sources */,
 				B44AA75F283A75A900383413 /* TabBarViewControllerViewControllerProtocol.swift in Sources */,
 				B40D311728085A41002C1396 /* ServiceProxy.swift in Sources */,
+				9DD8FC2F292A2049005890AF /* StarCarrouselCollectionViewCell.swift in Sources */,
 				9DBFA0B4290D75AB009593E8 /* RegisterAllDonePresenterProtocol.swift in Sources */,
 				B4832EEC28322DAF0024A950 /* LoginInteractor.swift in Sources */,
 				9DBFA0CA290D7D30009593E8 /* HabitDetailPresenterProtocol.swift in Sources */,
