@@ -98,3 +98,10 @@ for which I am very grateful (what I need).
 "lng.noHabit.infoLabel.text" = "You don't have any habit";
 "lng.delete.habit.info.subtitle" = "Are you sure you want to delete this habit? It will be lost forever!";
 "lng.common.error.toast.message" = "An error has occurred please try again later";
+"lng.carrousel.step1.title" = "Gain control over your habits";
+"lng.carrousel.step1.subTitle" = "Create a gradual evolution, a long series of small triumphs and modest advances";
+"lng.carrousel.step2.title" = "Learn how our habits influence";
+"lng.carrousel.step2.subTitle" = "Offering the right reward or punishment to a person can make that person act in a certain way.";
+"lng.carrousel.step3.title" = "Plan ahead";
+"lng.carrousel.step3.subTitle" = "Be proactive and anticipate adversity";
+

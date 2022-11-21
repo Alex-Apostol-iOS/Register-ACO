@@ -9,4 +9,5 @@
 import UIKit
 
 protocol Login_RegisterViewProtocol: AnyObject {
+    func darwCarrousel(with data: [StarCarrouselCollectionViewCellModel])
 }

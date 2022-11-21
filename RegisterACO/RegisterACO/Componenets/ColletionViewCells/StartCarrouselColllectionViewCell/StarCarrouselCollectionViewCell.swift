@@ -12,9 +12,9 @@ class StarCarrouselCollectionViewCell: UICollectionViewCell {
     
     private lazy var mainImage: UIImageView = {
         let view = UIImageView()
-        view.contentMode = .scaleAspectFill
-        view.heightAnchor.constraint(equalToConstant: 300).isActive = true
-        view.widthAnchor.constraint(equalToConstant: 300).isActive = true
+        view.contentMode = .scaleAspectFit
+        view.heightAnchor.constraint(equalToConstant: 250).isActive = true
+        view.widthAnchor.constraint(equalToConstant: 250).isActive = true
         return view
     }()
     
@@ -23,6 +23,7 @@ class StarCarrouselCollectionViewCell: UICollectionViewCell {
         label.numberOfLines = 0
         label.font = UIFont.theme(id: .bold32)
         label.textColor = UIColor.theme(.dark50)
+        label.textAlignment = .center
         return label
     }()
     
@@ -31,13 +32,14 @@ class StarCarrouselCollectionViewCell: UICollectionViewCell {
         label.numberOfLines = 0
         label.font = UIFont.theme(id: .medium16)
         label.textColor = UIColor.theme(.baseLight20)
+        label.textAlignment = .center
         return label
     }()
     
     private lazy var labelsStackView: UIStackView = {
         let view = UIStackView(arrangedSubviews: [titleLabel, subTitleLabel, FreeSpaceView()])
         view.distribution = .fill
-        view.alignment = .center
+        view.alignment = .fill
         view.spacing = 16
         view.axis = .vertical
         return view
@@ -72,8 +74,8 @@ class StarCarrouselCollectionViewCell: UICollectionViewCell {
     private func commonInit() {
         contentView.addSubview(mainStackView)
         mainStackView.translatesAutoresizingMaskIntoConstraints = false
-        mainStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16).isActive = true
-        mainStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16).isActive = true
+        mainStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 0).isActive = true
+        mainStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 0).isActive = true
         mainStackView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
         mainStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
     }

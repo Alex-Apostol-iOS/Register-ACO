@@ -12,13 +12,37 @@ class Login_RegisterViewController: RegisterAcoNavigationController {
     
     let presenter: Login_RegisterPresenterProtocol
     private let sectionInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
+    private var content: [StarCarrouselCollectionViewCellModel] = [] {
+        didSet {
+            DispatchQueue.main.async { [weak self] in
+                self?.collectionView.reloadData()
+            }
+        }
+    }
     
     
     private var currentPage = 0 {
         didSet {
-            
+            self.pageController.currentPage = currentPage
         }
     }
+    
+    private lazy var pageController: UIPageControl = {
+        let view = UIPageControl(frame: .zero)
+        view.tintColor = UIColor.theme(.primary50)
+        view.currentPageIndicatorTintColor = UIColor.theme(.primary100)
+        view.heightAnchor.constraint(equalToConstant: 32).isActive = true
+        view.pageIndicatorTintColor = UIColor.theme(.primary50)
+        return view
+    }()
+    
+    private lazy var pageControllerStackView: UIStackView = {
+       let view = UIStackView(arrangedSubviews: [pageController])
+        view.distribution = .fill
+        view.alignment = .center
+        view.axis = .horizontal
+        return view
+    }()
     
     private lazy var registerButton: RegisterACOButton = {
         let button = RegisterACOButton(frame: .zero)
@@ -54,11 +78,11 @@ class Login_RegisterViewController: RegisterAcoNavigationController {
     }()
     
     private lazy var mainStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [collectionView, FreeSpaceView(), buttonsStackView])
+        let stackView = UIStackView(arrangedSubviews: [FreeSpaceView(), collectionView, pageControllerStackView, buttonsStackView])
         stackView.distribution = .fill
         stackView.alignment = .fill
         stackView.axis = .vertical
-        stackView.spacing = 0
+        stackView.spacing = 16
         return stackView
     }()
     
@@ -95,6 +119,7 @@ class Login_RegisterViewController: RegisterAcoNavigationController {
         setUpMainStackViewLayout()
         collectionView.delegate = self
         collectionView.dataSource = self
+        presenter.viewDidLoad()
        
     }
     
@@ -104,7 +129,6 @@ class Login_RegisterViewController: RegisterAcoNavigationController {
         mainStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -40).isActive = true
         mainStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
         mainStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
-        mainStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 24).isActive = true
     }
     
     private func didTapLoginButton() {
@@ -118,17 +142,21 @@ class Login_RegisterViewController: RegisterAcoNavigationController {
 }
 
 extension Login_RegisterViewController: Login_RegisterViewProtocol{
-    // TODO: Implement View Output Methods
+    func darwCarrousel(with data: [StarCarrouselCollectionViewCellModel]) {
+        content = data
+        pageController.numberOfPages = content.count
+    }
 }
 
 extension Login_RegisterViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        5
+        content.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let item = content[indexPath.row]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StarCarrouselCollectionViewCell.id, for: indexPath) as! StarCarrouselCollectionViewCell
-        cell.configure(with: StarCarrouselCollectionViewCellModel(titleKey: "Gain total control of your money", subtitleKey: "Become your own money manager and make every cent count", imageUrl: "positivehabitsAccesCard"))
+        cell.configure(with: item)
         return cell
     }
     
