@@ -12,7 +12,7 @@ class Login_RegisterViewController: RegisterAcoNavigationController {
     
     let presenter: Login_RegisterPresenterProtocol
     private let sectionInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
-    private var content: [StarCarrouselCollectionViewCellModel] = [] {
+    private var content: [StartCarrouselCollectionViewCellModel] = [] {
         didSet {
             DispatchQueue.main.async { [weak self] in
                 self?.collectionView.reloadData()
@@ -68,7 +68,7 @@ class Login_RegisterViewController: RegisterAcoNavigationController {
     
     lazy var collectionView: ContentSizedCollectionView = {
         let collectionView = ContentSizedCollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
-        collectionView.register(StarCarrouselCollectionViewCell.self, forCellWithReuseIdentifier: StarCarrouselCollectionViewCell.id)
+        collectionView.register(StartCarrouselCollectionViewCell.self, forCellWithReuseIdentifier: StartCarrouselCollectionViewCell.id)
         collectionView.backgroundColor = .white
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.bounces = true
@@ -142,7 +142,7 @@ class Login_RegisterViewController: RegisterAcoNavigationController {
 }
 
 extension Login_RegisterViewController: Login_RegisterViewProtocol{
-    func darwCarrousel(with data: [StarCarrouselCollectionViewCellModel]) {
+    func darwCarrousel(with data: [StartCarrouselCollectionViewCellModel]) {
         content = data
         pageController.numberOfPages = content.count
     }
@@ -155,7 +155,7 @@ extension Login_RegisterViewController: UICollectionViewDataSource, UICollection
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let item = content[indexPath.row]
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StarCarrouselCollectionViewCell.id, for: indexPath) as! StarCarrouselCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StartCarrouselCollectionViewCell.id, for: indexPath) as! StartCarrouselCollectionViewCell
         cell.configure(with: item)
         return cell
     }

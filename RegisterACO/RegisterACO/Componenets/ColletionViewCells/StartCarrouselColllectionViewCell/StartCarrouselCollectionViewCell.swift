@@ -7,8 +7,8 @@
 
 import UIKit
 
-class StarCarrouselCollectionViewCell: UICollectionViewCell {
-    static let id = String(describing: StarCarrouselCollectionViewCell.self)
+class StartCarrouselCollectionViewCell: UICollectionViewCell {
+    static let id = String(describing: StartCarrouselCollectionViewCell.self)
     
     private lazy var mainImage: UIImageView = {
         let view = UIImageView()
@@ -65,7 +65,7 @@ class StarCarrouselCollectionViewCell: UICollectionViewCell {
         commonInit()
     }
     
-    func configure(with model: StarCarrouselCollectionViewCellModel) {
+    func configure(with model: StartCarrouselCollectionViewCellModel) {
         titleLabel.text = model.titleKey.localized
         subTitleLabel.text = model.subtitleKey.localized
         mainImage.image = UIImage(named: model.imageUrl)
@@ -81,7 +81,7 @@ class StarCarrouselCollectionViewCell: UICollectionViewCell {
     }
 }
 
-struct StarCarrouselCollectionViewCellModel {
+struct StartCarrouselCollectionViewCellModel {
     let titleKey: String
     let subtitleKey: String
     let imageUrl: String

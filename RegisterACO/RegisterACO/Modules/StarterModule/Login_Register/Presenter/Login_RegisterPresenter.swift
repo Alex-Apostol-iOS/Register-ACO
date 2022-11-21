@@ -20,20 +20,20 @@ class Login_RegisterPresenter {
         self.coordinatorOutput = coordinnatorOutput
     }
     
-    private func layoutCarrousel() -> [StarCarrouselCollectionViewCellModel] {
-        var models = [StarCarrouselCollectionViewCellModel]()
+    private func layoutCarrousel() -> [StartCarrouselCollectionViewCellModel] {
+        var models = [StartCarrouselCollectionViewCellModel]()
         
-        models.append(StarCarrouselCollectionViewCellModel(
+        models.append(StartCarrouselCollectionViewCellModel(
             titleKey: "lng.carrousel.step1.title",
             subtitleKey: "lng.carrousel.step1.subTitle",
             imageUrl: "Money"))
         
-        models.append(StarCarrouselCollectionViewCellModel(
+        models.append(StartCarrouselCollectionViewCellModel(
             titleKey: "lng.carrousel.step2.title",
             subtitleKey: "lng.carrousel.step2.subTitle",
             imageUrl: "SheetMoney"))
         
-        models.append(StarCarrouselCollectionViewCellModel(
+        models.append(StartCarrouselCollectionViewCellModel(
             titleKey: "lng.carrousel.step3.title",
             subtitleKey: "lng.carrousel.step3.subTitle",
             imageUrl: "plan"))
