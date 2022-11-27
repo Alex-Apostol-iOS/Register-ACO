@@ -14,7 +14,7 @@ class HabitStepDataManager: HabitStepDataManagerProtocol, HTTPHeadersHelper {
     func postPositiveHabit(habit: DtoPostiveHabit, completion: @escaping (Result<DtoPostiveHabit?, Error>) -> Void)  {
         let params = habit.dictionary
         
-        serviceProxy.postItem(url: Endpoint.habit.rawValue+Endpoint.postPositiveHabit.rawValue, type: DtoPostiveHabit.self, parameters: params ?? [:], headers: buildLoginHeaders()) { result in
+        serviceProxy.postItem(url: Endpoint.habit.rawValue+Endpoint.postPositiveHabit.rawValue, type: DtoPostiveHabit.self, parameters: params ?? [:], headers: buildHeaders()) { result in
             switch result {
             case .success(let habit):
                 completion(.success(habit))

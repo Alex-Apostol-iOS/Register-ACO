@@ -15,7 +15,7 @@ import Alamofire
 
 extension HTTPHeadersHelper {
     
-   func  buildLoginHeaders() -> HTTPHeaders? {
+   func  buildHeaders() -> HTTPHeaders? {
         guard let email = try? KeychainHelper.sharedInstance.read(service: .user_email, account: .registerACO),
               let password = try? KeychainHelper.sharedInstance.read(service: .user_password, account: .registerACO) else { return nil}
 
@@ -28,7 +28,7 @@ extension HTTPHeadersHelper {
 
        let base64LoginData = loginDataUTF8.base64EncodedString()
 
-       let authenticationType = "Basic "+base64LoginData
+       let authenticationType = "Bearer "+base64LoginData
 
        let headers = HTTPHeaders(
         [HTTPHeader(name: "Authorization", value: authenticationType)])

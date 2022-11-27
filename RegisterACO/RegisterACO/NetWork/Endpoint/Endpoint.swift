@@ -8,7 +8,7 @@
 import Foundation
 
 enum Endpoint: String {
-    case mainUrl = "http://127.0.0.1:8080"
+    case mainUrl = "https://registeracobackend.herokuapp.com"
     case user = "/user"
     case login = "/login"
     case habit = "/habit"
