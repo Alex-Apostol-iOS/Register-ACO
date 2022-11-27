@@ -62,7 +62,13 @@ class HomeCoordinator: Coordinator, GetLabel {
     
     private func goToPostiveHabitChildCoordinator() {
         postiveHabitChildCoordinator = nil
-        postiveHabitChildCoordinator = PositiveHabitCoordinator(on: navigator)
+        postiveHabitChildCoordinator = PositiveHabitCoordinator(on: navigator, closeCoordinator: { [weak self] in
+            self?.goToHabitListTab()
+        })
         postiveHabitChildCoordinator?.start()
+    }
+    
+    private func goToHabitListTab() {
+       
     }
 }

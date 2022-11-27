@@ -26,14 +26,16 @@ class PositiveHabitCoordinator: Coordinator {
     private let modelImplementation:  BasicStepControllerHelperImplementation
     private var stepsVcs: [UIViewController]
     private let basicStepViewControllerStepDTOContainer : BasicStepViewControllerStepDTOContainer
+    private let closeCoordinator: () -> Void
     
     
-    init(on navigator: UINavigationController, with state: PositiveHabitCoordinatorState = .initial) {
+    init(on navigator: UINavigationController, with state: PositiveHabitCoordinatorState = .initial, closeCoordinator: @escaping  () -> Void) {
         self.navigator = navigator
         self.state = state
         modelImplementation = BasicStepControllerHelperImplementation()
         stepsVcs = []
         basicStepViewControllerStepDTOContainer = BasicStepViewControllerStepDTOContainer()
+        self.closeCoordinator = closeCoordinator
     }
     
     func start() {
@@ -152,6 +154,7 @@ class PositiveHabitCoordinator: Coordinator {
         let topVc = self.navigator.presentedViewController
         topVc?.dismiss(animated: true, completion: {
             self.navigator.popToRootViewController(animated: true)
+            self.closeCoordinator()
         })
     }
     

@@ -21,6 +21,7 @@ class TabBarCoordinator: Coordinator, GetLabel {
     private let homeChildCoordinator: HomeCoordinator
     private let profileChildCoordinator: ProfileCoordinator
     private let habitListCoordinator: HabitListCoordinator
+    private weak var tabBarRefernce: UITabBarController?
     
     init(on navigator: UINavigationController, with state: TabBarCoordinatorState) {
         self.navigator = navigator
@@ -74,12 +75,16 @@ class TabBarCoordinator: Coordinator, GetLabel {
     }
     
     private func buildTaBarViewController() {
-        let vc = TabBarViewControllerBuilder(tabBarModel: setUpTabBarModel()) { _ in
-            
+        let vc = TabBarViewControllerBuilder(tabBarModel: setUpTabBarModel()) { output in
+            switch output {
+            case .goToHabitList:
+                self.goToHabitList()
+            }
         }.build()
         
         navigator.setViewControllers([vc], animated: true)
         navigator.interactivePopGestureRecognizer?.isEnabled = true
+        tabBarRefernce = vc as! UITabBarController
     }
     
     private func buildHomeModule() -> UIViewController {
@@ -102,5 +107,9 @@ class TabBarCoordinator: Coordinator, GetLabel {
             self?.habitListCoordinator.manageHabitListInternalNavigation(with: output)
         }.build()
         return vc
+    }
+    
+    private func goToHabitList()  {
+        tabBarRefernce?.selectedIndex = 1
     }
 }

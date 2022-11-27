@@ -54,6 +54,7 @@ extension HabitStepPresenter: HabitStepPresenterProtocol {
                 switch result {
                 case .success(let habit):
                     guard let habit = habit else {return}
+                    self?.view?.showToast(message: "lng.common.create.habit.success.message".localized, type: .succes)
                     self?.coordinatorOutput(.goToAllDone(habit: habit))
                 case .failure(let failure):
                     print(failure)

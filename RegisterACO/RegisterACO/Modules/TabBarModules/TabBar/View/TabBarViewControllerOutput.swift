@@ -9,4 +9,5 @@
 import Foundation
 
 enum TabBarViewControllerOutput {
+   case  goToHabitList
 }
