@@ -69,6 +69,7 @@ class HomeCoordinator: Coordinator, GetLabel {
     }
     
     private func goToHabitListTab() {
-       
+        guard let tabBar = navigator.topViewController as? TabBarViewControllerViewController else {return}
+        tabBar.selectedIndex = 1
     }
 }
