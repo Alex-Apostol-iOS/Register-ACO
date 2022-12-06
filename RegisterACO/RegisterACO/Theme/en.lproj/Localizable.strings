@@ -105,4 +105,6 @@ for which I am very grateful (what I need).
 "lng.carrousel.step3.title" = "Plan ahead";
 "lng.carrousel.step3.subTitle" = "Be proactive and anticipate adversity";
 "lng.common.create.habit.success.message" = "Habit created correctly!";
+"lng.common.areYou.the.user" = "You're not @ ?";
+"lng.common.nice.to.see.you.again" = "Nice to see you again @";
 

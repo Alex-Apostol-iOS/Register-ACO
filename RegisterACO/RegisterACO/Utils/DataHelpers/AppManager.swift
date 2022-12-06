@@ -9,6 +9,7 @@ import Foundation
 
 
 class AppManager {
-    static let serviceProxy = ServiceProxy()
+     let serviceProxy = ServiceProxy()
     static let sharedInstace = AppManager()
+     let coreData = CoreDateController()
 }

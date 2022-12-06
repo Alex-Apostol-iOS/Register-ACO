@@ -9,7 +9,7 @@
 import Foundation
 
 class HabitListDataManager: HabitListDataManagerProtocol {
-    private let serviceProxy = AppManager.serviceProxy
+    private let serviceProxy = AppManager.sharedInstace.serviceProxy
     @Cache(.userSession)
     private var user: DtoUser?
     

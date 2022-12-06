@@ -9,7 +9,7 @@
 import Foundation
 
 class StarterDataManager: StarterDataManagerProtocol {
-    private let serviceProxy = AppManager.serviceProxy
+    private let serviceProxy = AppManager.sharedInstace.serviceProxy
     
     func getUser(id: String, completion: @escaping (Result<DtoUser, Error>) -> Void) {
         serviceProxy.getItem(url: Endpoint.user.rawValue, type: DtoUser.self, parameters: ["id":id], headers: nil) { result in

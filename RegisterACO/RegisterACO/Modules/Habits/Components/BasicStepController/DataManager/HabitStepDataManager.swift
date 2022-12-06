@@ -9,7 +9,7 @@
 import Foundation
 
 class HabitStepDataManager: HabitStepDataManagerProtocol, HTTPHeadersHelper {
-     let serviceProxy = AppManager.serviceProxy
+    let serviceProxy = AppManager.sharedInstace.serviceProxy
     
     func postPositiveHabit(habit: DtoPostiveHabit, completion: @escaping (Result<DtoPostiveHabit?, Error>) -> Void)  {
         let params = habit.dictionary

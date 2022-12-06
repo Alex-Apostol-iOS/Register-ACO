@@ -21,6 +21,7 @@ class MainCoordinator: Coordinator {
         case willShowLoginFromLoginRegiser
         case didShowRegister
         case willShowHomeFlow
+        case willShowLogoutPrompt(logout: () -> Void)
     }
     
     private var state: MainCoordinatorState
@@ -47,6 +48,8 @@ class MainCoordinator: Coordinator {
             showLogin()
         case .willShowHomeFlow:
             goToHomeFlow()
+        case .willShowLogoutPrompt(let logout):
+            showAlert(logout: logout)
         case .initial, .didShowLogin(type: _), .didShowLoginRegisterFlow, .didShowRegister:
             fatalError("Unexpected Case in Main Coordinator")
        
@@ -68,7 +71,7 @@ class MainCoordinator: Coordinator {
             }
         case .didShowRegister:
             return .willShowHomeFlow
-        case .willShowLogin, .willShowLoginRegisterFlow(type: _), .willShowRegisterForm, .willShowLoginFromLoginRegiser, .willShowHomeFlow:
+        case .willShowLogin, .willShowLoginRegisterFlow(type: _), .willShowRegisterForm, .willShowLoginFromLoginRegiser, .willShowHomeFlow, .willShowLogoutPrompt(logout: _):
             return nextState
         
         }
@@ -121,10 +124,23 @@ class MainCoordinator: Coordinator {
             case .goToHome:
                 self?.state = .willShowHomeFlow
                 self?.loop()
+            case .goToLogout(logout: let logout):
+                self?.state = .willShowLogoutPrompt(logout: logout)
+                self?.loop()
             }
         }.build()
         
         navigator.pushViewController(vc, animated: true)
+    }
+    
+    private func showAlert(logout: @escaping() -> Void) {
+        
+        let alertViewModel = AlertViewModel(title: "lng.common.logout", subtitle: "lng.logout.subtitle", mainButtonTitle: "lng.common.yes", secondaryButttonTitle: "lng.common.no", mainButtonAction: logout)
+        let vc = AlertViewController(with: alertViewModel)
+        
+        vc.modalPresentationStyle = .overCurrentContext
+        vc.modalTransitionStyle = .coverVertical
+        navigator.present(vc, animated: true, completion: nil)
     }
     
 }

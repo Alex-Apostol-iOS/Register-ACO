@@ -11,4 +11,5 @@ import Foundation
 protocol LoginInteractorProtocol : AnyObject {
     
     func login(email: String, password: String) async throws -> DtoUser
+    func logout()
 }

@@ -10,4 +10,6 @@ import Foundation
 
 protocol LoginPresenterProtocol: AnyObject, GetLabel {
     func login(viewModel: LoginViewModel)
+    func getUser() -> DtoUser?
+    func didTapLogout()
 }

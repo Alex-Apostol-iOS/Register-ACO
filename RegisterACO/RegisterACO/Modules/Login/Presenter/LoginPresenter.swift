@@ -8,7 +8,7 @@
 
 import Foundation
 
-class LoginPresenter {
+class LoginPresenter{
     private var interactor: LoginInteractorProtocol
     weak var view: LoginViewProtocol?
     private var coordinatorOutput: (LoginOutput) -> Void
@@ -21,7 +21,7 @@ class LoginPresenter {
     }
 }
 
-extension LoginPresenter: LoginPresenterProtocol {
+extension LoginPresenter: LoginPresenterProtocol, CoreDataControllerProtcol {
    
     
     func login(viewModel: LoginViewModel)  {
@@ -30,6 +30,7 @@ extension LoginPresenter: LoginPresenterProtocol {
             do {
                 let user =  try await interactor.login(email: viewModel.email.lowercased(), password: viewModel.password)
                 self?.user = user
+                putItem(CoreDateController.EntityKey.user.rawValue, common: user)
                 DispatchQueue.main.async { [weak self] in
                     self?.coordinatorOutput(.goToHome)
                 }
@@ -38,6 +39,17 @@ extension LoginPresenter: LoginPresenterProtocol {
                 self?.view?.hideLoader()
             }
         }
-        
+    }
+    
+    func getUser() -> DtoUser? {
+        queryItem(entityName: CoreDateController.EntityKey.user.rawValue, item: DtoUser.self)
+    }
+    
+    func didTapLogout() {
+        coordinatorOutput(.goToLogout(logout: logout))
+    }
+    
+    private func logout() {
+        interactor.logout()
     }
 }

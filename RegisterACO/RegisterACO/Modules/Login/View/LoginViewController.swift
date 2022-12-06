@@ -28,6 +28,36 @@ class LoginViewController: RegisterAcoNavigationController {
         return textField
     }()
     
+    private lazy var staticUserNameLabel: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.font = UIFont.theme(id: .bold16)
+        label.textColor = UIColor.theme(.dark100)
+        label.text = "lng.common.nice.to.see.you.again".localized.replacingOccurrences(of: "@", with: presenter.getUser()?.user?.name ?? "")
+        return label
+    }()
+    
+    private lazy var logoutButton: UIButton = {
+        let button = UIButton(frame: .zero)
+        let paragraphStyle: NSMutableParagraphStyle = NSMutableParagraphStyle()
+            paragraphStyle.alignment = NSTextAlignment.left
+        let attributeString = NSAttributedString(string: "lng.common.areYou.the.user".localized.replacingOccurrences(of: "@", with: presenter.getUser()?.user?.name ?? ""), attributes:
+                                                    [NSAttributedString.Key.font : UIFont.theme(id: .regular14), NSAttributedString.Key.foregroundColor: UIColor.theme(.primary100),
+                                                     NSAttributedString.Key.paragraphStyle: paragraphStyle])
+        button.setAttributedTitle(attributeString, for: .normal)
+        button.addTarget(self, action: #selector(didTapLogoutButton), for: .touchUpInside)
+        return button
+    }()
+    
+    private lazy var userNameAndLogoutButtonStackView: UIStackView = {
+       let stackView = UIStackView(arrangedSubviews: [staticUserNameLabel, logoutButton])
+        stackView.distribution = .fill
+        stackView.alignment = .leading
+        stackView.axis = .vertical
+        stackView.spacing = 8
+        stackView.isHidden = presenter.getUser() == nil
+        return stackView
+    }()
+    
     private lazy var emailTextField: RegisterACOTextField = {
         let textField = RegisterACOTextField(frame: .zero)
         textField.configure(placeHolder: presenter.getlabelForKey(key: "lng.commonEmail"), type: .email)
@@ -46,7 +76,7 @@ class LoginViewController: RegisterAcoNavigationController {
     }()
     
     private lazy var mainStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [emailTextField, passwordTextField, FreeSpaceView(), submitButton])
+        let stackView = UIStackView(arrangedSubviews: [userNameAndLogoutButtonStackView, emailTextField, passwordTextField, FreeSpaceView(), submitButton])
         stackView.distribution = .fill
         stackView.alignment = .fill
         stackView.axis = .vertical
@@ -69,14 +99,16 @@ class LoginViewController: RegisterAcoNavigationController {
         configTitle(title: presenter.getlabelForKey(key: "lng.login"))
         setUpMainStackViewLayout()
         view.backgroundColor = .white
+        fillEmailIfNeeded()
         buttonSubscriber = model.validateCredentials
             .receive(on: RunLoop.main)
             .assign(to: \.isEnabled, on: submitButton)
-        
-        #if DEBUG
-        emailTextField.setText(text: "apostol516@gmail.com")
-        passwordTextField.setText(text:"Teladoc1!") 
-        #endif
+    }
+    
+    private func fillEmailIfNeeded() {
+        if presenter.getUser() != nil {
+            emailTextField.setText(text: presenter.getUser()?.user?.email ?? "")
+        }
     }
     
     private func setUpMainStackViewLayout() {
@@ -91,6 +123,11 @@ class LoginViewController: RegisterAcoNavigationController {
     @objc
     private func submitForm()  {
          presenter.login(viewModel: model)
+    }
+    
+    @objc
+    private func didTapLogoutButton() {
+        presenter.didTapLogout()
     }
     
 }

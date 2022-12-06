@@ -143,6 +143,7 @@ class RegisterACOTextField: UIStackView {
     
     func setText(text: String) {
         textField.text = text
+        NotificationCenter.default.post(name: UITextField.textDidChangeNotification, object: self.textField)
     }
     
     @objc

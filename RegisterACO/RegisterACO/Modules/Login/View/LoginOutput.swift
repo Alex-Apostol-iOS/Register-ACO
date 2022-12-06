@@ -10,4 +10,5 @@ import Foundation
 
 enum LoginOutput {
     case goToHome
+    case goToLogout(logout: () -> Void)
 }

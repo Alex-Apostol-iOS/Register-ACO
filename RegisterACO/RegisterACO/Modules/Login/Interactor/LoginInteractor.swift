@@ -33,4 +33,7 @@ class LoginInteractor: LoginInteractorProtocol {
         
         return user
     }
+    func logout() {
+        dataManager.logout()
+    }
 }

@@ -8,14 +8,15 @@
 
 import Foundation
 
-class RegisterFromDataManager: RegisterFromDataManagerProtocol {
-    private let serviceProxy = AppManager.serviceProxy
+class RegisterFromDataManager: RegisterFromDataManagerProtocol, CoreDataControllerProtcol {
+    private let serviceProxy = AppManager.sharedInstace.serviceProxy
     
     func postUser(user: RegisterACOUser, completion: @escaping (Result<DtoUser?, Error>) -> Void) {
         let paramas = user.dictionary
-        serviceProxy.postItem(url: Endpoint.user.rawValue, type: DtoUser.self, parameters: paramas ?? [:], headers: nil) { result in
+        serviceProxy.postItem(url: Endpoint.user.rawValue, type: DtoUser.self, parameters: paramas ?? [:], headers: nil) { [weak self] result in
             switch result {
             case .success(let dtoUser):
+                self?.putItem(CoreDateController.EntityKey.user.rawValue, common: dtoUser)
                 completion(.success(dtoUser))
             case .failure(let error):
                 completion(.failure(error))
