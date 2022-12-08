@@ -11,7 +11,7 @@ import Foundation
 class RegisterFromDataManager: RegisterFromDataManagerProtocol, CoreDataControllerProtcol {
     private let serviceProxy = AppManager.sharedInstace.serviceProxy
     
-    func postUser(user: RegisterACOUser, completion: @escaping (Result<DtoUser?, Error>) -> Void) {
+    func postUser(user: RegisterACOUser, completion: @escaping (Result<DtoUser?, RegisterAcoErrors>) -> Void) {
         let paramas = user.dictionary
         serviceProxy.postItem(url: Endpoint.user.rawValue, type: DtoUser.self, parameters: paramas ?? [:], headers: nil) { [weak self] result in
             switch result {

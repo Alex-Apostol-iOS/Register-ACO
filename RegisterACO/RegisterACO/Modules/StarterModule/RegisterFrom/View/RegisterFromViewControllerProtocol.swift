@@ -8,5 +8,5 @@
 
 import UIKit
 
-protocol RegisterFromViewProtocol: AnyObject {
+protocol RegisterFromViewProtocol: ShowToastAlert {
 }

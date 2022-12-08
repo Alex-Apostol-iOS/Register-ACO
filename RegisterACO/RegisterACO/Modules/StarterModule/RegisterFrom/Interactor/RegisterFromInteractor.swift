@@ -16,7 +16,7 @@ class RegisterFromInteractor: RegisterFromInteractorProtocol {
         self.dataManager = dataManager
     }
     
-    func postUser(user: RegisterACOUser, completion: @escaping (Result<DtoUser?, Error>) -> Void) {
+    func postUser(user: RegisterACOUser, completion: @escaping (Result<DtoUser?, RegisterAcoErrors>) -> Void) {
         dataManager.postUser(user: user) { result in
             switch result {
             case .success(let dtoUser):

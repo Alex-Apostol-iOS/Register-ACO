@@ -24,13 +24,17 @@ class RegisterFromPresenter {
 extension RegisterFromPresenter: RegisterFromPresenterProtocol {
     func didTapSubmit(viewModel: RegisterFormViewModel) {
         let user = RegisterACOUser(phone: viewModel.phone, password: viewModel.password, id: nil, surname: viewModel.surname, email: viewModel.email.lowercased(), name: viewModel.firstName, secondSurname: viewModel.secondSurname)
-        interactor.postUser(user: user) { result in
+        interactor.postUser(user: user) { [weak self] result in
             switch result {
             case .success(let dtoUser):
-                self.dtoUser = dtoUser
-                self.coordinatorOutput(.goToHome)
+                self?.dtoUser = dtoUser
+                self?.coordinatorOutput(.goToHome)
             case .failure(let error):
-                print(error)
+                switch error {
+                case .emailAlredyUsed:
+                    self?.view?.showToast(message: "lng.error.email.alredy.used".localized, type: .error)
+                default: break
+                }
             }
         }
         

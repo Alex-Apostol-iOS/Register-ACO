@@ -35,8 +35,13 @@ extension LoginPresenter: LoginPresenterProtocol, CoreDataControllerProtcol {
                     self?.coordinatorOutput(.goToHome)
                 }
             } catch {
-                print(error)
                 self?.view?.hideLoader()
+                guard let error = error as? RegisterAcoErrors else {return}
+                switch error {
+                case .wrongPassword:
+                    self?.view?.showToast(message: "lng.error.wrong.password.or.email".localized, type: .error)
+                default: break
+                }
             }
         }
     }

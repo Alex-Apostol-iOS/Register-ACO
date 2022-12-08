@@ -8,6 +8,6 @@
 
 import UIKit
 
-protocol LoginViewProtocol: AnyObject, Loader {
+protocol LoginViewProtocol:Loader, ShowToastAlert {
     
 }

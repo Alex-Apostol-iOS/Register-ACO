@@ -9,5 +9,5 @@
 import Foundation
 
 protocol RegisterFromDataManagerProtocol : AnyObject {
-    func postUser(user: RegisterACOUser, completion: @escaping (Result<DtoUser?, Error>) -> Void)
+    func postUser(user: RegisterACOUser, completion: @escaping (Result<DtoUser?, RegisterAcoErrors>) -> Void)
 }

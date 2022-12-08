@@ -107,4 +107,6 @@ for which I am very grateful (what I need).
 "lng.common.create.habit.success.message" = "Habit created correctly!";
 "lng.common.areYou.the.user" = "You're not @ ?";
 "lng.common.nice.to.see.you.again" = "Nice to see you again @";
+"lng.error.wrong.password.or.email" = "The password or email is wrong";
+"lng.error.email.alredy.used" = "Email alredy used";
 

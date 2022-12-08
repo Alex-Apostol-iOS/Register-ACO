@@ -15,7 +15,7 @@ class ServiceProxy {
     private let timeout: Double = 30
     let retryLimit: Int = 30
     
-    func getItem<T: Decodable>(url: String, type: T.Type, parameters: [String:Any]?,headers: HTTPHeaders? = nil, queue: DispatchQueue = .main, completion: @escaping (Result<T, AFError>) -> Void) {
+    func getItem<T: Decodable>(url: String, type: T.Type, parameters: [String:Any]?,headers: HTTPHeaders? = nil, queue: DispatchQueue = .main, completion: @escaping (Result<T, RegisterAcoErrors>) -> Void) {
         let url = "\(mainURL)\(url)"
         let request =  AF.request(url, method: .get, parameters: parameters, headers: headers)
         { $0.timeoutInterval = self.timeout }
@@ -38,7 +38,7 @@ class ServiceProxy {
             case .success(let result):
                 completion(.success(result))
             case .failure(let error):
-                completion(.failure(error))
+                completion(.failure( self.showError(statusCode: response.response?.statusCode ?? 0, error: error)))
             }
         }
         
@@ -52,7 +52,7 @@ class ServiceProxy {
         }
     }
     
-    func getItemOptional<T: Decodable>(url: String, type: T.Type?, parameters: [String:Any]?,headers: HTTPHeaders? = nil,queue: DispatchQueue = .main, completion: @escaping (Result<T?, AFError>) -> Void) {
+    func getItemOptional<T: Decodable>(url: String, type: T.Type?, parameters: [String:Any]?,headers: HTTPHeaders? = nil,queue: DispatchQueue = .main, completion: @escaping (Result<T?, RegisterAcoErrors>) -> Void) {
         let url = "\(mainURL)\(url)"
         let request =  AF.request(url, method: .get, parameters: parameters, headers: headers)
         { $0.timeoutInterval = self.timeout  }
@@ -87,7 +87,7 @@ class ServiceProxy {
                 default:
                     break
                 }
-                completion(.failure(error))
+                completion(.failure( self.showError(statusCode: response.response?.statusCode ?? 0, error: error)))
             }
         }
         
@@ -101,7 +101,7 @@ class ServiceProxy {
         }
     }
     
-    func postItem<T: Decodable>(url: String, type: T.Type?, parameters: [String:Any] = [:], headers: HTTPHeaders?,completion: @escaping (Result<T?, AFError>) -> Void) {
+    func postItem<T: Decodable>(url: String, type: T.Type?, parameters: [String:Any] = [:], headers: HTTPHeaders?,completion: @escaping (Result<T?, RegisterAcoErrors>) -> Void) {
         let url = "\(mainURL)\(url)"
         let request =  AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers)
         { $0.timeoutInterval = self.timeout  }
@@ -125,7 +125,7 @@ class ServiceProxy {
             case .success(let result):
                 completion(.success(result))
             case .failure(let error):
-                completion(.failure(error))
+                completion(.failure( self.showError(statusCode: response.response?.statusCode ?? 0, error: error)))
             }
         }
         
@@ -139,7 +139,7 @@ class ServiceProxy {
         }
     }
     
-    func postItemNoResponse(url: String, parameters: [String:Any] = [:], headers: HTTPHeaders?,completion: @escaping (Result<Any, AFError>) -> Void) {
+    func postItemNoResponse(url: String, parameters: [String:Any] = [:], headers: HTTPHeaders?,completion: @escaping (Result<Any, RegisterAcoErrors>) -> Void) {
         let url = "\(mainURL)\(url)"
         let request =  AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers)
         { $0.timeoutInterval = self.timeout  }
@@ -162,7 +162,7 @@ class ServiceProxy {
             case .success(let result):
                 completion(.success(result))
             case .failure(let error):
-                completion(.failure(error))
+                completion(.failure( self.showError(statusCode: response.response?.statusCode ?? 0, error: error)))
             }
         }
         
@@ -176,7 +176,7 @@ class ServiceProxy {
         }
     }
     
-    func putItemNoResponse(url: String, parameters: [String:Any] = [:], headers: HTTPHeaders?,completion: @escaping (Result<Any, AFError>) -> Void) {
+    func putItemNoResponse(url: String, parameters: [String:Any] = [:], headers: HTTPHeaders?,completion: @escaping (Result<Any, RegisterAcoErrors>) -> Void) {
         let url = "\(mainURL)\(url)"
         let request =  AF.request(url, method: .put, parameters: parameters, encoding: JSONEncoding.default, headers: headers).validate()
             .responseData(emptyResponseCodes: [200, 201]) {  (response) in
@@ -197,7 +197,7 @@ class ServiceProxy {
                 case .success(let result):
                     completion(.success(result))
                 case .failure(let error):
-                    completion(.failure(error))
+                    completion(.failure( self.showError(statusCode: response.response?.statusCode ?? 0, error: error)))
                 }
             }
         
@@ -211,7 +211,7 @@ class ServiceProxy {
         }
     }
     
-    func deleteItemNoResponse(url: String, parameters: [String:Any]?, headers: HTTPHeaders?,completion: @escaping (Result<Any, AFError>) -> Void) {
+    func deleteItemNoResponse(url: String, parameters: [String:Any]?, headers: HTTPHeaders?,completion: @escaping (Result<Any, RegisterAcoErrors>) -> Void) {
         let url = "\(mainURL)\(url)"
         let request =  AF.request(url, method: .delete, parameters: parameters, encoding: JSONEncoding.default, headers: headers)
         { $0.timeoutInterval = self.timeout  }
@@ -234,7 +234,7 @@ class ServiceProxy {
             case .success(let result):
                 completion(.success(result))
             case .failure(let error):
-                completion(.failure(error))
+                completion(.failure( self.showError(statusCode: response.response?.statusCode ?? 0, error: error)))
             }
         }
         
@@ -249,7 +249,7 @@ class ServiceProxy {
     }
     
     
-    func getItems<T: Decodable>(url: String, type: [T].Type, parameters: [String:Any]?, headers: HTTPHeaders? = nil ,completion: @escaping (Result<[T], AFError>) -> Void) {
+    func getItems<T: Decodable>(url: String, type: [T].Type, parameters: [String:Any]?, headers: HTTPHeaders? = nil ,completion: @escaping (Result<[T], RegisterAcoErrors>) -> Void) {
         let url = "\(mainURL)\(url)"
         let request = AF.request(url, method: .get, parameters: parameters, headers: headers)
         { $0.timeoutInterval = self.timeout  }
@@ -273,7 +273,7 @@ class ServiceProxy {
             case .success(let result):
                 completion(.success(result))
             case .failure(let error):
-                completion(.failure(error))
+                completion(.failure( self.showError(statusCode: response.response?.statusCode ?? 0, error: error)))
             }
         }
         if request.isInitialized {
@@ -312,7 +312,7 @@ class ServiceProxy {
                 case .success(let result):
                     continuation.resume(returning: result)
                 case .failure(let error):
-                    continuation.resume(throwing: error)
+                    continuation.resume(throwing:  self.showError(statusCode: response.response?.statusCode ?? 0, error: error))
                 }
             }
             
@@ -353,7 +353,7 @@ class ServiceProxy {
                 case .success(let result):
                     continuation.resume(returning: result)
                 case .failure(let error):
-                    continuation.resume(throwing: error)
+                    continuation.resume(throwing: self.showError(statusCode: response.response?.statusCode ?? 0, error: error))
                 }
             }
             
@@ -366,5 +366,14 @@ class ServiceProxy {
                 
             }
         })
+    }
+    
+    func showError(statusCode: Int, error: Error) -> RegisterAcoErrors {
+        
+        switch statusCode {
+        case 426: return .wrongPassword
+        case 425: return .emailAlredyUsed
+        default: return .unknownd(message: error.localizedDescription)
+        }
     }
 }
