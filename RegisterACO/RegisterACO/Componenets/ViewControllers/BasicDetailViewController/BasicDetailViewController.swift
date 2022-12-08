@@ -82,7 +82,7 @@ class BasicDetailViewController: UIViewController, ModalAlerViewControllerProtoc
         setUpTitleLayout()
         setUpMainStackViewLayout()
         populateMainStackViewWith(examples: dataModel.labelKeys)
-        if !self.isBeingPresented {
+        if !self.isModal {
             closeIcon.isHidden = true
         }
         setUpButtonLayout()
