@@ -15,6 +15,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let userDefaults = UserDefaults.standard
+
+        if !userDefaults.bool(forKey: "hasRunBefore") {
+             // Remove Keychain items here
+            KeychainHelper.sharedInstance.delete(service: .user_email, account: .registerACO)
+            KeychainHelper.sharedInstance.delete(service: .user_password, account: .registerACO)
+
+             // Update the flag indicator
+             userDefaults.set(true, forKey: "hasRunBefore")
+        }
         return true
     }
 
