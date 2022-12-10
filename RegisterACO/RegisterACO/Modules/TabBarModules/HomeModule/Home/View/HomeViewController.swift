@@ -39,7 +39,7 @@ class HomeViewController: RegisterAcoNavigationController {
     }()
     
     private lazy var mainStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [postiveHabitAccesCard, negativeeHabitAccesCard, FreeSpaceView()])
+        let stackView = UIStackView(arrangedSubviews: [postiveHabitAccesCard, FreeSpaceView()])
         stackView.distribution = .fill
         stackView.alignment = .fill
         stackView.axis = .vertical
