@@ -22,6 +22,10 @@
 		9D1BCF1628FFBDE5002D0A73 /* BasicDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1BCF1528FFBDE5002D0A73 /* BasicDetailViewController.swift */; };
 		9D1BCF1928FFC7BE002D0A73 /* BasicStepControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1BCF1828FFC7BE002D0A73 /* BasicStepControllerHelper.swift */; };
 		9D2355A6291F961900322047 /* RegisterACONoDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2355A5291F961900322047 /* RegisterACONoDataView.swift */; };
+		9D3EA42D2972A5B100D13748 /* HabitListPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3EA42C2972A5B100D13748 /* HabitListPresenterTest.swift */; };
+		9D3EA4372972A61A00D13748 /* HabitListMockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3EA4362972A61A00D13748 /* HabitListMockView.swift */; };
+		9D3EA4412972AB8F00D13748 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3EA4402972AB8F00D13748 /* AutoMockable.generated.swift */; };
+		9D3EA4432972AF7600D13748 /* MockError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3EA4422972AF7600D13748 /* MockError.swift */; };
 		9D4AB851293F3A6E0084F4A5 /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4AB850293F3A6E0084F4A5 /* CoreDataController.swift */; };
 		9D6042DF28F92FAA00211A9E /* RegisterACOTextArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6042DE28F92FAA00211A9E /* RegisterACOTextArea.swift */; };
 		9D61B4662941EB0200B8507C /* RegisterAcoErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D61B4652941EB0200B8507C /* RegisterAcoErrors.swift */; };
@@ -201,6 +205,16 @@
 		C7DD8466CA29468BFF1F049B /* Pods_RegisterACO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 590A60A5953D89FCABD09D0F /* Pods_RegisterACO.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		9D3EA42E2972A5B100D13748 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B40D30F1280858AD002C1396 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B40D30F8280858AD002C1396;
+			remoteInfo = RegisterACO;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		13133E5C59BD45F445B7E812 /* Pods-RegisterACO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RegisterACO.release.xcconfig"; path = "Target Support Files/Pods-RegisterACO/Pods-RegisterACO.release.xcconfig"; sourceTree = "<group>"; };
 		40A3A5F11283A45636049278 /* Pods-RegisterACO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RegisterACO.debug.xcconfig"; path = "Target Support Files/Pods-RegisterACO/Pods-RegisterACO.debug.xcconfig"; sourceTree = "<group>"; };
@@ -220,6 +234,11 @@
 		9D1BCF1528FFBDE5002D0A73 /* BasicDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicDetailViewController.swift; sourceTree = "<group>"; };
 		9D1BCF1828FFC7BE002D0A73 /* BasicStepControllerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicStepControllerHelper.swift; sourceTree = "<group>"; };
 		9D2355A5291F961900322047 /* RegisterACONoDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterACONoDataView.swift; sourceTree = "<group>"; };
+		9D3EA42A2972A5B100D13748 /* RegisterACOTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RegisterACOTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D3EA42C2972A5B100D13748 /* HabitListPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListPresenterTest.swift; sourceTree = "<group>"; };
+		9D3EA4362972A61A00D13748 /* HabitListMockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListMockView.swift; sourceTree = "<group>"; };
+		9D3EA4402972AB8F00D13748 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
+		9D3EA4422972AF7600D13748 /* MockError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockError.swift; sourceTree = "<group>"; };
 		9D4AB850293F3A6E0084F4A5 /* CoreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
 		9D6042DE28F92FAA00211A9E /* RegisterACOTextArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterACOTextArea.swift; sourceTree = "<group>"; };
 		9D61B4652941EB0200B8507C /* RegisterAcoErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAcoErrors.swift; sourceTree = "<group>"; };
@@ -403,6 +422,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9D3EA4272972A5B100D13748 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B40D30F6280858AD002C1396 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -535,6 +561,42 @@
 			);
 			path = NoDataView;
 			sourceTree = "<group>";
+		};
+		9D3EA42B2972A5B100D13748 /* RegisterACOTests */ = {
+			isa = PBXGroup;
+			children = (
+				9D3EA4332972A5DB00D13748 /* HabitList */,
+			);
+			path = RegisterACOTests;
+			sourceTree = "<group>";
+		};
+		9D3EA4332972A5DB00D13748 /* HabitList */ = {
+			isa = PBXGroup;
+			children = (
+				9D3EA43B2972AAD700D13748 /* Generated */,
+				9D3EA4342972A5FF00D13748 /* MockView */,
+				9D3EA42C2972A5B100D13748 /* HabitListPresenterTest.swift */,
+			);
+			path = HabitList;
+			sourceTree = "<group>";
+		};
+		9D3EA4342972A5FF00D13748 /* MockView */ = {
+			isa = PBXGroup;
+			children = (
+				9D3EA4362972A61A00D13748 /* HabitListMockView.swift */,
+			);
+			path = MockView;
+			sourceTree = "<group>";
+		};
+		9D3EA43B2972AAD700D13748 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				9D3EA4402972AB8F00D13748 /* AutoMockable.generated.swift */,
+				9D3EA4422972AF7600D13748 /* MockError.swift */,
+			);
+			name = Generated;
+			path = "msalud-DEVTests/Generated";
+			sourceTree = SOURCE_ROOT;
 		};
 		9D6042DC28F92BE100211A9E /* BasicStepController */ = {
 			isa = PBXGroup;
@@ -787,6 +849,7 @@
 			isa = PBXGroup;
 			children = (
 				B40D30FB280858AD002C1396 /* RegisterACO */,
+				9D3EA42B2972A5B100D13748 /* RegisterACOTests */,
 				B40D30FA280858AD002C1396 /* Products */,
 				02E1C8D8D9B67D6BAB3745B8 /* Pods */,
 				ADDD343129DAE07932E74B84 /* Frameworks */,
@@ -797,6 +860,7 @@
 			isa = PBXGroup;
 			children = (
 				B40D30F9280858AD002C1396 /* RegisterACO.app */,
+				9D3EA42A2972A5B100D13748 /* RegisterACOTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1627,6 +1691,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		9D3EA4292972A5B100D13748 /* RegisterACOTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D3EA4322972A5B100D13748 /* Build configuration list for PBXNativeTarget "RegisterACOTests" */;
+			buildPhases = (
+				9D3EA4262972A5B100D13748 /* Sources */,
+				9D3EA4272972A5B100D13748 /* Frameworks */,
+				9D3EA4282972A5B100D13748 /* Resources */,
+				9D3EA43A2972A91F00D13748 /* Sourcery */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9D3EA42F2972A5B100D13748 /* PBXTargetDependency */,
+			);
+			name = RegisterACOTests;
+			productName = RegisterACOTests;
+			productReference = 9D3EA42A2972A5B100D13748 /* RegisterACOTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		B40D30F8280858AD002C1396 /* RegisterACO */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B40D3110280858B1002C1396 /* Build configuration list for PBXNativeTarget "RegisterACO" */;
@@ -1653,9 +1736,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1300;
+				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
+					9D3EA4292972A5B100D13748 = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = B40D30F8280858AD002C1396;
+					};
 					B40D30F8280858AD002C1396 = {
 						CreatedOnToolsVersion = 13.0;
 					};
@@ -1676,11 +1763,19 @@
 			projectRoot = "";
 			targets = (
 				B40D30F8280858AD002C1396 /* RegisterACO */,
+				9D3EA4292972A5B100D13748 /* RegisterACOTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9D3EA4282972A5B100D13748 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B40D30F7280858AD002C1396 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1703,6 +1798,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		9D3EA43A2972A91F00D13748 /* Sourcery */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Sourcery;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "sh \"${PROJECT_DIR}/tools/sourcery.sh\"\n";
+		};
 		F6048F6BABFFDEC65B4ED7A8 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1745,6 +1858,17 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9D3EA4262972A5B100D13748 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D3EA42D2972A5B100D13748 /* HabitListPresenterTest.swift in Sources */,
+				9D3EA4372972A61A00D13748 /* HabitListMockView.swift in Sources */,
+				9D3EA4432972AF7600D13748 /* MockError.swift in Sources */,
+				9D3EA4412972AB8F00D13748 /* AutoMockable.generated.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B40D30F5280858AD002C1396 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1933,6 +2057,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		9D3EA42F2972A5B100D13748 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B40D30F8280858AD002C1396 /* RegisterACO */;
+			targetProxy = 9D3EA42E2972A5B100D13748 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		B40D310A280858B1002C1396 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -1955,6 +2087,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		9D3EA4302972A5B100D13748 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8DURMPUBZ2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.apostol.alex.RegisterACO.RegisterACOTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RegisterACO.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RegisterACO";
+			};
+			name = Debug;
+		};
+		9D3EA4312972A5B100D13748 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8DURMPUBZ2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.apostol.alex.RegisterACO.RegisterACOTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RegisterACO.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RegisterACO";
+			};
+			name = Release;
+		};
 		B40D310E280858B1002C1396 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2136,6 +2308,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9D3EA4322972A5B100D13748 /* Build configuration list for PBXNativeTarget "RegisterACOTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D3EA4302972A5B100D13748 /* Debug */,
+				9D3EA4312972A5B100D13748 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B40D30F4280858AD002C1396 /* Build configuration list for PBXProject "RegisterACO" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
